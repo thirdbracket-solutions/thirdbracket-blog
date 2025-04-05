@@ -1,10 +1,11 @@
 'use client'
-import { cn } from '@/utilities/ui'
+
 import useClickableCard from '@/utilities/useClickableCard'
 import Link from 'next/link'
 import React, { Fragment } from 'react'
 
 import type { Post } from '@/payload-types'
+import { Card as MainCard } from '@thirdbracket/bracketui'
 
 import { Media } from '@/components/Media'
 
@@ -19,7 +20,7 @@ export const Card: React.FC<{
   title?: string
 }> = (props) => {
   const { card, link } = useClickableCard({})
-  const { className, doc, relationTo, showCategories, title: titleFromProps } = props
+  const { doc, relationTo, showCategories, title: titleFromProps } = props
 
   const { slug, categories, meta, title } = doc || {}
   const { description, image: metaImage } = meta || {}
@@ -30,11 +31,12 @@ export const Card: React.FC<{
   const href = `/${relationTo}/${slug}`
 
   return (
-    <article
-      className={cn(
-        'border border-border rounded-lg overflow-hidden bg-card hover:cursor-pointer',
-        className,
-      )}
+    <MainCard
+      // className={cn(
+      //   'border border-border rounded-lg overflow-hidden bg-card hover:cursor-pointer',
+      //   className,
+      // )}
+
       ref={card.ref}
     >
       <div className="relative w-full ">
@@ -79,6 +81,6 @@ export const Card: React.FC<{
         )}
         {description && <div className="mt-2">{description && <p>{sanitizedDescription}</p>}</div>}
       </div>
-    </article>
+    </MainCard>
   )
 }
