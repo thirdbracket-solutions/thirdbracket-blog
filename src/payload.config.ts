@@ -69,6 +69,7 @@ export default buildConfig({
   globals: [Header, Footer],
   plugins: [
     ...plugins,
+
     vercelBlobStorage({
       collections: {
         media: true,

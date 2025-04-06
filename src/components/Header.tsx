@@ -358,7 +358,7 @@ const Header: FC = () => {
           <Navlink as={Link} href="/posts">
             Blog
           </Navlink>
-          <Navlink as={Link} href="contact">
+          <Navlink as={Link} href="/contact">
             Contact
           </Navlink>
           <Link href="/search">
