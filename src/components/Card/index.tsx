@@ -19,7 +19,7 @@ export const Card: React.FC<{
   showCategories?: boolean
   title?: string
 }> = (props) => {
-  const { card, link } = useClickableCard({})
+  const { link } = useClickableCard({})
   const { doc, relationTo, showCategories, title: titleFromProps } = props
 
   const { slug, categories, meta, title } = doc || {}
@@ -37,15 +37,18 @@ export const Card: React.FC<{
       //   className,
       // )}
 
-      ref={card.ref}
+      // ref={card.ref}
+      href={href}
+      ref={link.ref}
+      className="rounded-lg border border-primary-500  border-opacity-40 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-70"
     >
       <div className="relative w-full ">
         {!metaImage && <div className="">No image</div>}
         {metaImage && typeof metaImage !== 'string' && <Media resource={metaImage} size="33vw" />}
       </div>
-      <div className="p-4">
+      <div className="mt-4">
         {showCategories && hasCategories && (
-          <div className="uppercase text-sm mb-4">
+          <div className=" mb-2">
             {showCategories && hasCategories && (
               <div>
                 {categories?.map((category, index) => {
@@ -58,7 +61,9 @@ export const Card: React.FC<{
 
                     return (
                       <Fragment key={index}>
-                        {categoryTitle}
+                        <span className="px-1.5 py-0.5 text-xs text-secondary-600 dark:text-secondary-600  border-secondary-500/20   rounded-md border">
+                          {categoryTitle}
+                        </span>
                         {!isLast && <Fragment>, &nbsp;</Fragment>}
                       </Fragment>
                     )
@@ -71,15 +76,17 @@ export const Card: React.FC<{
           </div>
         )}
         {titleToUse && (
-          <div className="prose">
-            <h3>
+          <div className="prose mb-2">
+            <h3 className="text-xl font-bold text-primary-800 dark:text-primary-200 line-clamp-2 leading-tight">
               <Link className="not-prose" href={href} ref={link.ref}>
                 {titleToUse}
               </Link>
             </h3>
           </div>
         )}
-        {description && <div className="mt-2">{description && <p>{sanitizedDescription}</p>}</div>}
+        {description && (
+          <div>{description && <p className="line-clamp-2">{sanitizedDescription}</p>}</div>
+        )}
       </div>
     </MainCard>
   )

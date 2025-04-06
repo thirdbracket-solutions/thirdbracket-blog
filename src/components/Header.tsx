@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { FC } from 'react'
 import { BiChevronRight } from 'react-icons/bi'
 import { Logo } from './icons'
+import { MdSearch } from 'react-icons/md'
 
 // import { RiArrowRightUpLine, RiRecycleLine } from "react-icons/ri";
 
@@ -18,10 +19,7 @@ const Header: FC = () => {
           mobileMenu: 'bg-white dark:bg-black',
         }}
       >
-        {/* <Navbrand logo={<Logo />} href="/"></Navbrand> */}
-        <Navbrand logo={<Logo />} href="/">
-          {/* <span className="font-normal ml-1">BRACKET</span> */}
-        </Navbrand>
+        <Navbrand logo={<Logo />} href="/"></Navbrand>
 
         <NavItem>
           <Megamenu
@@ -363,6 +361,10 @@ const Header: FC = () => {
           <Navlink as={Link} href="contact">
             Contact
           </Navlink>
+          <Link href="/search">
+            <span className="sr-only">Search</span>
+            <MdSearch className="w-5 text-primary" />
+          </Link>
         </NavItem>
 
         <MobileNav>
@@ -565,6 +567,11 @@ const Header: FC = () => {
             </Navlink>
             <Navlink as={Link} href="/contact">
               Contact
+            </Navlink>
+            <Navlink as={Link} href="/search" cto>
+              <span className="sr-only">Search</span>
+
+              <MdSearch />
             </Navlink>
           </div>
         </MobileNav>

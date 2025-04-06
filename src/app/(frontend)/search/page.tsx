@@ -7,6 +7,8 @@ import React from 'react'
 import { Search } from '@/search/Component'
 import PageClient from './page.client'
 import { CardPostData } from '@/components/Card'
+import { Bracket } from '@thirdbracket/bracketui'
+import PageHeader from '@/components/PageHeader'
 
 type Args = {
   searchParams: Promise<{
@@ -60,12 +62,11 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
   })
 
   return (
-    <div className="pt-24 pb-24">
+    <Bracket>
       <PageClient />
-      <div className="container mb-16">
+      <PageHeader title="Search" description="Browse Web Development Blog" />
+      <div className="max-w-7xl mx-auto  py-8 sm:py-12 md:py-16">
         <div className="prose dark:prose-invert max-w-none text-center">
-          <h1 className="mb-8 lg:mb-16">Search</h1>
-
           <div className="max-w-[50rem] mx-auto">
             <Search />
           </div>
@@ -77,7 +78,7 @@ export default async function Page({ searchParams: searchParamsPromise }: Args) 
       ) : (
         <div className="container">No results found.</div>
       )}
-    </div>
+    </Bracket>
   )
 }
 

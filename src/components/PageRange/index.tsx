@@ -45,7 +45,11 @@ export const PageRange: React.FC<{
     {}
 
   return (
-    <div className={[className, 'font-semibold'].filter(Boolean).join(' ')}>
+    <div
+      className={[className, 'font-semibold text-primary-700 dark:text-primary-300']
+        .filter(Boolean)
+        .join(' ')}
+    >
       {(typeof totalDocs === 'undefined' || totalDocs === 0) && 'Search produced no results.'}
       {typeof totalDocs !== 'undefined' &&
         totalDocs > 0 &&
