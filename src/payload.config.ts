@@ -13,9 +13,15 @@ import { Posts } from './collections/Posts'
 import { Users } from './collections/Users'
 import { Footer } from './Footer/config'
 import { Header } from './Header/config'
-import { plugins } from './plugins'
+
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
+// import { formBuilderPlugin } from '@payloadcms/plugin-form-builder'
+// import { nestedDocsPlugin } from '@payloadcms/plugin-nested-docs'
+// import { searchPlugin } from '@payloadcms/plugin-search'
+// import { redirectsPlugin } from '@payloadcms/plugin-redirects'
+// import { seoPlugin } from '@payloadcms/plugin-seo'
+import { plugins } from './plugins'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -69,6 +75,60 @@ export default buildConfig({
   globals: [Header, Footer],
   plugins: [
     ...plugins,
+    // nestedDocsPlugin({
+    //   collections: ['pages'],
+
+    //   generateURL: (docs) => docs.reduce((url, doc) => `${url}/${doc.slug}`, ''),
+    // }),
+    // searchPlugin({
+    //   collections: ['pages', 'posts'],
+    //   defaultPriorities: {
+    //     pages: 10,
+    //     posts: 20,
+    //   },
+    // }),
+    // redirectsPlugin({
+    //   collections: ['pages'],
+    // }),
+    // seoPlugin({
+    //   collections: ['pages'],
+    //   uploadsCollection: 'media',
+    //   generateTitle: ({ doc }) => `Website.com — ${doc.title}`,
+    //   generateDescription: ({ doc }) => doc.excerpt,
+    // }),
+    // formBuilderPlugin({
+    //   formOverrides: {
+    //     fields: ({ defaultFields }) => {
+    //       return [
+    //         ...defaultFields,
+    //         {
+    //           name: 'hasAttachment',
+    //           type: 'checkbox',
+    //         },
+    //         {
+    //           name: 'hasAttachmentLabel',
+    //           type: 'text',
+    //         },
+    //       ]
+    //     },
+    //   },
+    //   formSubmissionOverrides: {
+    //     fields: ({ defaultFields }) => {
+    //       return [
+    //         ...defaultFields,
+    //         {
+    //           name: 'file',
+    //           type: 'upload',
+    //           relationTo: 'media',
+    //           admin: {
+    //             allowCreate: true,
+    //             allowEdit: true,
+    //           },
+    //         },
+    //       ]
+    //     },
+    //   },
+    // }),
 
     vercelBlobStorage({
       collections: {

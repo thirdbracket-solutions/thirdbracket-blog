@@ -53,3 +53,31 @@
 
 //   )
 // }
+
+// import { headers as getHeaders } from 'next/headers.js'
+
+// import { getPayload } from 'payload'
+// import React from 'react'
+// import { fileURLToPath } from 'url'
+
+// import config from '@/payload.config'
+
+import MyFormComponent from '@/components/ContactForm'
+import { Bracket } from '@thirdbracket/bracketui'
+import PageHeader from '@/components/PageHeader'
+
+export default async function Contact() {
+  // const headers = await getHeaders()
+  // const payloadConfig = await config
+  // const payload = await getPayload({ config: payloadConfig })
+  // const { user } = await payload.auth({ headers })
+
+  return (
+    <Bracket>
+      <PageHeader title="Contact Us" description="Get in touch with our team" />
+      <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16">
+        <MyFormComponent formId="1" />
+      </div>
+    </Bracket>
+  )
+}
