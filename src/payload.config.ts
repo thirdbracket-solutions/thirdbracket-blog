@@ -22,11 +22,17 @@ import { getServerSideURL } from './utilities/getURL'
 // import { redirectsPlugin } from '@payloadcms/plugin-redirects'
 // import { seoPlugin } from '@payloadcms/plugin-seo'
 import { plugins } from './plugins'
+import { resendAdapter } from '@payloadcms/email-resend'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
 export default buildConfig({
+  email: resendAdapter({
+    defaultFromAddress: 'no-reply@thirdbracket.co.uk',
+    defaultFromName: 'Third Bracket',
+    apiKey: process.env.RESEND_API_KEY || '',
+  }),
   admin: {
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
@@ -39,6 +45,7 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+
     user: Users.slug,
     livePreview: {
       breakpoints: [
@@ -75,60 +82,6 @@ export default buildConfig({
   globals: [Header, Footer],
   plugins: [
     ...plugins,
-    // nestedDocsPlugin({
-    //   collections: ['pages'],
-
-    //   generateURL: (docs) => docs.reduce((url, doc) => `${url}/${doc.slug}`, ''),
-    // }),
-    // searchPlugin({
-    //   collections: ['pages', 'posts'],
-    //   defaultPriorities: {
-    //     pages: 10,
-    //     posts: 20,
-    //   },
-    // }),
-    // redirectsPlugin({
-    //   collections: ['pages'],
-    // }),
-    // seoPlugin({
-    //   collections: ['pages'],
-    //   uploadsCollection: 'media',
-    //   generateTitle: ({ doc }) => `Website.com — ${doc.title}`,
-    //   generateDescription: ({ doc }) => doc.excerpt,
-    // }),
-    // formBuilderPlugin({
-    //   formOverrides: {
-    //     fields: ({ defaultFields }) => {
-    //       return [
-    //         ...defaultFields,
-    //         {
-    //           name: 'hasAttachment',
-    //           type: 'checkbox',
-    //         },
-    //         {
-    //           name: 'hasAttachmentLabel',
-    //           type: 'text',
-    //         },
-    //       ]
-    //     },
-    //   },
-    //   formSubmissionOverrides: {
-    //     fields: ({ defaultFields }) => {
-    //       return [
-    //         ...defaultFields,
-    //         {
-    //           name: 'file',
-    //           type: 'upload',
-    //           relationTo: 'media',
-    //           admin: {
-    //             allowCreate: true,
-    //             allowEdit: true,
-    //           },
-    //         },
-    //       ]
-    //     },
-    //   },
-    // }),
 
     vercelBlobStorage({
       collections: {
@@ -158,3 +111,6 @@ export default buildConfig({
     tasks: [],
   },
 })
+// function resendAdapter(arg0: { defaultFromAddress: string; defaultFromName: string; apiKey: string }) {
+//   throw new Error('Function not implemented.')
+// }

@@ -1,4 +1,5 @@
 import { cn } from '@/utilities/ui'
+
 import * as React from 'react'
 
 const Input: React.FC<
@@ -9,7 +10,7 @@ const Input: React.FC<
   return (
     <input
       className={cn(
-        'flex h-10 w-full rounded border border-border bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
+        'w-full h-10 px-3 py-2 text-sm border border-primary-500/40 file:border-0 file:bg-transparent file:text-sm file:font-medium rounded bg-white dark:bg-black text-black dark:text-white placeholder:text-primary-400 placeholder:dark:text-primary-600  focus:outline-none focus:ring-1 focus-visible:ring-1 focus:ring-secondary-400  dark:focus:ring-secondary-700 focus-visible:ring-secondary-400 dark:focus-visible:ring-secondary-700 disabled:opacity-50 disabled:cursor-not-allowed',
         className,
       )}
       ref={ref}

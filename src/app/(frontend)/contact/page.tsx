@@ -54,28 +54,52 @@
 //   )
 // }
 
-import { headers as getHeaders } from 'next/headers.js'
+// import { headers as getHeaders } from 'next/headers.js'
 
-import { getPayload } from 'payload'
+// import { getPayload } from 'payload'
 import React from 'react'
 
-import config from '@/payload.config'
+// import config from '@/payload.config'
 
-import MyFormComponent from '@/components/ContactForm'
 import { Bracket } from '@thirdbracket/bracketui'
 import PageHeader from '@/components/PageHeader'
+import { FormBlock } from '@/blocks/Form/Component'
 
-export default async function Contact() {
-  const headers = await getHeaders()
-  const payloadConfig = await config
-  const payload = await getPayload({ config: payloadConfig })
-  const { user } = await payload.auth({ headers })
+// export default async function Contact() {
+//   // const headers = await getHeaders()
+//   // const payloadConfig = await config
+//   // const payload = await getPayload({ config: payloadConfig })
+//   // const { user } = await payload.auth({ headers })
+
+//   return (
+//     <Bracket>
+//       <PageHeader title="Contact Us" description="Get in touch with our team" />
+//       <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16">
+//         <MyFormComponent formId="1" />
+//       </div>
+//     </Bracket>
+//   )
+// }
+
+async function getFormData() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/1`, {
+    cache: 'no-store', // Ensures fresh data on each request
+  })
+
+  if (!res.ok) return null
+  return res.json()
+}
+
+export default async function ContactPage() {
+  const form = await getFormData()
+
+  if (!form) return <p>Form not found</p>
 
   return (
-    <Bracket>
+    <Bracket className="container mx-auto p-8">
       <PageHeader title="Contact Us" description="Get in touch with our team" />
       <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16">
-        <MyFormComponent formId="1" />
+        <FormBlock form={form} enableIntro={false} />
       </div>
     </Bracket>
   )
