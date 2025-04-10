@@ -104,7 +104,10 @@ export const jsonLd: WithContext<WebPage> = {
 const baseUrl = Settings.metadataBase
 
 export const metadata: Metadata = {
-  title: Settings.title,
+  title: {
+    template: `%s | ${Settings.title}`,
+    default: `Enterprise Web Development & Marketing | ${Settings.title}`,
+  },
   metadataBase: new URL(baseUrl),
   description: Settings.description,
   keywords: Settings.keywords,

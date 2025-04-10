@@ -62,6 +62,6 @@ export default async function Page() {
 
 export function generateMetadata(): Metadata {
   return {
-    title: `Thirdbracket Posts`,
+    title: `Web Development & Digital Marketing Blogs`,
   }
 }

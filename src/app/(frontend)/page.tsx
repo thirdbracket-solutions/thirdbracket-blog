@@ -14,7 +14,7 @@ import Subscription from '../../components/Subscription'
 
 export default function Home() {
   return (
-    <Bracket>
+    <Bracket fluid centered padding="medium">
       <HeroSection />
 
       <FeatureOne />

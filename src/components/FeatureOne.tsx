@@ -7,11 +7,11 @@ export function FeatureOne() {
       {/* Header Container */}
       <div className="mx-auto max-w-screen-xl">
         {/* Title group with flex layout on large screens */}
-        <div className="mx-auto mb-8 md:mb-12 lg:mb-16 xl:max-w-6xl lg:max-w-6xl md:max-w-3xl max-w-lg sm:max-w-xl lg:flex lg:items-center lg:justify-between lg:gap-6">
-          <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl font-extrabold text-primary-950 dark:text-white lg:mb-0 text-center lg:text-right  px-4  lg:px-0">
-            Think Your Business Can not Afford a Professional&nbsp;Start?
+        <div className=" mb-8 md:mb-12 lg:mb-16  lg:flex lg:items-center lg:justify-between lg:gap-6">
+          <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-bold text-primary-950 dark:text-primary-50 lg:mb-0 text-center lg:text-left   ">
+            Think Your Business Can not Afford a Professional Start?
           </h2>
-          <p className="text-primary-950/60 dark:text-primary-200/60 font-light text-base md:text-lg lg:text-xl text-center lg:text-left px-4 lg:px-0">
+          <p className="text-primary-600  font-light text-base md:text-lg lg:text-xl  text-center lg:text-left ">
             We bring enterprise-level web development and digital marketing solutions within your
             budget, so you never feel left behind.
           </p>

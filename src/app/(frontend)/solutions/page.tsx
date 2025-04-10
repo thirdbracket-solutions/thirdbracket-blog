@@ -8,6 +8,11 @@ import { MdAutorenew, MdBusiness } from 'react-icons/md'
 import { TbBrandReact } from 'react-icons/tb'
 
 import { BsArrowUpRight } from 'react-icons/bs'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Web Development & Business Solutions',
+}
 
 interface SolutionCategory {
   title: string

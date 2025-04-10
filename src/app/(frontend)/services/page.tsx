@@ -5,6 +5,11 @@ import { IconType } from 'react-icons'
 import { FaWordpress, FaServer, FaSearch, FaPencilAlt, FaRocket } from 'react-icons/fa'
 import { SiNextdotjs } from 'react-icons/si'
 import { MdSpeed, MdDesignServices, MdBrandingWatermark } from 'react-icons/md'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Web & Digital Marketing Services',
+}
 
 interface ServiceCategory {
   title: string

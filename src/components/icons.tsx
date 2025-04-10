@@ -7,7 +7,7 @@ export const Logo = (props: SVGProps<SVGSVGElement>) => (
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
     viewBox="0 0 757 83"
-    className="h-[18px] md:h-6  w-auto  "
+    className="h-[18px] md:h-5  w-auto  "
     {...props}
   >
     <defs className="dark:hidden">

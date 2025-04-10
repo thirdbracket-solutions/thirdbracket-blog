@@ -64,22 +64,11 @@ import React from 'react'
 import { Bracket } from '@thirdbracket/bracketui'
 import PageHeader from '@/components/PageHeader'
 import { FormBlock } from '@/blocks/Form/Component'
+import { Metadata } from 'next'
 
-// export default async function Contact() {
-//   // const headers = await getHeaders()
-//   // const payloadConfig = await config
-//   // const payload = await getPayload({ config: payloadConfig })
-//   // const { user } = await payload.auth({ headers })
-
-//   return (
-//     <Bracket>
-//       <PageHeader title="Contact Us" description="Get in touch with our team" />
-//       <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16">
-//         <MyFormComponent formId="1" />
-//       </div>
-//     </Bracket>
-//   )
-// }
+export const metadata: Metadata = {
+  title: 'Get In Touch',
+}
 
 async function getFormData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/1`, {

@@ -1,6 +1,11 @@
-import { Bracket } from "@thirdbracket/bracketui";
-import PageHeader from "../../../components/PageHeader";
-import Image from "next/image";
+import { Bracket } from '@thirdbracket/bracketui'
+import PageHeader from '../../../components/PageHeader'
+import Image from 'next/image'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Us',
+}
 
 function BlogCard({
   title,
@@ -9,11 +14,11 @@ function BlogCard({
   author,
   image,
 }: {
-  title: string;
-  excerpt: string;
-  date: string;
-  author: string;
-  image: string;
+  title: string
+  excerpt: string
+  date: string
+  author: string
+  image: string
 }) {
   return (
     <div className="border border-primary-200 dark:border-primary-800 rounded-lg overflow-hidden">
@@ -34,27 +39,24 @@ function BlogCard({
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default function Blog() {
   const posts = [
     {
-      title: "Understanding Modern Web Development",
-      excerpt: "An overview of current trends...",
-      date: "2024-01-15",
-      author: "John Doe",
-      image: "/website.svg",
+      title: 'Understanding Modern Web Development',
+      excerpt: 'An overview of current trends...',
+      date: '2024-01-15',
+      author: 'John Doe',
+      image: '/website.svg',
     },
     // Add more blog posts
-  ];
+  ]
 
   return (
     <Bracket>
-      <PageHeader
-        title="About"
-        description="Insights and updates from our team"
-      />
+      <PageHeader title="About" description="Insights and updates from our team" />
       <div className="max-w-7xl mx-auto  py-8 sm:py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post, index) => (
@@ -63,5 +65,5 @@ export default function Blog() {
         </div>
       </div>
     </Bracket>
-  );
+  )
 }
