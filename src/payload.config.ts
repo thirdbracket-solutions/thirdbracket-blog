@@ -34,16 +34,20 @@ export default buildConfig({
     apiKey: process.env.RESEND_API_KEY || '',
   }),
   admin: {
+    importMap: {
+      baseDir: path.resolve(dirname),
+    },
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below and the import `BeforeLogin` statement on line 15.
-      beforeLogin: ['@/components/BeforeLogin'],
+      // beforeLogin: ['@/components/BeforeLogin'],
       // The `BeforeDashboard` component renders the 'welcome' block that you see after logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below and the import `BeforeDashboard` statement on line 15.
-      beforeDashboard: ['@/components/BeforeDashboard'],
-    },
-    importMap: {
-      baseDir: path.resolve(dirname),
+      // beforeDashboard: ['@/components/BeforeDashboard'],
+      graphics: {
+        Icon: '/graphics/Icon/index.tsx#Icon',
+        Logo: '/graphics/Logo/index.tsx#Logo',
+      },
     },
 
     user: Users.slug,
