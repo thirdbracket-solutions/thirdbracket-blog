@@ -6,7 +6,7 @@ const defaultOpenGraph: Metadata['openGraph'] = {
   description: 'Lightening Fast Website with Nextjs SEO features ',
   images: [
     {
-      url: `${getServerSideURL()}/website-thirdbracket-OG.webp.webp`,
+      url: `${getServerSideURL()}/og-image.png`,
     },
   ],
   siteName: 'Third Bracket',
