@@ -10,12 +10,12 @@ export function FeatureTwo() {
     <section className="py-8 sm:py-12 md:py-16">
       <div className="mx-auto max-w-screen-xl  ">
         <div className=" mb-8 md:mb-12 lg:mb-16 ">
-          <h2 className="mb-4 md:mb-6  text-3xl lg:text-4xl  font-bold text-primary-950 dark:text-primary-50   text-center ">
-            Best of Both Worlds- The Perfect Middle&nbsp;Ground
+          <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl lg:text-4xl  font-bold text-primary-950 dark:text-primary-50   text-center ">
+            Best of Both Worlds- The Perfect Middle Ground
           </h2>
           <p className="text-primary-600  text-base md:text-lg lg:text-xl  text-center   font-light  ">
             Freelancers can be unreliable. Agencies charge a premium. We offer the expertise,
-            structure, and execution of an agency—without the overhead cost.
+            structure, and execution of an&nbsp;agency—without&nbsp;the&nbsp;overhead cost.
           </p>
         </div>
         <div className="space-y-8 md:grid md:grid-cols-2 md:gap-8 md:space-y-0 lg:grid-cols-3 ">
