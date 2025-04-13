@@ -361,10 +361,10 @@ const Header: FC = () => {
           <Navlink as={Link} href="/contact">
             Contact
           </Navlink>
-          <Link href="/search">
+          <Navlink as={Link} href="/search">
             <span className="sr-only">Search</span>
             <MdSearch className="w-5 text-primary" />
-          </Link>
+          </Navlink>
         </NavItem>
 
         <MobileNav>
@@ -568,11 +568,11 @@ const Header: FC = () => {
             <Navlink as={Link} href="/contact">
               Contact
             </Navlink>
-            <Navlink as={Link} href="/search" cto>
+            {/* <Navlink as={Link} href="/search" cto>
               <span className="sr-only">Search</span>
 
               <MdSearch />
-            </Navlink>
+            </Navlink> */}
           </div>
         </MobileNav>
       </Navbar>

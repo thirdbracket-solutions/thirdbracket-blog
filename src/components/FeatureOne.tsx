@@ -1,5 +1,6 @@
 import { Card } from '@thirdbracket/bracketui'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export function FeatureOne() {
   return (
@@ -23,6 +24,7 @@ export function FeatureOne() {
           <div className="grid gap-8 md:grid-cols-2">
             <Card
               size="lg"
+              as={Link}
               href="/solutions"
               className="w-full h-full rounded-lg border border-primary-500  border-opacity-40 overflow-hidden flex flex-col transition-all duration-300 ease-in-out   focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 " // Added full width and height
               cover={
@@ -46,6 +48,7 @@ export function FeatureOne() {
             <Card
               size="lg"
               href="/services"
+              as={Link}
               className="w-full h-full rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out  focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 " // Added full width and height
               cover={
                 <div className="h-60 w-full lg:h-80 bg-white dark:bg-black bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#636e9f1f_1px,transparent_1px),linear-gradient(to_bottom,#636e9f1f_1px,transparent_1px)] bg-[size:14px_24px]   relative">
@@ -65,6 +68,7 @@ export function FeatureOne() {
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             <Card
               size="lg"
+              as={Link}
               className="w-full h-full rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 " // Added full width and height
               header="Missing Modern Features?"
               href="/solutions"
@@ -77,6 +81,7 @@ export function FeatureOne() {
 
             <Card
               size="lg"
+              as={Link}
               className="w-full h-full rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 " // Added full width and height
               header="Tired of Searching for Marketers?"
               href="/solutions"
@@ -89,6 +94,7 @@ export function FeatureOne() {
 
             <Card
               size="lg"
+              as={Link}
               className="w-full h-full rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100  md:hover:border-opacity-100 "
               header="SEO Takes Too Long!"
               href="/solutions"

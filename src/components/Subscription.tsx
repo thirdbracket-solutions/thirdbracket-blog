@@ -68,7 +68,6 @@ const Subscription = () => {
             <div className="flex-1 max-w-xl w-full">
               <Form onSubmit={handleSubmit}>
                 <div className="relative">
-                  {/* <label className="sr-only">Email address</label> */}
                   <FormLabel className="sr-only">Email address</FormLabel>
                   {/* <input
                     type="email"
@@ -102,7 +101,6 @@ const Subscription = () => {
                       isLoading={state.isSubmitting}
                       size="md"
                       className="bg-gradient-primary dark:bg-gradient-primary-dark !text-white dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85 "
-                      // className="border-transparent !bg-accent-500 dark:!bg-accent-400 !text-white dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-80"
                     >
                       Subscribe
                     </Button>

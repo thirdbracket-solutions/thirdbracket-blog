@@ -1,4 +1,5 @@
 import { Card } from '@thirdbracket/bracketui'
+import Link from 'next/link'
 
 import { MdOutlineAutoGraph } from 'react-icons/md'
 import { RiMedal2Line, RiRunLine, RiStackLine, RiUserCommunityLine } from 'react-icons/ri'
@@ -27,7 +28,6 @@ export function FeatureTwo() {
               <RiMedal2Line className="h-12 w-12     text-secondary-950 dark:text-secondary-200 " />
             }
             header="Expertise & Flexibility"
-            href="/solutions"
           >
             <span className="text-primary-950/60 dark:text-primary-200/60 font-light">
               Experience agency expertise with freelancer flexibility. Access a unified team of
@@ -38,7 +38,6 @@ export function FeatureTwo() {
             size="lg"
             className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 "
             isIcon
-            href="/solutions"
             cover={
               <RiStackLine className="h-12 w-12     text-secondary-900 dark:text-secondary-200" />
             }
@@ -52,7 +51,6 @@ export function FeatureTwo() {
           <Card
             size="lg"
             isIcon
-            href="/services"
             className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 "
             cover={
               <MdOutlineAutoGraph className="h-12 w-12     text-secondary-900 dark:text-secondary-200" />
@@ -68,7 +66,6 @@ export function FeatureTwo() {
           <Card
             size="lg"
             isIcon
-            href="/services"
             className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 "
             cover={
               <RiUserCommunityLine className="h-12 w-12     text-secondary-900 dark:text-secondary-200" />
@@ -84,7 +81,6 @@ export function FeatureTwo() {
           <Card
             size="lg"
             isIcon
-            href="/services"
             className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 "
             cover={
               <VscUnlock className="h-12 w-12     text-secondary-900 dark:text-secondary-200" />
@@ -99,9 +95,9 @@ export function FeatureTwo() {
           <Card
             className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 "
             size="lg"
-            isExternal
+            as={Link}
             isIcon
-            href="/services"
+            href="/contact"
             cover={
               <RiRunLine className="h-12 w-12     text-secondary-900 dark:text-secondary-200 " />
             }

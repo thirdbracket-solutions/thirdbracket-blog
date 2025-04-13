@@ -1,6 +1,7 @@
 import { Button } from '@thirdbracket/bracketui'
 import React from 'react'
 import { Nextjs, Tailwind, Vercel } from './icons'
+import Link from 'next/link'
 
 const HeroSection: React.FC = () => {
   return (
@@ -61,9 +62,11 @@ const HeroSection: React.FC = () => {
           <div className="flex justify-center gap-3 md:gap-4 backdrop-blur-sm">
             <Button
               size="lg"
+              as={Link}
+              href="/about"
               className="hidden  md:flex !bg-gradient-primary dark:!bg-gradient-primary-dark !text-white dark:!text-primary-950  [@media(hover:hover)]:hover:opacity-90 active:opacity-80"
             >
-              Get Started
+              About Us
               <svg
                 className="size-4 ml-2"
                 fill="currentColor"
@@ -80,6 +83,8 @@ const HeroSection: React.FC = () => {
             <Button
               outline
               size="lg"
+              as={Link}
+              href="/contact"
               className="hidden  md:flex !border-secondary-100 dark:!border-secondary-950   !text-primary-900 dark:!text-primary-50  [@media(hover:hover)]:hover:!bg-primary-100 [@media(hover:hover)]:dark:hover:!bg-primary-900 active:!bg-primary-200 dark:active:!bg-secondary-900"
             >
               <svg
@@ -90,13 +95,15 @@ const HeroSection: React.FC = () => {
               >
                 <path d="M860 265h-61q-8 0-13.5 5.5T780 284v246q0 39-28 67t-68 28H279q-8 0-13.5 5.5T260 644v61q0 17 11.5 28.5T300 745h415q25 0 43 18l110 110q4 4 9.5 5t11-1 8.5-7 3-11V305q0-17-11.5-28.5T860 265zM700 505V145q0-17-11.5-28.5T660 105H140q-17 0-28.5 11.5T100 145v514q0 6 3 11t8.5 7 11 1 9.5-5l110-110q18-18 43-18h375q17 0 28.5-12t11.5-28z"></path>
               </svg>
-              Get Consultation
+              Contact Us
             </Button>
             <Button
               size="md"
+              as={Link}
+              href="/about"
               className="md:hidden flex  !bg-gradient-primary dark:!bg-gradient-primary-dark !text-white dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85"
             >
-              Get Started
+              About Us
               <svg
                 className="size-4 ml-2"
                 fill="currentColor"
@@ -112,6 +119,8 @@ const HeroSection: React.FC = () => {
             </Button>
             <Button
               outline
+              as={Link}
+              href="/contact"
               size="md"
               className="md:hidden flex !border-secondary-100 dark:!border-secondary-950   !text-primary-900 dark:!text-primary-50  [@media(hover:hover)]:hover:!bg-primary-100 [@media(hover:hover)]:dark:hover:!bg-primary-950 active:!bg-secondary-200 dark:active:!bg-secondary-900"
             >
@@ -132,13 +141,25 @@ const HeroSection: React.FC = () => {
               FEATURED IN
             </h3>
             <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 md:gap-12 lg:gap-16 sm:items-center  text-primary-500 justify-start sm:justify-between ">
-              <a href="#" className=" hover:text-primary-700 dark:hover:text-primary-400 ">
+              <a
+                href="https://tailwindcss.com/"
+                target="_blank"
+                className=" hover:text-primary-700 dark:hover:text-primary-400 "
+              >
                 <Tailwind />
               </a>
-              <a href="#" className=" hover:text-primary-700 dark:hover:text-primary-400 ">
+              <a
+                href="https://nextjs.org/"
+                target="_blank"
+                className=" hover:text-primary-700 dark:hover:text-primary-400 "
+              >
                 <Nextjs />
               </a>
-              <a href="#" className="  hover:text-primary-700 dark:hover:text-primary-400 ">
+              <a
+                href="https://vercel.com"
+                target="_blank"
+                className="  hover:text-primary-700 dark:hover:text-primary-400 "
+              >
                 <Vercel />
               </a>
             </div>
