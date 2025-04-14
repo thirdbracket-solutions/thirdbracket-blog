@@ -25,10 +25,10 @@ import { VscUnlock } from 'react-icons/vsc'
 
 export function FeatureTwo() {
   return (
-    <section className="py-8 sm:py-12 md:py-16">
+    <section className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">
       <div className="mx-auto max-w-screen-xl  ">
         <div className=" mb-8 md:mb-12 lg:mb-16 ">
-          <h2 className="mb-4 md:mb-6 text-2xl md:text-3xl lg:text-4xl  font-bold text-primary-950 dark:text-primary-50   text-center ">
+          <h2 className="mb-4 md:mb-6 text-3xl  lg:text-4xl  font-bold text-primary-900/90 dark:text-primary-50/90   text-center ">
             Why Choose Us for Web Development?
           </h2>
           <p className="text-primary-600  text-base md:text-lg lg:text-xl  text-center   font-light  ">
@@ -46,7 +46,7 @@ export function FeatureTwo() {
             }
             header="Expertise & Flexibility"
           >
-            <span className="text-primary-950/60 dark:text-primary-200/60 font-light">
+            <span className="text-primary-600 font-light">
               Get senior-level skills with startup agility. Experience agency expertise with
               freelancer flexibility. Access a unified team of top-rated professionals, not just
               scattered freelancers.
@@ -61,7 +61,7 @@ export function FeatureTwo() {
             }
             header="Modern Stack"
           >
-            <span className="text-primary-950/60 dark:text-primary-200/60 font-light">
+            <span className="text-primary-600 font-light">
               Next.js, TailwindCSS & Typescript. We build with the technologies powering today’s
               best-performing websites—ensuring fast loads, clean code, and easy scaling.
             </span>
@@ -75,7 +75,7 @@ export function FeatureTwo() {
             }
             header="Built for Growth"
           >
-            <span className="text-primary-950/60 dark:text-primary-200/60 font-light">
+            <span className="text-primary-600 font-light">
               Future-ready websites that evolve with you. Every site is architected to support SEO,
               performance, and feature expansion—perfect for startups aiming to scale or agencies
               needing long-term solutions.
@@ -90,7 +90,7 @@ export function FeatureTwo() {
             }
             header="Seamless Collaboration"
           >
-            <span className="font-light">
+            <span className="text-primary-600 font-light">
               We work like part of your team. Slack, Notion, GitHub—whatever you use, we integrate
               smoothly. Communication is clear, responsive, and always aligned with your timelines.
             </span>
@@ -104,7 +104,7 @@ export function FeatureTwo() {
             }
             header="No Lock-in, No Bloat"
           >
-            <span className="text-primary-950/60 dark:text-primary-200/60 font-light">
+            <span className="text-primary-600 font-light">
               You pay for what you need—no unnecessary subscriptions, yearly lock-ins, or bloated
               retainers. Just clean code, full ownership, and total freedom to move forward on your
               terms.
@@ -121,7 +121,7 @@ export function FeatureTwo() {
             }
             header="Timely Deliveries"
           >
-            <span className=" font-light">
+            <span className="text-primary-600 font-light">
               Fast doesn’t mean rushed. We always deliver on time, without compromising quality. Our
               process is built around clear milestones and predictable outputs.
             </span>

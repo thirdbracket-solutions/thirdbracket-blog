@@ -5,10 +5,10 @@ import Link from 'next/link'
 
 const HeroSection: React.FC = () => {
   return (
-    <section className="pb-8 sm:pb-12 md:pb-16 pt-20  lg:pt-24 bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
+    <section className=" pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36  bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
       <div className="sm:mx-auto   max-w-screen-xl">
-        <div className="flex flex-col items-start sm:items-center    space-y-10 md:space-y-12 lg:space-y-16 lg:space-y-18">
-          <a
+        <div className="flex flex-col  items-start sm:items-center    space-y-10 md:space-y-12 lg:space-y-16 ">
+          {/* <a
             href="#"
             className="flex items-center justify-between rounded-full  
     pr-3 py-0.5 pl-0.5  text-[10px] lg:text-[13px] 
@@ -42,27 +42,26 @@ const HeroSection: React.FC = () => {
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </a> */}
 
           {/* Heading */}
-          <div>
-            <h1 className="text-4xl  font-extrabold md:text-5xl lg:text-6xl bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text text-left sm:text-center    capitalize mb-4 md:mb-6">
-              Next.js Web Development for UK Agencies&nbsp;&&nbsp;Startups
-            </h1>
 
-            {/* 800-#1f2937,900- #111827, 200-#e5e7eb, 100-#f3f4f6  #030712 #f9fafb*/}
-            {/* Paragraph */}
-            <p className="text-primary-600  font-light text-base md:text-lg lg:text-xl  lg:px-24 sm:px-6 px-0 backdrop-blur-sm  text-left sm:text-center ">
-              We build fast, SEO-optimized websites using Next.js and TailwindCSS. Our custom React
-              component library delivers minimal, professional design that’s hard to outsource
-              without an in-house team.
-            </p>
-          </div>
+          <h1 className="text-[2.55rem]  font-extrabold md:text-5xl leading-none lg:text-6xl text-primary-900 dark:text-primary-50 text-left sm:text-center lg:max-w-screen-md xl:max-w-screen-lg sm:max-w-lg md:max-w-screen-sm max-w-md  capitalize ">
+            Next.js Web Development for UK Agencies & Startups
+          </h1>
+
+          {/* 800-#1f2937,900- #111827, 200-#e5e7eb, 100-#f3f4f6  #030712 #f9fafb*/}
+          {/* Paragraph */}
+          <p className="text-primary-700 dark:text-primary-600  font-light text-base md:text-lg lg:text-xl lg:max-w-screen-md sm:max-w-lg md:max-w-screen-sm backdrop-blur-sm  text-left sm:text-center xl:max-w-screen-lg">
+            We build fast, SEO-optimized websites using Next.js and TailwindCSS. Our custom React
+            component library delivers minimal, professional design that’s hard to outsource without
+            an in-house team.
+          </p>
 
           {/* Button Group */}
           <div className="flex justify-center gap-3 md:gap-4 backdrop-blur-sm">
             <Button
-              size="lg"
+              size="md"
               as={Link}
               href="/about"
               className="hidden  md:flex !bg-gradient-primary dark:!bg-gradient-primary-dark !text-white dark:!text-primary-950  [@media(hover:hover)]:hover:opacity-90 active:opacity-80"
@@ -83,7 +82,7 @@ const HeroSection: React.FC = () => {
             </Button>
             <Button
               outline
-              size="lg"
+              size="md"
               as={Link}
               href="/contact"
               className="hidden  md:flex !border-secondary-100 dark:!border-secondary-950   !text-primary-900 dark:!text-primary-50  [@media(hover:hover)]:hover:!bg-primary-100 [@media(hover:hover)]:dark:hover:!bg-primary-900 active:!bg-primary-200 dark:active:!bg-secondary-900"
@@ -99,7 +98,7 @@ const HeroSection: React.FC = () => {
               Contact Us
             </Button>
             <Button
-              size="md"
+              size="sm"
               as={Link}
               href="/about"
               className="md:hidden flex  !bg-gradient-primary dark:!bg-gradient-primary-dark !text-white dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85"
@@ -122,7 +121,7 @@ const HeroSection: React.FC = () => {
               outline
               as={Link}
               href="/contact"
-              size="md"
+              size="sm"
               className="md:hidden flex !border-secondary-100 dark:!border-secondary-950   !text-primary-900 dark:!text-primary-50  [@media(hover:hover)]:hover:!bg-primary-100 [@media(hover:hover)]:dark:hover:!bg-primary-950 active:!bg-secondary-200 dark:active:!bg-secondary-900"
             >
               <svg
