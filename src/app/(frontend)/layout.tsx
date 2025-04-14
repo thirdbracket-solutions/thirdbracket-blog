@@ -85,7 +85,7 @@ export const jsonLd: WithContext<WebPage> = {
 
   url: 'https://www.thirdbracket.co.uk/',
   description:
-    'Step into Third Bracket Solutions, a UK-based modern web infrastructure development service born from the collective efforts of a group of nomads who conquered platforms like Upwork and Fiverr',
+    'We specialize in web development for agencies, startups, and vendors. Offering fast, SEO-friendly websites built with the power of Next.js.',
 
   isPartOf: {
     '@type': 'WebSite',
@@ -94,7 +94,7 @@ export const jsonLd: WithContext<WebPage> = {
   },
   publisher: {
     '@type': 'Organization',
-    name: 'Third Bracket Solution',
+    name: 'Third Bracket Studio',
     url: 'https://www.thirdbracket.co.uk/',
     legalName: 'Third Bracket Solution',
     sameAs: ['https://www.facebook.com/thirdbracket.co.uk'],
@@ -106,7 +106,7 @@ const baseUrl = Settings.metadataBase
 export const metadata: Metadata = {
   title: {
     template: `%s | ${Settings.title}`,
-    default: `Enterprise Web Development & Marketing | ${Settings.title}`,
+    default: `Next.js Web Development & SEO-Optimized Websites for UK Startups, Agencies, and Businesses | ${Settings.title}`,
   },
   metadataBase: new URL(baseUrl),
   description: Settings.description,

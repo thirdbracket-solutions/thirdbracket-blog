@@ -7,7 +7,7 @@ const HeroSection: React.FC = () => {
   return (
     <section className="pb-8 sm:pb-12 md:pb-16 pt-20  lg:pt-24 bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
       <div className="sm:mx-auto   max-w-screen-xl">
-        <div className="flex flex-col items-start sm:items-center    space-y-8 md:space-y-12 lg:space-y-16">
+        <div className="flex flex-col items-start sm:items-center    space-y-10 md:space-y-12 lg:space-y-16 lg:space-y-18">
           <a
             href="#"
             className="flex items-center justify-between rounded-full  
@@ -47,14 +47,15 @@ const HeroSection: React.FC = () => {
           {/* Heading */}
           <div>
             <h1 className="text-4xl  font-extrabold md:text-5xl lg:text-6xl bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text text-left sm:text-center    capitalize mb-4 md:mb-6">
-              Enterprise Web Development & SEO, Made&nbsp;Affordable
+              Next.js Web Development for UK Agencies&nbsp;&&nbsp;Startups
             </h1>
 
             {/* 800-#1f2937,900- #111827, 200-#e5e7eb, 100-#f3f4f6  #030712 #f9fafb*/}
             {/* Paragraph */}
             <p className="text-primary-600  font-light text-base md:text-lg lg:text-xl  lg:px-24 sm:px-6 px-0 backdrop-blur-sm  text-left sm:text-center ">
-              We build custom websites, provide digital solutions, and drive business
-              growth—everything you’d expect from an agency, at a price that works for you.
+              We build fast, SEO-optimized websites using Next.js and TailwindCSS. Our custom React
+              component library delivers minimal, professional design that’s hard to outsource
+              without an in-house team.
             </p>
           </div>
 
@@ -66,7 +67,7 @@ const HeroSection: React.FC = () => {
               href="/about"
               className="hidden  md:flex !bg-gradient-primary dark:!bg-gradient-primary-dark !text-white dark:!text-primary-950  [@media(hover:hover)]:hover:opacity-90 active:opacity-80"
             >
-              About Us
+              Learn More
               <svg
                 className="size-4 ml-2"
                 fill="currentColor"
@@ -103,7 +104,7 @@ const HeroSection: React.FC = () => {
               href="/about"
               className="md:hidden flex  !bg-gradient-primary dark:!bg-gradient-primary-dark !text-white dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85"
             >
-              About Us
+              Learn More
               <svg
                 className="size-4 ml-2"
                 fill="currentColor"
@@ -132,7 +133,7 @@ const HeroSection: React.FC = () => {
               >
                 <path d="M860 265h-61q-8 0-13.5 5.5T780 284v246q0 39-28 67t-68 28H279q-8 0-13.5 5.5T260 644v61q0 17 11.5 28.5T300 745h415q25 0 43 18l110 110q4 4 9.5 5t11-1 8.5-7 3-11V305q0-17-11.5-28.5T860 265zM700 505V145q0-17-11.5-28.5T660 105H140q-17 0-28.5 11.5T100 145v514q0 6 3 11t8.5 7 11 1 9.5-5l110-110q18-18 43-18h375q17 0 28.5-12t11.5-28z"></path>
               </svg>
-              Consult Us
+              Contact Us
             </Button>
           </div>
           {/* Featured section*/}
