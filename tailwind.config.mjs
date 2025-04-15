@@ -16,24 +16,11 @@ const config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        // "gradient-accent":
-
-        //"gradient-accent":
-        //"conic-gradient(at bottom right,  #f3d7e5, #f3f7fa, #f3d7e5 )",
-        // "gradient-accent-dark":
-        //"conic-gradient(at bottom right, #431423,  #292d3d, #6f2c42)",
-        'gradient-accent': 'conic-gradient(at bottom right,  #f3d7e5, #f3f7fa )',
-        'gradient-accent-dark': 'conic-gradient(at bottom right, #431423,  #292d3)',
-        'gradient-primary-dark': 'conic-gradient(at bottom left, #e8ecef, #f3f7fa, #f6fafb)',
-        'gradient-primary': 'conic-gradient(at bottom left, #101014, #292d3d, #353942)',
-        'gradient-secondary-dark': 'conic-gradient(at bottom left, #f6fafb, #f3f7fa, #e9eff6)',
-        'gradient-secondary':
-          // "conic-gradient(at bottom left, #212429, #292d3d, #464d69)",
-          'conic-gradient(at_bottom_right,_var(--tw-gradient-stops)) ',
-      },
+      // backgroundImage: {
+      //   'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      //   'gradient-conic': 'conic-gradient(var(--tw-gradient-stops))',
+      // },
       colors: {
-        mix: 'from-[#8697c4] via-[#fbf4f7] to-[#e9eff6]',
         accent: {
           50: '#fbf4f7',
           100: '#f8ebf1',

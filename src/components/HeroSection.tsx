@@ -5,7 +5,7 @@ import Link from 'next/link'
 
 const HeroSection: React.FC = () => {
   return (
-    <section className=" pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pt-20 sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36  bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
+    <section className=" pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pt-[5.5rem] sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36  bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
       <div className="sm:mx-auto   max-w-screen-xl">
         <div className="flex flex-col  items-start sm:items-center    space-y-10 md:space-y-12 lg:space-y-16 ">
           {/* <a
@@ -46,7 +46,10 @@ const HeroSection: React.FC = () => {
 
           {/* Heading */}
 
-          <h1 className="text-[2.55rem]  font-extrabold md:text-5xl leading-none lg:text-6xl text-primary-900 dark:text-primary-50 text-left sm:text-center lg:max-w-screen-md xl:max-w-screen-lg sm:max-w-lg md:max-w-screen-sm max-w-md  capitalize ">
+          <h1
+            className="text-[2.55rem]  font-extrabold md:text-5xl leading-none lg:text-6xl   text-left bg-[conic-gradient(at_right,_var(--tw-gradient-stops))]
+from-black dark:from-white via-secondary-800 dark:via-secondary-200  to-primary-950 dark:to-primary-50  text-transparent bg-clip-text sm:text-center lg:max-w-screen-md xl:max-w-screen-lg sm:max-w-lg md:max-w-screen-sm max-w-md  capitalize "
+          >
             Next.js Web Development for UK Agencies & Startups
           </h1>
 
@@ -60,7 +63,7 @@ const HeroSection: React.FC = () => {
 
           {/* Button Group */}
           <div className="flex justify-center gap-3 md:gap-4 backdrop-blur-sm">
-            <Button
+            {/* <Button
               size="md"
               as={Link}
               href="/about"
@@ -96,12 +99,13 @@ const HeroSection: React.FC = () => {
                 <path d="M860 265h-61q-8 0-13.5 5.5T780 284v246q0 39-28 67t-68 28H279q-8 0-13.5 5.5T260 644v61q0 17 11.5 28.5T300 745h415q25 0 43 18l110 110q4 4 9.5 5t11-1 8.5-7 3-11V305q0-17-11.5-28.5T860 265zM700 505V145q0-17-11.5-28.5T660 105H140q-17 0-28.5 11.5T100 145v514q0 6 3 11t8.5 7 11 1 9.5-5l110-110q18-18 43-18h375q17 0 28.5-12t11.5-28z"></path>
               </svg>
               Contact Us
-            </Button>
+            </Button> */}
             <Button
-              size="sm"
+              size="md"
               as={Link}
               href="/about"
-              className="md:hidden flex  !bg-gradient-primary dark:!bg-gradient-primary-dark !text-white dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85"
+              className="  !bg-[conic-gradient(at_bootom_left,_var(--tw-gradient-stops))]
+from-black dark:from-white via-secondary-800 dark:via-secondary-200  to-primary-950 dark:to-primary-50 !text-white dark:!text-black [@media(hover:hover)]:hover:opacity-95 active:opacity-85"
             >
               Learn More
               <svg
@@ -121,8 +125,8 @@ const HeroSection: React.FC = () => {
               outline
               as={Link}
               href="/contact"
-              size="sm"
-              className="md:hidden flex !border-secondary-100 dark:!border-secondary-950   !text-primary-900 dark:!text-primary-50  [@media(hover:hover)]:hover:!bg-primary-100 [@media(hover:hover)]:dark:hover:!bg-primary-950 active:!bg-secondary-200 dark:active:!bg-secondary-900"
+              size="md"
+              className=" !border-primary-200 dark:!border-primary-800   !text-black dark:!text-white  [@media(hover:hover)]:hover:!bg-primary-100 [@media(hover:hover)]:dark:hover:!bg-primary-900 active:!bg-secondary-100 dark:active:!bg-secondary-900"
             >
               <svg
                 className="size-4 mr-2"
