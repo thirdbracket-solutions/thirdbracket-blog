@@ -24,19 +24,10 @@ import { Settings } from '../../utilities/meta'
 import { Metadata } from 'next'
 import { WebPage, WithContext } from 'schema-dts'
 import Script from 'next/script'
+import GTM from '@/components/GTM'
 
 const roboto = localFont({
   src: [
-    {
-      path: './Roboto-Thin.ttf',
-      weight: '100',
-      style: 'normal',
-    },
-    {
-      path: './Roboto-ExtraLight.ttf',
-      weight: '200',
-      style: 'normal',
-    },
     {
       path: './Roboto-Light.ttf',
       weight: '300',
@@ -50,13 +41,9 @@ const roboto = localFont({
     {
       path: './Roboto-Medium.ttf',
       weight: '500',
-      style: 'italic',
-    },
-    {
-      path: './Roboto-SemiBold.ttf',
-      weight: '600',
       style: 'normal',
     },
+
     {
       path: './Roboto-Bold.ttf',
       weight: '700',
@@ -65,11 +52,6 @@ const roboto = localFont({
     {
       path: './Roboto-ExtraBold.ttf',
       weight: '800',
-      style: 'normal',
-    },
-    {
-      path: './Roboto-Black.ttf',
-      weight: '900',
       style: 'normal',
     },
   ],
@@ -150,7 +132,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <head>
         {/* Google Tag Manager - Head */}
-        <Script
+        {/* <Script
           id="gtm-head"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
@@ -162,7 +144,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               })(window,document,'script','dataLayer','GTM-5LLRMTFW');
             `,
           }}
-        />
+        /> */}
+        <meta name="gtm-id" content="GTM-5LLRMTFW" />
+
         <meta name="msvalidate.01" content="46803F5EEF01F535EF3999B5E1F48682" />
         <ThemeScript />
         <script
@@ -174,19 +158,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body suppressHydrationWarning>
         {/* <MegaHeader /> */}
         {/* Google Tag Manager - Body */}
-        <noscript>
+        {/* <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-5LLRMTFW"
             height="0"
             width="0"
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
-        </noscript>
+        </noscript> */}
         <Header />
         <main className="min-h-screen py-8 sm:py-12 md:py-16  bg-white dark:bg-black">
           {children}
         </main>
         <SiteFooter />
+        <GTM />
       </body>
     </html>
   )

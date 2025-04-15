@@ -46,7 +46,7 @@ const Subscription = () => {
         {state.isSuccess ? (
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12">
             <div className="text-5xl mb-4">🎉</div>
-            <h3 className="text-3xl font-extrabold  text-primary-950 dark:text-white   mb-2 lg:mb-6">
+            <h3 className="text-3xl font-extrabold  bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text   mb-2 lg:mb-6">
               Thank you for subscribing!
             </h3>
             <p className="text-primary-800/90 dark:text-primary-100 text-base md:text-lg lg:text-xl  max-w-md font-light">
@@ -56,10 +56,10 @@ const Subscription = () => {
         ) : (
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12 ">
             <div>
-              <h3 className="text-3xl font-extrabold  text-primary-900 dark:text-white   mb-2 lg:mb-6">
+              <h3 className="text-3xl font-extrabold  bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text  mb-2 lg:mb-6">
                 Stay Updated
               </h3>
-              <p className="text-primary-800/70 dark:text-primary-100 text-base md:text-lg lg:text-xl  max-w-md font-light">
+              <p className="text-primary-950/80 dark:text-primary-50/70 text-base md:text-lg lg:text-xl  max-w-md font-light">
                 Subscribe to our newsletter for updates and exclusive content delivered straight to
                 your inbox.
               </p>
@@ -108,7 +108,7 @@ const Subscription = () => {
                 </div>
 
                 <div className="mt-3">
-                  <p className="text-sm text-primary-800/80 dark:text-primary-100/90  font-light">
+                  <p className="text-sm text-primary-900/80 dark:text-primary-100/70  font-light">
                     We respect your privacy. Unsubscribe at any time.
                   </p>
                   {state.error && <p className="text-sm text-red-500 mt-1">{state.error}</p>}

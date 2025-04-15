@@ -5,9 +5,9 @@ import Link from 'next/link'
 
 const HeroSection: React.FC = () => {
   return (
-    <section className=" pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pt-[5.5rem] sm:pt-24 md:pt-28 lg:pt-32 xl:pt-36  bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
+    <section className=" pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pt-[5.5rem] sm:pt-24 md:pt-28 lg:pt-32   bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
       <div className="sm:mx-auto   max-w-screen-xl">
-        <div className="flex flex-col  items-start sm:items-center    space-y-10 md:space-y-12 lg:space-y-16 ">
+        <div className="flex flex-col  items-start sm:items-center    space-y-10 md:space-y-12 lg:space-y-14 ">
           {/* <a
             href="#"
             className="flex items-center justify-between rounded-full  
@@ -46,23 +46,20 @@ const HeroSection: React.FC = () => {
 
           {/* Heading */}
 
-          <h1
-            className="text-[2.55rem]  font-extrabold md:text-5xl leading-none lg:text-6xl   text-left bg-[conic-gradient(at_right,_var(--tw-gradient-stops))]
-from-black dark:from-white via-secondary-800 dark:via-secondary-200  to-primary-950 dark:to-primary-50  text-transparent bg-clip-text sm:text-center lg:max-w-screen-md xl:max-w-screen-lg sm:max-w-lg md:max-w-screen-sm max-w-md  capitalize "
-          >
+          <h1 className="text-[2.55rem]/[1]  font-extrabold md:text-5xl/[1.1]  lg:text-6xl/[1.1]   text-left bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text sm:text-center lg:max-w-screen-md xl:max-w-screen-lg sm:max-w-lg md:max-w-screen-sm max-w-md  capitalize ">
             Next.js Web Development for UK Agencies & Startups
           </h1>
 
           {/* 800-#1f2937,900- #111827, 200-#e5e7eb, 100-#f3f4f6  #030712 #f9fafb*/}
           {/* Paragraph */}
-          <p className="text-primary-700 dark:text-primary-600  font-light text-base md:text-lg lg:text-xl lg:max-w-screen-md sm:max-w-lg md:max-w-screen-sm backdrop-blur-sm  text-left sm:text-center xl:max-w-screen-lg">
+          <p className="text-primary-950/80 dark:text-primary-50/60  font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  lg:max-w-screen-md sm:max-w-lg md:max-w-screen-sm backdrop-blur-sm  text-left sm:text-center xl:max-w-[900px]">
             We build fast, SEO-optimized websites using Next.js and TailwindCSS. Our custom React
             component library delivers minimal, professional design that’s hard to outsource without
             an in-house team.
           </p>
 
           {/* Button Group */}
-          <div className="flex justify-center gap-3 md:gap-4 backdrop-blur-sm">
+          <div className="flex justify-center gap-4 md:gap-6 backdrop-blur-sm">
             {/* <Button
               size="md"
               as={Link}
@@ -104,8 +101,7 @@ from-black dark:from-white via-secondary-800 dark:via-secondary-200  to-primary-
               size="md"
               as={Link}
               href="/about"
-              className="  !bg-[conic-gradient(at_bootom_left,_var(--tw-gradient-stops))]
-from-black dark:from-white via-secondary-800 dark:via-secondary-200  to-primary-950 dark:to-primary-50 !text-white dark:!text-black [@media(hover:hover)]:hover:opacity-95 active:opacity-85"
+              className="  !bg-gradient-primary dark:!bg-gradient-primary-dark !font-medium  !text-white dark:!text-black [@media(hover:hover)]:hover:opacity-95 active:opacity-85"
             >
               Learn More
               <svg
@@ -126,7 +122,7 @@ from-black dark:from-white via-secondary-800 dark:via-secondary-200  to-primary-
               as={Link}
               href="/contact"
               size="md"
-              className=" !border-primary-200 dark:!border-primary-800   !text-black dark:!text-white  [@media(hover:hover)]:hover:!bg-primary-100 [@media(hover:hover)]:dark:hover:!bg-primary-900 active:!bg-secondary-100 dark:active:!bg-secondary-900"
+              className=" !border-primary-200 dark:!border-primary-800   !text-black dark:!text-white  [@media(hover:hover)]:hover:!bg-primary-100 [@media(hover:hover)]:dark:hover:!bg-primary-900 active:!bg-secondary-100 dark:active:!bg-secondary-900 !font-medium"
             >
               <svg
                 className="size-4 mr-2"
@@ -141,9 +137,9 @@ from-black dark:from-white via-secondary-800 dark:via-secondary-200  to-primary-
           </div>
           {/* Featured section*/}
           <div className="px-0 sm:px-4 py-4 text-left sm:text-center   lg:px-36">
-            <h3 className="font-semibold uppercase text-primary-500 backdrop-blur-sm">
+            <span className="font-semibold uppercase text-primary-800/60 dark:text-primary-200/60 backdrop-blur-sm">
               FEATURED IN
-            </h3>
+            </span>
             <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 md:gap-12 lg:gap-16 sm:items-center  text-primary-500 justify-start sm:justify-between ">
               <a
                 href="https://tailwindcss.com/"
