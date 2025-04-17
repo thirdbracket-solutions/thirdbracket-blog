@@ -2,6 +2,7 @@ import { Button } from '@thirdbracket/bracketui'
 import React from 'react'
 import { Nextjs, Tailwind, Vercel } from './icons'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const HeroSection: React.FC = () => {
   return (
@@ -141,7 +142,28 @@ const HeroSection: React.FC = () => {
               FEATURED IN
             </span>
             <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 md:gap-12 lg:gap-16 sm:items-center  text-primary-500 justify-start sm:justify-between ">
-              <a
+              <a href="https://accenture.com/" target="_blank" className="w-32 h-8 relative">
+                <Image
+                  className="grayscale opacity-70 hover:grayscale-0 dark:invert h-auto w-full object-contain"
+                  src="/Accenture.svg"
+                  alt="Accenture"
+                  width={163}
+                  height={43}
+                  priority
+                />
+              </a>
+              <a href="https://accenture.com/" target="_blank" className="w-32 h-8 relative">
+                <Image
+                  className=" dark:invert opacity-70 hover:opacity-100  h-auto w-full object-contain"
+                  src="/magneto.svg"
+                  alt="Magneto"
+                  width={136}
+                  height={52}
+                  priority
+                />
+              </a>
+
+              {/* <a
                 href="https://tailwindcss.com/"
                 target="_blank"
                 className=" hover:text-primary-700 dark:hover:text-primary-400 "
@@ -161,7 +183,7 @@ const HeroSection: React.FC = () => {
                 className="  hover:text-primary-700 dark:hover:text-primary-400 "
               >
                 <Vercel />
-              </a>
+              </a> */}
             </div>
           </div>
         </div>
