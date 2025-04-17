@@ -142,9 +142,13 @@ const HeroSection: React.FC = () => {
               FEATURED IN
             </span>
             <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 md:gap-12 lg:gap-16 sm:items-center  text-primary-500 justify-start sm:justify-between ">
-              <a href="https://accenture.com/" target="_blank" className="w-32 h-8 relative">
+              {/* <a
+                href="https://accenture.com/"
+                target="_blank"
+                className="w-32 h-8 relative bg-primary-500/50"
+              >
                 <Image
-                  className="grayscale opacity-70 hover:grayscale-0 dark:invert h-auto w-full object-contain"
+                  className="grayscale  hover:grayscale-0  h-auto w-full object-contain transition duration-300"
                   src="/Accenture.svg"
                   alt="Accenture"
                   width={163}
@@ -152,14 +156,63 @@ const HeroSection: React.FC = () => {
                   priority
                 />
               </a>
-              <a href="https://accenture.com/" target="_blank" className="w-32 h-8 relative">
+              <a
+                href="https://accenture.com/"
+                target="_blank"
+                className="w-32 h-8 relative bg-primary-500/50"
+              >
                 <Image
-                  className=" dark:invert opacity-70 hover:opacity-100  h-auto w-full object-contain"
+                  className=" grayscale  hover:grayscale-0  h-auto w-full object-contain transition duration-300"
                   src="/magneto.svg"
                   alt="Magneto"
                   width={136}
                   height={52}
                   priority
+                />
+              </a> */}
+
+              <a
+                href="https://example1.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-500/80  "
+              >
+                <Image
+                  src="/accenture.svg"
+                  alt="Logo 1"
+                  width={163}
+                  height={43}
+                  className="w-auto h-8 md:h-10 object-contain grayscale opacity-60 group-hover:grayscale-0   transition  duration-300"
+                />
+              </a>
+
+              <a
+                href="https://example2.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-500/80"
+              >
+                <Image
+                  src="/clutch.svg"
+                  alt="Logo 2"
+                  width={141}
+                  height={40}
+                  className="w-auto h-8 md:h-10 object-contain grayscale  opacity-80 group-hover:grayscale-0   transition  duration-300"
+                />
+              </a>
+
+              <a
+                href="https://example3.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-500/80"
+              >
+                <Image
+                  src="/designrush.svg"
+                  alt="Logo 3"
+                  width={179}
+                  height={40}
+                  className="w-auto h-8 md:h-10 object-contain grayscale   group-hover:grayscale-0   transition  duration-300"
                 />
               </a>
 
