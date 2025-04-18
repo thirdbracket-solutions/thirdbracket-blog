@@ -4,8 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 import { BiChevronRight } from 'react-icons/bi'
-import { Logo } from './icons'
+
 import { MdSearch } from 'react-icons/md'
+import { Logo } from './Logo/Logo'
 
 // import { RiArrowRightUpLine, RiRecycleLine } from "react-icons/ri";
 
@@ -19,7 +20,10 @@ const Header: FC = () => {
           mobileMenu: 'bg-white dark:bg-black',
         }}
       >
-        <Navbrand logo={<Logo />} href="/"></Navbrand>
+        <Navbrand
+          logo={<Logo className="w-auto h-5 md:h-6 dark:invert" priority loading="eager" />}
+          href="/"
+        ></Navbrand>
 
         <NavItem>
           <Megamenu

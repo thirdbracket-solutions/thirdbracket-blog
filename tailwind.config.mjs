@@ -17,10 +17,10 @@ const config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-primary-dark': 'conic-gradient(at bottom left, #fff, #d7e2ee, #f6fafb )',
-        'gradient-primary': 'conic-gradient(at bottom left, #000, #525b81, #101014 )',
-        'gradient-secondary-dark': 'conic-gradient(at bottom right, #f6fafb, #d7e2ee, #e8ecef )',
-        'gradient-secondary': 'conic-gradient(at bottom right, #101014, #525b81, #212429 )',
+        'gradient-primary-dark': 'conic-gradient(at bottom left, #fff, #f3f7fa, #f6fafb )',
+        'gradient-primary': 'conic-gradient(at bottom left, #000, #292d3d, #101014 )',
+        'gradient-secondary-dark': 'conic-gradient(at bottom right, #f6fafb, #e9eff6, #f3f7fa )',
+        'gradient-secondary': 'conic-gradient(at bottom right, #101014, #464d69, #212429 )',
       },
       colors: {
         accent: {

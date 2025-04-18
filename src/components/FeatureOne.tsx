@@ -9,7 +9,7 @@ export function FeatureOne() {
       <div className="mx-auto max-w-screen-xl">
         {/* Title group with flex layout on large screens */}
         <div className=" mb-8 md:mb-12 lg:mb-16  lg:flex lg:items-center lg:justify-center lg:gap-6">
-          <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-bold bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text lg:mb-0 text-center lg:text-right  ">
+          <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text lg:mb-0 text-center lg:text-right  ">
             Looking for Fast & Beautiful Websites for Your Business?
           </h2>
           <p className="text-primary-950/80 dark:text-primary-50/60  font-light text-base md:text-lg lg:text-xl  text-center lg:text-left ">

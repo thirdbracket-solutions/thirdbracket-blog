@@ -46,7 +46,7 @@ function SolutionCard({
   return (
     <Card
       size="xl"
-      className="rounded-lg border border-primary-500  border-opacity-40 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-70  "
+      className="rounded-lg border border-primary-500  border-opacity-40 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 bg-gradient-secondary-dark dark:bg-gradient-secondary active:border-opacity-100 md:hover:border-opacity-70  "
       // style={{
       //   backgroundImage:
       //     "linear-gradient(to top, rgb(243, 215, 229) 0%, transparent)",

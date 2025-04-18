@@ -138,51 +138,24 @@ const HeroSection: React.FC = () => {
           </div>
           {/* Featured section*/}
           <div className="px-0 sm:px-4 py-4 text-left sm:text-center   lg:px-36">
-            <span className="font-semibold uppercase text-primary-800/60 dark:text-primary-200/60 backdrop-blur-sm">
+            <span className="font-semibold uppercase text-primary-800/70 dark:text-primary-200/70 backdrop-blur-sm">
               FEATURED IN
             </span>
-            <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 md:gap-12 lg:gap-16 sm:items-center  text-primary-500 justify-start sm:justify-between ">
-              {/* <a
-                href="https://accenture.com/"
-                target="_blank"
-                className="w-32 h-8 relative bg-primary-500/50"
-              >
-                <Image
-                  className="grayscale  hover:grayscale-0  h-auto w-full object-contain transition duration-300"
-                  src="/Accenture.svg"
-                  alt="Accenture"
-                  width={163}
-                  height={43}
-                  priority
-                />
-              </a>
-              <a
-                href="https://accenture.com/"
-                target="_blank"
-                className="w-32 h-8 relative bg-primary-500/50"
-              >
-                <Image
-                  className=" grayscale  hover:grayscale-0  h-auto w-full object-contain transition duration-300"
-                  src="/magneto.svg"
-                  alt="Magneto"
-                  width={136}
-                  height={52}
-                  priority
-                />
-              </a> */}
-
+            <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-4 md:gap-8 lg:gap-12 sm:items-center  text-primary-500 justify-start sm:justify-between ">
               <a
                 href="https://example1.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-500/80  "
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-100/20 dark:bg-primary-50/10 "
               >
                 <Image
                   src="/accenture.svg"
                   alt="Logo 1"
                   width={163}
                   height={43}
-                  className="w-auto h-8 md:h-10 object-contain grayscale opacity-60 group-hover:grayscale-0   transition  duration-300"
+                  priority
+                  loading="eager"
+                  className="w-auto h-5 md:h-6 object-contain grayscale  group-hover:grayscale-0   dark:opacity-100 opacity-50 group-hover:opacity-100 transition  duration-300"
                 />
               </a>
 
@@ -190,14 +163,16 @@ const HeroSection: React.FC = () => {
                 href="https://example2.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-500/80"
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-100/20 dark:bg-primary-300/10"
               >
                 <Image
                   src="/clutch.svg"
                   alt="Logo 2"
                   width={141}
                   height={40}
-                  className="w-auto h-8 md:h-10 object-contain grayscale  opacity-80 group-hover:grayscale-0   transition  duration-300"
+                  priority
+                  loading="eager"
+                  className="w-auto h-5 md:h-6 object-contain grayscale dark:opacity-100 opacity-50 group-hover:opacity-100  group-hover:grayscale-0   transition  duration-300"
                 />
               </a>
 
@@ -205,14 +180,16 @@ const HeroSection: React.FC = () => {
                 href="https://example3.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-500/80"
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-500/10 dark:bg-primary-300/10"
               >
                 <Image
                   src="/designrush.svg"
                   alt="Logo 3"
                   width={179}
                   height={40}
-                  className="w-auto h-8 md:h-10 object-contain grayscale   group-hover:grayscale-0   transition  duration-300"
+                  priority
+                  loading="eager"
+                  className="w-auto h-5 md:h-6 object-contain grayscale dark:opacity-30  group-hover:grayscale-0   transition  duration-300"
                 />
               </a>
 

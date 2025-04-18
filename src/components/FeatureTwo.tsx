@@ -28,7 +28,7 @@ export function FeatureTwo() {
     <section className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">
       <div className="mx-auto max-w-screen-xl  ">
         <div className=" mb-8 md:mb-12 lg:mb-16 ">
-          <h2 className="mb-4 md:mb-6 text-3xl  lg:text-4xl  font-bold bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text   text-center ">
+          <h2 className="mb-4 md:mb-6 text-3xl  lg:text-4xl  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text   text-center ">
             Why Choose Us for Web Development?
           </h2>
           <p className="text-primary-950/80 dark:text-primary-50/60  text-base md:text-lg lg:text-xl  text-center   font-light  ">

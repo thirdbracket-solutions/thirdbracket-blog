@@ -16,46 +16,54 @@
 // }
 
 import './globals.css'
-import localFont from 'next/font/local'
+
 import { ThemeScript } from '@thirdbracket/bracketui'
 import Header from '../../components/Header'
 import SiteFooter from '../../components/Footer'
 import { Settings } from '../../utilities/meta'
 import { Metadata } from 'next'
 import { WebPage, WithContext } from 'schema-dts'
-import Script from 'next/script'
+
 import GTM from '@/components/GTM'
+import { Roboto } from 'next/font/google'
 
-const roboto = localFont({
-  src: [
-    {
-      path: './Roboto-Light.ttf',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: './Roboto-Regular.ttf',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './Roboto-Medium.ttf',
-      weight: '500',
-      style: 'normal',
-    },
-
-    {
-      path: './Roboto-Bold.ttf',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: './Roboto-ExtraBold.ttf',
-      weight: '800',
-      style: 'normal',
-    },
-  ],
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  display: 'swap',
 })
+
+// const roboto = localFont({
+//   src: [
+//     {
+//       path: './Roboto-Light.ttf',
+//       weight: '300',
+//       style: 'normal',
+
+//     },
+//     {
+//       path: './Roboto-Regular.ttf',
+//       weight: '400',
+//       style: 'normal',
+//     },
+//     {
+//       path: './Roboto-Medium.ttf',
+//       weight: '500',
+//       style: 'normal',
+//     },
+
+//     {
+//       path: './Roboto-Bold.ttf',
+//       weight: '700',
+//       style: 'normal',
+//     },
+//     {
+//       path: './Roboto-ExtraBold.ttf',
+//       weight: '800',
+//       style: 'normal',
+//     },
+//   ],
+// })
 
 // import Header from "..npm run dev
 // /../components/Header";
@@ -90,6 +98,14 @@ export const metadata: Metadata = {
     template: `%s | ${Settings.title}`,
     default: `Next.js Web Development & SEO-Optimized Websites for UK Startups, Agencies, and Businesses | ${Settings.title}`,
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
+    ],
+    apple: '/apple-icon.png',
+  },
+  manifest: '/manifest.json',
   metadataBase: new URL(baseUrl),
   description: Settings.description,
   keywords: Settings.keywords,

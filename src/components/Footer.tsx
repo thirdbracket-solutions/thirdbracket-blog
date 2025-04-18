@@ -12,6 +12,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import { RiFacebookLine, RiLinkedinLine, RiMailLine, RiPhoneLine } from 'react-icons/ri'
+import { Logo } from './Logo/Logo'
 
 const SiteFooter = () => {
   return (
@@ -20,17 +21,8 @@ const SiteFooter = () => {
         {/* <FooterBrand logo="/logo.svg">
           Making the web a better place with Third Bracket Solutions.
         </FooterBrand> */}
-        <Link href="/" className="inline-flex items-center">
-          <Image
-            src="/icon32.svg"
-            width={32}
-            height={32}
-            alt="Logo"
-            className=" shadow-sm shadow-primary-500/70 rounded"
-          />
-          <h3 className="ml-2 bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text text-3xl font-medium tracking-tight">
-            Third Bracket Studio
-          </h3>
+        <Link href="/">
+          <Logo className="w-auto h-5 md:h-6 dark:invert" loading="lazy" />
         </Link>
         <p className="text-base  text-primary-700 dark:text-primary-600">
           Making the web a better place with Third Bracket Solutions.
@@ -77,7 +69,7 @@ const SiteFooter = () => {
         <FooterLink href="#">Pricing</FooterLink>
       </FooterSection>
       <FooterBottom>
-        <FooterText>© 2024 Third Bracket Solution.</FooterText>
+        <FooterText>© 2025 Third Bracket Solution.</FooterText>
         <div>
           <ThemeToggle />
         </div>
