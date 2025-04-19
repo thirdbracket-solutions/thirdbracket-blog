@@ -22,7 +22,7 @@ const SiteFooter = () => {
           Making the web a better place with Third Bracket Solutions.
         </FooterBrand> */}
         <Link href="/">
-          <Logo className="w-auto h-5 md:h-6 dark:invert" loading="lazy" />
+          <Logo className="w-auto h-6 md:h-7 dark:invert" loading="lazy" />
         </Link>
         <p className="text-base  text-primary-700 dark:text-primary-600">
           Making the web a better place with Third Bracket Solutions.

@@ -59,20 +59,20 @@ function SolutionCard({
         )
       }
       header={
-        <div className="flex items-center mb-2">
+        <div className="flex items-center my-2 ">
           <h3 className=" max-w-md">{title}</h3>
         </div>
       }
     >
       <div className="">
         {technologies && (
-          <div className="  dark:border-primary-800 pb-4 ">
+          <div className="    pb-4 ">
             {/* <h4 className="font-semibold mb-2">Technologies:</h4> */}
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-3 py-1 text-sm text-secondary-900 dark:text-secondary-200  border-secondary-500/20   rounded-lg border flex flex-col space-y-1 font-semibold"
+                  className="px-2 py-1 text-sm text-primary-800 dark:text-primary-200  border-primary-500/20   rounded-lg border flex flex-col space-y-1 font-semibold"
                 >
                   {tech.cto}
                   <span className="text-xs font-normal text-primary-500">{tech.title}</span>
@@ -84,7 +84,7 @@ function SolutionCard({
         {description && (
           <a
             href="#"
-            className="text-secondary-900 tracking-wide dark:text-secondary-200 mb-2  text-base underline"
+            className="text-primary-800 tracking-wide dark:text-primary-200 mb-2  text-sm underline"
           >
             {description}
             <span className="inline-flex ml-2 items-center">
@@ -371,11 +371,7 @@ export default function Solutions() {
           <CategorySection key={index} {...category} />
         ))}
 
-        <div
-          className=" rounded-lg p-8 lg:p-12 text-center bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))]
-from-[#f8ebf1] via-[#f3d7e5] to-[#eab7cf] dark:bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))]
-dark:from-[#6f2c42] dark:via-[#84304b] dark:to-[#ac3b61]  border border-secondary-500  border-opacity-30"
-        >
+        <div className=" rounded-lg p-8 lg:p-12 text-center bg-gradient-accent-dark dark:bg-gradient-accent  border border-secondary-500  border-opacity-30">
           <h3 className="text-2xl lg:text-4xl font-extrabold  text-primary-950 dark:text-white mb-4">
             Ready to Transform Your Digital Presence?
           </h3>

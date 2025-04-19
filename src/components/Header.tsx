@@ -21,7 +21,9 @@ const Header: FC = () => {
         }}
       >
         <Navbrand
-          logo={<Logo className="w-auto h-5 md:h-6 dark:invert" priority loading="eager" />}
+          logo={
+            <Logo className="w-auto h-[18px] md:h-[22px] dark:invert" priority loading="eager" />
+          }
           href="/"
         ></Navbrand>
 

@@ -47,7 +47,7 @@ const HeroSection: React.FC = () => {
 
           {/* Heading */}
 
-          <h1 className="text-[2.55rem]/[1]  font-extrabold md:text-5xl/[1.1]  lg:text-6xl/[1.1]   text-left bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text sm:text-center lg:max-w-screen-md xl:max-w-screen-lg sm:max-w-lg md:max-w-screen-sm max-w-md  capitalize ">
+          <h1 className="text-[2.55rem]/[2.65rem]  font-extrabold md:text-5xl/[1.1]  lg:text-6xl/[1.1]   text-left bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text sm:text-center lg:max-w-screen-md xl:max-w-screen-lg sm:max-w-lg md:max-w-screen-sm max-w-md  capitalize ">
             Next.js Web Development for UK Agencies & Startups
           </h1>
 
@@ -61,43 +61,6 @@ const HeroSection: React.FC = () => {
 
           {/* Button Group */}
           <div className="flex justify-center gap-4 md:gap-6 backdrop-blur-sm">
-            {/* <Button
-              size="md"
-              as={Link}
-              href="/about"
-              className="hidden  md:flex !bg-gradient-primary dark:!bg-gradient-primary-dark !text-white dark:!text-primary-950  [@media(hover:hover)]:hover:opacity-90 active:opacity-80"
-            >
-              Learn More
-              <svg
-                className="size-4 ml-2"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                />
-              </svg>
-            </Button>
-            <Button
-              outline
-              size="md"
-              as={Link}
-              href="/contact"
-              className="hidden  md:flex !border-secondary-100 dark:!border-secondary-950   !text-primary-900 dark:!text-primary-50  [@media(hover:hover)]:hover:!bg-primary-100 [@media(hover:hover)]:dark:hover:!bg-primary-900 active:!bg-primary-200 dark:active:!bg-secondary-900"
-            >
-              <svg
-                className="size-4 mr-2"
-                fill="currentColor"
-                viewBox="0 0 1000 1000"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M860 265h-61q-8 0-13.5 5.5T780 284v246q0 39-28 67t-68 28H279q-8 0-13.5 5.5T260 644v61q0 17 11.5 28.5T300 745h415q25 0 43 18l110 110q4 4 9.5 5t11-1 8.5-7 3-11V305q0-17-11.5-28.5T860 265zM700 505V145q0-17-11.5-28.5T660 105H140q-17 0-28.5 11.5T100 145v514q0 6 3 11t8.5 7 11 1 9.5-5l110-110q18-18 43-18h375q17 0 28.5-12t11.5-28z"></path>
-              </svg>
-              Contact Us
-            </Button> */}
             <Button
               size="md"
               as={Link}
@@ -123,7 +86,7 @@ const HeroSection: React.FC = () => {
               as={Link}
               href="/contact"
               size="md"
-              className=" !border-primary-200 dark:!border-primary-800   !text-black dark:!text-white  [@media(hover:hover)]:hover:!bg-primary-100 [@media(hover:hover)]:dark:hover:!bg-primary-900 active:!bg-secondary-100 dark:active:!bg-secondary-900 !font-medium"
+              className=" !border-primary-200 dark:!border-primary-800   !text-black dark:!text-white  [@media(hover:hover)]:hover:!bg-gradient-primary-dark [@media(hover:hover)]:dark:hover:!bg-gradient-primary active:!bg-secondary-100 dark:active:!bg-secondary-900 !font-medium"
             >
               <svg
                 className="size-4 mr-2"
@@ -138,15 +101,15 @@ const HeroSection: React.FC = () => {
           </div>
           {/* Featured section*/}
           <div className="px-0 sm:px-4 py-4 text-left sm:text-center   lg:px-36">
-            <span className="font-semibold uppercase text-primary-800/70 dark:text-primary-200/70 backdrop-blur-sm">
+            <span className=" uppercase text-primary-800/60 dark:text-primary-200/60 backdrop-blur-sm">
               FEATURED IN
             </span>
             <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-4 md:gap-8 lg:gap-12 sm:items-center  text-primary-500 justify-start sm:justify-between ">
               <a
-                href="https://example1.com"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-100/20 dark:bg-primary-50/10 "
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-primary-dark dark:bg-gradient-primary "
               >
                 <Image
                   src="/accenture.svg"
@@ -155,15 +118,15 @@ const HeroSection: React.FC = () => {
                   height={43}
                   priority
                   loading="eager"
-                  className="w-auto h-5 md:h-6 object-contain grayscale  group-hover:grayscale-0   dark:opacity-100 opacity-50 group-hover:opacity-100 transition  duration-300"
+                  className="w-auto h-5 md:h-6 object-contain grayscale  group-hover:grayscale-0     transition  duration-300"
                 />
               </a>
 
               <a
-                href="https://example2.com"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-100/20 dark:bg-primary-300/10"
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-primary-dark dark:bg-gradient-primary"
               >
                 <Image
                   src="/clutch.svg"
@@ -172,15 +135,15 @@ const HeroSection: React.FC = () => {
                   height={40}
                   priority
                   loading="eager"
-                  className="w-auto h-5 md:h-6 object-contain grayscale dark:opacity-100 opacity-50 group-hover:opacity-100  group-hover:grayscale-0   transition  duration-300"
+                  className="w-auto h-5 md:h-6 object-contain grayscale   group-hover:grayscale-0   transition  duration-300"
                 />
               </a>
 
               <a
-                href="https://example3.com"
+                href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-primary-500/10 dark:bg-primary-300/10"
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-primary-dark dark:bg-gradient-primary "
               >
                 <Image
                   src="/designrush.svg"
@@ -189,7 +152,7 @@ const HeroSection: React.FC = () => {
                   height={40}
                   priority
                   loading="eager"
-                  className="w-auto h-5 md:h-6 object-contain grayscale dark:opacity-30  group-hover:grayscale-0   transition  duration-300"
+                  className="w-auto h-5 md:h-6 object-contain grayscale  group-hover:grayscale-0   transition  duration-300"
                 />
               </a>
 

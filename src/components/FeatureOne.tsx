@@ -26,9 +26,9 @@ export function FeatureOne() {
               size="lg"
               as={Link}
               href="/solutions"
-              className="w-full h-full rounded-lg border border-primary-500  border-opacity-40 overflow-hidden flex flex-col transition-all duration-300 ease-in-out   focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100" // Added full width and height
+              className="w-full h-full rounded-lg border border-primary-500  border-opacity-40 overflow-hidden flex flex-col transition-all duration-300 ease-in-out    focus-within:border-opacity-100 active:border-opacity-100  md:hover:border-opacity-100" // Added full width and height
               cover={
-                <div className="h-60 w-full lg:h-80 bg-white dark:bg-black bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#636e9f1f_1px,transparent_1px),linear-gradient(to_bottom,#636e9f1f_1px,transparent_1px)] bg-[size:14px_24px]   relative">
+                <div className="h-60 w-full lg:h-80   bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#636e9f1f_1px,transparent_1px),linear-gradient(to_bottom,#636e9f1f_1px,transparent_1px)] bg-[size:14px_24px]   relative">
                   <Image
                     src="/website.svg"
                     alt="Enterprise Solutions"
@@ -52,7 +52,7 @@ export function FeatureOne() {
               as={Link}
               className="w-full h-full rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out  focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 " // Added full width and height
               cover={
-                <div className="h-60 w-full lg:h-80 bg-white dark:bg-black bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#636e9f1f_1px,transparent_1px),linear-gradient(to_bottom,#636e9f1f_1px,transparent_1px)] bg-[size:14px_24px]   relative">
+                <div className="h-60 w-full lg:h-80  bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#636e9f1f_1px,transparent_1px),linear-gradient(to_bottom,#636e9f1f_1px,transparent_1px)] bg-[size:14px_24px]   relative">
                   <Image src="/ui.svg" alt="Professional Teams" fill className="object-cover " />
                 </div>
               }
