@@ -46,21 +46,21 @@ function SolutionCard({
   return (
     <Card
       size="xl"
-      className="rounded-lg border border-primary-500  border-opacity-40 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 bg-gradient-secondary-dark dark:bg-gradient-secondary active:border-opacity-100 md:hover:border-opacity-70  "
+      className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 bg-gradient-primary-dark dark:bg-gradient-primary active:border-opacity-100 md:hover:border-opacity-100  "
       // style={{
       //   backgroundImage:
       //     "linear-gradient(to top, rgb(243, 215, 229) 0%, transparent)",
       // }}
       cover={
         image && (
-          <div className="relative  h-60 w-full lg:h-80">
+          <div className="bg-slate-50 dark:bg-zinc-950   h-60 w-full lg:h-80  bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#464d691f_1px,transparent_1px),linear-gradient(to_bottom,#464d691f_1px,transparent_1px)] bg-[size:14px_24px]   relative">
             <Image src={image} alt={title} fill className="object-cover " />
           </div>
         )
       }
       header={
-        <div className="flex items-center my-2 ">
-          <h3 className=" max-w-md">{title}</h3>
+        <div className="flex items-center mb-2 ">
+          <h3 className="!font-semibold  max-w-md">{title}</h3>
         </div>
       }
     >
@@ -72,7 +72,7 @@ function SolutionCard({
               {technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 text-sm text-primary-800 dark:text-primary-200  border-primary-500/20   rounded-lg border flex flex-col space-y-1 font-semibold"
+                  className="px-2 py-1 text-sm text-primary-800 bg-gradient-secondary-dark dark:bg-gradient-secondary  dark:text-primary-200 border-primary-100/80 dark:border-primary-900/70   rounded-lg border flex flex-col space-y-1 font-semibold"
                 >
                   {tech.cto}
                   <span className="text-xs font-normal text-primary-500">{tech.title}</span>
@@ -109,12 +109,12 @@ style={{
 
 function CategorySection({ title, description, solutions }: SolutionCategory) {
   return (
-    <div className="mb-20">
+    <div className="mb-20 md:mb-24 lg:mb-28 ">
       <div className="text-center mb-12">
-        <h2 className="text-3xl lg:text-4xl  mb-6 font-extrabold text-primary-950 dark:text-white px-4">
+        <h2 className="text-3xl lg:text-4xl  font-bold text-primary-950 dark:text-primary-50 mb-6  px-4">
           {title}
         </h2>
-        <p className="text-primary-950/60 dark:text-primary-200/60 font-light text-base md:text-lg lg:text-xl">
+        <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-950/80 dark:text-primary-50/60">
           {description}
         </p>
       </div>
@@ -365,17 +365,17 @@ export default function Solutions() {
         description="Comprehensive digital solutions for modern businesses"
       />
 
-      <div className="max-w-7xl mx-auto  py-8 sm:py-12 md:py-16">
+      <div className="mx-auto max-w-screen-xl  py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
         {/* Solutions Categories */}
         {solutionCategories.map((category, index) => (
           <CategorySection key={index} {...category} />
         ))}
 
-        <div className=" rounded-lg p-8 lg:p-12 text-center bg-gradient-accent-dark dark:bg-gradient-accent  border border-secondary-500  border-opacity-30">
-          <h3 className="text-2xl lg:text-4xl font-extrabold  text-primary-950 dark:text-white mb-4">
+        <div className=" rounded-lg p-8 lg:p-12 text-center bg-accent-radial dark:bg-accent-radial-dark  border border-secondary-500/40">
+          <h3 className="text-3xl  font-semibold  text-primary-950 dark:text-primary-50 mb-4">
             Ready to Transform Your Digital Presence?
           </h3>
-          <p className="text-primary-800/70 dark:text-primary-200/60 text-base md:text-lg lg:text-xl   font-light mb-6">
+          <p className="text-primary-950/70 dark:text-primary-50/60 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   font-light mb-6">
             Let us discuss how our solutions can help you achieve your goals
           </p>
 

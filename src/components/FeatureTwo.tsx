@@ -25,13 +25,13 @@ import { VscUnlock } from 'react-icons/vsc'
 
 export function FeatureTwo() {
   return (
-    <section className="py-8 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+    <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
       <div className="mx-auto max-w-screen-xl  ">
         <div className=" mb-8 md:mb-12 lg:mb-16 ">
-          <h2 className="mb-4 md:mb-6 text-3xl  lg:text-4xl  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text   text-center ">
+          <h2 className="mb-4 md:mb-6 text-3xl  lg:text-4xl  font-bold bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text text-left   sm:text-center ">
             Why Choose Us for Web Development?
           </h2>
-          <p className="text-primary-950/80 dark:text-primary-50/60  text-base md:text-lg lg:text-xl  text-center   font-light  ">
+          <p className="text-primary-950/80 dark:text-primary-50/60  text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  text-left sm:text-center   font-light  max-w-4xl mx-auto">
             Our approach combines technical excellence with real-world flexibility—designed to meet
             the needs of growing businesses that care about speed, SEO, and design clarity.
           </p>
@@ -42,7 +42,7 @@ export function FeatureTwo() {
             isIcon
             className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out bg-gradient-primary-dark dark:bg-gradient-primary focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 "
             cover={
-              <IoMedalOutline className="h-12 w-12     text-secondary-900 dark:text-secondary-200 " />
+              <IoMedalOutline className="h-10 w-10     text-secondary-900 dark:text-secondary-200 " />
             }
             header="Expertise & Flexibility"
           >
@@ -57,7 +57,7 @@ export function FeatureTwo() {
             className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 bg-gradient-primary-dark dark:bg-gradient-primary active:border-opacity-100 md:hover:border-opacity-100 "
             isIcon
             cover={
-              <IoLayersOutline className="h-12 w-12     text-secondary-900 dark:text-secondary-200" />
+              <IoLayersOutline className="h-10 w-10     text-secondary-900 dark:text-secondary-200" />
             }
             header="Modern Stack"
           >
@@ -71,7 +71,7 @@ export function FeatureTwo() {
             isIcon
             className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 bg-gradient-primary-dark dark:bg-gradient-primary md:hover:border-opacity-100 "
             cover={
-              <MdOutlineAutoGraph className="h-12 w-12     text-secondary-900 dark:text-secondary-200" />
+              <MdOutlineAutoGraph className="h-10 w-10     text-secondary-900 dark:text-secondary-200" />
             }
             header="Built for Growth"
           >
@@ -86,7 +86,7 @@ export function FeatureTwo() {
             isIcon
             className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 bg-gradient-primary-dark dark:bg-gradient-primary"
             cover={
-              <IoGitNetworkOutline className="h-12 w-12     text-secondary-900 dark:text-secondary-200" />
+              <IoGitNetworkOutline className="h-10 w-10     text-secondary-900 dark:text-secondary-200" />
             }
             header="Seamless Collaboration"
           >
@@ -100,7 +100,7 @@ export function FeatureTwo() {
             isIcon
             className="rounded-lg border border-primary-500  border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 bg-gradient-primary-dark dark:bg-gradient-primary"
             cover={
-              <IoLockOpenOutline className="h-12 w-12     text-secondary-900 dark:text-secondary-200" />
+              <IoLockOpenOutline className="h-10 w-10     text-secondary-900 dark:text-secondary-200" />
             }
             header="No Lock-in, No Bloat"
           >
@@ -115,7 +115,7 @@ export function FeatureTwo() {
             size="lg"
             isIcon
             cover={
-              <IoTimerOutline className="h-12 w-12     text-secondary-900 dark:text-secondary-200 " />
+              <IoTimerOutline className="h-10 w-10     text-secondary-900 dark:text-secondary-200 " />
             }
             header="Timely Deliveries"
           >

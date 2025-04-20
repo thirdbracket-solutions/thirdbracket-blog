@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const HeroSection: React.FC = () => {
   return (
-    <section className=" pb-8 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pt-[5.5rem] sm:pt-24 md:pt-28 lg:pt-32   bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
+    <section className=" pb-10 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pt-[5.5rem] sm:pt-24 md:pt-28 lg:pt-32   bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
       <div className="sm:mx-auto   max-w-screen-xl">
         <div className="flex flex-col  items-start sm:items-center    space-y-10 md:space-y-12 lg:space-y-14 ">
           {/* <a
@@ -53,7 +53,7 @@ const HeroSection: React.FC = () => {
 
           {/* 800-#1f2937,900- #111827, 200-#e5e7eb, 100-#f3f4f6  #030712 #f9fafb*/}
           {/* Paragraph */}
-          <p className="text-primary-950/80 dark:text-primary-50/60  font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  lg:max-w-screen-md sm:max-w-lg md:max-w-screen-sm backdrop-blur-sm  text-left sm:text-center xl:max-w-[900px]">
+          <p className="text-primary-950/70 dark:text-primary-50/60  font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  lg:max-w-screen-md sm:max-w-lg md:max-w-screen-sm backdrop-blur-sm  text-left sm:text-center xl:max-w-[900px]">
             We build fast, SEO-optimized websites using Next.js and TailwindCSS. Our custom React
             component library delivers minimal, professional design that’s hard to outsource without
             an in-house team.
@@ -65,9 +65,9 @@ const HeroSection: React.FC = () => {
               size="md"
               as={Link}
               href="/about"
-              className="  !bg-gradient-primary dark:!bg-gradient-primary-dark !font-medium  !text-white dark:!text-black [@media(hover:hover)]:hover:opacity-95 active:opacity-85"
+              className="  !bg-gradient-primary dark:!bg-gradient-primary-dark !font-medium  !text-white dark:!text-black [@media(hover:hover)]:hover:opacity-90 active:opacity-85"
             >
-              Learn More
+              About Us
               <svg
                 className="size-4 ml-2"
                 fill="currentColor"
@@ -86,7 +86,7 @@ const HeroSection: React.FC = () => {
               as={Link}
               href="/contact"
               size="md"
-              className=" !border-primary-200 dark:!border-primary-800   !text-black dark:!text-white  [@media(hover:hover)]:hover:!bg-gradient-primary-dark [@media(hover:hover)]:dark:hover:!bg-gradient-primary active:!bg-secondary-100 dark:active:!bg-secondary-900 !font-medium"
+              className=" !border-primary-100 dark:!border-primary-900   !text-black dark:!text-white  [@media(hover:hover)]:hover:!bg-gradient-secondary-dark [@media(hover:hover)]:dark:hover:!bg-gradient-secondary active:!bg-secondary-100 dark:active:!bg-primary-900 !font-medium"
             >
               <svg
                 className="size-4 mr-2"
@@ -109,7 +109,7 @@ const HeroSection: React.FC = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-primary-dark dark:bg-gradient-primary "
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-secondary-dark dark:bg-gradient-secondary "
               >
                 <Image
                   src="/accenture.svg"
@@ -126,7 +126,7 @@ const HeroSection: React.FC = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-primary-dark dark:bg-gradient-primary"
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-secondary-dark dark:bg-gradient-secondary"
               >
                 <Image
                   src="/clutch.svg"
@@ -143,7 +143,7 @@ const HeroSection: React.FC = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-primary-dark dark:bg-gradient-primary "
+                className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-secondary-dark dark:bg-gradient-secondary "
               >
                 <Image
                   src="/designrush.svg"

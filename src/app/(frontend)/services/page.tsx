@@ -32,7 +32,7 @@ function ServiceCard({ title, description, icon: Icon, features }: Service) {
       header={title}
       className="rounded-lg border border-primary-500  border-opacity-40 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100   bg-gradient-primary-dark dark:bg-gradient-primary"
       cover={
-        <div className="w-12 h-12 mb-4 flex items-center  justify-center   border border-primary-500/40  dark:bg-secondary-950 bg-secondary-50  rounded-lg">
+        <div className="w-12 h-12 mb-4 flex items-center  justify-center   border border-primary-500/40  bg-gradient-secondary-dark dark:bg-gradient-secondary  rounded-lg">
           <Icon className="w-6 h-6 text-primary-900 dark:text-primary-100" />
         </div>
       }
@@ -61,10 +61,14 @@ function ServiceCard({ title, description, icon: Icon, features }: Service) {
 
 function CategorySection({ title, description, services }: ServiceCategory) {
   return (
-    <div className="mb-20">
+    <div className="mb-20 md:mb-24 lg:mb-28">
       <div className="text-center mb-12">
-        <h2 className="text-3xl text-primary-800 dark:text-primary-200 font-bold mb-4">{title}</h2>
-        <p className="text-primary-600 dark:text-primary-400 max-w-3xl mx-auto">{description}</p>
+        <h2 className="text-3xl lg:text-4xl  font-bold text-primary-950 dark:text-primary-50 mb-4 md:mb-6  px-4">
+          {title}
+        </h2>
+        <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-950/80 dark:text-primary-50/60">
+          {description}
+        </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
@@ -77,11 +81,11 @@ function CategorySection({ title, description, services }: ServiceCategory) {
 
 function ContactCTA() {
   return (
-    <div className="rounded-lg p-8 lg:p-12 text-center bg-gradient-accent-dark dark:bg-gradient-accent  border border-secondary-500  border-opacity-30 ">
-      <h3 className="text-2xl lg:text-4xl font-extrabold  text-primary-950 dark:text-white mb-4">
+    <div className="rounded-lg p-8 lg:p-12 text-center bg-accent-radial dark:bg-accent-radial-dark  border border-secondary-500/40 ">
+      <h3 className="text-3xl font-semibold  text-primary-950 dark:text-primary-50 mb-4">
         Ready to Transform Your Digital Presence?
       </h3>
-      <p className="text-primary-800/70 dark:text-primary-200/60 text-base md:text-lg lg:text-xl   font-light mb-6">
+      <p className="text-primary-950/70 dark:text-primary-50/60 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   font-light mb-6">
         Let us discuss how we can help you achieve your goals
       </p>
 
@@ -233,14 +237,14 @@ export default function Services() {
         description="Comprehensive digital solutions tailored to your needs"
       />
 
-      <div className="max-w-7xl mx-auto py-8 sm:py-12 md:py-16">
+      <div className="mx-auto max-w-screen-xl  py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
         {serviceCategories.map((category, index) => (
           <CategorySection key={index} {...category} />
         ))}
 
         {/* Process Section */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold text-center mb-12 text-primary-800 dark:text-primary-200">
+          <h2 className="text-3xl lg:text-4xl   text-primary-950 dark:text-primary-50 font-bold text-center mb-12 ">
             Our Process
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
