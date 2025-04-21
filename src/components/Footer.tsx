@@ -89,7 +89,7 @@ const SiteFooter = () => {
 
  <FooterBottom>
   <FooterText>© 2025 Third Bracket Solution.</FooterText>
- >
+ 
    <ThemeToggle />
         {/* <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start md:items-center">
     <a
