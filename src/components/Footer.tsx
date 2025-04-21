@@ -83,14 +83,21 @@ const SiteFooter = () => {
         </a>
       </div>
 
- 
-      <FooterBottom>
-        <FooterText>© 2025 Third Bracket Solution.</FooterText>
-        <div>
-          <ThemeToggle />
-        </div>
-      </FooterBottom>
-    </Footer>
+ <FooterBottom>
+  <FooterText>© 2025 Third Bracket Solution.</FooterText>
+  <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start md:items-center">
+    <a
+      href="https://www.business-directory-uk.co.uk/web-design.htm"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-sm text-primary-700 dark:text-primary-500 underline hover:text-primary-900 dark:hover:text-primary-300"
+    >
+      UK Web Designers - Directory of Web Design Companies in the UK
+    </a>
+    <ThemeToggle />
+  </div>
+</FooterBottom>
+     </Footer>
   )
 }
 export default SiteFooter
