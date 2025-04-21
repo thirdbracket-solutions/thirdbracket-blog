@@ -68,6 +68,9 @@ const SiteFooter = () => {
         <FooterLink href="#">Templates</FooterLink>
         <FooterLink href="#">Pricing</FooterLink>
       </FooterSection>
+      <FooterSection title="Useful Links">
+        <FooterLink href="https://www.business-directory-uk.co.uk/web-design.htm" target="_blank"
+      rel="noopener noreferrer">UK Web Designers - Directory of Web Design Companies in the UK</FooterLink>
            <div className="w-full flex justify-center mt-6">
         <img 
           src="https://www.business-directory.org.uk/c.php?id=117346" 
@@ -82,10 +85,13 @@ const SiteFooter = () => {
           />
         </a>
       </div>
+         </FooterSection>
 
  <FooterBottom>
   <FooterText>© 2025 Third Bracket Solution.</FooterText>
-  <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start md:items-center">
+ >
+   <ThemeToggle />
+        {/* <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start md:items-center">
     <a
       href="https://www.business-directory-uk.co.uk/web-design.htm"
       target="_blank"
@@ -95,7 +101,7 @@ const SiteFooter = () => {
       UK Web Designers - Directory of Web Design Companies in the UK
     </a>
     <ThemeToggle />
-  </div>
+  </div> */}
 </FooterBottom>
      </Footer>
   )
