@@ -68,6 +68,22 @@ const SiteFooter = () => {
         <FooterLink href="#">Templates</FooterLink>
         <FooterLink href="#">Pricing</FooterLink>
       </FooterSection>
+           <div className="w-full flex justify-center mt-6">
+        <img 
+          src="https://www.business-directory.org.uk/c.php?id=117346" 
+          style={{ position: 'absolute', visibility: 'hidden' }} 
+          alt="Business Directory Tracker" 
+        />
+        <a href="https://www.business-directory.org.uk/">
+          <img 
+            src="https://www.business-directory.org.uk/free-business-directory.png" 
+            alt="Free Business Directory" 
+            style={{ border: 0 }} 
+          />
+        </a>
+      </div>
+
+ 
       <FooterBottom>
         <FooterText>© 2025 Third Bracket Solution.</FooterText>
         <div>
