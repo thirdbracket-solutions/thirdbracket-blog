@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const HeroSection: React.FC = () => {
   return (
-    <section className=" pb-10 sm:pb-12 md:pb-16 lg:pb-20 xl:pb-24 pt-[5.5rem] sm:pt-24 md:pt-28 lg:pt-32   bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
+    <section className="pb-10 sm:pb-12  lg:pb-14 xl:pb-16 pt-20 sm:pt-24  lg:pt-28 xl:pt-32   bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1e2026_1px,transparent_1px)]  [background-size:16px_16px]     ">
       <Bracket fluid centered padding="medium">
         <div className="sm:mx-auto   max-w-screen-xl">
           <div className="flex flex-col  items-start sm:items-center    space-y-10 md:space-y-12 lg:space-y-14 ">
@@ -105,12 +105,12 @@ const HeroSection: React.FC = () => {
               <span className=" uppercase text-primary-800/60 dark:text-primary-200/60 backdrop-blur-sm">
                 FEATURED IN
               </span>
-              <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-4 md:gap-8 lg:gap-12 sm:items-center  text-primary-500 justify-start sm:justify-between ">
+              <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 lg:gap-12 sm:items-center  text-primary-500 justify-start sm:justify-between ">
                 <a
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-secondary-dark dark:bg-gradient-secondary "
+                  className=" backdrop-blur-lg  grayscale  hover:grayscale-0     transition  duration-300"
                 >
                   <Image
                     src="/accenture.svg"
@@ -119,7 +119,7 @@ const HeroSection: React.FC = () => {
                     height={43}
                     priority
                     loading="eager"
-                    className="w-auto h-5 md:h-6 object-contain grayscale  group-hover:grayscale-0     transition  duration-300"
+                    className="w-auto h-5 md:h-6 object-contain "
                   />
                 </a>
 
@@ -127,7 +127,7 @@ const HeroSection: React.FC = () => {
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-secondary-dark dark:bg-gradient-secondary"
+                  className="backdrop-blur-lg  grayscale  hover:grayscale-0     transition  duration-300"
                 >
                   <Image
                     src="/clutch.svg"
@@ -136,7 +136,7 @@ const HeroSection: React.FC = () => {
                     height={40}
                     priority
                     loading="eager"
-                    className="w-auto h-5 md:h-6 object-contain grayscale   group-hover:grayscale-0   transition  duration-300"
+                    className="w-auto h-5 md:h-6 object-contain "
                   />
                 </a>
 
@@ -144,7 +144,7 @@ const HeroSection: React.FC = () => {
                   href="#"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-4 flex items-center justify-center rounded-md group backdrop-blur-lg bg-gradient-secondary-dark dark:bg-gradient-secondary "
+                  className="backdrop-blur-lg  grayscale  hover:grayscale-0     transition  duration-300 "
                 >
                   <Image
                     src="/designrush.svg"
@@ -153,7 +153,7 @@ const HeroSection: React.FC = () => {
                     height={40}
                     priority
                     loading="eager"
-                    className="w-auto h-5 md:h-6 object-contain grayscale  group-hover:grayscale-0   transition  duration-300"
+                    className="w-auto h-5 md:h-6 object-contain "
                   />
                 </a>
 

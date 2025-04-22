@@ -4,13 +4,13 @@ import Link from 'next/link'
 
 export function FeatureOne() {
   return (
-    <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
+    <section className=" py-10 sm:py-12  lg:py-14 xl:py-16">
       <Bracket fluid centered padding="medium">
         {/* Header Container */}
         <div className="mx-auto max-w-screen-xl">
           {/* Title group with flex layout on large screens */}
           <div className=" mb-8 md:mb-12 lg:mb-16  lg:flex lg:items-center lg:justify-center lg:gap-6">
-            <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-bold text-primary-950 dark:text-primary-50     lg:mb-0 text-left sm:text-center lg:text-right  ">
+            <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text     lg:mb-0 text-left sm:text-center lg:text-right  ">
               Looking for Fast & Beautiful Websites for Your Business?
             </h2>
             <p className="text-primary-950/80 dark:text-primary-50/60  font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left  sm:text-center lg:text-left ">
