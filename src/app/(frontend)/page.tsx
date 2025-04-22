@@ -11,15 +11,20 @@ import HeroSection from '../../components/HeroSection'
 import { FeatureOne } from '../../components/FeatureOne'
 import { FeatureTwo } from '../../components/FeatureTwo'
 import Subscription from '../../components/Subscription'
+import { ClientTestimonials } from '@/components/ClientTestomonial'
+import { FAQ } from '@/components/Faq'
 
 export default function Home() {
   return (
-    <Bracket fluid centered padding="medium">
+    <section>
       <HeroSection />
 
       <FeatureOne />
+
       <FeatureTwo />
+      <ClientTestimonials />
+      <FAQ />
       <Subscription />
-    </Bracket>
+    </section>
   )
 }
