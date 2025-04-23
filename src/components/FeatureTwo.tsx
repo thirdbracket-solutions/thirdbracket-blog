@@ -300,10 +300,10 @@ export function WhyChooseUsSection() {
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
           <div className="mb-8 md:mb-12 lg:mb-16">
-            <h2 className="mb-4 md:mb-6 text-[2rem]/[1.1] font-extrabold md:text-[2.45rem]/[1.1]  bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left sm:text-center">
+            <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left sm:text-center">
               Why Choose Us for Web Development?
             </h2>
-            <p className="text-primary-950/80 dark:text-primary-50/60 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center font-light max-w-4xl mx-auto">
+            <p className="text-primary-950/80 dark:text-primary-50/60 text-base md:text-lg lg:text-xl text-left sm:text-center font-light max-w-4xl mx-auto">
               Our approach combines technical excellence with real-world flexibility—designed to
               meet the needs of growing businesses that care about speed, SEO, and design clarity.
             </p>

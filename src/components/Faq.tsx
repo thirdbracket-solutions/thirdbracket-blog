@@ -42,7 +42,7 @@ export const FAQ = () => {
     <section className="py-10 sm:py-12  lg:py-14 xl:py-16 ">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
-          <h2 className="text-[2rem]/[1.1]  md:text-[2.45rem]/[1.1]  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text text-left sm:text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text text-left sm:text-center mb-12">
             FAQs
           </h2>
 

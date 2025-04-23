@@ -171,10 +171,10 @@ export function FeatureShowcaseSection() {
         <div className="mx-auto max-w-screen-xl">
           {/* Header */}
           <div className="mb-8 md:mb-12 lg:mb-16 lg:flex lg:items-center lg:justify-center lg:gap-6">
-            <h2 className="mb-4 md:mb-6 text-[2rem]/[1.1]  md:text-[2.45rem]/[1.1]  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text lg:mb-0 text-left sm:text-center lg:text-right">
+            <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text lg:mb-0 text-left sm:text-center lg:text-right">
               Looking for Fast & Beautiful Websites for Your Business?
             </h2>
-            <p className="text-primary-950/80 dark:text-primary-50/60 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center lg:text-left">
+            <p className="text-primary-950/80 dark:text-primary-50/60 font-light text-base md:text-lg lg:text-xl text-left sm:text-center lg:text-left">
               Whether you are a startup or an agency, we help you build scalable, SEO-optimized
               websites with a clean, minimal design that aligns with your brand.
             </p>
