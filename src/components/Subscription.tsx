@@ -41,7 +41,7 @@ const Subscription = () => {
   }
 
   return (
-    <section className="   py-8 sm:py-12 md:py-16   ">
+    <section className="   py-10 sm:py-12  lg:py-14 xl:py-16   ">
       <Bracket fluid centered padding="medium">
         <div className="max-w-screen-xl  bg-accent-radial dark:bg-accent-radial-dark  rounded-lg p-8 lg:p-12 border border-secondary-500/40 ">
           {state.isSuccess ? (

@@ -6,22 +6,23 @@
 
 // import { Button, Card } from "@thirdbracket/core";
 
-import { Bracket } from '@thirdbracket/bracketui'
-import HeroSection from '../../components/HeroSection'
-import { FeatureOne } from '../../components/FeatureOne'
-import { FeatureTwo } from '../../components/FeatureTwo'
+import { FeatureShowcaseSection } from '../../components/FeatureOne'
+
 import Subscription from '../../components/Subscription'
 import { ClientTestimonials } from '@/components/ClientTestomonial'
 import { FAQ } from '@/components/Faq'
+import { WhyChooseUsSection } from '@/components/FeatureTwo'
+import { Hero } from '@/components/HeroSection'
 
 export default function Home() {
   return (
     <section>
-      <HeroSection />
-
-      <FeatureOne />
-
-      <FeatureTwo />
+      {/* <HeroSection /> */}
+      <Hero />
+      {/* <FeatureOne /> */}
+      <FeatureShowcaseSection />
+      <WhyChooseUsSection />
+      {/* <FeatureTwo /> */}
       <ClientTestimonials />
       <FAQ />
       <Subscription />

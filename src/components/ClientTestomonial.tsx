@@ -33,37 +33,38 @@ const testimonials: Testimonial[] = [
 
 export const ClientTestimonials = () => {
   return (
-    <section className="py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24 bg-gradient-primary-dark dark:bg-gradient-primary">
+    <section className="py-10 sm:py-12  lg:py-14 xl:py-16 ">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
-          <h2 className="text-3xl  lg:text-4xl  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text text-left sm:text-center mb-12">
-            Trusted by early-stage teams
+          <h2 className="text-[2rem]/[1.1]  md:text-[2.45rem]/[1.1]  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text text-left sm:text-center mb-12">
+            Trusted by Early-stage Startups
           </h2>
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((item, i) => (
               <Card
                 key={i}
-                className="bg-gradient-secondary-dark dark:bg-gradient-secondary p-6 !rounded-3xl shadow-sm border border-primary-500/30 flex flex-col justify-between"
+                size="lg"
+                className="bg-gradient-secondary-dark dark:bg-gradient-secondary  !rounded-3xl shadow-sm border border-primary-500/30 flex flex-col justify-between"
               >
                 {item.logo && (
                   <div className="mb-6 h-10 relative w-auto text-primary-900 dark:text-primary-100">
                     <Image
                       src={item.logo}
                       alt={`${item.client} logo`}
-                      height={40}
-                      width={120}
-                      className="object-contain dark:invert grayscale"
+                      height={30}
+                      width={90}
+                      className="object-contain dark:invert grayscale opacity-75 pt-2"
                     />
                   </div>
                 )}
 
-                <p className="bg-gradient-secondary dark:bg-gradient-secondary-dark  text-transparent bg-clip-text text-lg mb-6  tracking-wider  ">
+                <blockquote className="bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text  mb-6  text-lg    tracking-wide">
                   “{item.quote}”
-                </p>
+                </blockquote>
 
                 <div className="mt-auto">
-                  <p className="text-sm font-medium text-primary-900 dark:text-primary-100">
+                  <p className="text-sm font-medium text-primary-800 dark:text-primary-300">
                     {item.client}
                   </p>
                   <p className="text-sm text-primary-500">{item.role}</p>
