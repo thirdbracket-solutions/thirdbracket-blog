@@ -43,23 +43,23 @@ export const ClientTestimonials = () => {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((item, i) => (
               <Card
+                isIcon
                 key={i}
                 size="lg"
-                className="bg-gradient-secondary-dark dark:bg-gradient-secondary  !rounded-3xl shadow-sm border border-primary-500/30 flex flex-col justify-between"
-              >
-                {item.logo && (
-                  <div className="mb-6 h-10 relative w-auto text-primary-900 dark:text-primary-100">
+                cover={
+                  item.logo && (
                     <Image
                       src={item.logo}
                       alt={`${item.client} logo`}
                       height={30}
                       width={90}
-                      className="object-contain dark:invert grayscale opacity-75 pt-2"
+                      className="object-contain  grayscale dark:invert  opacity-70 pt-2 pl-2"
                     />
-                  </div>
-                )}
-
-                <blockquote className="bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text  mb-6  text-lg    tracking-wide">
+                  )
+                }
+                className="bg-accent-radial dark:bg-accent-radial-dark  !rounded-3xl   "
+              >
+                <blockquote className="text-primary-800 dark:text-primary-100 backdrop-blur-md mb-6  text-base   ">
                   “{item.quote}”
                 </blockquote>
 

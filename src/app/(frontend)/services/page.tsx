@@ -7,6 +7,14 @@
 // import { MdSpeed, MdDesignServices, MdBrandingWatermark } from 'react-icons/md'
 // import { Metadata } from 'next'
 
+import PageHeader from '@/components/PageHeader'
+import Category from './Catagory'
+import ContactCTA from './ContactCTA'
+import Stats from './Stats'
+import TechStack from './TechStack'
+import { Metadata } from 'next'
+import { IoTimerOutline } from 'react-icons/io5'
+
 // export const metadata: Metadata = {
 //   title: 'Web & Digital Marketing Services',
 // }
@@ -288,304 +296,497 @@
 //   )
 // }
 
-import { Metadata } from 'next'
-import { FaWordpress, FaSearch, FaRocket, FaReact, FaFigma, FaNodeJs } from 'react-icons/fa'
-import { SiNextdotjs, SiVercel, SiTailwindcss, SiGoogleanalytics } from 'react-icons/si'
-import { MdSpeed, MdDesignServices, MdBrandingWatermark } from 'react-icons/md'
-import { IconType } from 'react-icons'
-import PageHeader from '@/components/PageHeader'
-import { Bracket, Button, Card } from '@thirdbracket/bracketui'
+// import { Metadata } from 'next'
+// import { FaWordpress, FaSearch, FaRocket, FaReact, FaFigma, FaNodeJs } from 'react-icons/fa'
+// import { SiNextdotjs, SiVercel, SiTailwindcss, SiGoogleanalytics } from 'react-icons/si'
+// import { MdSpeed, MdDesignServices, MdBrandingWatermark } from 'react-icons/md'
+// import { IconType } from 'react-icons'
+// import PageHeader from '@/components/PageHeader'
+// import { Bracket, Button, Card } from '@thirdbracket/bracketui'
 
-interface Service {
-  title: string
-  description: string
-  icon: IconType
-  features: string[]
-}
+// interface Service {
+//   title: string
+//   description: string
+//   icon: IconType
+//   features: string[]
+// }
 
-interface ServiceCategory {
-  title: string
-  description: string
-  services: Service[]
-  stackIcons: IconType[]
-  illustration: {
-    src: string
-    alt: string
-  }
-}
+// interface ServiceCategory {
+//   title: string
+//   description: string
+//   services: Service[]
+//   stackIcons: IconType[]
+//   illustration: {
+//     src: string
+//     alt: string
+//   }
+// }
 
-function ServiceCard({ title, description, icon: Icon, features }: Service) {
-  return (
-    <Card
-      isIcon
-      size="lg"
-      header={title}
-      className="rounded-lg border border-primary-500  border-opacity-40 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100   bg-gradient-primary-dark dark:bg-gradient-primary"
-      cover={
-        <div className="w-12 h-12 mb-4 flex items-center  justify-center   border border-primary-500/40  bg-gradient-secondary-dark dark:bg-gradient-secondary  rounded-lg">
-          <Icon className="w-6 h-6 text-primary-900 dark:text-primary-100" />
-        </div>
-      }
-    >
-      <p className="text-primary-600 dark:text-primary-400 mb-4">{description}</p>
-      <ul className="space-y-2">
-        {features.map((feature, index) => (
-          <li
-            key={index}
-            className="flex items-center text-sm text-primary-600 dark:text-primary-400"
-          >
-            <span className="w-1.5 h-1.5 bg-primary-900 dark:bg-primary-100 rounded-full mr-2"></span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-    </Card>
-  )
-}
+// function ServiceCard({ title, description, icon: Icon, features }: Service) {
+//   return (
+//     <Card
+//       isIcon
+//       size="lg"
+//       header={title}
+//       className="rounded-lg border border-primary-500  border-opacity-40 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100   bg-gradient-primary-dark dark:bg-gradient-primary"
+//       cover={
+//         <div className="w-12 h-12 mb-4 flex items-center  justify-center   border border-primary-500/40  bg-gradient-secondary-dark dark:bg-gradient-secondary  rounded-lg">
+//           <Icon className="w-6 h-6 text-primary-900 dark:text-primary-100" />
+//         </div>
+//       }
+//     >
+//       <p className="text-primary-600 dark:text-primary-400 mb-4">{description}</p>
+//       <ul className="space-y-2">
+//         {features.map((feature, index) => (
+//           <li
+//             key={index}
+//             className="flex items-center text-sm text-primary-600 dark:text-primary-400"
+//           >
+//             <span className="w-1.5 h-1.5 bg-primary-900 dark:bg-primary-100 rounded-full mr-2"></span>
+//             {feature}
+//           </li>
+//         ))}
+//       </ul>
+//     </Card>
+//   )
+// }
 
-const serviceCategories: ServiceCategory[] = [
+// const serviceCategories: ServiceCategory[] = [
+//   {
+//     title: 'Web Development',
+//     description: 'Modern web solutions built with cutting-edge technologies.',
+//     stackIcons: [SiNextdotjs, FaWordpress, FaReact, FaNodeJs, SiVercel],
+//     illustration: {
+//       src: '/webdev.svg',
+//       alt: 'ff',
+//     },
+//     services: [
+//       {
+//         title: 'Next.js Development',
+//         description: 'Blazing fast websites and web apps with the latest Next.js stack.',
+//         icon: SiNextdotjs,
+//         features: [
+//           'Server-side rendering',
+//           'Static site generation',
+//           'API routes and serverless functions',
+//           'Performance optimization',
+//           'SEO-friendly architecture',
+//         ],
+//       },
+//       {
+//         title: 'WordPress Integration',
+//         description: 'Custom WordPress sites and headless WordPress for dynamic content.',
+//         icon: FaWordpress,
+//         features: [
+//           'Custom theme development',
+//           'Plugin development',
+//           'WooCommerce integration',
+//           'Performance optimization',
+//           'Security hardening',
+//         ],
+//       },
+//       {
+//         title: 'Frontend UI & Components',
+//         description: 'Minimal and fast UI with our own BracketUI component library.',
+//         icon: FaReact,
+//         features: [
+//           'Headless CMS integration',
+//           'JAMstack architecture',
+//           'Serverless functions',
+//           'API development',
+//           'Cloud deployment',
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     title: 'Digital Marketing',
+//     description: 'Strategic digital marketing to grow traffic, rankings, and conversions.',
+//     stackIcons: [FaSearch, SiGoogleanalytics, MdBrandingWatermark],
+//     illustration: {
+//       src: '/webdev.svg',
+//       alt: 'ff',
+//     },
+//     services: [
+//       {
+//         title: 'SEO Optimization',
+//         description: 'Optimized for search engine visibility and top rankings.',
+//         icon: FaSearch,
+//         features: [
+//           'Technical SEO optimization',
+//           'Content strategy',
+//           'Keyword research',
+//           'Link building',
+//           'Performance tracking',
+//         ],
+//       },
+//       {
+//         title: 'Performance & Analytics',
+//         description: 'Monitor user journeys and performance with accurate insights.',
+//         icon: SiGoogleanalytics,
+//         features: [
+//           'Brand strategy',
+//           'Visual identity design',
+//           'Brand guidelines',
+//           'Marketing materials',
+//           'Brand messaging',
+//         ],
+//       },
+//       {
+//         title: 'Brand Strategy',
+//         description: 'Clear positioning with a modern brand and marketing funnel.',
+//         icon: MdBrandingWatermark,
+//         features: [
+//           'Website copywriting',
+//           'Blog content',
+//           'Email campaigns',
+//           'Social media content',
+//           'SEO copywriting',
+//         ],
+//       },
+//     ],
+//   },
+//   {
+//     title: 'Other Services',
+//     description: 'Extra services to level up your products and improve engagement.',
+//     stackIcons: [MdDesignServices, MdSpeed, FaFigma, FaRocket, SiTailwindcss],
+//     illustration: {
+//       src: '/webdev.svg',
+//       alt: 'ff',
+//     },
+//     services: [
+//       {
+//         title: 'Web Design',
+//         description: 'Beautiful UI/UX designs built to convert and impress.',
+//         icon: MdDesignServices,
+//         features: [
+//           'User interface design',
+//           'User experience design',
+//           'Wireframing',
+//           'Prototyping',
+//           'Usability testing',
+//         ],
+//       },
+//       {
+//         title: 'Speed Optimization',
+//         description: 'Score better on PageSpeed, DebugBear, and real-world metrics.',
+//         icon: MdSpeed,
+//         features: [
+//           'Load time optimization',
+//           'Code optimization',
+//           'Database optimization',
+//           'Caching strategies',
+//           'Performance monitoring',
+//         ],
+//       },
+//       {
+//         title: 'Figma to Frontend',
+//         description: 'Convert design files into perfect, fast code.',
+//         icon: FaFigma,
+//         features: [
+//           'Interactive prototypes',
+//           'MVP development',
+//           'Concept validation',
+//           'User testing',
+//           'Iterative development',
+//         ],
+//       },
+//     ],
+//   },
+// ]
+
+// function TechStack({ icons }: { icons: IconType[] }) {
+//   return (
+//     <>
+//       {icons.map((Icon, i) => (
+//         <div
+//           key={i}
+//           className="w-14 h-14 flex items-center justify-center  border rounded-xl border-primary-500/20 bg-accent-radial dark:bg-accent-radial-dark dark:bg-primary-900"
+//         >
+//           <Icon className="text-xl  text-primary-800 dark:text-primary-200" />
+//         </div>
+//       ))}
+//     </>
+//   )
+// }
+
+// function CategorySection({ title, description, services, stackIcons }: ServiceCategory) {
+//   const index = serviceCategories.findIndex((c) => c.title === title)
+//   const isEven = index % 2 === 0
+
+//   return (
+//     <div className="py-10 sm:py-12  lg:py-14 xl:py-16">
+//       <div
+//         className={`flex flex-col sm:max-w-screen-md lg:max-w-4xl  md:flex-row  md:mx-auto ${isEven ? 'md:text-right ' : 'md:flex-row-reverse  '} items-center gap-8 md:gap-12 mb-12`}
+//       >
+//         {/* Left: Content */}
+//         <div className="md:w-1/2">
+//           <h2 className="text-3xl lg:text-4xl font-bold text-primary-950 dark:text-primary-50 mb-4 md:mb-6">
+//             {title}
+//           </h2>
+//           <p className="text-base md:text-lg lg:text-xl font-light text-primary-950/80 dark:text-primary-50/60 mb-4">
+//             {description}
+//           </p>
+//         </div>
+
+//         {/* Right: Illustration */}
+
+//         {/* <div className="w-full max-w-[300px] h-[200px] rounded-lg border border-primary-500/20 bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-400 text-sm"> */}
+//         <div className="  border border-dashed rounded-3xl border-primary-500/20   p-6   text-primary-400  flex flex-wrap  gap-4   ">
+//           <TechStack icons={stackIcons} />
+//         </div>
+//         {/* </div> */}
+//       </div>
+
+//       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//         {services.map((service, index) => (
+//           <ServiceCard key={index} {...service} />
+//         ))}
+//       </div>
+//     </div>
+//   )
+// }
+
+// function StatsSection() {
+//   const stats = [
+//     { label: 'Projects Delivered', value: '150+' },
+//     { label: 'Average Speed Boost', value: '3x' },
+//     { label: 'Client Retention Rate', value: '98%' },
+//     { label: 'Stack Specialties', value: '15+' },
+//   ]
+
+//   return (
+//     <div className="py-10 sm:py-12  lg:py-14 xl:py-16">
+//       <div className="py-10 sm:py-12  lg:py-14 xl:py-16 text-center border-y border-primary-500/20">
+//         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+//           {stats.map((stat, index) => (
+//             <div key={index}>
+//               <div className="text-3xl font-bold text-primary-900 dark:text-primary-100">
+//                 {stat.value}
+//               </div>
+//               <div className="text-primary-600 dark:text-primary-400">{stat.label}</div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//     </div>
+//   )
+// }
+
+// function ContactCTA() {
+//   return (
+//     <div className="py-10 sm:py-12  lg:py-14 xl:py-16">
+//       <div className="rounded-lg p-8 lg:p-12 text-center bg-accent-radial dark:bg-accent-radial-dark  border border-secondary-500/40 ">
+//         <h3 className="text-3xl font-semibold  text-primary-950 dark:text-primary-50 mb-4">
+//           Ready to Transform Your Digital Presence?
+//         </h3>
+//         <p className="text-primary-950/70 dark:text-primary-50/60 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   font-light mb-6">
+//           Let us discuss how we can help you achieve your goals
+//         </p>
+
+//         <Button
+//           size="md"
+//           className="bg-gradient-primary dark:bg-gradient-primary-dark !text-white dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85 "
+//         >
+//           Contact Us
+//         </Button>
+//       </div>
+//     </div>
+//   )
+// }
+
+// export const metadata: Metadata = {
+//   title: 'Services | Third Bracket',
+//   description:
+//     'Explore our modern web development and digital marketing services crafted for UK agencies and small businesses. We deliver speed, SEO, and clean design.',
+// }
+
+// export default function Services() {
+//   return (
+//     <>
+//       <PageHeader
+//         title="Services"
+//         description="Full-service modern web development & marketing for small businesses, agencies, and startups in the UK."
+//       />
+
+//       <Bracket fluid centered padding="medium">
+//         <div className="mx-auto max-w-screen-xl ">
+//           <div className="py-10 sm:py-12  lg:py-14 xl:py-16">
+//             {serviceCategories.map((category, index) => (
+//               <CategorySection key={index} {...category} />
+//             ))}
+//           </div>
+
+//           <StatsSection />
+//           <ContactCTA />
+//         </div>
+//       </Bracket>
+//     </>
+//   )
+// }
+
+// const categories = [
+//   {
+//     title: 'Modern Web Development',
+//     description: 'We build fast, modern, SEO-optimized websites using the latest technologies.',
+//     illustration: {
+//       src: '/5.svg',
+//       alt: 'Web Development Illustration',
+//     },
+//     stackIcons: TechStack(['SiNextdotjs', 'SiPayloadcms', 'SiTailwindcss', 'SiVercel']),
+//     services: [
+//       {
+//         title: 'Next.js Websites',
+//         description: 'Fast, SEO-optimized and scalable static & dynamic websites.',
+//         features: ['File-system routing', 'API Routes', 'Image Optimization'],
+//         badge: 'Frontend',
+//         icon: IoTimerOutline,
+//       },
+//       {
+//         title: 'Payload CMS Integration',
+//         description: 'Powerful admin dashboard and headless CMS for custom workflows.',
+//         features: ['Collections & Globals', 'Access Control', 'Custom Hooks'],
+//         icon: IoTimerOutline,
+//       },
+//     ],
+//   },
+//   {
+//     title: 'Email & Automation',
+//     description: 'Setup transactional emails and automate communication workflows.',
+//     illustration: {
+//       src: '/4.svg',
+//       alt: 'Email Illustration',
+//     },
+//     stackIcons: TechStack(['SiResend']),
+//     services: [
+//       {
+//         title: 'Transactional Email Setup',
+//         description: 'Integrate Resend with your forms and systems.',
+//         features: ['Form submission', 'Email templates', 'Payload plugin'],
+//         icon: IoTimerOutline,
+//       },
+//     ],
+//   },
+// ]
+
+const categories = [
   {
-    title: 'Web Development',
-    description: 'Modern web solutions built with cutting-edge technologies.',
-    stackIcons: [SiNextdotjs, FaWordpress, FaReact, FaNodeJs, SiVercel],
+    title: 'Modern Web Development',
+    description:
+      'We craft high-performance websites using modern frameworks that are scalable, SEO-friendly, and fast by default.',
     illustration: {
-      src: '/webdev.svg',
-      alt: 'ff',
+      src: '/5.svg',
+      alt: 'Modern Web Development Illustration',
     },
+    stackIcons: TechStack(['SiNextdotjs', 'SiPayloadcms', 'SiTailwindcss', 'SiVercel']),
     services: [
       {
         title: 'Next.js Development',
-        description: 'Blazing fast websites and web apps with the latest Next.js stack.',
-        icon: SiNextdotjs,
-        features: [
-          'Server-side rendering',
-          'Static site generation',
-          'API routes and serverless functions',
-          'Performance optimization',
-          'SEO-friendly architecture',
-        ],
+        description:
+          'Build blazing fast websites and applications using the power of React and server components.',
+        features: ['App Router', 'ISR & SSR', 'SEO Optimization'],
+        badge: 'Frontend',
+        icon: IoTimerOutline,
       },
       {
-        title: 'WordPress Integration',
-        description: 'Custom WordPress sites and headless WordPress for dynamic content.',
-        icon: FaWordpress,
-        features: [
-          'Custom theme development',
-          'Plugin development',
-          'WooCommerce integration',
-          'Performance optimization',
-          'Security hardening',
-        ],
+        title: 'Headless CMS Integration',
+        description: 'Custom admin interfaces and content workflows with Payload CMS.',
+        features: ['Custom Collections', 'Access Control', 'Form Builder'],
+        badge: 'CMS',
+        icon: IoTimerOutline,
       },
       {
-        title: 'Frontend UI & Components',
-        description: 'Minimal and fast UI with our own BracketUI component library.',
-        icon: FaReact,
-        features: [
-          'Headless CMS integration',
-          'JAMstack architecture',
-          'Serverless functions',
-          'API development',
-          'Cloud deployment',
-        ],
+        title: 'Performance Engineering',
+        description: 'Optimize Core Web Vitals for faster load times and better rankings.',
+        features: ['Lighthouse 90+', 'Image Optimization', 'Bundle Splitting'],
+        badge: 'Performance',
+        icon: IoTimerOutline,
+      },
+      {
+        title: 'API & Backend Logic',
+        description: 'Build scalable serverless APIs and backend logic for your web apps.',
+        features: ['Edge Functions', 'API Routes', 'Payload Hooks'],
+        badge: 'Backend',
+        icon: IoTimerOutline,
       },
     ],
   },
   {
-    title: 'Digital Marketing',
-    description: 'Strategic digital marketing to grow traffic, rankings, and conversions.',
-    stackIcons: [FaSearch, SiGoogleanalytics, MdBrandingWatermark],
+    title: 'Rapid Digital Marketing',
+    description:
+      'We help you grow online visibility with automated, data-driven marketing strategies tailored for speed and ROI.',
     illustration: {
-      src: '/webdev.svg',
-      alt: 'ff',
+      src: '/digital-marketing.svg',
+      alt: 'Digital Marketing Illustration',
     },
+    stackIcons: TechStack(['SiResend', 'SiNextdotjs', 'SiPayloadcms']),
     services: [
       {
-        title: 'SEO Optimization',
-        description: 'Optimized for search engine visibility and top rankings.',
-        icon: FaSearch,
-        features: [
-          'Technical SEO optimization',
-          'Content strategy',
-          'Keyword research',
-          'Link building',
-          'Performance tracking',
-        ],
+        title: 'Email Automation',
+        description: 'Setup high-converting transactional and drip campaigns using Resend.',
+        features: ['Form to Inbox', 'Custom Templates', 'Payload Email Plugin'],
+        badge: 'Automation',
+        icon: IoTimerOutline,
       },
       {
-        title: 'Performance & Analytics',
-        description: 'Monitor user journeys and performance with accurate insights.',
-        icon: SiGoogleanalytics,
-        features: [
-          'Brand strategy',
-          'Visual identity design',
-          'Brand guidelines',
-          'Marketing materials',
-          'Brand messaging',
-        ],
+        title: 'Technical SEO',
+        description:
+          'Built-in best practices for crawlability, structured data, and meta automation.',
+        features: ['Sitemaps', 'Meta Tags', 'Open Graph / Schema'],
+        badge: 'SEO',
+        icon: IoTimerOutline,
       },
       {
-        title: 'Brand Strategy',
-        description: 'Clear positioning with a modern brand and marketing funnel.',
-        icon: MdBrandingWatermark,
-        features: [
-          'Website copywriting',
-          'Blog content',
-          'Email campaigns',
-          'Social media content',
-          'SEO copywriting',
-        ],
+        title: 'Analytics & Tracking',
+        description: 'Implement analytics to measure performance, conversions, and funnels.',
+        features: ['Vercel Analytics', 'Google Tag Manager', 'Custom Events'],
+        badge: 'Tracking',
+        icon: IoTimerOutline,
       },
     ],
   },
   {
-    title: 'Other Services',
-    description: 'Extra services to level up your products and improve engagement.',
-    stackIcons: [MdDesignServices, MdSpeed, FaFigma, FaRocket, SiTailwindcss],
+    title: 'Minimal UI/UX',
+    description:
+      'We design simple, intuitive, and beautiful user interfaces focused on clarity and usability.',
     illustration: {
-      src: '/webdev.svg',
-      alt: 'ff',
+      src: '/ui-ux.svg',
+      alt: 'Minimal UI/UX Illustration',
     },
+    stackIcons: TechStack(['SiNextdotjs', 'SiTailwindcss', 'SiVercel']),
     services: [
       {
-        title: 'Web Design',
-        description: 'Beautiful UI/UX designs built to convert and impress.',
-        icon: MdDesignServices,
-        features: [
-          'User interface design',
-          'User experience design',
-          'Wireframing',
-          'Prototyping',
-          'Usability testing',
-        ],
+        title: 'Design System Setup',
+        description:
+          'Reusable components, tokens, and styling rules using Tailwind and Bracket UI.',
+        features: ['Dark Mode', 'Component Library', 'Responsiveness'],
+        badge: 'UI Kit',
+        icon: IoTimerOutline,
       },
       {
-        title: 'Speed Optimization',
-        description: 'Score better on PageSpeed, DebugBear, and real-world metrics.',
-        icon: MdSpeed,
-        features: [
-          'Load time optimization',
-          'Code optimization',
-          'Database optimization',
-          'Caching strategies',
-          'Performance monitoring',
-        ],
+        title: 'Clean UI Implementation',
+        description: 'Hand-coded layouts with pixel-perfect styling and accessibility built-in.',
+        features: ['Minimal Design', 'ARIA Labels', 'Interactive States'],
+        badge: 'UI',
+        icon: IoTimerOutline,
       },
       {
-        title: 'Figma to Frontend',
-        description: 'Convert design files into perfect, fast code.',
-        icon: FaFigma,
-        features: [
-          'Interactive prototypes',
-          'MVP development',
-          'Concept validation',
-          'User testing',
-          'Iterative development',
-        ],
+        title: 'Landing Page Design',
+        description: 'High-converting, fast-loading landing pages for your campaigns and services.',
+        features: ['Above-the-fold Content', 'Scroll Effects', 'Call-to-Action Focused'],
+        badge: 'UX',
+        icon: IoTimerOutline,
+      },
+      {
+        title: 'Design-to-Code Workflow',
+        description: 'Convert your design mockups into production-grade code with consistency.',
+        features: ['Figma Handoff', 'Component Mapping', 'No Design Drift'],
+        badge: 'Workflow',
+        icon: IoTimerOutline,
       },
     ],
   },
 ]
-
-function TechStack({ icons }: { icons: IconType[] }) {
-  return (
-    <>
-      {icons.map((Icon, i) => (
-        <div
-          key={i}
-          className="w-14 h-14 flex items-center justify-center  border rounded-xl border-primary-500/20 bg-accent-radial dark:bg-accent-radial-dark dark:bg-primary-900"
-        >
-          <Icon className="text-xl  text-primary-800 dark:text-primary-200" />
-        </div>
-      ))}
-    </>
-  )
-}
-
-function CategorySection({ title, description, services, stackIcons }: ServiceCategory) {
-  const index = serviceCategories.findIndex((c) => c.title === title)
-  const isEven = index % 2 === 0
-
-  return (
-    <div className="py-10 sm:py-12  lg:py-14 xl:py-16">
-      <div
-        className={`flex flex-col sm:max-w-screen-md lg:max-w-4xl  md:flex-row  md:mx-auto ${isEven ? 'md:text-right ' : 'md:flex-row-reverse  '} items-center gap-8 md:gap-12 mb-12`}
-      >
-        {/* Left: Content */}
-        <div className="md:w-1/2">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary-950 dark:text-primary-50 mb-4 md:mb-6">
-            {title}
-          </h2>
-          <p className="text-base md:text-lg lg:text-xl font-light text-primary-950/80 dark:text-primary-50/60 mb-4">
-            {description}
-          </p>
-        </div>
-
-        {/* Right: Illustration */}
-
-        {/* <div className="w-full max-w-[300px] h-[200px] rounded-lg border border-primary-500/20 bg-primary-100 dark:bg-primary-900 flex items-center justify-center text-primary-400 text-sm"> */}
-        <div className="  border border-dashed rounded-3xl border-primary-500/20   p-6   text-primary-400  flex flex-wrap  gap-4   ">
-          <TechStack icons={stackIcons} />
-        </div>
-        {/* </div> */}
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <ServiceCard key={index} {...service} />
-        ))}
-      </div>
-    </div>
-  )
-}
-
-function StatsSection() {
-  const stats = [
-    { label: 'Projects Delivered', value: '150+' },
-    { label: 'Average Speed Boost', value: '3x' },
-    { label: 'Client Retention Rate', value: '98%' },
-    { label: 'Stack Specialties', value: '15+' },
-  ]
-
-  return (
-    <div className="py-10 sm:py-12  lg:py-14 xl:py-16">
-      <div className="py-10 sm:py-12  lg:py-14 xl:py-16 text-center border-y border-primary-500/20">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
-          {stats.map((stat, index) => (
-            <div key={index}>
-              <div className="text-3xl font-bold text-primary-900 dark:text-primary-100">
-                {stat.value}
-              </div>
-              <div className="text-primary-600 dark:text-primary-400">{stat.label}</div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  )
-}
-
-function ContactCTA() {
-  return (
-    <div className="py-10 sm:py-12  lg:py-14 xl:py-16">
-      <div className="rounded-lg p-8 lg:p-12 text-center bg-accent-radial dark:bg-accent-radial-dark  border border-secondary-500/40 ">
-        <h3 className="text-3xl font-semibold  text-primary-950 dark:text-primary-50 mb-4">
-          Ready to Transform Your Digital Presence?
-        </h3>
-        <p className="text-primary-950/70 dark:text-primary-50/60 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   font-light mb-6">
-          Let us discuss how we can help you achieve your goals
-        </p>
-
-        <Button
-          size="md"
-          className="bg-gradient-primary dark:bg-gradient-primary-dark !text-white dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85 "
-        >
-          Contact Us
-        </Button>
-      </div>
-    </div>
-  )
-}
 
 export const metadata: Metadata = {
   title: 'Services | Third Bracket',
@@ -593,26 +794,18 @@ export const metadata: Metadata = {
     'Explore our modern web development and digital marketing services crafted for UK agencies and small businesses. We deliver speed, SEO, and clean design.',
 }
 
-export default function Services() {
+export default function ServicesPage() {
   return (
-    <>
+    <section>
       <PageHeader
         title="Services"
         description="Full-service modern web development & marketing for small businesses, agencies, and startups in the UK."
       />
-
-      <Bracket fluid centered padding="medium">
-        <div className="mx-auto max-w-screen-xl ">
-          <div className="py-10 sm:py-12  lg:py-14 xl:py-16">
-            {serviceCategories.map((category, index) => (
-              <CategorySection key={index} {...category} />
-            ))}
-          </div>
-
-          <StatsSection />
-          <ContactCTA />
-        </div>
-      </Bracket>
-    </>
+      {categories.map((cat, index) => (
+        <Category key={index} {...cat} index={index} />
+      ))}
+      <Stats />
+      <ContactCTA />
+    </section>
   )
 }

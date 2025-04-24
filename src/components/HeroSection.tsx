@@ -212,7 +212,7 @@ export const Hero: React.FC = () => {
               Next.js Web Development for UK Agencies & Startups
             </h1>
 
-            <p className="text-primary-950/70 dark:text-primary-50/60 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] lg:max-w-screen-md sm:max-w-lg md:max-w-screen-sm text-left sm:text-center xl:max-w-[900px] backdrop-blur-sm">
+            <p className="text-primary-950/80 dark:text-primary-200/70 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] lg:max-w-screen-md sm:max-w-lg md:max-w-screen-sm text-left sm:text-center xl:max-w-[900px] backdrop-blur-sm">
               We build fast, SEO-optimized websites using Next.js and TailwindCSS. Our custom React
               component library delivers minimal, professional design that’s hard to outsource
               without an in-house team.

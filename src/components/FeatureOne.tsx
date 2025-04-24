@@ -174,7 +174,7 @@ export function FeatureShowcaseSection() {
             <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text lg:mb-0 text-left sm:text-center lg:text-right">
               Looking for Fast & Beautiful Websites for Your Business?
             </h2>
-            <p className="text-primary-950/80 dark:text-primary-50/60 font-light text-base md:text-lg lg:text-xl text-left sm:text-center lg:text-left">
+            <p className="text-primary-950/80 dark:text-primary-200/70 font-light text-base md:text-lg lg:text-xl text-left sm:text-center lg:text-left">
               Whether you are a startup or an agency, we help you build scalable, SEO-optimized
               websites with a clean, minimal design that aligns with your brand.
             </p>
@@ -191,7 +191,6 @@ export function FeatureShowcaseSection() {
                   as={Link}
                   href={card.href}
                   header={card.header}
-                  className="w-full h-full rounded-lg border border-primary-500 border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out bg-gradient-primary-dark dark:bg-gradient-secondary focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100"
                   cover={
                     <div className="h-60 w-full lg:h-80 bg-white dark:bg-black bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#636e9f1f_1px,transparent_1px),linear-gradient(to_bottom,#636e9f1f_1px,transparent_1px)] bg-[size:14px_24px] relative">
                       <Image
@@ -203,7 +202,7 @@ export function FeatureShowcaseSection() {
                     </div>
                   }
                 >
-                  <span className="font-light text-primary-950/80 dark:text-primary-50/60">
+                  <span className="font-light text-primary-950/80 dark:text-primary-200/70">
                     {card.description}
                   </span>
                 </Card>
@@ -215,15 +214,8 @@ export function FeatureShowcaseSection() {
               {services
                 .filter((card) => !hasImage(card))
                 .map((card, index) => (
-                  <Card
-                    key={index}
-                    size="lg"
-                    as={Link}
-                    href={card.href}
-                    header={card.header}
-                    className="w-full h-full bg-gradient-primary-dark dark:bg-gradient-primary rounded-lg border border-primary-500 border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100"
-                  >
-                    <span className="font-light text-primary-950/80 dark:text-primary-50/60">
+                  <Card key={index} size="lg" as={Link} href={card.href} header={card.header}>
+                    <span className="font-light text-primary-950/80 dark:text-primary-200/70">
                       {card.description}
                     </span>
                   </Card>

@@ -303,7 +303,7 @@ export function WhyChooseUsSection() {
             <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left sm:text-center">
               Why Choose Us for Web Development?
             </h2>
-            <p className="text-primary-950/80 dark:text-primary-50/60 text-base md:text-lg lg:text-xl text-left sm:text-center font-light max-w-4xl mx-auto">
+            <p className="text-primary-950/80 dark:text-primary-200/70 text-base md:text-lg lg:text-xl text-left sm:text-center font-light max-w-4xl mx-auto">
               Our approach combines technical excellence with real-world flexibility—designed to
               meet the needs of growing businesses that care about speed, SEO, and design clarity.
             </p>
@@ -315,11 +315,11 @@ export function WhyChooseUsSection() {
                 key={index}
                 size="lg"
                 isIcon
-                className="rounded-lg border border-primary-500 border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100 bg-gradient-primary-dark dark:bg-gradient-primary"
+                className=" bg-gradient-primary-dark dark:bg-gradient-primary"
                 cover={<Icon className={iconClassName} />}
                 header={header}
               >
-                <span className="text-primary-950/80 dark:text-primary-50/60 font-light">
+                <span className="font-light text-primary-950/80 dark:text-primary-200/70">
                   {description}
                 </span>
               </Card>
