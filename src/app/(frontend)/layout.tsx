@@ -98,14 +98,7 @@ export const metadata: Metadata = {
     template: `%s | ${Settings.title}`,
     default: `Next.js Web Development & SEO-Optimized Websites for UK Startups, Agencies, and Businesses | ${Settings.title}`,
   },
-  icons: {
-    icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
-      { url: '/favicon.ico', type: 'image/x-icon' },
-    ],
-    apple: '/apple-icon.png',
-  },
-  manifest: '/manifest.json',
+
   metadataBase: new URL(baseUrl),
   description: Settings.description,
   keywords: Settings.keywords,
@@ -130,9 +123,6 @@ export const metadata: Metadata = {
       url: `${baseUrl}${image.url}`,
     })),
   },
-  // verification: {
-  //   google: Settings.verification.google,
-  // },
 
   alternates: {
     canonical: baseUrl,
@@ -161,15 +151,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             `,
           }}
         /> */}
-         {/* Facebook Meta Tags */}
-  <meta property="og:url" content="https://www.thirdbracket.co.uk" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Third Bracket" />
-  <meta
-    property="og:description"
-    content="Looking for fast, SEO-optimized, and professionally designed websites? We specialize in Next.js web development and React component libraries, helping UK startups, agencies, and businesses outsource high-quality web development and design."
-  />
-  <meta property="og:image" content="https://www.thirdbracket.co.uk/og-image.png" />
+
         <meta name="gtm-id" content="GTM-5LLRMTFW" />
 
         <meta name="msvalidate.01" content="46803F5EEF01F535EF3999B5E1F48682" />

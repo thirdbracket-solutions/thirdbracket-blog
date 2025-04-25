@@ -1,6 +1,7 @@
 'use client'
 
-import { Bracket } from '@thirdbracket/bracketui'
+import { Bracket, Button } from '@thirdbracket/bracketui'
+import Link from 'next/link'
 
 export default function ContactCTA() {
   return (
@@ -13,12 +14,14 @@ export default function ContactCTA() {
           <p className="text-primary-700 dark:text-primary-200 mb-6">
             Let’s discuss your project and bring your vision to life.
           </p>
-          <a
+          <Button
+            as={Link}
             href="/contact"
-            className="inline-block bg-primary-700 text-white px-6 py-3 rounded hover:bg-primary-800 transition"
+            size="md"
+            className="bg-gradient-primary dark:bg-gradient-primary-dark !text-white dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85 "
           >
             Contact Us
-          </a>
+          </Button>
         </div>
       </Bracket>
     </section>

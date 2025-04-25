@@ -1,6 +1,8 @@
 {
   "name": "Third Bracket",
-  "short_name": "TBracket",
+  "short_name": "TB",
+  "description": "Next.js Web Development for UK Agencies & Startups",
+  "start_url": "/",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

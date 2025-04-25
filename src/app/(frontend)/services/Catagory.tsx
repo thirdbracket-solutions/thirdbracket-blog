@@ -25,7 +25,7 @@ export default function Category({
   description,
   stackIcons,
   illustration,
-  index,
+
   services,
 }: CategoryProps) {
   return (
