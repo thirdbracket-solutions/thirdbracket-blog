@@ -315,7 +315,7 @@ export function WhyChooseUsSection() {
                 key={index}
                 size="lg"
                 isIcon
-                className=" bg-gradient-primary-dark dark:bg-gradient-primary"
+                className=" bg-gradient-secondary-dark dark:bg-gradient-secondary"
                 cover={<Icon className={iconClassName} />}
                 header={header}
               >

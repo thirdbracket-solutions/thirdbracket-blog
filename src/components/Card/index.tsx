@@ -129,7 +129,7 @@ export const Card: React.FC<{
     <Link href={href}>
       <article
         className={cn(
-          'border border-primary-600 border-opacity-40 rounded-lg overflow-hidden  hover:cursor-pointer transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100',
+          'border border-primary-500 border-opacity-30 rounded-lg overflow-hidden bg-gradient-secondary-dark dark:bg-gradient-secondary hover:cursor-pointer transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100',
           className,
         )}
         ref={card.ref}
@@ -140,7 +140,7 @@ export const Card: React.FC<{
         </div>
         <div className="p-4">
           {showCategories && hasCategories && (
-            <div className="uppercase px-0.5 border border-primary-600/30 text-secondary-600 w-fit text-xs rounded mb-2">
+            <div className="uppercase px-1  border border-primary-600/30 text-primary-700 dark:text-primary-300 w-fit text-xs rounded mb-2 bg-accent-radial dark:bg-accent-radial-dark">
               {showCategories && hasCategories && (
                 <div>
                   {categories?.map((category, index) => {

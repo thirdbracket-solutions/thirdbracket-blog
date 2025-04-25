@@ -37,7 +37,7 @@ export default async function Page() {
             <h1>Posts</h1>
           </div>
         </div> */}
-      <PageHeader title="Blog" description="Insights and updates from our team" />
+      <PageHeader title="Blog" description="Bracket Insights and updates from our team" />
       <div className="max-w-7xl mx-auto  py-8 sm:py-12 md:py-16">
         <div className="container mb-8">
           <PageRange
