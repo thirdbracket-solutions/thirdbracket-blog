@@ -6,7 +6,7 @@ export const url = 'https://www.thirdbracket.co.uk'
 
 export const sitename = 'Third Bracket'
 export const description =
-  'Looking for fast, SEO-optimized, and professionally designed websites? We specialize in Next.js web development and React component libraries, helping UK startups, agencies, and businesses outsource high-quality web development and design.'
+  'We specialize in Next.js web development and React component libraries, helping UK startups, agencies, and businesses outsource high-quality web development and design.'
 export const keywords = [
   'Next.js web development UK',
   'SEO-optimized websites UK',

@@ -26,6 +26,7 @@ import { WebPage, WithContext } from 'schema-dts'
 
 import GTM from '@/components/GTM'
 import { Roboto } from 'next/font/google'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -179,6 +180,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <SiteFooter />
         <GTM />
+        <SpeedInsights />
       </body>
     </html>
   )
