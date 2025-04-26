@@ -669,119 +669,298 @@ import { IoTimerOutline } from 'react-icons/io5'
 //   },
 // ]
 
+// const categories = [
+//   {
+//     title: 'Modern Web Development',
+//     description:
+//       'We craft high-performance websites using modern frameworks that are scalable, SEO-friendly, and fast by default.',
+//     illustration: {
+//       src: '/5.svg',
+//       alt: 'Modern Web Development Illustration',
+//     },
+//     stackIcons: TechStack(['SiNextdotjs', 'SiPayloadcms', 'SiTailwindcss', 'SiVercel']),
+//     services: [
+//       {
+//         title: 'Next.js Development',
+//         description:
+//           'Build blazing fast websites and applications using the power of React and server components.',
+//         features: ['App Router', 'ISR & SSR', 'SEO Optimization'],
+//         badge: 'Frontend',
+//         icon: IoTimerOutline,
+//       },
+//       {
+//         title: 'Headless CMS Integration',
+//         description: 'Custom admin interfaces and content workflows with Payload CMS.',
+//         features: ['Custom Collections', 'Access Control', 'Form Builder'],
+//         badge: 'CMS',
+//         icon: IoTimerOutline,
+//       },
+//       {
+//         title: 'Performance Engineering',
+//         description: 'Optimize Core Web Vitals for faster load times and better rankings.',
+//         features: ['Lighthouse 90+', 'Image Optimization', 'Bundle Splitting'],
+//         badge: 'Performance',
+//         icon: IoTimerOutline,
+//       },
+//       {
+//         title: 'API & Backend Logic',
+//         description: 'Build scalable serverless APIs and backend logic for your web apps.',
+//         features: ['Edge Functions', 'API Routes', 'Payload Hooks'],
+//         badge: 'Backend',
+//         icon: IoTimerOutline,
+//       },
+//     ],
+//   },
+//   {
+//     title: 'Rapid Digital Marketing',
+//     description:
+//       'We help you grow online visibility with automated, data-driven marketing strategies tailored for speed and ROI.',
+//     illustration: {
+//       src: '/digital-marketing.svg',
+//       alt: 'Digital Marketing Illustration',
+//     },
+//     stackIcons: TechStack(['SiResend', 'SiNextdotjs', 'SiPayloadcms']),
+//     services: [
+//       {
+//         title: 'Email Automation',
+//         description: 'Setup high-converting transactional and drip campaigns using Resend.',
+//         features: ['Form to Inbox', 'Custom Templates', 'Payload Email Plugin'],
+//         badge: 'Automation',
+//         icon: IoTimerOutline,
+//       },
+//       {
+//         title: 'Technical SEO',
+//         description:
+//           'Built-in best practices for crawlability, structured data, and meta automation.',
+//         features: ['Sitemaps', 'Meta Tags', 'Open Graph / Schema'],
+//         badge: 'SEO',
+//         icon: IoTimerOutline,
+//       },
+//       {
+//         title: 'Analytics & Tracking',
+//         description: 'Implement analytics to measure performance, conversions, and funnels.',
+//         features: ['Vercel Analytics', 'Google Tag Manager', 'Custom Events'],
+//         badge: 'Tracking',
+//         icon: IoTimerOutline,
+//       },
+//     ],
+//   },
+//   {
+//     title: 'Minimal UI/UX',
+//     description:
+//       'We design simple, intuitive, and beautiful user interfaces focused on clarity and usability.',
+//     illustration: {
+//       src: '/ui-ux.svg',
+//       alt: 'Minimal UI/UX Illustration',
+//     },
+//     stackIcons: TechStack(['SiNextdotjs', 'SiTailwindcss', 'SiVercel']),
+//     services: [
+//       {
+//         title: 'Design System Setup',
+//         description:
+//           'Reusable components, tokens, and styling rules using Tailwind and Bracket UI.',
+//         features: ['Dark Mode', 'Component Library', 'Responsiveness'],
+//         badge: 'UI Kit',
+//         icon: IoTimerOutline,
+//       },
+//       {
+//         title: 'Clean UI Implementation',
+//         description: 'Hand-coded layouts with pixel-perfect styling and accessibility built-in.',
+//         features: ['Minimal Design', 'ARIA Labels', 'Interactive States'],
+//         badge: 'UI',
+//         icon: IoTimerOutline,
+//       },
+//       {
+//         title: 'Landing Page Design',
+//         description: 'High-converting, fast-loading landing pages for your campaigns and services.',
+//         features: ['Above-the-fold Content', 'Scroll Effects', 'Call-to-Action Focused'],
+//         badge: 'UX',
+//         icon: IoTimerOutline,
+//       },
+//       {
+//         title: 'Design-to-Code Workflow',
+//         description: 'Convert your design mockups into production-grade code with consistency.',
+//         features: ['Figma Handoff', 'Component Mapping', 'No Design Drift'],
+//         badge: 'Workflow',
+//         icon: IoTimerOutline,
+//       },
+//     ],
+//   },
+// ]
+
 const categories = [
   {
-    title: 'Modern Web Development',
+    title: 'Web Development',
     description:
-      'We craft high-performance websites using modern frameworks that are scalable, SEO-friendly, and fast by default.',
+      'We build modern, high-performance web solutions using cutting-edge technologies with a focus on scalability and maintainability.',
     illustration: {
       src: '/5.svg',
-      alt: 'Modern Web Development Illustration',
+      alt: 'Web Development Illustration',
     },
-    stackIcons: TechStack(['SiNextdotjs', 'SiPayloadcms', 'SiTailwindcss', 'SiVercel']),
+    stackIcons: TechStack(['SiNextdotjs', 'SiWordpress', 'SiPayloadcms', 'SiVercel']),
     services: [
       {
         title: 'Next.js Development',
         description:
-          'Build blazing fast websites and applications using the power of React and server components.',
-        features: ['App Router', 'ISR & SSR', 'SEO Optimization'],
+          'Build modern web applications with React and server components for optimal performance.',
+        features: ['App Router', 'Server Components', 'Edge Runtime'],
         badge: 'Frontend',
         icon: IoTimerOutline,
       },
       {
-        title: 'Headless CMS Integration',
-        description: 'Custom admin interfaces and content workflows with Payload CMS.',
-        features: ['Custom Collections', 'Access Control', 'Form Builder'],
+        title: 'WordPress Development',
+        description:
+          'Custom WordPress solutions with modern development practices and optimizations.',
+        features: ['Custom Themes', 'Plugin Development', 'Performance Tuning'],
         badge: 'CMS',
         icon: IoTimerOutline,
       },
       {
-        title: 'Performance Engineering',
-        description: 'Optimize Core Web Vitals for faster load times and better rankings.',
-        features: ['Lighthouse 90+', 'Image Optimization', 'Bundle Splitting'],
+        title: 'Headless Integration',
+        description:
+          'Connect modern frontends with powerful backend systems for flexible content management.',
+        features: ['API Development', 'CMS Integration', 'Content Modeling'],
+        badge: 'Integration',
+        icon: IoTimerOutline,
+      },
+      {
+        title: 'Performance Optimization',
+        description: 'Optimize web applications for speed, SEO, and user experience.',
+        features: ['Core Web Vitals', 'Caching Strategy', 'Asset Optimization'],
         badge: 'Performance',
         icon: IoTimerOutline,
       },
       {
-        title: 'API & Backend Logic',
-        description: 'Build scalable serverless APIs and backend logic for your web apps.',
-        features: ['Edge Functions', 'API Routes', 'Payload Hooks'],
-        badge: 'Backend',
-        icon: IoTimerOutline,
-      },
-    ],
-  },
-  {
-    title: 'Rapid Digital Marketing',
-    description:
-      'We help you grow online visibility with automated, data-driven marketing strategies tailored for speed and ROI.',
-    illustration: {
-      src: '/digital-marketing.svg',
-      alt: 'Digital Marketing Illustration',
-    },
-    stackIcons: TechStack(['SiResend', 'SiNextdotjs', 'SiPayloadcms']),
-    services: [
-      {
-        title: 'Email Automation',
-        description: 'Setup high-converting transactional and drip campaigns using Resend.',
-        features: ['Form to Inbox', 'Custom Templates', 'Payload Email Plugin'],
-        badge: 'Automation',
+        title: 'Migration & Modernization',
+        description: 'Upgrade legacy systems to modern technology stacks with minimal disruption.',
+        features: ['Code Refactoring', 'Platform Migration', 'Tech Stack Updates'],
+        badge: 'Migration',
         icon: IoTimerOutline,
       },
       {
-        title: 'Technical SEO',
+        title: 'Feature Development',
         description:
-          'Built-in best practices for crawlability, structured data, and meta automation.',
-        features: ['Sitemaps', 'Meta Tags', 'Open Graph / Schema'],
-        badge: 'SEO',
-        icon: IoTimerOutline,
-      },
-      {
-        title: 'Analytics & Tracking',
-        description: 'Implement analytics to measure performance, conversions, and funnels.',
-        features: ['Vercel Analytics', 'Google Tag Manager', 'Custom Events'],
-        badge: 'Tracking',
+          'Build custom features and integrate third-party APIs for enhanced functionality.',
+        features: ['API Integration', 'Custom Features', 'Payment Systems'],
+        badge: 'Development',
         icon: IoTimerOutline,
       },
     ],
   },
   {
-    title: 'Minimal UI/UX',
+    title: 'UI/UX Design',
     description:
-      'We design simple, intuitive, and beautiful user interfaces focused on clarity and usability.',
+      'We create intuitive and engaging user interfaces that balance aesthetic appeal with functional design principles.',
     illustration: {
       src: '/ui-ux.svg',
-      alt: 'Minimal UI/UX Illustration',
+      alt: 'UI/UX Design Illustration',
     },
-    stackIcons: TechStack(['SiNextdotjs', 'SiTailwindcss', 'SiVercel']),
+    stackIcons: TechStack(['SiTailwindcss', 'SiFigma', 'SiAdobeillustrator', 'SiFramer']),
     services: [
       {
-        title: 'Design System Setup',
-        description:
-          'Reusable components, tokens, and styling rules using Tailwind and Bracket UI.',
-        features: ['Dark Mode', 'Component Library', 'Responsiveness'],
-        badge: 'UI Kit',
+        title: 'Landing Page Design',
+        description: 'Create high-converting landing pages that drive user engagement and actions.',
+        features: ['Conversion Optimization', 'Mobile-First Design', 'A/B Testing'],
+        badge: 'Design',
         icon: IoTimerOutline,
       },
       {
-        title: 'Clean UI Implementation',
-        description: 'Hand-coded layouts with pixel-perfect styling and accessibility built-in.',
-        features: ['Minimal Design', 'ARIA Labels', 'Interactive States'],
+        title: 'Website Layout Design',
+        description:
+          'Design intuitive website layouts that enhance user experience and navigation.',
+        features: ['Information Architecture', 'Responsive Design', 'User Flow'],
         badge: 'UI',
         icon: IoTimerOutline,
       },
       {
-        title: 'Landing Page Design',
-        description: 'High-converting, fast-loading landing pages for your campaigns and services.',
-        features: ['Above-the-fold Content', 'Scroll Effects', 'Call-to-Action Focused'],
-        badge: 'UX',
+        title: 'Vector Design',
+        description: 'Create scalable logos, icons, and visual assets for brand consistency.',
+        features: ['Logo Design', 'Icon Sets', 'Brand Assets'],
+        badge: 'Graphics',
         icon: IoTimerOutline,
       },
       {
-        title: 'Design-to-Code Workflow',
-        description: 'Convert your design mockups into production-grade code with consistency.',
-        features: ['Figma Handoff', 'Component Mapping', 'No Design Drift'],
-        badge: 'Workflow',
+        title: 'Component-Based UI',
+        description: 'Build scalable design systems with reusable components and patterns.',
+        features: ['Design System', 'Component Library', 'Style Guide'],
+        badge: 'System',
+        icon: IoTimerOutline,
+      },
+      {
+        title: 'Website Redesign',
+        description:
+          'Modernize existing websites with contemporary design patterns and best practices.',
+        features: ['UI Modernization', 'UX Enhancement', 'Visual Refresh'],
+        badge: 'Redesign',
+        icon: IoTimerOutline,
+      },
+      {
+        title: 'UX Strategy',
+        description:
+          'Develop user-centered design strategies and wireframes for optimal experiences.',
+        features: ['User Research', 'Wireframing', 'Prototyping'],
+        badge: 'UX',
+        icon: IoTimerOutline,
+      },
+    ],
+  },
+  {
+    title: 'Digital Marketing',
+    description:
+      'We implement data-driven digital marketing strategies to improve visibility, engagement, and conversion rates.',
+    illustration: {
+      src: '/digital-marketing.svg',
+      alt: 'Digital Marketing Illustration',
+    },
+    stackIcons: TechStack([
+      'SiGoogleanalytics',
+      'SiGooglesearchconsole',
+      'SiWordpress',
+      'SiNextdotjs',
+    ]),
+    services: [
+      {
+        title: 'Technical SEO',
+        description:
+          'Optimize website technical aspects for better search engine visibility and rankings.',
+        features: ['Site Structure', 'Performance SEO', 'Technical Audit'],
+        badge: 'SEO',
+        icon: IoTimerOutline,
+      },
+      {
+        title: 'Performance Optimization',
+        description: 'Enhance website performance metrics for better user experience and SEO.',
+        features: ['Speed Optimization', 'Core Web Vitals', 'Mobile Performance'],
+        badge: 'Performance',
+        icon: IoTimerOutline,
+      },
+      {
+        title: 'SEO-Ready Development',
+        description: 'Build websites with SEO best practices implemented from the ground up.',
+        features: ['Schema Markup', 'SEO Architecture', 'Content Strategy'],
+        badge: 'Development',
+        icon: IoTimerOutline,
+      },
+      {
+        title: 'Content Writing',
+        description: 'Create engaging, SEO-optimized content that resonates with your audience.',
+        features: ['Blog Writing', 'Website Copy', 'Content Strategy'],
+        badge: 'Content',
+        icon: IoTimerOutline,
+      },
+      {
+        title: 'Social Media Management',
+        description:
+          'Manage and grow your social media presence with strategic content and engagement.',
+        features: ['Content Calendar', 'Platform Strategy', 'Community Management'],
+        badge: 'Social',
+        icon: IoTimerOutline,
+      },
+      {
+        title: 'Google Services',
+        description: 'Implement and optimize Google services for better visibility and analytics.',
+        features: ['Analytics Setup', 'Search Console', 'Tag Manager'],
+        badge: 'Google',
         icon: IoTimerOutline,
       },
     ],
