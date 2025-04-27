@@ -14,6 +14,25 @@ import Stats from './Stats'
 import TechStack from './TechStack'
 import { Metadata } from 'next'
 import { IoTimerOutline } from 'react-icons/io5'
+import { SiNextdotjs, SiWordpress } from 'react-icons/si'
+import {
+  FaCode,
+  FaCubes,
+  FaDesktop,
+  FaExchangeAlt,
+  FaFileCode,
+  FaGoogle,
+  FaHashtag,
+  FaLightbulb,
+  FaPaintBrush,
+  FaPencilAlt,
+  FaRocket,
+  FaSearch,
+  FaServer,
+  FaSyncAlt,
+  FaTachometerAlt,
+  FaVectorSquare,
+} from 'react-icons/fa'
 
 // export const metadata: Metadata = {
 //   title: 'Web & Digital Marketing Services',
@@ -357,7 +376,7 @@ import { IoTimerOutline } from 'react-icons/io5'
 //     description: 'Modern web solutions built with cutting-edge technologies.',
 //     stackIcons: [SiNextdotjs, FaWordpress, FaReact, FaNodeJs, SiVercel],
 //     illustration: {
-//       src: '/webdev.svg',
+//       src: '/webdev555.svg',
 //       alt: 'ff',
 //     },
 //     services: [
@@ -404,7 +423,7 @@ import { IoTimerOutline } from 'react-icons/io5'
 //     description: 'Strategic digital marketing to grow traffic, rankings, and conversions.',
 //     stackIcons: [FaSearch, SiGoogleanalytics, MdBrandingWatermark],
 //     illustration: {
-//       src: '/webdev.svg',
+//       src: '/webdev555.svg',
 //       alt: 'ff',
 //     },
 //     services: [
@@ -451,7 +470,7 @@ import { IoTimerOutline } from 'react-icons/io5'
 //     description: 'Extra services to level up your products and improve engagement.',
 //     stackIcons: [MdDesignServices, MdSpeed, FaFigma, FaRocket, SiTailwindcss],
 //     illustration: {
-//       src: '/webdev.svg',
+//       src: '/webdev555.svg',
 //       alt: 'ff',
 //     },
 //     services: [
@@ -628,54 +647,10 @@ import { IoTimerOutline } from 'react-icons/io5'
 // const categories = [
 //   {
 //     title: 'Modern Web Development',
-//     description: 'We build fast, modern, SEO-optimized websites using the latest technologies.',
-//     illustration: {
-//       src: '/5.svg',
-//       alt: 'Web Development Illustration',
-//     },
-//     stackIcons: TechStack(['SiNextdotjs', 'SiPayloadcms', 'SiTailwindcss', 'SiVercel']),
-//     services: [
-//       {
-//         title: 'Next.js Websites',
-//         description: 'Fast, SEO-optimized and scalable static & dynamic websites.',
-//         features: ['File-system routing', 'API Routes', 'Image Optimization'],
-//         badge: 'Frontend',
-//         icon: IoTimerOutline,
-//       },
-//       {
-//         title: 'Payload CMS Integration',
-//         description: 'Powerful admin dashboard and headless CMS for custom workflows.',
-//         features: ['Collections & Globals', 'Access Control', 'Custom Hooks'],
-//         icon: IoTimerOutline,
-//       },
-//     ],
-//   },
-//   {
-//     title: 'Email & Automation',
-//     description: 'Setup transactional emails and automate communication workflows.',
-//     illustration: {
-//       src: '/4.svg',
-//       alt: 'Email Illustration',
-//     },
-//     stackIcons: TechStack(['SiResend']),
-//     services: [
-//       {
-//         title: 'Transactional Email Setup',
-//         description: 'Integrate Resend with your forms and systems.',
-//         features: ['Form submission', 'Email templates', 'Payload plugin'],
-//         icon: IoTimerOutline,
-//       },
-//     ],
-//   },
-// ]
-
-// const categories = [
-//   {
-//     title: 'Modern Web Development',
 //     description:
 //       'We craft high-performance websites using modern frameworks that are scalable, SEO-friendly, and fast by default.',
 //     illustration: {
-//       src: '/5.svg',
+//       src: '/5555.svg',
 //       alt: 'Modern Web Development Illustration',
 //     },
 //     stackIcons: TechStack(['SiNextdotjs', 'SiPayloadcms', 'SiTailwindcss', 'SiVercel']),
@@ -716,7 +691,7 @@ import { IoTimerOutline } from 'react-icons/io5'
 //     description:
 //       'We help you grow online visibility with automated, data-driven marketing strategies tailored for speed and ROI.',
 //     illustration: {
-//       src: '/digital-marketing.svg',
+//       src: '/digital-marketing555.svg',
 //       alt: 'Digital Marketing Illustration',
 //     },
 //     stackIcons: TechStack(['SiResend', 'SiNextdotjs', 'SiPayloadcms']),
@@ -750,7 +725,7 @@ import { IoTimerOutline } from 'react-icons/io5'
 //     description:
 //       'We design simple, intuitive, and beautiful user interfaces focused on clarity and usability.',
 //     illustration: {
-//       src: '/ui-ux.svg',
+//       src: '/ui-ux555.svg',
 //       alt: 'Minimal UI/UX Illustration',
 //     },
 //     stackIcons: TechStack(['SiNextdotjs', 'SiTailwindcss', 'SiVercel']),
@@ -797,7 +772,7 @@ const categories = [
       src: '/5.svg',
       alt: 'Web Development Illustration',
     },
-    stackIcons: TechStack(['SiNextdotjs', 'SiWordpress', 'SiPayloadcms', 'SiVercel']),
+    stackIcons: TechStack(['SiNextdotjs', 'SiReact', 'SiTypescript', 'SiNodedotjs', 'SiVercel']),
     services: [
       {
         title: 'Next.js Development',
@@ -805,7 +780,7 @@ const categories = [
           'Build modern web applications with React and server components for optimal performance.',
         features: ['App Router', 'Server Components', 'Edge Runtime'],
         badge: 'Frontend',
-        icon: IoTimerOutline,
+        icon: SiNextdotjs,
       },
       {
         title: 'WordPress Development',
@@ -813,7 +788,7 @@ const categories = [
           'Custom WordPress solutions with modern development practices and optimizations.',
         features: ['Custom Themes', 'Plugin Development', 'Performance Tuning'],
         badge: 'CMS',
-        icon: IoTimerOutline,
+        icon: SiWordpress,
       },
       {
         title: 'Headless Integration',
@@ -821,21 +796,21 @@ const categories = [
           'Connect modern frontends with powerful backend systems for flexible content management.',
         features: ['API Development', 'CMS Integration', 'Content Modeling'],
         badge: 'Integration',
-        icon: IoTimerOutline,
+        icon: FaServer,
       },
       {
         title: 'Performance Optimization',
         description: 'Optimize web applications for speed, SEO, and user experience.',
         features: ['Core Web Vitals', 'Caching Strategy', 'Asset Optimization'],
         badge: 'Performance',
-        icon: IoTimerOutline,
+        icon: FaTachometerAlt,
       },
       {
         title: 'Migration & Modernization',
         description: 'Upgrade legacy systems to modern technology stacks with minimal disruption.',
         features: ['Code Refactoring', 'Platform Migration', 'Tech Stack Updates'],
         badge: 'Migration',
-        icon: IoTimerOutline,
+        icon: FaExchangeAlt,
       },
       {
         title: 'Feature Development',
@@ -843,7 +818,7 @@ const categories = [
           'Build custom features and integrate third-party APIs for enhanced functionality.',
         features: ['API Integration', 'Custom Features', 'Payment Systems'],
         badge: 'Development',
-        icon: IoTimerOutline,
+        icon: FaCode,
       },
     ],
   },
@@ -852,7 +827,7 @@ const categories = [
     description:
       'We create intuitive and engaging user interfaces that balance aesthetic appeal with functional design principles.',
     illustration: {
-      src: '/ui-ux.svg',
+      src: '/5.svg',
       alt: 'UI/UX Design Illustration',
     },
     stackIcons: TechStack(['SiTailwindcss', 'SiFigma', 'SiAdobeillustrator', 'SiFramer']),
@@ -862,7 +837,7 @@ const categories = [
         description: 'Create high-converting landing pages that drive user engagement and actions.',
         features: ['Conversion Optimization', 'Mobile-First Design', 'A/B Testing'],
         badge: 'Design',
-        icon: IoTimerOutline,
+        icon: FaPaintBrush,
       },
       {
         title: 'Website Layout Design',
@@ -870,21 +845,21 @@ const categories = [
           'Design intuitive website layouts that enhance user experience and navigation.',
         features: ['Information Architecture', 'Responsive Design', 'User Flow'],
         badge: 'UI',
-        icon: IoTimerOutline,
+        icon: FaDesktop,
       },
       {
         title: 'Vector Design',
         description: 'Create scalable logos, icons, and visual assets for brand consistency.',
         features: ['Logo Design', 'Icon Sets', 'Brand Assets'],
         badge: 'Graphics',
-        icon: IoTimerOutline,
+        icon: FaVectorSquare,
       },
       {
         title: 'Component-Based UI',
         description: 'Build scalable design systems with reusable components and patterns.',
         features: ['Design System', 'Component Library', 'Style Guide'],
         badge: 'System',
-        icon: IoTimerOutline,
+        icon: FaCubes,
       },
       {
         title: 'Website Redesign',
@@ -892,7 +867,7 @@ const categories = [
           'Modernize existing websites with contemporary design patterns and best practices.',
         features: ['UI Modernization', 'UX Enhancement', 'Visual Refresh'],
         badge: 'Redesign',
-        icon: IoTimerOutline,
+        icon: FaSyncAlt,
       },
       {
         title: 'UX Strategy',
@@ -900,7 +875,7 @@ const categories = [
           'Develop user-centered design strategies and wireframes for optimal experiences.',
         features: ['User Research', 'Wireframing', 'Prototyping'],
         badge: 'UX',
-        icon: IoTimerOutline,
+        icon: FaLightbulb,
       },
     ],
   },
@@ -909,15 +884,10 @@ const categories = [
     description:
       'We implement data-driven digital marketing strategies to improve visibility, engagement, and conversion rates.',
     illustration: {
-      src: '/digital-marketing.svg',
+      src: '/5.svg',
       alt: 'Digital Marketing Illustration',
     },
-    stackIcons: TechStack([
-      'SiGoogleanalytics',
-      'SiGooglesearchconsole',
-      'SiWordpress',
-      'SiNextdotjs',
-    ]),
+    stackIcons: TechStack(['SiGoogleanalytics', 'SiGooglesearchconsole', 'SiWordpress']),
     services: [
       {
         title: 'Technical SEO',
@@ -925,28 +895,29 @@ const categories = [
           'Optimize website technical aspects for better search engine visibility and rankings.',
         features: ['Site Structure', 'Performance SEO', 'Technical Audit'],
         badge: 'SEO',
-        icon: IoTimerOutline,
+        icon: FaSearch,
       },
       {
         title: 'Performance Optimization',
         description: 'Enhance website performance metrics for better user experience and SEO.',
         features: ['Speed Optimization', 'Core Web Vitals', 'Mobile Performance'],
         badge: 'Performance',
-        icon: IoTimerOutline,
+
+        icon: FaRocket,
       },
       {
         title: 'SEO-Ready Development',
         description: 'Build websites with SEO best practices implemented from the ground up.',
         features: ['Schema Markup', 'SEO Architecture', 'Content Strategy'],
         badge: 'Development',
-        icon: IoTimerOutline,
+        icon: FaFileCode,
       },
       {
         title: 'Content Writing',
         description: 'Create engaging, SEO-optimized content that resonates with your audience.',
         features: ['Blog Writing', 'Website Copy', 'Content Strategy'],
         badge: 'Content',
-        icon: IoTimerOutline,
+        icon: FaPencilAlt,
       },
       {
         title: 'Social Media Management',
@@ -954,14 +925,14 @@ const categories = [
           'Manage and grow your social media presence with strategic content and engagement.',
         features: ['Content Calendar', 'Platform Strategy', 'Community Management'],
         badge: 'Social',
-        icon: IoTimerOutline,
+        icon: FaHashtag,
       },
       {
         title: 'Google Services',
         description: 'Implement and optimize Google services for better visibility and analytics.',
         features: ['Analytics Setup', 'Search Console', 'Tag Manager'],
         badge: 'Google',
-        icon: IoTimerOutline,
+        icon: FaGoogle,
       },
     ],
   },
@@ -980,13 +951,15 @@ export default function ServicesPage() {
         title="Services"
         description="Full-service modern web development & marketing for small businesses, agencies, and startups in the UK."
       />
+
       {categories.map((cat, index) => (
         <Category key={index} {...cat} index={index} />
       ))}
+
       <Stats />
       <ContactCTA
         title={'Ready to Share Your Idea?'}
-        description={'Let us Discuss about how can help you'}
+        // description={'Let us Discuss about how can help you'}
       />
     </section>
   )

@@ -57,9 +57,9 @@ const Subscription = () => {
           ) : (
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12 ">
               <div>
-                <h3 className="text-3xl lg:text-4xl font-extrabold  text-primary-950 dark:text-primary-50  mb-2 lg:mb-6">
+                <h2 className="text-3xl lg:text-4xl font-extrabold  text-primary-950 dark:text-primary-50  mb-2 lg:mb-6">
                   Stay Updated
-                </h3>
+                </h2>
                 <p className="text-primary-800 dark:text-primary-300 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   max-w-md font-light">
                   Subscribe to our newsletter for updates and exclusive content delivered straight
                   to your inbox.
