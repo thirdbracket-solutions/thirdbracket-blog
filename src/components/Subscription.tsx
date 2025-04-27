@@ -43,24 +43,24 @@ const Subscription = () => {
   return (
     <section className="   py-10 sm:py-12  lg:py-14 xl:py-16   ">
       <Bracket fluid centered padding="medium">
-        <div className="max-w-screen-xl  bg-accent-radial dark:bg-accent-radial-dark  rounded-lg p-8 lg:p-12 border border-secondary-500/40 ">
+        <div className="max-w-screen-xl  bg-accent-radial dark:bg-accent-radial-dark  rounded-xl p-8 lg:p-12 border border-primary-400/20 dark:border-primary-600/20 ">
           {state.isSuccess ? (
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12">
               <div className="text-5xl mb-4">🎉</div>
-              <h3 className="text-3xl font-extrabold  bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text   mb-2 lg:mb-6">
+              <h3 className="text-3xl font-extrabold  text-primary-950 dark:text-primary-50   mb-2 lg:mb-6">
                 Thank you for subscribing!
               </h3>
-              <p className="text-primary-800/90 dark:text-primary-100 text-base md:text-lg lg:text-xl  max-w-md font-light">
+              <p className="text-primary-800 dark:text-primary-300 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  max-w-md font-light">
                 We will keep you updated with the latest news and updates.
               </p>
             </div>
           ) : (
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12 ">
               <div>
-                <h3 className="text-3xl font-extrabold  text-primary-950 dark:text-primary-50  mb-2 lg:mb-6">
+                <h3 className="text-3xl lg:text-4xl font-extrabold  text-primary-950 dark:text-primary-50  mb-2 lg:mb-6">
                   Stay Updated
                 </h3>
-                <p className="text-primary-950/70 dark:text-primary-50/60 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   max-w-md font-light">
+                <p className="text-primary-800 dark:text-primary-300 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   max-w-md font-light">
                   Subscribe to our newsletter for updates and exclusive content delivered straight
                   to your inbox.
                 </p>
@@ -70,18 +70,6 @@ const Subscription = () => {
                 <Form onSubmit={handleSubmit}>
                   <div className="relative">
                     <FormLabel className="sr-only">Email address</FormLabel>
-                    {/* <input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={state.email}
-                    onChange={(e) =>
-                      setState((prev) => ({
-                        ...prev,
-                        email: e.target.value,
-                      }))
-                    }
-                    className="w-full pl-4 pr-32 h-14 text-base rounded-md border border-primary-200 dark:border-primary-800 bg-white dark:bg-primary-800"
-                  /> */}
 
                     <FormInput
                       type="email"
@@ -93,7 +81,7 @@ const Subscription = () => {
                           email: e.target.value,
                         }))
                       }
-                      className="w-full pl-4 pr-32 h-14 text-base rounded-md border border-secondary-500/40      !bg-white  focus:!ring-primary-400 text-primary-700   dark:!bg-black  dark:focus:!ring-primary-400 dark:!text-primary-400"
+                      className="w-full pl-4 pr-32 h-14 text-base rounded-md border  border-primary-400/30   dark:border-primary-600/30   !bg-white  focus:!ring-primary-400 text-primary-700   dark:!bg-black  dark:focus:!ring-primary-400 dark:!text-primary-400 placeholder:text-primary-500/70"
                     ></FormInput>
                     <div className="absolute right-1 top-1/2 -translate-y-1/2">
                       <Button
@@ -101,7 +89,7 @@ const Subscription = () => {
                         disabled={state.isSubmitting}
                         isLoading={state.isSubmitting}
                         size="md"
-                        className="bg-gradient-primary dark:bg-gradient-primary-dark !text-white dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85 "
+                        className="bg-gradient-secondary dark:bg-gradient-secondary-dark !text-primary-50 dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85 "
                       >
                         Subscribe
                       </Button>
@@ -109,7 +97,7 @@ const Subscription = () => {
                   </div>
 
                   <div className="mt-3">
-                    <p className="text-sm text-primary-900/80 dark:text-primary-100/70  font-light">
+                    <p className="text-sm text-primary-700 dark:text-primary-400 font-light">
                       We respect your privacy. Unsubscribe at any time.
                     </p>
                     {state.error && <p className="text-sm text-red-500 mt-1">{state.error}</p>}

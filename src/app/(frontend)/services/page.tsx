@@ -984,7 +984,10 @@ export default function ServicesPage() {
         <Category key={index} {...cat} index={index} />
       ))}
       <Stats />
-      <ContactCTA />
+      <ContactCTA
+        title={'Ready to Share Your Idea?'}
+        description={'Let us Discuss about how can help you'}
+      />
     </section>
   )
 }

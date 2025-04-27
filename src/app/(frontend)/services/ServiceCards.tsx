@@ -21,7 +21,7 @@ export default function ServiceCard({
       size="xl"
       isIcon
       cover={
-        <div className="w-12 h-12 mb-4 flex items-center  justify-center   border border-primary-500/40  bg-gradient-secondary-dark dark:bg-gradient-secondary  rounded-lg">
+        <div className="w-12 h-12 mb-4 flex items-center  justify-center   border border-primary-500/40  bg-badge-light dark:bg-badge-dark  rounded-lg">
           <Icon className="w-6 h-6 text-primary-900 dark:text-primary-100" />
         </div>
       }
