@@ -33,6 +33,7 @@ import {
   FaTachometerAlt,
   FaVectorSquare,
 } from 'react-icons/fa'
+import CTASection from '@/components/CTASection'
 
 // export const metadata: Metadata = {
 //   title: 'Web & Digital Marketing Services',
@@ -957,9 +958,22 @@ export default function ServicesPage() {
       ))}
 
       <Stats />
-      <ContactCTA
+      {/* <ContactCTA
         title={'Ready to Share Your Idea?'}
         // description={'Let us Discuss about how can help you'}
+      /> */}
+
+      <CTASection
+        title="Ready to Build Your Next Project?"
+        description="Let's create something amazing together. Our team is ready to help you bring your vision to life."
+        primary={{
+          label: 'Get Started',
+          href: '/contact',
+        }}
+        secondary={{
+          label: 'View Projects',
+          href: '/projects',
+        }}
       />
     </section>
   )

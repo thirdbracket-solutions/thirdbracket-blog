@@ -1,7 +1,7 @@
 import { cn } from '@/utilities/ui'
 import React from 'react'
 
-import { Card, CardPostData } from '@/components/Card'
+import { CardPostData, PostCard } from '@/components/Card'
 
 export type Props = {
   posts: CardPostData[]
@@ -25,7 +25,7 @@ export const CollectionArchive: React.FC<Props> = (props) => {
                   // className="col-span-4"
                   key={index}
                 >
-                  <Card className="h-full" doc={result} relationTo="posts" showCategories />
+                  <PostCard className="h-full" doc={result} relationTo="posts" showCategories />
                 </div>
               )
             }

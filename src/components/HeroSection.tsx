@@ -219,12 +219,7 @@ export const Hero: React.FC = () => {
             </p>
 
             <div className="flex justify-center gap-4 md:gap-6 backdrop-blur-sm">
-              <Button
-                size="md"
-                as={Link}
-                href="/about"
-                className="!bg-gradient-primary dark:!bg-gradient-primary-dark !font-medium !text-white dark:!text-black hover:opacity-90 active:opacity-85"
-              >
+              <Button size="md" as={Link} href="/about">
                 About Us
                 <svg className="size-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
                   <path
@@ -235,13 +230,7 @@ export const Hero: React.FC = () => {
                 </svg>
               </Button>
 
-              <Button
-                outline
-                as={Link}
-                href="/contact"
-                size="md"
-                className="!border-primary-100 dark:!border-primary-900 !text-black dark:!text-white hover:!bg-gradient-secondary-dark dark:hover:!bg-gradient-secondary active:!bg-secondary-100 dark:active:!bg-primary-900 !font-medium"
-              >
+              <Button outline as={Link} href="/contact" size="md">
                 <svg className="size-4 mr-2" fill="currentColor" viewBox="0 0 1000 1000">
                   <path d="M860 265h-61q-8 0-13.5 5.5T780 284v246q0 39-28 67t-68 28H279q-8 0-13.5 5.5T260 644v61q0 17 11.5 28.5T300 745h415q25 0 43 18l110 110q4 4 9.5 5t11-1 8.5-7 3-11V305q0-17-11.5-28.5T860 265zM700 505V145q0-17-11.5-28.5T660 105H140q-17 0-28.5 11.5T100 145v514q0 6 3 11t8.5 7 11 1 9.5-5l110-110q18-18 43-18h375q17 0 28.5-12t11.5-28z" />
                 </svg>
