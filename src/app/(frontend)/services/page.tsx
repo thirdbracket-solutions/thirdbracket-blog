@@ -958,10 +958,6 @@ export default function ServicesPage() {
       ))}
 
       <Stats />
-      {/* <ContactCTA
-        title={'Ready to Share Your Idea?'}
-        // description={'Let us Discuss about how can help you'}
-      /> */}
 
       <CTASection
         title="Ready to Build Your Next Project?"

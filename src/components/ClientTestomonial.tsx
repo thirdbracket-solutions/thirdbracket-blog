@@ -57,7 +57,7 @@ export const ClientTestimonials = () => {
                     />
                   )
                 }
-                className="bg-accent-radial dark:bg-accent-radial-dark  !rounded-3xl   "
+                className="bg-gradient-secondary-dark dark:bg-gradient-secondary  !rounded-3xl   "
               >
                 <blockquote className="text-primary-800 dark:text-primary-100 backdrop-blur-md mb-6  text-base   ">
                   “{item.quote}”
