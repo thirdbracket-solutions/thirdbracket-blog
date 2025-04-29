@@ -98,14 +98,14 @@ const CTASection = ({
               {primary && (
                 <Button
                   href={primary.href}
-                  size="lg"
+                  size="md"
                   className="!bg-gradient-primary dark:!bg-gradient-primary-dark !font-medium !text-white dark:!text-black hover:opacity-90 active:opacity-85"
                 >
                   {primary.label}
                 </Button>
               )}
               {secondary && (
-                <Button href={secondary.href} outline size="lg">
+                <Button href={secondary.href} outline size="md">
                   {secondary.label}
                 </Button>
               )}
