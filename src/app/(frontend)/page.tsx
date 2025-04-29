@@ -11,6 +11,7 @@ import { FeatureShowcaseSection } from '../../components/FeatureOne'
 import Subscription from '../../components/Subscription'
 import { ClientTestimonials } from '@/components/ClientTestomonial'
 import { FAQ } from '@/components/Faq'
+import CardGrid from '@/components/Feature'
 import { WhyChooseUsSection } from '@/components/FeatureTwo'
 import { Hero } from '@/components/HeroSection'
 
@@ -20,7 +21,8 @@ export default function Home() {
       {/* <HeroSection /> */}
       <Hero />
       {/* <FeatureOne /> */}
-      <FeatureShowcaseSection />
+      <CardGrid />
+      {/* <FeatureShowcaseSection /> */}
       <WhyChooseUsSection />
       {/* <FeatureTwo /> */}
       <ClientTestimonials />
