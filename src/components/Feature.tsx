@@ -1,14 +1,6 @@
 'use client'
 import { Bracket, Card } from '@thirdbracket/bracketui'
 
-const demoIcon = (
-  <div className="bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-300 rounded-full p-3">
-    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M10 2a8 8 0 100 16 8 8 0 000-16z" />
-    </svg>
-  </div>
-)
-
 const cards = [
   {
     name: 'speed',
@@ -16,14 +8,13 @@ const cards = [
       header: 'Fast Websites that Rank',
       cover: '/website.svg',
       href: '/services',
-      theme: {
-        background: 'bg-primary-50 dark:bg-primary-900',
-        border: 'border-primary-300',
-        hoverBorder: 'hover:border-primary-500',
-        text: 'text-primary-800 dark:text-primary-200',
-      },
-      children:
-        'We build high-performing websites that are SEO-optimized, delivering fast load times and great user experiences.',
+
+      children: (
+        <span className="!font-light">
+          We build high-performing websites that are SEO-optimized, delivering fast load times and
+          great user experiences.
+        </span>
+      ),
     },
   },
 
@@ -33,13 +24,12 @@ const cards = [
       header: 'Enterprise-Level Websites',
 
       href: '/services',
-      theme: {
-        background: 'bg-primary-50 dark:bg-primary-900',
-        border: 'border-primary-300',
-        hoverBorder: 'hover:border-primary-500',
-        text: 'text-primary-800 dark:text-primary-200',
-      },
-      children: 'Built to scale with fast load times and excellent user experience.',
+
+      children: (
+        <span className="!font-light">
+          Built to scale with fast load times and excellent user experience.
+        </span>
+      ),
     },
   },
   {
@@ -48,13 +38,12 @@ const cards = [
       header: 'White-Label Web Development',
 
       href: '/services',
-      theme: {
-        background: 'bg-primary-50 dark:bg-primary-900',
-        border: 'border-primary-300',
-        hoverBorder: 'hover:border-primary-500',
-        text: 'text-primary-800 dark:text-primary-200',
-      },
-      children: 'Offer premium web dev under your brand while we handle the build.',
+
+      children: (
+        <span className="!font-light">
+          Offer premium web dev under your brand while we handle the build.
+        </span>
+      ),
     },
   },
   {
@@ -63,14 +52,13 @@ const cards = [
       header: 'API Integration & Development',
 
       href: '/services',
-      theme: {
-        background: 'bg-primary-50 dark:bg-primary-900',
-        border: 'border-primary-300',
-        hoverBorder: 'hover:border-primary-500',
-        text: 'text-primary-800 dark:text-primary-200',
-      },
-      children:
-        'Robust API development and third-party integrations to extend your applications functionality.',
+
+      children: (
+        <span className="!font-light">
+          Robust API development and third-party integrations to extend your applications
+          functionality
+        </span>
+      ),
     },
   },
   {
@@ -79,14 +67,13 @@ const cards = [
       header: 'Designs That Reflect Your Brand',
       cover: '/ui.svg',
       href: '/services',
-      theme: {
-        background: 'bg-primary-50 dark:bg-primary-900',
-        border: 'border-primary-300',
-        hoverBorder: 'hover:border-primary-500',
-        text: 'text-primary-800 dark:text-primary-200',
-      },
-      children:
-        'Minimalist, clean design that focuses on usability while staying true to your brand’s vision.',
+
+      children: (
+        <span className="!font-light">
+          Minimalist, clean design that focuses on usability while staying true to your brand’s
+          vision.
+        </span>
+      ),
     },
   },
 
@@ -96,14 +83,13 @@ const cards = [
       header: 'Progressive Web Apps',
       cover: '/webdev.svg',
       href: '/services',
-      theme: {
-        background: 'bg-primary-50 dark:bg-primary-900',
-        border: 'border-primary-300',
-        hoverBorder: 'hover:border-primary-500',
-        text: 'text-primary-800 dark:text-primary-200',
-      },
-      children:
-        'Transform your website into a lightning-fast, offline-capable progressive web application that provides native app-like experiences across all devices and platforms.',
+
+      children: (
+        <span className="!font-light">
+          Transform your website into a lightning-fast, offline-capable progressive web application
+          that provides native app-like experiences across all devices and platforms.
+        </span>
+      ),
     },
   },
 
@@ -113,14 +99,13 @@ const cards = [
       header: 'E-commerce Solutions',
 
       href: '/services',
-      theme: {
-        background: 'bg-primary-50 dark:bg-primary-900',
-        border: 'border-primary-300',
-        hoverBorder: 'hover:border-primary-500',
-        text: 'text-primary-800 dark:text-primary-200',
-      },
-      children:
-        'Complete e-commerce implementations with secure payment gateways, inventory management, and seamless shopping experiences.',
+
+      children: (
+        <span className="!font-light">
+          Complete e-commerce implementations with secure payment gateways, inventory management,
+          and seamless shopping experiences.
+        </span>
+      ),
     },
   },
 
@@ -130,13 +115,12 @@ const cards = [
       header: 'Custom Web Development',
 
       href: '/services',
-      theme: {
-        background: 'bg-primary-50 dark:bg-primary-900',
-        border: 'border-primary-300',
-        hoverBorder: 'hover:border-primary-500',
-        text: 'text-primary-800 dark:text-primary-200',
-      },
-      children: 'Tailored sites built to meet your unique business requirements.',
+
+      children: (
+        <span className="!font-light">
+          Tailored sites built to meet your unique business requirements.
+        </span>
+      ),
     },
   },
   {
@@ -145,14 +129,13 @@ const cards = [
       header: 'Performance Optimization',
       cover: '/performance.svg',
       href: '/services',
-      theme: {
-        background: 'bg-primary-50 dark:bg-primary-900',
-        border: 'border-primary-300',
-        hoverBorder: 'hover:border-primary-500',
-        text: 'text-primary-800 dark:text-primary-200',
-      },
-      children:
-        'Comprehensive website optimization including code splitting, lazy loading, and advanced caching strategies to achieve maximum speed and efficiency.',
+
+      children: (
+        <span className="!font-light">
+          Comprehensive website optimization including code splitting, lazy loading, and advanced
+          caching strategies to achieve maximum speed and efficiency.
+        </span>
+      ),
     },
   },
 ]
@@ -181,7 +164,17 @@ export default function CardGrid() {
                   className="mb-6 break-inside-avoid"
                   data-card-name={name} // You can use this for debugging or testing
                 >
-                  <Card {...props} />
+                  <Card
+                    size="lg"
+                    theme={{
+                      background: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                      border: 'border-primary-500/30',
+                      hoverBorder: 'hover:border-primary-500/70',
+
+                      text: 'text-primary-800  dark:text-primary-200',
+                    }}
+                    {...props}
+                  />
                 </div>
               ))}
             </div>

@@ -16,7 +16,7 @@ const Header: FC = () => {
       <Navbar
         theme={{
           background: 'bg-white dark:bg-black',
-          border: 'border-b !border-primary-200/60 dark:!border-primary-800/60',
+          border: 'border-b border-primary-500/30 dark:border-primary-500/40',
           mobileMenu: 'bg-white dark:bg-black',
         }}
       >
@@ -28,175 +28,12 @@ const Header: FC = () => {
         ></Navbrand>
 
         <NavItem>
-          {/* <Megamenu
-            label="Services"
-            theme={{
-              text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-              menu: 'bg-white dark:bg-black',
-            }}
-          >
-            <div className="grid w-full grid-flow-col gap-x-8 grid-cols-[repeat(4,minmax(0,220px))_250px]">
-              <div className="flex flex-col h-full ">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">Explore Our Services</h3>
-                </div>
-                <div className="flex flex-col space-y-3 ">
-                  <Navlink href="/services" as={Link} cto>
-                    Web Development
-                  </Navlink>
-                  <Navlink href="/services" as={Link} cto>
-                    Digital Marketing
-                  </Navlink>
-                  <Navlink href="/services" as={Link} cto>
-                    Ui/Ux
-                  </Navlink>
-                </div>
-                <div className="flex-grow"></div>
-
-                <div className=" mt-6 ">
-                  <Navlink
-                    as={Link}
-                    href="/services"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    Explore All
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-              <div className="flex flex-col h-full">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">Web Development</h3>
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    Next.js Development
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    WordPress Development
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    Headless & Serverles
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    Custom Backend
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    API Development
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    Other Dev Services
-                  </Navlink>
-                </div>
-                <div className="flex-grow"></div>
-                <div className=" mt-6 ">
-                  <Navlink
-                    as={Link}
-                    href="/services"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-
-              <div className="flex flex-col h-full ">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">Digital Marketing</h3>{' '}
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    SEO & Web Visibility
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    Branding & Design
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    Social Media Marketing
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    PPC & Social Ad
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    Content & Copywriting
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Other Marketing Services
-                  </Navlink>
-                </div>
-                <div className="flex-grow"></div>
-                <div className=" mt-6 ">
-                  <Navlink
-                    as={Link}
-                    href="#"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-
-              <div className="flex flex-col h-full ">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">Other Services</h3>
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    UI/UX Design
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Performance Optimization
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Prototyping
-                  </Navlink>
-                </div>
-                <div className="flex-grow"></div>
-                <div className="mt-6 ">
-                  <Navlink
-                    isDropdownItem
-                    as={Link}
-                    href="#"
-                    className="block md:inline-flex md:items-center gap-1"
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-              <div className="w-full flex flex-col items-center justify-center h-full">
-                <div className="p-2">
-                  <Image
-                    src="Megamenu.svg"
-                    alt=""
-                    width={500}
-                    height={600}
-                    className="w-full h-[250pxpx] dark:opacity-90 bg-primary-50  dark:bg-primary-800/50   rounded-3xl"
-                  ></Image>
-                </div>
-              </div>
-            </div>
-          </Megamenu> */}
           <Megamenu
             label="Services"
             theme={{
-              text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+              text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
               states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-              menu: 'bg-white dark:bg-black',
+              menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
             }}
           >
             <div className="grid w-full grid-flow-col gap-x-8 grid-cols-[repeat(4,minmax(0,220px))_250px]">
@@ -289,15 +126,6 @@ const Header: FC = () => {
                   <Navlink as={Link} href="/services" isDropdownItem>
                     Website Redesign
                   </Navlink>
-                  {/* <Navlink as={Link} href="/services" isDropdownItem>
-                    Design System Development
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    UX Strategy & Wireframing
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    Social Media Design
-                  </Navlink> */}
                 </div>
                 <div className="flex-grow"></div>
                 <div className="mt-6">
@@ -334,12 +162,6 @@ const Header: FC = () => {
                   <Navlink as={Link} href="/services" isDropdownItem>
                     Content Writing
                   </Navlink>
-                  {/* <Navlink as={Link} href="/services" isDropdownItem>
-                    Social Media Management
-                  </Navlink>
-                  <Navlink as={Link} href="/services" isDropdownItem>
-                    Google Services Integration
-                  </Navlink> */}
                 </div>
                 <div className="flex-grow"></div>
                 <div className="mt-6">
@@ -362,9 +184,9 @@ const Header: FC = () => {
                   <Image
                     src="1.svg"
                     alt=""
-                    width={250}
-                    height={250}
-                    className="w-full h-[250px] dark:opacity-90 bg-primary-50  dark:bg-primary-800/50   rounded-3xl"
+                    width={280}
+                    height={280}
+                    className="w-full h-[280px] dark:opacity-90 bg-gradient-secondary-dark  border border-dotted border-primary-500/30 dark:bg-gradient-secondary   rounded-3xl"
                   ></Image>
                 </div>
               </div>
@@ -374,9 +196,9 @@ const Header: FC = () => {
           <Megamenu
             label="Solutions"
             theme={{
-              text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+              text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
               states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-              menu: 'bg-white dark:bg-black',
+              menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
             }}
           >
             <div className="grid w-full grid-flow-col gap-x-8 grid-cols-[repeat(4,minmax(0,220px))_250px]">
@@ -523,192 +345,64 @@ const Header: FC = () => {
                   <Image
                     src="2.svg"
                     alt=""
-                    width={250}
-                    height={250}
-                    className="w-full h-[250px] dark:opacity-90 bg-primary-50  dark:bg-primary-800/50   rounded-3xl"
+                    width={280}
+                    height={280}
+                    className="w-full h-[280px] dark:opacity-90 bg-gradient-secondary-dark  border border-dotted border-primary-500/30 dark:bg-gradient-secondary   rounded-3xl"
                   ></Image>
                 </div>
               </div>
             </div>
           </Megamenu>
 
-          {/* <Megamenu
-            label="Solutions"
+          <Navlink
             theme={{
-              text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+              text: 'text-primary-900 dark:text-primary-100',
               states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-              menu: 'bg-white dark:bg-black',
             }}
+            as={Link}
+            href="/case-studies"
           >
-            <div className="grid w-full grid-flow-col gap-x-8 grid-cols-[repeat(4,minmax(0,220px))_250px]">
-              <div className="flex flex-col h-full ">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">Explore Our Solutions</h3>
-                </div>
-                <div className="flex flex-col space-y-3 ">
-                  <Navlink href="/solutions" as={Link} cto>
-                    Automation & Integration
-                  </Navlink>
-                  <Navlink href="/solutions" as={Link} cto>
-                    UI/UX
-                  </Navlink>
-                </div>
-                <div className="flex-grow"></div>
-
-                <div className=" mt-6 ">
-                  <Navlink
-                    as={Link}
-                    href="#"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    Explore All
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-              <div className="flex flex-col h-full">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">
-                    Automation & Integration
-                  </h3>
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Form Integration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Marketing Automation
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Search Integration
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Interntionalization
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    CI/CD
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Release Automation
-                  </Navlink>
-                </div>
-                <div className="flex-grow"></div>
-                <div className=" mt-6 ">
-                  <Navlink
-                    as={Link}
-                    href="#"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-
-              <div className="flex flex-col h-full ">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">UI/UX</h3>{' '}
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Bracket UI
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Elementor Template
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Nextjs Themes
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Wordpress Theme
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Reusable Blocks
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Landing Pages
-                  </Navlink>
-                </div>
-                <div className="flex-grow"></div>
-                <div className=" mt-6 ">
-                  <Navlink
-                    as={Link}
-                    href="#"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-
-              <div className="flex flex-col h-full ">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">Other Solutions</h3>
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Wordpress 360
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Notion Blog
-                  </Navlink>
-                  <Navlink as={Link} href="#" isDropdownItem>
-                    Business 360
-                  </Navlink>
-                </div>
-                <div className="flex-grow"></div>
-                <div className="mt-6 ">
-                  <Navlink
-                    isDropdownItem
-                    as={Link}
-                    href="#"
-                    className="block md:inline-flex md:items-center gap-1"
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-              <div className="w-full flex flex-col items-center justify-center h-full">
-                <div className="p-2">
-                  <Image
-                    src="2.svg"
-                    alt=""
-                    width={300}
-                    height={300}
-                    className="w-full h-[300px] dark:opacity-90 bg-primary-50  dark:bg-primary-800/50   rounded-3xl"
-                  ></Image>
-                </div>
-              </div>
-            </div>
-          </Megamenu> */}
-
-          <Navlink as={Link} href="/case-studies">
             Case Studies
           </Navlink>
 
-          <Navlink as={Link} href="/about">
+          <Navlink
+            theme={{
+              text: 'text-primary-900 dark:text-primary-100',
+              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+            }}
+            as={Link}
+            href="/about"
+          >
             About
           </Navlink>
-          <Navlink as={Link} href="/posts">
+          <Navlink
+            theme={{
+              text: 'text-primary-900 dark:text-primary-100',
+              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+            }}
+            as={Link}
+            href="/posts"
+          >
             Blog
           </Navlink>
-          <Navlink as={Link} href="/contact">
+          <Navlink
+            theme={{
+              text: 'text-primary-900 dark:text-primary-100',
+              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+            }}
+            as={Link}
+            href="/contact"
+          >
             Contact
           </Navlink>
-          <Navlink as={Link} href="/search">
+          <Navlink
+            theme={{
+              text: 'text-primary-900 dark:text-primary-100',
+              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+            }}
+            as={Link}
+            href="/search"
+          >
             <span className="sr-only">Search</span>
             <MdSearch className="w-5 text-primary" />
           </Navlink>
@@ -924,18 +618,18 @@ const Header: FC = () => {
             <Megamenu
               label="Services"
               theme={{
-                text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+                text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                 states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                menu: 'bg-white dark:bg-black',
+                menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
               }}
             >
               <div className="space-y-2 py-1.5">
                 <Megamenu
                   label="Web Development"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
+                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
@@ -963,9 +657,9 @@ const Header: FC = () => {
                 <Megamenu
                   label="UI/UX Design"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
+                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
@@ -999,9 +693,9 @@ const Header: FC = () => {
                 <Megamenu
                   label="Digital Marketing"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
+                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
@@ -1034,18 +728,18 @@ const Header: FC = () => {
             <Megamenu
               label="Solutions"
               theme={{
-                text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+                text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                 states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                menu: 'bg-white dark:bg-black',
+                menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
               }}
             >
               <div className="space-y-2 py-1.5">
                 <Megamenu
                   label="UI/UX Solutions"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
+                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
@@ -1070,9 +764,9 @@ const Header: FC = () => {
                 <Megamenu
                   label="Business Solutions"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
+                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
@@ -1097,9 +791,9 @@ const Header: FC = () => {
                 <Megamenu
                   label="Infrastructure Solutions"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
+                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   }}
                 >
                   <div className="space-y-2 py-1.5">

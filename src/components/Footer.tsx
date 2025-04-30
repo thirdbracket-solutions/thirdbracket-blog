@@ -22,17 +22,12 @@ import { Logo } from './Logo/Logo'
 
 const SiteFooter = () => {
   return (
-    <Footer className="dark:!bg-black ">
+    <Footer className="!bg-white dark:!bg-black">
       <FooterSection className="col-span-2 ">
-        {/* <FooterBrand logo="/logo.svg">
+        <FooterBrand logo="/logo.svg">
           Making the web a better place with Third Bracket Solutions.
-        </FooterBrand> */}
-        <Link href="/" className="mb-4">
-          <Logo className="w-auto h-5 md:h-6 dark:invert" loading="lazy" />
-        </Link>
-        <p className="text-base  text-primary-700 mb-6 dark:text-primary-600">
-          Making the web a better place with Third Bracket Solutions.
-        </p>
+        </FooterBrand>
+
         <div className="flex  gap-x-4 justify-start items-center">
           <FooterSocial
             href="https://www.facebook.com/thirdbracket.co.uk"

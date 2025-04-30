@@ -293,7 +293,7 @@ const features = [
 ]
 
 export function WhyChooseUsSection() {
-  const iconClassName = 'h-10 w-10 text-primary-800 dark:text-primary-200'
+  const iconClassName = 'h-16 w-16 text-primary-800 dark:text-primary-200 object-cover'
 
   return (
     <section className="py-10 sm:py-12 lg:py-14 xl:py-16">
@@ -315,13 +315,21 @@ export function WhyChooseUsSection() {
                 key={index}
                 size="lg"
                 isIcon
-                className=" bg-gradient-primary-dark dark:bg-gradient-primary"
-                cover={<Icon className={iconClassName} />}
+                theme={{
+                  background: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                  border: 'border-primary-500/30',
+                  hoverBorder: 'hover:border-primary-500/70',
+
+                  text: 'text-primary-800  dark:text-primary-200',
+                }}
+                cover={
+                  <div className="bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#636e9f1f_1px,transparent_1px),linear-gradient(to_bottom,#636e9f1f_1px,transparent_1px)] bg-[size:14px_24px]">
+                    <Icon className={iconClassName} />
+                  </div>
+                }
                 header={header}
               >
-                <span className="font-light text-primary-950/80 dark:text-primary-200/70">
-                  {description}
-                </span>
+                <span className="!font-light ">{description}</span>
               </Card>
             ))}
           </div>

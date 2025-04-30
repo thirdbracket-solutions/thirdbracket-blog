@@ -17,13 +17,13 @@ const config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-primary-dark': 'conic-gradient(at bottom left, #fff, #e7e7e7 )',
-        'gradient-primary': 'conic-gradient(at bottom left, #000, #141414 )',
-        'gradient-secondary-dark': 'conic-gradient(at bottom left, #f6f6f6, #cfd3dc, #d1d1d1 )',
-        'gradient-secondary': 'conic-gradient(at bottom left, #141414, #353942, #3d3d3d )',
+        'gradient-primary-dark': 'conic-gradient(at bottom left, #fff, #f6f6f6, #6d6d6d )',
+        'gradient-primary': 'conic-gradient(at bottom left, #000, #141414, #6d6d6d  )',
+        'gradient-secondary-dark': 'conic-gradient(at bottom left, #fff, #f6fafb, #8e96a3 )',
+        'gradient-secondary': 'conic-gradient(at bottom left, #000, #101014, #8e96a3 )',
 
-        'accent-radial': 'radial-gradient(circle at center,  #eab7b9, #f2cfd1   )',
-        'accent-radial-dark': 'radial-gradient(circle at center,  #5a1b2a  ,#3d141c )',
+        'accent-radial': 'radial-gradient(circle at center,  #eab7b9, #f4d7d9   )',
+        'accent-radial-dark': 'radial-gradient(circle at center,  #9a3647  ,#822f40 )',
       },
       colors: {
         accent: {

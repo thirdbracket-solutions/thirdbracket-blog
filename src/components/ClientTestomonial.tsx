@@ -44,31 +44,38 @@ export const ClientTestimonials = () => {
             {testimonials.map((item, i) => (
               <Card
                 isIcon
+                theme={{
+                  background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                  border: 'border-secondary-500/30',
+                  hoverBorder: 'hover:border-secondary-500/70',
+
+                  text: 'text-primary-800  dark:text-primary-200',
+                }}
                 key={i}
                 size="lg"
                 cover={
                   item.logo && (
-                    <Image
-                      src={item.logo}
-                      alt={`${item.client} logo`}
-                      height={30}
-                      width={90}
-                      className="object-contain  grayscale dark:invert  opacity-70 pt-2 pl-2"
-                    />
+                    <div className=" w-full  bg-white dark:bg-black   bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#636e9f1f_1px,transparent_1px),linear-gradient(to_bottom,#636e9f1f_1px,transparent_1px)] bg-[size:14px_24px]   relative">
+                      {' '}
+                      <Image
+                        src={item.logo}
+                        alt={`${item.client} logo`}
+                        height={30}
+                        width={90}
+                        className="object-cover  grayscale dark:invert  opacity-70 sm:pt-2 sm:pl-2 mb-16"
+                      />
+                      <blockquote className="text-primary-800 dark:text-primary-100 backdrop-blur-md   text-base   ">
+                        “{item.quote}”
+                      </blockquote>
+                    </div>
                   )
                 }
                 className="  !rounded-3xl   "
               >
-                <blockquote className="text-primary-800 dark:text-primary-100 backdrop-blur-md mb-6  text-base   ">
-                  “{item.quote}”
-                </blockquote>
-
-                <div className="mt-auto">
-                  <p className="text-sm font-medium text-primary-800 dark:text-primary-300">
-                    {item.client}
-                  </p>
-                  <p className="text-sm text-primary-500">{item.role}</p>
-                </div>
+                <p className="text-sm font-medium text-primary-800 dark:text-primary-300">
+                  {item.client}
+                </p>
+                <p className="text-sm text-primary-500">{item.role}</p>
               </Card>
             ))}
           </div>
