@@ -293,17 +293,17 @@ const features = [
 ]
 
 export function WhyChooseUsSection() {
-  const iconClassName = 'h-16 w-16 text-primary-800 dark:text-primary-200 object-cover'
+  const iconClassName = 'dark:text-secondary-400 text-primary-700'
 
   return (
     <section className="py-10 sm:py-12 lg:py-14 xl:py-16">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
           <div className="mb-8 md:mb-12 lg:mb-16">
-            <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left sm:text-center">
+            <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left sm:text-center">
               Why Choose Us for Web Development?
             </h2>
-            <p className="text-primary-950/80 dark:text-primary-200/70 text-base md:text-lg lg:text-xl text-left sm:text-center font-light max-w-4xl mx-auto">
+            <p className="dark:text-secondary-200/70 text-primary-800/80 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center font-light max-w-4xl mx-auto">
               Our approach combines technical excellence with real-world flexibility—designed to
               meet the needs of growing businesses that care about speed, SEO, and design clarity.
             </p>
@@ -316,20 +316,22 @@ export function WhyChooseUsSection() {
                 size="lg"
                 isIcon
                 theme={{
-                  background: 'bg-gradient-primary-dark dark:bg-gradient-primary',
-                  border: 'border-primary-500/30',
-                  hoverBorder: 'hover:border-primary-500/70',
+                  background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                  border:
+                    'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-secondary-400 !border',
+                  hover:
+                    '[@media(hover:hover)]:hover:border-opacity-50  focus-within:border-opacity-50 active:border-opacity-100',
 
-                  text: 'text-primary-800  dark:text-primary-200',
+                  text: 'dark:text-secondary-200/70 text-primary-800/80 font-light',
                 }}
-                cover={
-                  <div className="bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#636e9f1f_1px,transparent_1px),linear-gradient(to_bottom,#636e9f1f_1px,transparent_1px)] bg-[size:14px_24px]">
-                    <Icon className={iconClassName} />
-                  </div>
+                cover={<Icon size={52} className={iconClassName} />}
+                header={
+                  <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2 ">
+                    {header}
+                  </span>
                 }
-                header={header}
               >
-                <span className="!font-light ">{description}</span>
+                {description}
               </Card>
             ))}
           </div>

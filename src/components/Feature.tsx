@@ -5,137 +5,137 @@ const cards = [
   {
     name: 'speed',
     props: {
-      header: 'Fast Websites that Rank',
+      header: (
+        <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2">
+          Fast Website That Ranks
+        </span>
+      ),
       cover: '/website.svg',
       href: '/services',
 
-      children: (
-        <span className="!font-light">
-          We build high-performing websites that are SEO-optimized, delivering fast load times and
-          great user experiences.
-        </span>
-      ),
+      children:
+        ' We build high-performing websites that are SEO-optimized, delivering fast load times and great user experiences.',
     },
   },
 
   {
     name: 'scalability',
     props: {
-      header: 'Enterprise-Level Websites',
+      header: (
+        <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2">
+          Enterprise Level Website
+        </span>
+      ),
 
       href: '/services',
 
-      children: (
-        <span className="!font-light">
-          Built to scale with fast load times and excellent user experience.
-        </span>
-      ),
+      children: 'Built to scale with fast load times and excellent user experience.',
     },
   },
   {
     name: 'white-label',
     props: {
-      header: 'White-Label Web Development',
+      header: (
+        <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2">
+          White Level Development
+        </span>
+      ),
 
       href: '/services',
 
-      children: (
-        <span className="!font-light">
-          Offer premium web dev under your brand while we handle the build.
-        </span>
-      ),
+      children: 'Offer premium web dev under your brand while we handle the build.',
     },
   },
   {
     name: 'api',
     props: {
-      header: 'API Integration & Development',
+      header: (
+        <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2">
+          API Integration
+        </span>
+      ),
 
       href: '/services',
 
-      children: (
-        <span className="!font-light">
-          Robust API development and third-party integrations to extend your applications
-          functionality
-        </span>
-      ),
+      children:
+        'Robust API development and third-party integrations to extend your applications functionality',
     },
   },
   {
     name: 'design',
     props: {
-      header: 'Designs That Reflect Your Brand',
+      header: (
+        <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2">
+          Design that Reflects Your Brand
+        </span>
+      ),
       cover: '/ui.svg',
       href: '/services',
 
-      children: (
-        <span className="!font-light">
-          Minimalist, clean design that focuses on usability while staying true to your brand’s
-          vision.
-        </span>
-      ),
+      children:
+        'Minimalist, clean design that focuses on usability while staying true to your brand’s vision.',
     },
   },
 
   {
     name: 'webaps',
     props: {
-      header: 'Progressive Web Apps',
+      header: (
+        <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2">
+          PWA
+        </span>
+      ),
       cover: '/webdev.svg',
       href: '/services',
 
-      children: (
-        <span className="!font-light">
-          Transform your website into a lightning-fast, offline-capable progressive web application
-          that provides native app-like experiences across all devices and platforms.
-        </span>
-      ),
+      children:
+        'Transform your website into a lightning-fast, offline-capable progressive web application that provides native app-like experiences across all devices and platforms.',
     },
   },
 
   {
     name: 'ecommerce',
     props: {
-      header: 'E-commerce Solutions',
+      header: (
+        <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2">
+          Ecommerce Solution
+        </span>
+      ),
 
       href: '/services',
 
-      children: (
-        <span className="!font-light">
-          Complete e-commerce implementations with secure payment gateways, inventory management,
-          and seamless shopping experiences.
-        </span>
-      ),
+      children:
+        'Complete e-commerce implementations with secure payment gateways, inventory management,and seamless shopping experiences.',
     },
   },
 
   {
     name: 'custom',
     props: {
-      header: 'Custom Web Development',
+      header: (
+        <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2">
+          Custom Web Development
+        </span>
+      ),
 
       href: '/services',
 
-      children: (
-        <span className="!font-light">
-          Tailored sites built to meet your unique business requirements.
-        </span>
-      ),
+      children: 'Tailored sites built to meet your unique business requirements.',
     },
   },
   {
     name: 'performance',
     props: {
-      header: 'Performance Optimization',
+      header: (
+        <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2">
+          Performance Optimization
+        </span>
+      ),
       cover: '/performance.svg',
       href: '/services',
 
-      children: (
-        <span className="!font-light">
-          Comprehensive website optimization including code splitting, lazy loading, and advanced
-          caching strategies to achieve maximum speed and efficiency.
-        </span>
-      ),
+      children:
+        'Comprehensive website optimization including code splitting, lazy loading, and advanced caching strategies to achieve maximum speed and efficiency.',
     },
   },
 ]
@@ -147,10 +147,10 @@ export default function CardGrid() {
         <div className="mx-auto max-w-screen-xl">
           {/* Header */}
           <div className="mb-8 md:mb-12 lg:mb-16 lg:flex lg:items-center lg:justify-center lg:gap-6">
-            <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text lg:mb-0 text-left sm:text-center lg:text-right">
+            <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text lg:mb-0 text-left sm:text-center lg:text-right">
               Looking for Fast & Beautiful Websites for Your Business?
             </h2>
-            <p className="text-primary-950/80 dark:text-primary-200/70 font-light text-base md:text-lg lg:text-xl text-left sm:text-center lg:text-left">
+            <p className="dark:text-secondary-200 text-primary-800 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center lg:text-left">
               Whether you are a startup or an agency, we help you build scalable, SEO-optimized
               websites with a clean, minimal design that aligns with your brand.
             </p>
@@ -168,10 +168,10 @@ export default function CardGrid() {
                     size="lg"
                     theme={{
                       background: 'bg-gradient-primary-dark dark:bg-gradient-primary',
-                      border: 'border-primary-500/30',
-                      hoverBorder: 'hover:border-primary-500/70',
+                      border:
+                        'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-secondary-400 !border',
 
-                      text: 'text-primary-800  dark:text-primary-200',
+                      text: 'dark:text-secondary-200/70 text-primary-800/80 font-light',
                     }}
                     {...props}
                   />
