@@ -174,7 +174,7 @@ export function FeatureShowcaseSection() {
             <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text lg:mb-0 text-left sm:text-center lg:text-right">
               Looking for Fast & Beautiful Websites for Your Business?
             </h2>
-            <p className="text-primary-950/80 dark:text-primary-200/70 font-light text-base md:text-lg lg:text-xl text-left sm:text-center lg:text-left">
+            <p className="dark:text-secondary-200/80 text-primary-800/80 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center lg:text-left">
               Whether you are a startup or an agency, we help you build scalable, SEO-optimized
               websites with a clean, minimal design that aligns with your brand.
             </p>
@@ -202,7 +202,7 @@ export function FeatureShowcaseSection() {
                     </div>
                   }
                 >
-                  <span className="font-light text-primary-950/80 dark:text-primary-200/70">
+                  <span className="dark:text-secondary-200/80 text-primary-800/80 font-light">
                     {card.description}
                   </span>
                 </Card>

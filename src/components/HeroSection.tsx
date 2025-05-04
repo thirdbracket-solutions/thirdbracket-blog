@@ -17,11 +17,11 @@ export const Hero: React.FC = () => {
       <Bracket fluid centered padding="medium">
         <div className="sm:mx-auto max-w-screen-xl">
           <div className="flex flex-col items-start sm:items-center space-y-10 md:space-y-12 lg:space-y-14">
-            <h1 className="text-[2.55rem]/[1.1] font-extrabold md:text-5xl/[1.1] lg:text-6xl/[1.1] text-left bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text sm:text-center lg:max-w-screen-md xl:max-w-screen-lg sm:max-w-lg md:max-w-screen-sm max-w-md capitalize">
+            <h1 className="text-[2.55rem]/[1] font-extrabold md:text-5xl/[1.1] lg:text-6xl/[1.1] text-left bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text sm:text-center lg:max-w-screen-md xl:max-w-screen-lg sm:max-w-lg md:max-w-screen-sm max-w-md capitalize">
               Next.js Web Development for UK Agencies & Startups
             </h1>
 
-            <p className="dark:text-secondary-200/70 text-primary-800/80 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] lg:max-w-screen-md sm:max-w-lg md:max-w-screen-sm text-left sm:text-center xl:max-w-[900px] backdrop-blur-sm">
+            <p className="dark:text-secondary-200/80 text-primary-800/80 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] lg:max-w-screen-md sm:max-w-lg md:max-w-screen-sm text-left sm:text-center xl:max-w-[900px] backdrop-blur-sm">
               We build fast, SEO-optimized websites using Next.js and TailwindCSS. Our custom React
               component library delivers minimal, professional design that’s hard to outsource
               without an in-house team.
