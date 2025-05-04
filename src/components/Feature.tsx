@@ -142,19 +142,29 @@ const cards = [
 
 export default function CardGrid() {
   return (
-    <section className="py-10 sm:py-12  lg:py-14 xl:py-16">
+    <section className="py-12 sm:py-14  lg:py-16 ">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
           {/* Header */}
-          <div className="mb-8 md:mb-12 lg:mb-16 lg:flex lg:items-center lg:justify-center lg:gap-6">
-            <h2 className="mb-4 md:mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text lg:mb-0 text-left sm:text-center lg:text-right">
+
+          <div className="mb-8 sm:mb-12 lg:mb-16 grid gap-6  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
+            <h2 className="  text-3xl lg:text-4xl font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right ">
               Looking for Fast & Beautiful Websites for Your Business?
             </h2>
-            <p className="dark:text-secondary-200 text-primary-800 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center lg:text-left">
+            <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-500 dark:text-secondary-500 text-left sm:text-center lg:text-left">
               Whether you are a startup or an agency, we help you build scalable, SEO-optimized
               websites with a clean, minimal design that aligns with your brand.
             </p>
           </div>
+          {/* <div className="mb-12 sm:mb-14 lg:mb-16 lg:flex lg:items-center lg:justify-between lg:gap-6">
+            <h2 className="mb-4 md:mb-6 text-3xl lg:text-[1.75rem]/[2.2rem]  font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text lg:mb-0 text-left sm:text-center lg:text-right ">
+              Looking for Fast & Beautiful Websites for Your Business?
+            </h2>
+            <p className="dark:text-secondary-500 text-primary-500 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center lg:text-left ">
+              Whether you are a startup or an agency, we help you build scalable, SEO-optimized
+              websites with a clean, minimal design that aligns with your brand.
+            </p>
+          </div> */}
           {/* Cards */}
           <div className="space-y-8">
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-6   [column-fill:_balance]">
@@ -171,7 +181,7 @@ export default function CardGrid() {
                       border:
                         'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-secondary-400 !border',
 
-                      text: 'dark:text-secondary-200/70 text-primary-800/80 font-light',
+                      text: 'dark:text-secondary-500 text-primary-500 leading-[1.45] font-light',
                     }}
                     {...props}
                   />
