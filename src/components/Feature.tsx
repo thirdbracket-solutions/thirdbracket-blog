@@ -151,7 +151,7 @@ export default function CardGrid() {
             <h2 className="  text-3xl lg:text-4xl font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right ">
               Looking for Fast & Beautiful Websites for Your Business?
             </h2>
-            <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-500 dark:text-secondary-500 text-left sm:text-center lg:text-left">
+            <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light dark:text-secondary-400/80 text-primary-600/90 text-left sm:text-center lg:text-left">
               Whether you are a startup or an agency, we help you build scalable, SEO-optimized
               websites with a clean, minimal design that aligns with your brand.
             </p>
@@ -181,7 +181,7 @@ export default function CardGrid() {
                       border:
                         'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-secondary-400 !border',
 
-                      text: 'dark:text-secondary-500 text-primary-500 leading-[1.45] font-light',
+                      text: 'dark:text-secondary-400/80 text-primary-600/90 leading-[1.45] font-light',
                     }}
                     {...props}
                   />

@@ -300,10 +300,10 @@ export function WhyChooseUsSection() {
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
           <div className="mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left md:text-center md:mx-auto sm:max-w-lg">
+            <h2 className="mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
               Why Choose Us for Proffessional Web Development Service?
             </h2>
-            <p className="dark:text-secondary-500 text-primary-500 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left md:text-center  max-w-4xl md:mx-auto sm:max-w-lg">
+            <p className="dark:text-secondary-400/80 text-primary-600/90 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
               Our approach combines technical excellence with real-world flexibility—designed to
               meet the needs of growing businesses that care about speed, SEO, and design clarity.
             </p>
@@ -322,7 +322,7 @@ export function WhyChooseUsSection() {
                   hover:
                     '[@media(hover:hover)]:hover:border-opacity-50  focus-within:border-opacity-50 active:border-opacity-100',
 
-                  text: 'dark:text-secondary-500 text-primary-500 leading-[1.45] font-light',
+                  text: 'dark:text-secondary-400/80 text-primary-600/90 leading-[1.45] font-light',
                 }}
                 cover={<Icon size={52} className={iconClassName} />}
                 header={

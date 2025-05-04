@@ -36,7 +36,7 @@ export const ClientTestimonials = () => {
     <section className="py-10 sm:py-12  lg:py-14 xl:py-16 ">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
-          <h2 className="text-3xl lg:text-4xl font-extrabold bg-gradient-primary dark:bg-gradient-primary-dark  text-transparent bg-clip-text text-left sm:text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl  font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left sm:text-center mb-12">
             Trusted by Early-stage Startups
           </h2>
 
@@ -64,7 +64,7 @@ export const ClientTestimonials = () => {
                         width={90}
                         className="object-cover  grayscale dark:invert  opacity-70 sm:pt-2 sm:pl-2 mb-16"
                       />
-                      <blockquote className="text-primary-800 dark:text-primary-100 backdrop-blur-md   text-base   ">
+                      <blockquote className="bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text backdrop-blur-md   text-base   ">
                         “{item.quote}”
                       </blockquote>
                     </div>
