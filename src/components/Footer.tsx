@@ -22,7 +22,12 @@ import { Logo } from './Logo/Logo'
 
 const SiteFooter = () => {
   return (
-    <Footer className="!bg-white dark:!bg-black">
+    <Footer
+      theme={{
+        background: 'bg-gradient-primary-dark dark:bg-gradient-secondary',
+        border: 'border-secondary-800/30 dark:border-secondary-200/30',
+      }}
+    >
       <FooterSection className="col-span-2 ">
         <FooterBrand logo="/logo.svg">
           Making the web a better place with Third Bracket Solutions.
@@ -48,31 +53,135 @@ const SiteFooter = () => {
       </FooterSection>
 
       <FooterSection title="About">
-        <FooterLink href="#">Components</FooterLink>
-        <FooterLink href="#">Templates</FooterLink>
-        <FooterLink href="#">Pricing</FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-100',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Components
+        </FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Templates
+        </FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Pricing
+        </FooterLink>
       </FooterSection>
 
       <FooterSection title="Resources">
-        <FooterLink href="#">Documentation</FooterLink>
-        <FooterLink href="#">Guides</FooterLink>
-        <FooterLink href="#">Support</FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Documentation
+        </FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Guides
+        </FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Support
+        </FooterLink>
       </FooterSection>
 
       <FooterSection title="Legal">
-        <FooterLink href="#">Privacy Policy</FooterLink>
-        <FooterLink href="#">Terms of Service</FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Privacy Policy
+        </FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Terms of Service
+        </FooterLink>
       </FooterSection>
       <FooterSection title="More">
-        <FooterLink href="#">Components</FooterLink>
-        <FooterLink href="#">Templates</FooterLink>
-        <FooterLink href="#">Pricing</FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Components
+        </FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Templates
+        </FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Pricing
+        </FooterLink>
       </FooterSection>
       <FooterSection title="Useful Links">
         <FooterLink
           href="https://www.business-directory-uk.co.uk/web-design.htm"
           target="_blank"
           rel="noopener noreferrer"
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
         >
           UK Web Designers - Directory of Web Design Companies in the UK
         </FooterLink>
@@ -80,6 +189,11 @@ const SiteFooter = () => {
           href="https://www.business-directory.org.uk/"
           target="_blank"
           rel="noopener noreferrer"
+          theme={{
+            text: 'text-primary-900 dark:text-secondary-400',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
           // className="w-full flex justify-center mt-6"
         >
           <img

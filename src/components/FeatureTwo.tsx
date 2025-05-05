@@ -293,7 +293,7 @@ const features = [
 ]
 
 export function WhyChooseUsSection() {
-  const iconClassName = 'dark:text-secondary-400 text-primary-700'
+  const iconClassName = 'dark:text-secondary-600 text-primary-600'
 
   return (
     <section className="py-10 sm:py-12 lg:py-14 xl:py-16">
@@ -303,7 +303,7 @@ export function WhyChooseUsSection() {
             <h2 className="mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
               Why Choose Us for Proffessional Web Development Service?
             </h2>
-            <p className="dark:text-secondary-400/80 text-primary-600/90 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
+            <p className="dark:text-secondary-600 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
               Our approach combines technical excellence with real-world flexibility—designed to
               meet the needs of growing businesses that care about speed, SEO, and design clarity.
             </p>
@@ -316,13 +316,13 @@ export function WhyChooseUsSection() {
                 size="lg"
                 isIcon
                 theme={{
-                  background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                  background: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   border:
-                    'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-secondary-400 !border',
+                    'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-secondary-600 !border',
                   hover:
-                    '[@media(hover:hover)]:hover:border-opacity-50  focus-within:border-opacity-50 active:border-opacity-100',
+                    '[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100',
 
-                  text: 'dark:text-secondary-400/80 text-primary-600/90 leading-[1.45] font-light',
+                  text: 'dark:text-secondary-600 text-primary-600 leading-[1.45] font-light',
                 }}
                 cover={<Icon size={52} className={iconClassName} />}
                 header={

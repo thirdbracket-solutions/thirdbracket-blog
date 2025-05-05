@@ -50,17 +50,17 @@ const Subscription = () => {
               <h3 className="text-3xl font-extrabold  text-primary-950 dark:text-primary-50   mb-2 lg:mb-6">
                 Thank you for subscribing!
               </h3>
-              <p className="text-primary-800 dark:text-primary-300 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  max-w-md font-light">
+              <p className="dark:text-secondary-600 text-primary-600 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  max-w-md font-light">
                 We will keep you updated with the latest news and updates.
               </p>
             </div>
           ) : (
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12 ">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-extrabold  text-primary-950 dark:text-primary-50  mb-2 lg:mb-6">
+                <h2 className="text-3xl lg:text-4xl font-extrabold  text-primary-950 dark:text-secondary-50  mb-2 lg:mb-6">
                   Stay Updated
                 </h2>
-                <p className="text-primary-800 dark:text-primary-300 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   max-w-md font-light">
+                <p className="dark:text-secondary-600 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   max-w-md ">
                   Subscribe to our newsletter for updates and exclusive content delivered straight
                   to your inbox.
                 </p>
@@ -89,7 +89,12 @@ const Subscription = () => {
                         disabled={state.isSubmitting}
                         isLoading={state.isSubmitting}
                         size="md"
-                        className="bg-gradient-secondary dark:bg-gradient-secondary-dark !text-primary-50 dark:!text-primary-950 [@media(hover:hover)]:hover:opacity-90 active:opacity-85 "
+                        theme={{
+                          background: 'bg-gradient-primary dark:bg-gradient-secondary-dark',
+                          hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
+                          focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
+                        }}
+                        className="!font-medium !text-primary-50 dark:!text-secondary-950"
                       >
                         Subscribe
                       </Button>

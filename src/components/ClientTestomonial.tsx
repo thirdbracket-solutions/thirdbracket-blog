@@ -46,17 +46,18 @@ export const ClientTestimonials = () => {
                 isIcon
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                  border: 'border-secondary-500/30',
-                  hoverBorder: 'hover:border-secondary-500/70',
+                  border:
+                    'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-secondary-600 !border',
+                  hover:
+                    '[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100',
 
-                  text: 'text-primary-800  dark:text-primary-200',
+                  text: 'dark:text-secondary-600 text-primary-600 leading-[1.45] font-light',
                 }}
                 key={i}
                 size="lg"
                 cover={
                   item.logo && (
-                    <div className=" w-full  bg-white dark:bg-black   bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#636e9f1f_1px,transparent_1px),linear-gradient(to_bottom,#636e9f1f_1px,transparent_1px)] bg-[size:14px_24px]   relative">
-                      {' '}
+                    <div>
                       <Image
                         src={item.logo}
                         alt={`${item.client} logo`}
