@@ -36,7 +36,7 @@ export const ClientTestimonials = () => {
     <section className="py-10 sm:py-12  lg:py-14 xl:py-16 ">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
-          <h2 className="text-3xl lg:text-4xl  font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left sm:text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl  font-extrabold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text text-left sm:text-center mb-12">
             Trusted by Early-stage Startups
           </h2>
 
@@ -45,13 +45,13 @@ export const ClientTestimonials = () => {
               <Card
                 isIcon
                 theme={{
-                  background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                  background: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   border:
-                    'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-secondary-600 !border',
+                    'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-primary-400 !border',
                   hover:
                     '[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100',
 
-                  text: 'dark:text-secondary-600 text-primary-600 leading-[1.45] font-light',
+                  text: 'dark:text-primary-500 text-primary-600 leading-[1.45] font-light',
                 }}
                 key={i}
                 size="lg"

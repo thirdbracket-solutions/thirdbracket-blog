@@ -42,7 +42,7 @@ export const FAQ = () => {
     <section className="py-10 sm:py-12  lg:py-14 xl:py-16 ">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
-          <h2 className="text-3xl lg:text-4xl font-extrabold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text text-left sm:text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-extrabold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text text-left sm:text-center mb-12">
             FAQs
           </h2>
 
@@ -50,7 +50,7 @@ export const FAQ = () => {
             {faqData.map((item, i) => (
               <div
                 key={i}
-                className="border border-primary-600/30 dark:border-secondary-600/30 rounded-lg  bg-gradient-primary-dark dark:bg-gradient-primary"
+                className="border border-primary-600/30 dark:border-primary-400/20 rounded-lg  bg-gradient-secondary-dark dark:bg-gradient-secondary"
               >
                 <button
                   onClick={() => toggle(i)}

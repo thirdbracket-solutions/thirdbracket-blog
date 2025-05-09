@@ -1,22 +1,89 @@
 import { Megamenu, MobileNav, Navbar, Navbrand, NavItem, Navlink } from '@thirdbracket/bracketui'
 import Image from 'next/image'
-
 import Link from 'next/link'
 import { FC } from 'react'
 import { BiChevronRight } from 'react-icons/bi'
-
 import { MdSearch } from 'react-icons/md'
 import { Logo } from './Logo/Logo'
-
-// import { RiArrowRightUpLine, RiRecycleLine } from "react-icons/ri";
+import {
+  NavlinkItem,
+  MegamenuItem,
+  mainNavItems,
+  webDevelopmentItems,
+  uiUxDesignItems,
+  digitalMarketingItems,
+  uiUxSolutionsItems,
+  businessSolutionsItems,
+  infrastructureSolutionsItems,
+  templateItems,
+  themeItems,
+  getNavlinkTheme,
+} from '../data/navigationData'
 
 const Header: FC = () => {
+  // Helper function to render a navlink
+  const renderNavlink = (item: NavlinkItem, isMobile: boolean = false) => {
+    const theme = getNavlinkTheme(isMobile, item.isDropdownItem)
+
+    return (
+      <Navlink
+        key={`${item.label}-${item.href}`}
+        theme={theme}
+        as={Link}
+        href={item.href}
+        isDropdownItem={item.isDropdownItem}
+        cto={item.cto}
+        className={item.icon ? 'block md:inline-flex md:items-center gap-1' : undefined}
+      >
+        {item.label}
+        {item.icon && <span>{item.icon}</span>}
+      </Navlink>
+    )
+  }
+
+  // Helper function to render megamenu items recursively
+  const renderMegamenuItems = (
+    items: (NavlinkItem | MegamenuItem)[],
+    isMobile: boolean = false,
+  ) => {
+    return items.map((item) => {
+      if ('items' in item) {
+        // This is a megamenu item
+        return (
+          <Megamenu
+            key={item.label}
+            label={item.label}
+            theme={
+              item.theme ||
+              (isMobile
+                ? {
+                    text: 'text-primary-900 dark:text-primary-100 text-base md:text-sm',
+                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                  }
+                : {
+                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+                    menu: 'bg-white dark:bg-black',
+                  })
+            }
+          >
+            <div className="space-y-2 py-1.5">{renderMegamenuItems(item.items, isMobile)}</div>
+          </Megamenu>
+        )
+      } else {
+        // This is a navlink item
+        return renderNavlink(item, isMobile)
+      }
+    })
+  }
+
   return (
     <header>
       <Navbar
         theme={{
           background: 'bg-white dark:bg-black',
-          border: 'border-b border-secondary-800/30 dark:border-secondary-200/30',
+          border: 'border-b border-primary-800/30 dark:border-primary-200/30',
           mobileMenu: 'bg-white dark:bg-black',
         }}
       >
@@ -28,10 +95,11 @@ const Header: FC = () => {
         ></Navbrand>
 
         <NavItem>
+          {/* Services Megamenu */}
           <Megamenu
             label="Services"
             theme={{
-              text: 'text-primary-900 dark:text-secondary-100  text-base md:text-sm',
+              text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
               states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
               menu: 'bg-white dark:bg-black',
             }}
@@ -44,7 +112,7 @@ const Header: FC = () => {
                 <div className="flex flex-col space-y-3">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -56,7 +124,7 @@ const Header: FC = () => {
                   </Navlink>
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -68,7 +136,7 @@ const Header: FC = () => {
                   </Navlink>
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -83,7 +151,7 @@ const Header: FC = () => {
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -104,75 +172,13 @@ const Header: FC = () => {
                   <h3 className="text-xs leading-none text-primary-500">Web Development</h3>
                 </div>
                 <div className="flex flex-col space-y-1.5">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Next.js Development
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    WordPress Development
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Headless Integration
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Performance Optimization
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Migration & Modernization
-                  </Navlink>
-                  {/* <Navlink as={Link} href="/services" isDropdownItem>
-                    Feature Development
-                  </Navlink> */}
+                  {webDevelopmentItems.map((item) => renderNavlink(item))}
                 </div>
                 <div className="flex-grow"></div>
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -193,72 +199,13 @@ const Header: FC = () => {
                   <h3 className="text-xs leading-none text-primary-500">UI/UX Design</h3>
                 </div>
                 <div className="flex flex-col space-y-1.5">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Landing Page Design
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Website Interface Design
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Vector Design
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Component-Based UI Setup
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Website Redesign
-                  </Navlink>
+                  {uiUxDesignItems.slice(0, 5).map((item) => renderNavlink(item))}
                 </div>
                 <div className="flex-grow"></div>
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -279,72 +226,13 @@ const Header: FC = () => {
                   <h3 className="text-xs leading-none text-primary-500">Digital Marketing</h3>
                 </div>
                 <div className="flex flex-col space-y-1.5">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Technical SEO Optimization
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Performance Optimization
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    SEO-Ready Website Builds
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Conversion Optimization
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/services"
-                    isDropdownItem
-                  >
-                    Content Writing
-                  </Navlink>
+                  {digitalMarketingItems.slice(0, 5).map((item) => renderNavlink(item))}
                 </div>
                 <div className="flex-grow"></div>
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -368,17 +256,18 @@ const Header: FC = () => {
                     alt=""
                     width={280}
                     height={280}
-                    className="w-full h-[280px] dark:opacity-90 bg-gradient-secondary-dark  border border-dotted border-primary-500/30 dark:bg-gradient-secondary   rounded-3xl"
+                    className="w-full h-[280px] dark:opacity-90 bg-gradient-primary-dark  border border-dotted border-primary-500/30 dark:bg-gradient-primary   rounded-3xl"
                   ></Image>
                 </div>
               </div>
             </div>
           </Megamenu>
 
+          {/* Solutions Megamenu */}
           <Megamenu
             label="Solutions"
             theme={{
-              text: 'text-primary-900 dark:text-secondary-100  text-base md:text-sm',
+              text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
               states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
               menu: 'bg-white dark:bg-black',
             }}
@@ -391,7 +280,7 @@ const Header: FC = () => {
                 <div className="flex flex-col space-y-3">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -403,7 +292,7 @@ const Header: FC = () => {
                   </Navlink>
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -415,7 +304,7 @@ const Header: FC = () => {
                   </Navlink>
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -430,7 +319,7 @@ const Header: FC = () => {
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -451,72 +340,13 @@ const Header: FC = () => {
                   <h3 className="text-xs leading-none text-primary-500">UI/UX Solutions</h3>
                 </div>
                 <div className="flex flex-col space-y-1.5">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    Elementor Templates
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    WordPress Themes
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    Bracketui Component Library
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    Landing Page Kits
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    Nextjs Starters
-                  </Navlink>
+                  {uiUxSolutionsItems.map((item) => renderNavlink(item))}
                 </div>
                 <div className="flex-grow"></div>
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -537,63 +367,13 @@ const Header: FC = () => {
                   <h3 className="text-xs leading-none text-primary-500">Business Solutions</h3>
                 </div>
                 <div className="flex flex-col space-y-1.5">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    Startup 360
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    Ecommerce 360
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    Blog 360
-                  </Navlink>
-                  <Navlink as={Link} href="/solutions" isDropdownItem>
-                    Business Strategy
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    Enterprise 360
-                  </Navlink>
+                  {businessSolutionsItems.slice(0, 5).map((item) => renderNavlink(item))}
                 </div>
                 <div className="flex-grow"></div>
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -616,60 +396,13 @@ const Header: FC = () => {
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-1.5">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    WordPress 360
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    Next.js 360
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    VPS Setup
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    isDropdownItem
-                  >
-                    Cloud Setup
-                  </Navlink>
+                  {infrastructureSolutionsItems.map((item) => renderNavlink(item))}
                 </div>
                 <div className="flex-grow"></div>
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-secondary-400',
+                      text: 'text-primary-900 dark:text-primary-100',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -693,58 +426,16 @@ const Header: FC = () => {
                     alt=""
                     width={280}
                     height={280}
-                    className="w-full h-[280px] dark:opacity-90 bg-gradient-secondary-dark  border border-dotted border-primary-500/30 dark:bg-gradient-secondary   rounded-3xl"
+                    className="w-full h-[280px] dark:opacity-90 bg-gradient-primary-dark  border border-dotted border-primary-500/30 dark:bg-gradient-primary   rounded-3xl"
                   ></Image>
                 </div>
               </div>
             </div>
           </Megamenu>
 
-          <Navlink
-            theme={{
-              text: 'text-primary-900 dark:text-secondary-400',
-              states:
-                'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-            }}
-            as={Link}
-            href="/case-studies"
-          >
-            Case Studies
-          </Navlink>
+          {/* Main navigation items */}
+          {mainNavItems.map((item) => renderNavlink(item))}
 
-          <Navlink
-            theme={{
-              text: 'text-primary-900 dark:text-secondary-400',
-              states:
-                'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-            }}
-            as={Link}
-            href="/about"
-          >
-            About
-          </Navlink>
-          <Navlink
-            theme={{
-              text: 'text-primary-900 dark:text-secondary-400',
-              states:
-                'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-            }}
-            as={Link}
-            href="/posts"
-          >
-            Blog
-          </Navlink>
-          <Navlink
-            theme={{
-              text: 'text-primary-900 dark:text-secondary-400',
-              states:
-                'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-            }}
-            as={Link}
-            href="/contact"
-          >
-            Contact
-          </Navlink>
           <Navlink
             theme={{
               text: 'text-primary-900 dark:text-primary-100',
@@ -758,672 +449,39 @@ const Header: FC = () => {
           </Navlink>
         </NavItem>
 
-        {/* <MobileNav>
-          <div className="space-y-2 py-1.5 ">
-            <Megamenu
-              label="Services"
-              theme={{
-                text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
-                states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                menu: 'bg-white dark:bg-black',
-              }}
-            >
-              <div className="space-y-2 py-1.5">
-                <Megamenu
-                  label="Web Development"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      Next.js Development
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      WordPress Development
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      Headless & Serverles
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      Custom Backend & API Development
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      Other Development Services
-                    </Navlink>
-                  </div>
-                </Megamenu>
-                <Megamenu
-                  label="Digital Marketing"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      SEO & Web Visibility
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      Branding & Design
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      Social Media Marketing
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      PPC & Social Ad
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      Content strategy & Copywriting
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                      Other Digital Marketing Services
-                    </Navlink>
-                  </div>
-                </Megamenu>
-                <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                  UI/UX Design & Prototyping
-                </Navlink>
-                <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                  Performance Optimization
-                </Navlink>
-                <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/services" isDropdownItem>
-                  Other Services
-                </Navlink>
-              </div>
-            </Megamenu>
-
-            <Megamenu
-              label="Solutions"
-              theme={{
-                text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
-                states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                menu: 'bg-white dark:bg-black',
-              }}
-            >
-              <div className="space-y-2 py-1.5">
-                <Megamenu
-                  label="Automation & Integration"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                      Form Integration
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                      Marketing Automation
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                      Search Integration
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                      Interntionalization
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                      CI/CD
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                      Release Automation
-                    </Navlink>
-                  </div>
-                </Megamenu>
-                <Megamenu
-                  label="UI/UX"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                      Bracket UI
-                    </Navlink>
-                    <Megamenu
-                      label="Templates"
-                      theme={{
-                        text: 'text-primary-800 dark:text-primary-100 text-base md:text-sm',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                        menu: 'bg-white dark:bg-primary-950',
-                      }}
-                    >
-                      <div className="space-y-2 py-1.5">
-                        <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                          Elementor Template
-                        </Navlink>
-                        <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                          Tailwind Template
-                        </Navlink>
-                        <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                          Html5 Template
-                        </Navlink>
-                      </div>
-                    </Megamenu>
-                    <Megamenu
-                      label="Themes"
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                        menu: 'bg-white dark:bg-black',
-                      }}
-                    >
-                      <div className="space-y-2 py-1.5">
-                        <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                          Nextjs Themes
-                        </Navlink>
-                        <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                          Hugo Themes
-                        </Navlink>
-                        <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                          Wordpress Theme
-                        </Navlink>
-                      </div>
-                    </Megamenu>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                      Reusable Blocks
-                    </Navlink>
-                    <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                      Landing Pages
-                    </Navlink>
-                  </div>
-                </Megamenu>
-                <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                  Wordpress 360
-                </Navlink>
-                <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                  Notion Blog
-                </Navlink>
-                <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/solutions" isDropdownItem>
-                  Business 360
-                </Navlink>
-              </div>
-            </Megamenu>
-
-            <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/case-studies">
-              Case Studies
-            </Navlink>
-
-            <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/about">
-              About
-            </Navlink>
-            <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/posts">
-              Blog
-            </Navlink>
-            <Navlink theme={{
-              text: 'text-primary-900 dark:text-primary-100',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-            }} as={Link} href="/contact">
-              Contact
-            </Navlink>
-           
-          </div>
-        </MobileNav> */}
-
         <MobileNav>
           <div className="space-y-2 py-1.5">
             <Megamenu
-              label="Services"
-              theme={{
-                text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
-                states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-              }}
-            >
-              <div className="space-y-2 py-1.5">
-                <Megamenu
-                  label="Web Development"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Next.js Development
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      WordPress Development
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Headless Integration
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Performance Optimization
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Migration & Modernization
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Feature Development & API Integrations
-                    </Navlink>
-                  </div>
-                </Megamenu>
-
-                <Megamenu
-                  label="UI/UX Design"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Landing Page Design
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Website Interface Design
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Vector Design
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Component-Based UI Setup
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Website Redesign
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Design System Development
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      UX Strategy & Wireframing
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Social Media Design
-                    </Navlink>
-                  </div>
-                </Megamenu>
-
-                <Megamenu
-                  label="Digital Marketing"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Technical SEO Optimization
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Website Performance Optimization
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      SEO-Ready Website Builds
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Conversion Optimization
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Content Writing
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Social Media Management
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/services"
-                      isDropdownItem
-                    >
-                      Google Services Integration
-                    </Navlink>
-                  </div>
-                </Megamenu>
-              </div>
-            </Megamenu>
-
-            <Megamenu
               label="Solutions"
               theme={{
                 text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                 states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
               }}
             >
               <div className="space-y-2 py-1.5">
+                <Megamenu
+                  label="Infrastructure Solutions"
+                  theme={{
+                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                  }}
+                >
+                  <div className="space-y-2 py-1.5">
+                    {infrastructureSolutionsItems.map((item) => renderNavlink(item, true))}
+                  </div>
+                </Megamenu>
                 <Megamenu
                   label="UI/UX Solutions"
                   theme={{
                     text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Elementor Templates
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      WordPress Themes
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Bracketui Component Library
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Landing Page Kits
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Nextjs Starters
-                    </Navlink>
+                    {uiUxSolutionsItems.map((item) => renderNavlink(item, true))}
                   </div>
                 </Megamenu>
 
@@ -1432,171 +490,73 @@ const Header: FC = () => {
                   theme={{
                     text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Startup 360
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Ecommerce 360
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Blog 360
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Business Strategy Setup
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Enterprise 360
-                    </Navlink>
-                  </div>
-                </Megamenu>
-
-                <Megamenu
-                  label="Infrastructure Solutions"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      WordPress 360
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Next.js 360
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      VPS Setup
-                    </Navlink>
-                    <Navlink
-                      theme={{
-                        text: 'text-primary-900 dark:text-primary-100',
-                        states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                      }}
-                      as={Link}
-                      href="/solutions"
-                      isDropdownItem
-                    >
-                      Cloud Setup
-                    </Navlink>
+                    {businessSolutionsItems.slice(0, 5).map((item) => renderNavlink(item, true))}
                   </div>
                 </Megamenu>
               </div>
             </Megamenu>
 
-            <Navlink
+            <Megamenu
+              label="Services"
               theme={{
-                text: 'text-primary-900 dark:text-primary-100',
+                text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
                 states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+                menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
               }}
-              as={Link}
-              href="/case-studies"
             >
-              Case Studies
-            </Navlink>
+              <div className="space-y-2 py-1.5">
+                <Megamenu
+                  label="Web Development"
+                  theme={{
+                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                  }}
+                >
+                  <div className="space-y-2 py-1.5">
+                    {webDevelopmentItems.map((item) => renderNavlink(item, true))}
+                  </div>
+                </Megamenu>
 
-            <Navlink
-              theme={{
-                text: 'text-primary-900 dark:text-primary-100',
-                states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-              }}
-              as={Link}
-              href="/about"
-            >
-              About
-            </Navlink>
-            <Navlink
-              theme={{
-                text: 'text-primary-900 dark:text-primary-100',
-                states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-              }}
-              as={Link}
-              href="/posts"
-            >
-              Blog
-            </Navlink>
-            <Navlink
-              theme={{
-                text: 'text-primary-900 dark:text-primary-100',
-                states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-              }}
-              as={Link}
-              href="/contact"
-            >
-              Contact
-            </Navlink>
+                <Megamenu
+                  label="UI/UX Design"
+                  theme={{
+                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                  }}
+                >
+                  <div className="space-y-2 py-1.5">
+                    {uiUxDesignItems.map((item) => renderNavlink(item, true))}
+                  </div>
+                </Megamenu>
+
+                <Megamenu
+                  label="Digital Marketing"
+                  theme={{
+                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
+                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                  }}
+                >
+                  <div className="space-y-2 py-1.5">
+                    {digitalMarketingItems.slice(0, 7).map((item) => renderNavlink(item, true))}
+                  </div>
+                </Megamenu>
+              </div>
+            </Megamenu>
+
+            {/* Main navigation items for mobile */}
+            {mainNavItems.map((item) => renderNavlink(item, true))}
           </div>
         </MobileNav>
       </Navbar>
     </header>
   )
 }
+
 export default Header
