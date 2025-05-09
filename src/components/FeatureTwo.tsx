@@ -72,8 +72,7 @@ export function WhyChooseUsSection() {
                 isIcon
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                  border:
-                    'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-primary-400 !border ',
+                  border: 'border-opacity-20 border-primary-500  !border',
                   hover:
                     '[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100',
 

@@ -33,13 +33,13 @@ export default function Category({
       <Bracket fluid centered padding="medium">
         <div className="flex flex-col-reverse lg:flex-row-reverse gap-y-8 sm:gap-x-0 items-center  mb-8 md:mb-12 lg:mb-16 ">
           <div className="lg:w-1/2 ">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary-950 dark:text-primary-50 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 dark:text-primary-100 mb-4">
               {title}
             </h2>
-            <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-950/80 dark:text-primary-50/60 mb-6">
+            <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-500 mb-6">
               {description}
             </p>
-            <div className="flex flex-wrap gap-4 mb-6">
+            <div className="flex flex-wrap gap-4 mb-6 text-primary-800 dark:text-primary-200">
               {stackIcons.map((Icon, index) => (
                 <span key={index}>{Icon}</span>
               ))}

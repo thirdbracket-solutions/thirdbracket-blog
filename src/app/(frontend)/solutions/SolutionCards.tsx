@@ -8,19 +8,22 @@ export default function SolutionCard({ title, description, technologies, image }
   return (
     <Card
       size="xl"
-      className="rounded-lg border border-primary-500 border-opacity-30 overflow-hidden flex flex-col transition-all duration-300 ease-in-out focus-within:border-opacity-100 bg-gradient-primary-dark dark:bg-gradient-primary active:border-opacity-100 md:hover:border-opacity-100"
+      theme={{
+        background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+        border: 'border-opacity-20 border-primary-500 !border',
+        hover:
+          '[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100',
+
+        text: 'dark:text-primary-500 text-primary-600 leading-[1.45] font-light',
+      }}
       cover={
         image && (
-          <div className="bg-slate-50 dark:bg-zinc-950 h-60 w-full lg:h-80 bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#464d691f_1px,transparent_1px),linear-gradient(to_bottom,#464d691f_1px,transparent_1px)] bg-[size:14px_24px] relative">
+          <div className="bg-secondary-50 dark:bg-secondary-950 h-60 w-full lg:h-80 bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#464d691f_1px,transparent_1px),linear-gradient(to_bottom,#464d691f_1px,transparent_1px)] bg-[size:14px_24px] relative">
             <Image src={image} alt={title} fill className="object-cover" />
           </div>
         )
       }
-      header={
-        <div className="flex items-center mb-2">
-          <h3 className="!font-semibold max-w-md">{title}</h3>
-        </div>
-      }
+      header={<div className="flex items-center mb-2">{title}</div>}
     >
       <div>
         {technologies && (
@@ -29,7 +32,7 @@ export default function SolutionCard({ title, description, technologies, image }
               {technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1 text-sm text-primary-800 bg-gradient-secondary-dark dark:bg-gradient-secondary dark:text-primary-200 border-primary-100/80 dark:border-primary-900/70 rounded-lg border flex flex-col space-y-1 font-semibold"
+                  className="px-2 py-1 text-sm text-primary-800 bg-gradient-primary-dark dark:bg-gradient-primary dark:text-primary-200 border-primary-100/80 dark:border-primary-900/70 rounded-lg border flex flex-col space-y-1 font-semibold"
                 >
                   {tech.cto}
                   <span className="text-xs font-normal text-primary-500">{tech.title}</span>

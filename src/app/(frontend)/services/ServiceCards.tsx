@@ -20,8 +20,16 @@ export default function ServiceCard({
     <Card
       size="xl"
       isIcon
+      theme={{
+        background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+        border: 'border-opacity-20 border-primary-500 !border',
+        hover:
+          '[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100',
+
+        text: 'dark:text-primary-500 text-primary-600 leading-[1.45] font-light',
+      }}
       cover={
-        <div className="w-12 h-12 mb-4 flex items-center  justify-center   border border-primary-500/40  bg-badge-light dark:bg-badge-dark  rounded-lg">
+        <div className="w-12 h-12 mb-4 flex items-center  justify-center   border border-primary-500/40  bg-gradient-primary-dark dark:bg-gradient-primary  rounded-lg">
           <Icon className="w-6 h-6 text-primary-900 dark:text-primary-100" />
         </div>
       }
@@ -36,8 +44,8 @@ export default function ServiceCard({
       // </div>
     >
       <div>
-        <p className="  text-secondary-950/60 dark:text-secondary-100/50 mb-4">{description}</p>
-        <ul className="list-disc list-inside text-primary-950/80 dark:text-primary-100/70 space-y-1 text-sm">
+        <p className="   mb-4">{description}</p>
+        <ul className="list-disc list-inside font-normal  space-y-1 text-sm">
           {features.map((feature, index) => (
             <li key={index}>{feature}</li>
           ))}

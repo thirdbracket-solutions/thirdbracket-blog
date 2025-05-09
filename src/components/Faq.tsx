@@ -50,19 +50,19 @@ export const FAQ = () => {
             {faqData.map((item, i) => (
               <div
                 key={i}
-                className="border border-primary-600/30 dark:border-primary-400/20 rounded-lg  bg-gradient-secondary-dark dark:bg-gradient-secondary"
+                className="border border-primary-500/20  rounded-lg  bg-gradient-secondary-dark dark:bg-gradient-secondary"
               >
                 <button
                   onClick={() => toggle(i)}
-                  className="w-full flex justify-between items-center px-6 py-4 text-left text-primary-900 dark:text-secondary-100 font-medium focus:outline-none"
+                  className="w-full flex justify-between items-center px-6 py-4 text-left text-primary-900 dark:text-primary-100  focus:outline-none"
                 >
                   <span>{item.question}</span>
-                  <span className="ml-4 text-primary-500 dark:text-secondary-500">
+                  <span className="ml-4 text-primary-600 dark:text-primary-400">
                     {openIndex === i ? '-' : '+'}
                   </span>
                 </button>
                 {openIndex === i && (
-                  <div className="px-6 pb-4 text-primary-700 dark:text-primary-300 text-sm leading-relaxed">
+                  <div className="px-6 pb-4 text-primary-600 dark:text-primary-400 text-sm leading-relaxed">
                     {item.answer}
                   </div>
                 )}

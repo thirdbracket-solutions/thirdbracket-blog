@@ -83,7 +83,7 @@ const CTASection = ({
   return (
     <section className={`py-10 sm:py-12 lg:py-14 xl:py-16 ${className}`}>
       <Bracket fluid centered padding="medium">
-        <div className="max-w-screen-xl bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-600/30 dark:border-primary-500/20">
+        <div className="max-w-screen-xl bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-500/20  ">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12">
             <div>
               <h2 className="text-3xl lg:text-4xl font-extrabold text-primary-900 dark:text-primary-100 mb-2 lg:mb-6">

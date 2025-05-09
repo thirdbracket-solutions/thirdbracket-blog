@@ -57,7 +57,7 @@ const Subscription = () => {
           ) : (
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12 ">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-extrabold  text-primary-950 dark:text-secondary-50  mb-2 lg:mb-6">
+                <h2 className="text-3xl lg:text-4xl font-extrabold  text-primary-900 dark:text-primary-100  mb-2 lg:mb-6">
                   Stay Updated
                 </h2>
                 <p className="dark:text-primary-400 text-primary-700 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   max-w-md ">
@@ -90,11 +90,11 @@ const Subscription = () => {
                         isLoading={state.isSubmitting}
                         size="md"
                         theme={{
-                          background: 'bg-gradient-primary dark:bg-gradient-secondary-dark',
-                          hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
+                          background: 'bg-gradient-primary dark:bg-gradient-primary-dark',
+                          hoverBackground: '[@media(hover:hover)]:hover:opacity-85',
                           focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                         }}
-                        className="!font-medium !text-primary-50 dark:!text-secondary-950"
+                        className="!font-medium !text-primary-50 dark:!text-primary-950"
                       >
                         Subscribe
                       </Button>

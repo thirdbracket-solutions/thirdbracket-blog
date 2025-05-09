@@ -11,28 +11,28 @@ const steps = [
     title: 'Initial Consultation',
     // description:
     //   'We start with a detailed discussion to understand your business needs, goals, and project requirements.',
-    color: 'text-accent-500 dark:text-accent-700',
+    color: 'text-secondary-700 dark:text-secondary-300',
   },
   {
     icon: MdOutlineDesignServices,
     title: 'Planning & Design',
     // description:
     //   'Our team creates a comprehensive project plan and design mockups tailored to your specifications.',
-    color: 'text-accent-500 dark:text-accent-700',
+    color: 'text-secondary-700 dark:text-secondary-300',
   },
   {
     icon: TbCodeDots,
     title: 'Development',
     // description:
     //   'We build your solution using modern technologies and best practices, with regular updates and feedback.',
-    color: 'text-accent-500 dark:text-accent-700',
+    color: 'text-secondary-700 dark:text-secondary-300',
   },
   {
     icon: MdRocketLaunch,
     title: 'Launch & Support',
     // description:
     //   'After thorough testing, we deploy your solution and provide ongoing support and maintenance.',
-    color: 'text-accent-500 dark:text-accent-700',
+    color: 'text-secondary-700 dark:text-secondary-300',
   },
 ]
 
@@ -44,7 +44,7 @@ export default function Steps() {
           <h2 className="text-3xl lg:text-4xl font-bold text-primary-950 dark:text-primary-50 mb-4 ">
             How We Work
           </h2>
-          <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-950/80 dark:text-primary-50/60 mb-6">
+          <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-500 mb-6">
             Our streamlined process ensures efficient delivery of high-quality solutions tailored to
             your needs
           </p>
@@ -57,9 +57,7 @@ export default function Steps() {
               <div key={index} className="relative flex flex-col items-center text-center group">
                 {/* Connector Line */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-1/2 w-full h-[2px] bg-gradient-to-r from-primary-200/40 to-primary-300/40 dark:from-primary-800/40 dark:to-primary-700/40">
-                    <BsArrowRight className="absolute right-0 top-1/2 -translate-y-1/2 text-primary-300 dark:text-primary-700" />
-                  </div>
+                  <div className="hidden lg:block absolute top-8 left-1/2 w-full h-[2px] bg-gradient-to-r from-primary-200/40 to-primary-300/40 dark:from-primary-800/40 dark:to-primary-700/40"></div>
                 )}
 
                 {/* Icon */}

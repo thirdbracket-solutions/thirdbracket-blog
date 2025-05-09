@@ -45,9 +45,8 @@ export const ClientTestimonials = () => {
               <Card
                 isIcon
                 theme={{
-                  background: 'bg-gradient-primary-dark dark:bg-gradient-primary',
-                  border:
-                    'border-opacity-30 dark:border-opacity-20 border-primary-600 dark:border-primary-400 !border',
+                  background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                  border: 'border-opacity-20 border-primary-500 !border',
                   hover:
                     '[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100',
 
@@ -63,7 +62,7 @@ export const ClientTestimonials = () => {
                         alt={`${item.client} logo`}
                         height={30}
                         width={90}
-                        className="object-cover  grayscale dark:invert  opacity-70 sm:pt-2 sm:pl-2 mb-16"
+                        className="object-cover  grayscale dark:invert  opacity-50 sm:pt-2 sm:pl-2 mb-16"
                       />
                       <blockquote className="bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text backdrop-blur-md   text-base   ">
                         “{item.quote}”
