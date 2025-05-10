@@ -1,19 +1,7 @@
 // data/solutions.ts
-import { FaWpforms, FaWordpress, FaShopify, FaStripe } from 'react-icons/fa'
-import {
-  SiNextdotjs,
-  SiGithubactions,
-  SiNotion,
-  SiVercel,
-  SiTailwindcss,
-  SiTypescript,
-  SiFirebase,
-  SiSupabase,
-  SiPrisma,
-  SiPostgresql,
-  SiMongodb,
-} from 'react-icons/si'
-import { MdAutorenew, MdBusiness, MdAnalytics, MdShoppingCart } from 'react-icons/md'
+import { FaWpforms, FaWordpress } from 'react-icons/fa'
+import { SiNextdotjs, SiGithubactions, SiNotion } from 'react-icons/si'
+import { MdAutorenew, MdBusiness, MdShoppingCart } from 'react-icons/md'
 import { TbBrandReact } from 'react-icons/tb'
 import { SolutionCategory } from './types'
 

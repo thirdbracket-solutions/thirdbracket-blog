@@ -10,15 +10,14 @@ export default function SolutionCard({ title, description, technologies, image }
       size="xl"
       theme={{
         background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-        border: 'border-opacity-20 border-primary-500 !border',
-        hover:
-          '[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100',
+        border: 'border-primary-200 dark:border-primary-800',
+        hover: 'md:hover:border-primary-400 md:hover:dark:border-primary-600',
 
-        text: 'dark:text-primary-500 text-primary-600 leading-[1.45] font-light',
+        text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
       }}
       cover={
         image && (
-          <div className="bg-secondary-50 dark:bg-secondary-950 h-60 w-full lg:h-80 bg-[linear-gradient(to_right,#8697c40a_1px,transparent_1px),linear-gradient(to_bottom,#8697c40a_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#464d691f_1px,transparent_1px),linear-gradient(to_bottom,#464d691f_1px,transparent_1px)] bg-[size:14px_24px] relative">
+          <div className=" h-60 w-full backdrop-blur-lg lg:h-80 bg-[linear-gradient(to_right,#f1f2f466_1px,transparent_1px),linear-gradient(to_bottom,#f1f2f466_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f242866_1px,transparent_1px),linear-gradient(to_bottom,#1f242866_1px,transparent_1px)] bg-[size:14px_24px] relative">
             <Image src={image} alt={title} fill className="object-cover" />
           </div>
         )

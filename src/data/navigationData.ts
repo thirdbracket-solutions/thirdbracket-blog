@@ -31,12 +31,12 @@ export interface NavigationSection {
 
 // Common theme styles
 const defaultNavlinkTheme = {
-  text: 'text-primary-900 dark:text-primary-100',
+  text: 'text-primary-900 dark:text-primary-50',
   states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
 }
 
 const desktopNavlinkTheme = {
-  text: 'text-primary-900 dark:text-primary-100',
+  text: 'text-primary-900 dark:text-primary-50',
   states:
     'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
 }
@@ -48,7 +48,7 @@ const megamenuTheme = {
 }
 
 const mobileMegamenuTheme = {
-  text: 'text-primary-900 dark:text-primary-100 text-base md:text-sm',
+  text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
   states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
   menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
 }
@@ -164,7 +164,7 @@ export const uiUxMegamenuItems: MegamenuItem[] = [
   {
     label: 'Templates',
     theme: {
-      text: 'text-primary-800 dark:text-primary-100 text-base md:text-sm',
+      text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
       states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
       menu: 'bg-white dark:bg-primary-950',
     },
@@ -190,7 +190,7 @@ export const desktopNavigation: NavigationSection[] = [
   {
     label: 'Solutions',
     theme: {
-      text: 'text-primary-900 dark:text-primary-100 text-base md:text-sm',
+      text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
       states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
       menu: 'bg-white dark:bg-black',
     },
@@ -199,7 +199,7 @@ export const desktopNavigation: NavigationSection[] = [
   {
     label: 'Services',
     theme: {
-      text: 'text-primary-900 dark:text-primary-100 text-base md:text-sm',
+      text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
       states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
       menu: 'bg-white dark:bg-black',
     },

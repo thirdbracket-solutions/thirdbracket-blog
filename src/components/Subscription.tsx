@@ -43,11 +43,11 @@ const Subscription = () => {
   return (
     <section className="   py-10 sm:py-12  lg:py-14 xl:py-16   ">
       <Bracket fluid centered padding="medium">
-        <div className="max-w-screen-xl  bg-accent-radial dark:bg-accent-radial-dark  rounded-xl p-8 lg:p-12 border border-primary-400/20 dark:border-primary-600/20 ">
+        <div className="max-w-screen-xl  bg-accent-radial dark:bg-accent-radial-dark  rounded-xl p-8 lg:p-12 border border-primary-200 dark:border-primary-800 ">
           {state.isSuccess ? (
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12">
               <div className="text-5xl mb-4">🎉</div>
-              <h3 className="text-3xl font-extrabold  text-primary-950 dark:text-primary-50   mb-2 lg:mb-6">
+              <h3 className="text-3xl font-extrabold  bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text   mb-2 lg:mb-6">
                 Thank you for subscribing!
               </h3>
               <p className="dark:text-primary-500 text-primary-600 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  max-w-md font-light">
@@ -57,10 +57,10 @@ const Subscription = () => {
           ) : (
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12 ">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-extrabold  text-primary-900 dark:text-primary-100  mb-2 lg:mb-6">
+                <h2 className="text-3xl lg:text-4xl font-extrabold  bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text  mb-2 lg:mb-6">
                   Stay Updated
                 </h2>
-                <p className="dark:text-primary-400 text-primary-700 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   max-w-md ">
+                <p className="dark:text-primary-200 text-primary-800 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   max-w-md ">
                   Subscribe to our newsletter for updates and exclusive content delivered straight
                   to your inbox.
                 </p>
@@ -102,7 +102,7 @@ const Subscription = () => {
                   </div>
 
                   <div className="mt-3">
-                    <p className="text-sm text-primary-600 dark:text-primary-500   font-light">
+                    <p className="text-sm text-primary-700 dark:text-primary-300   font-light">
                       We respect your privacy. Unsubscribe at any time.
                     </p>
                     {state.error && <p className="text-sm text-red-500 mt-1">{state.error}</p>}

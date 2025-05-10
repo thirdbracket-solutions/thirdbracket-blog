@@ -22,8 +22,8 @@ const config = {
         'gradient-secondary-dark': 'conic-gradient(at bottom left, #fff, #f1f2f4, #dbdbdb )',
         'gradient-secondary': 'conic-gradient(at bottom left, #000, #0b0d0e, #242424 )',
 
-        'overlay-radial': 'radial-gradient(#f2f2f2 1px,transparent 1px)',
-        'overlay-radial-dark': 'radial-gradient(#0d0d0d 1px,transparent 1px)',
+        'overlay-radial': 'radial-gradient(#f1f2f4_1px,transparent_1px)',
+        'overlay-radial-dark': 'radial-gradient(#0b0d0e_1px,transparent_1px)',
 
         'accent-radial': 'radial-gradient(circle at center,   #e0a9b4 , #eccbd1   )',
         'accent-radial-dark': 'radial-gradient(circle at center,    #7c2738 ,#5a1c28 )',

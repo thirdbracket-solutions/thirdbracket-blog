@@ -58,7 +58,7 @@ export function WhyChooseUsSection() {
             <h2 className="mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
               Why Choose Us for Proffessional Web Development Service?
             </h2>
-            <p className="dark:text-primary-500 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
+            <p className="dark:text-primary-400 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
               Our approach combines technical excellence with real-world flexibility—designed to
               meet the needs of growing businesses that care about speed, SEO, and design clarity.
             </p>
@@ -72,19 +72,17 @@ export function WhyChooseUsSection() {
                 isIcon
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                  border: 'border-opacity-20 border-primary-500  !border',
-                  hover:
-                    '[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100',
+                  border: 'border-primary-200 dark:border-primary-800',
 
-                  text: 'dark:text-primary-500 text-primary-600 leading-[1.45] font-light',
+                  text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
                 }}
                 cover={
-                  <div className="w-16 h-16 mb-4 flex items-center  justify-center   border  border-primary-100 dark:border-primary-900    rounded-lg bg-white dark:bg-black">
-                    <Icon size={32} className="text-secondary-900 dark:text-secondary-100" />
+                  <div className="w-16 h-16 mb-4 flex items-center  justify-center   border  border-primary-100 dark:border-primary-900    rounded-xl bg-white dark:bg-black">
+                    <Icon size={36} className="text-secondary-900 dark:text-secondary-100" />
                   </div>
                 }
                 header={
-                  <span className="font-bold bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-2 ">
+                  <span className="font-bold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2 ">
                     {header}
                   </span>
                 }

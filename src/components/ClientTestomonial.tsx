@@ -46,11 +46,9 @@ export const ClientTestimonials = () => {
                 isIcon
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                  border: 'border-opacity-20 border-primary-500 !border',
-                  hover:
-                    '[@media(hover:hover)]:hover:border-opacity-70  focus-within:border-opacity-70 active:border-opacity-100',
+                  border: 'border-primary-200 dark:border-primary-800',
 
-                  text: 'dark:text-primary-500 text-primary-600 leading-[1.45] font-light',
+                  text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
                 }}
                 key={i}
                 size="lg"
@@ -62,7 +60,7 @@ export const ClientTestimonials = () => {
                         alt={`${item.client} logo`}
                         height={30}
                         width={90}
-                        className="object-cover  grayscale dark:invert  opacity-50 sm:pt-2 sm:pl-2 mb-16"
+                        className="object-cover  grayscale dark:invert  opacity-60 sm:pt-2 sm:pl-2 mb-16"
                       />
                       <blockquote className="bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text backdrop-blur-md   text-base   ">
                         “{item.quote}”

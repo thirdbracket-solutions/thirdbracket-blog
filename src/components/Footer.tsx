@@ -24,7 +24,7 @@ const SiteFooter = () => {
   return (
     <Footer
       theme={{
-        background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+        background: 'bg-white dark:bg-black',
         border: 'border-primary-200 dark:border-primary-800',
       }}
     >
@@ -57,7 +57,7 @@ const SiteFooter = () => {
       <FooterSection title="About">
         <FooterLink
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -67,7 +67,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -80,7 +80,7 @@ const SiteFooter = () => {
       <FooterSection title="Partners">
         <FooterLink
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -90,7 +90,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -100,7 +100,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -113,7 +113,7 @@ const SiteFooter = () => {
       <FooterSection title="Legal">
         <FooterLink
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -123,7 +123,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -135,7 +135,7 @@ const SiteFooter = () => {
       <FooterSection title="Bracket UI">
         <FooterLink
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -145,7 +145,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800  dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -155,7 +155,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -170,7 +170,7 @@ const SiteFooter = () => {
           target="_blank"
           rel="noopener noreferrer"
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -182,10 +182,11 @@ const SiteFooter = () => {
           target="_blank"
           rel="noopener noreferrer"
           theme={{
-            text: 'text-primary-800 dark:text-primary-200',
+            text: 'text-primary-800   dark:text-primary-100',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
+
           // className="w-full flex justify-center mt-6"
         >
           <img
@@ -212,7 +213,7 @@ const SiteFooter = () => {
       href="https://www.business-directory-uk.co.uk/web-design.htm"
       target="_blank"
       rel="noopener noreferrer"
-      className="text-sm text-primary-700 dark:text-primary-500 underline hover:text-primary-900 dark:hover:text-primary-300"
+      className="text-sm text-primary-700 dark:text-primary-500 underline hover:text-primary-800 dark:hover:text-primary-300"
     >
       UK Web Designers - Directory of Web Design Companies in the UK
     </a>

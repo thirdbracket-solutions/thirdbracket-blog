@@ -1,61 +1,3 @@
-// 'use client'
-
-// import { Bracket, Button } from '@thirdbracket/bracketui'
-
-// interface CTALink {
-//   label: string
-//   href: string
-//   variant?: string
-// }
-
-// interface CTASectionProps {
-//   title: string
-//   description: string
-//   links: CTALink[]
-//   className?: string
-// }
-
-// const CTASection = ({ title, description, links, className = '' }: CTASectionProps) => {
-//   return (
-//     <section className={`py-10 sm:py-12 lg:py-14 xl:py-16 ${className}`}>
-//       <Bracket fluid centered padding="medium">
-//         <div className="max-w-screen-xl bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-400/20 dark:border-primary-600/20">
-//           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12">
-//             <div>
-//               <h2 className="text-3xl lg:text-4xl font-extrabold text-primary-950 dark:text-primary-50 mb-2 lg:mb-6">
-//                 {title}
-//               </h2>
-//               <p className="text-primary-800 dark:text-primary-300 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] max-w-md font-light">
-//                 {description}
-//               </p>
-//             </div>
-
-//             <div className="flex flex-row gap-4 sm:gap-6">
-//               {links.map((link, index) => (
-//                 <Button
-//                   key={index}
-//                   href={link.href}
-//                   size="lg"
-
-//                   className={
-//                     link.variant === 'outline'
-//                       ? '!border-primary-100 dark:!border-primary-900 !text-black dark:!text-white hover:!bg-gradient-secondary-dark dark:hover:!bg-gradient-secondary active:!bg-secondary-100 dark:active:!bg-primary-900 !font-medium'
-//                       : '!bg-gradient-primary dark:!bg-gradient-primary-dark !font-medium !text-white dark:!text-black hover:opacity-90 active:opacity-85'
-//                   }
-//                 >
-//                   {link.label}
-//                 </Button>
-//               ))}
-//             </div>
-//           </div>
-//         </div>
-//       </Bracket>
-//     </section>
-//   )
-// }
-
-// export default CTASection
-
 'use client'
 
 import { Bracket, Button } from '@thirdbracket/bracketui'
@@ -83,13 +25,13 @@ const CTASection = ({
   return (
     <section className={`py-10 sm:py-12 lg:py-14 xl:py-16 ${className}`}>
       <Bracket fluid centered padding="medium">
-        <div className="max-w-screen-xl bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-500/20  ">
+        <div className="max-w-screen-xl bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-200 dark:border-primary-800  ">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-extrabold text-primary-900 dark:text-primary-100 mb-2 lg:mb-6">
+              <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-4 lg:mb-6">
                 {title}
               </h2>
-              <p className="text-primary-700 dark:text-primary-300 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] max-w-md font-light">
+              <p className="text-primary-800 dark:text-primary-200 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] max-w-md font-light">
                 {description}
               </p>
             </div>
@@ -100,11 +42,11 @@ const CTASection = ({
                   href={primary.href}
                   size="md"
                   theme={{
-                    background: 'bg-gradient-primary dark:bg-gradient-primary-dark',
+                    background: 'bg-gradient-secondary dark:bg-gradient-secondary-dark',
                     hoverBackground: '[@media(hover:hover)]:hover:opacity-85',
                     focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                   }}
-                  className="!font-medium !text-primary-50 dark:!text-primary-950"
+                  className="!font-medium !text-accent-50 dark:!text-accent-800"
                 >
                   {primary.label}
                 </Button>
@@ -115,12 +57,11 @@ const CTASection = ({
                   outline
                   size="md"
                   theme={{
-                    border: 'border-primary-500/40 ',
-                    hoverBackground:
-                      '[@media(hover:hover)]:hover:bg-accent-300/50 [@media(hover:hover)]:dark:hover:bg-accent-700/40 ',
+                    border: 'border-primary-800/20 dark:border-primary-200/10 ',
+                    hoverBackground: 'hover:bg-primary-800/5 dark:hover:bg-primary-200/5 ',
                     focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                   }}
-                  className="!font-medium !text-primary-950 dark:!text-primary-50"
+                  className="!font-medium !text-primary-950 dark:!text-accent-50"
                 >
                   {secondary.label}
                 </Button>

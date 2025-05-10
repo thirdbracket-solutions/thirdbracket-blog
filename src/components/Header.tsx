@@ -57,12 +57,12 @@ const Header: FC = () => {
               item.theme ||
               (isMobile
                 ? {
-                    text: 'text-primary-900 dark:text-primary-100 text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-200 text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                     menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   }
                 : {
-                    text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-200 text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                     menu: 'bg-white dark:bg-black',
                   })
@@ -83,7 +83,7 @@ const Header: FC = () => {
       <Navbar
         theme={{
           background: 'bg-white dark:bg-black',
-          border: 'border-b border-primary-800/30 dark:border-primary-200/30',
+          border: 'border-b border-primary-200 dark:border-primary-800',
           mobileMenu: 'bg-white dark:bg-black',
         }}
       >
@@ -99,7 +99,7 @@ const Header: FC = () => {
           <Megamenu
             label="Services"
             theme={{
-              text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+              text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
               states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
               menu: 'bg-white dark:bg-black',
             }}
@@ -112,7 +112,7 @@ const Header: FC = () => {
                 <div className="flex flex-col space-y-3">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -124,7 +124,7 @@ const Header: FC = () => {
                   </Navlink>
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -136,7 +136,7 @@ const Header: FC = () => {
                   </Navlink>
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -151,7 +151,7 @@ const Header: FC = () => {
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -178,7 +178,7 @@ const Header: FC = () => {
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -205,7 +205,7 @@ const Header: FC = () => {
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -232,7 +232,7 @@ const Header: FC = () => {
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -267,7 +267,7 @@ const Header: FC = () => {
           <Megamenu
             label="Solutions"
             theme={{
-              text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+              text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
               states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
               menu: 'bg-white dark:bg-black',
             }}
@@ -280,7 +280,7 @@ const Header: FC = () => {
                 <div className="flex flex-col space-y-3">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -292,7 +292,7 @@ const Header: FC = () => {
                   </Navlink>
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -304,7 +304,7 @@ const Header: FC = () => {
                   </Navlink>
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -319,7 +319,7 @@ const Header: FC = () => {
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -346,7 +346,7 @@ const Header: FC = () => {
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -373,7 +373,7 @@ const Header: FC = () => {
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -402,7 +402,7 @@ const Header: FC = () => {
                 <div className="mt-6">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-100',
+                      text: 'text-primary-900 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
                     }}
@@ -438,7 +438,7 @@ const Header: FC = () => {
 
           <Navlink
             theme={{
-              text: 'text-primary-900 dark:text-primary-100',
+              text: 'text-primary-900 dark:text-primary-50',
               states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
             }}
             as={Link}
@@ -454,7 +454,7 @@ const Header: FC = () => {
             <Megamenu
               label="Solutions"
               theme={{
-                text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                 states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                 menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
               }}
@@ -463,7 +463,7 @@ const Header: FC = () => {
                 <Megamenu
                   label="Infrastructure Solutions"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                     menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   }}
@@ -475,7 +475,7 @@ const Header: FC = () => {
                 <Megamenu
                   label="UI/UX Solutions"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                     menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   }}
@@ -488,7 +488,7 @@ const Header: FC = () => {
                 <Megamenu
                   label="Business Solutions"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                     menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   }}
@@ -503,7 +503,7 @@ const Header: FC = () => {
             <Megamenu
               label="Services"
               theme={{
-                text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                text: 'text-primary-900 dark:text-primary-200  text-base md:text-sm',
                 states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                 menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
               }}
@@ -512,7 +512,7 @@ const Header: FC = () => {
                 <Megamenu
                   label="Web Development"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                     menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   }}
@@ -525,7 +525,7 @@ const Header: FC = () => {
                 <Megamenu
                   label="UI/UX Design"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                     menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   }}
@@ -538,7 +538,7 @@ const Header: FC = () => {
                 <Megamenu
                   label="Digital Marketing"
                   theme={{
-                    text: 'text-primary-900 dark:text-primary-100  text-base md:text-sm',
+                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                     menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
                   }}

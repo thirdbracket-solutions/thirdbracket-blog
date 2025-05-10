@@ -11,28 +11,28 @@ const steps = [
     title: 'Initial Consultation',
     // description:
     //   'We start with a detailed discussion to understand your business needs, goals, and project requirements.',
-    color: 'text-secondary-700 dark:text-secondary-300',
+    color: 'text-primary-900 dark:text-primary-100',
   },
   {
     icon: MdOutlineDesignServices,
     title: 'Planning & Design',
     // description:
     //   'Our team creates a comprehensive project plan and design mockups tailored to your specifications.',
-    color: 'text-secondary-700 dark:text-secondary-300',
+    color: 'text-primary-900 dark:text-primary-100',
   },
   {
     icon: TbCodeDots,
     title: 'Development',
     // description:
     //   'We build your solution using modern technologies and best practices, with regular updates and feedback.',
-    color: 'text-secondary-700 dark:text-secondary-300',
+    color: 'text-primary-900 dark:text-primary-100',
   },
   {
     icon: MdRocketLaunch,
     title: 'Launch & Support',
     // description:
     //   'After thorough testing, we deploy your solution and provide ongoing support and maintenance.',
-    color: 'text-secondary-700 dark:text-secondary-300',
+    color: 'text-primary-900 dark:text-primary-100',
   },
 ]
 
@@ -50,14 +50,14 @@ export default function Steps() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {steps.map((step, index) => {
             const Icon = step.icon
             return (
               <div key={index} className="relative flex flex-col items-center text-center group">
                 {/* Connector Line */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-1/2 w-full h-[2px] bg-gradient-to-r from-primary-200/40 to-primary-300/40 dark:from-primary-800/40 dark:to-primary-700/40"></div>
+                  <div className="hidden lg:block absolute top-8 left-1/2 w-full h-[1px] bg-primary-100 dark:bg-primary-900"></div>
                 )}
 
                 {/* Icon */}
@@ -68,7 +68,7 @@ export default function Steps() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-semibold text-primary-950 dark:text-primary-50 mb-3">
+                <h3 className="lg:text-base text-sm font-semibold text-primary-800 dark:text-primary-200 ">
                   {step.title}
                 </h3>
                 {/* <p className="text-primary-950/70 dark:text-primary-50/60 text-sm leading-relaxed">

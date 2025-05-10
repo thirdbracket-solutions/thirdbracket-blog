@@ -13,7 +13,7 @@ const featuredLogos = [
 
 export const Hero: React.FC = () => {
   return (
-    <section className="pb-12 sm:pb-14 lg:pb-16 pt-24 sm:pt-28 lg:pt-32 bg-overlay-radial dark:bg-overlay-radial-dark [background-size:12px_12px]">
+    <section className="pb-12 sm:pb-14 lg:pb-16 pt-24 sm:pt-28 lg:pt-32 bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1c1c1c_1px,transparent_1px)]  [background-size:16px_16px]">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
           <div className="flex flex-col items-start sm:items-center space-y-12 sm:space-y-14 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl">
@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
               Next.js Web Development for UK Agencies & Startups
             </h1>
 
-            <p className="dark:text-primary-500 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center backdrop-blur-sm">
+            <p className="dark:text-primary-400 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center backdrop-blur-sm">
               We build fast, SEO-optimized websites using Next.js and TailwindCSS. Our custom React
               component library delivers minimal, professional design that’s hard to outsource
               without an in-house team.
@@ -55,9 +55,8 @@ export const Hero: React.FC = () => {
                 href="/contact"
                 size="md"
                 theme={{
-                  border: 'border-primary-100/50 dark:border-primary-900/80 ',
-                  hoverBackground:
-                    '[@media(hover:hover)]:hover:bg-primary-50 [@media(hover:hover)]:dark:hover:bg-primary-950 ',
+                  border: 'border-primary-200/30 dark:border-primary-800/60 ',
+                  hoverBackground: 'hover:bg-primary-200/20 dark:hover:bg-primary-800/50 ',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                 }}
                 className="!font-medium !text-primary-950 dark:!text-primary-50"
