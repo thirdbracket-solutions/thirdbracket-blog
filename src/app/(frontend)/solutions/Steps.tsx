@@ -62,7 +62,7 @@ export default function Steps() {
 
                 {/* Icon */}
                 <div
-                  className={`w-16 h-16 mb-6 rounded-2xl bg-gradient-secondary-dark dark:bg-gradient-secondary border border-primary-400/20 dark:border-primary-500/20 flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform duration-300 ${step.color}`}
+                  className={`w-16 h-16 mb-6 rounded-2xl bg-gradient-secondary-dark dark:bg-gradient-secondary border border-primary-100 dark:border-primary-900 flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform duration-300 ${step.color}`}
                 >
                   <Icon size={28} />
                 </div>

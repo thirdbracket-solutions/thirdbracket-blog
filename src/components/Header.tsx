@@ -503,7 +503,7 @@ const Header: FC = () => {
             <Megamenu
               label="Services"
               theme={{
-                text: 'text-primary-900 dark:text-primary-200  text-base md:text-sm',
+                text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                 states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
                 menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
               }}

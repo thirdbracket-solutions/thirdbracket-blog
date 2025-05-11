@@ -28,7 +28,7 @@ const CTASection = ({
         <div className="max-w-screen-xl bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-200 dark:border-primary-800  ">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-4 lg:mb-6">
+              <h2 className="text-3xl lg:text-4xl font-extrabold bg-gradient-secondary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-4 lg:mb-6">
                 {title}
               </h2>
               <p className="text-primary-800 dark:text-primary-200 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] max-w-md font-light">
@@ -57,8 +57,8 @@ const CTASection = ({
                   outline
                   size="md"
                   theme={{
-                    border: 'border-primary-800/20 dark:border-primary-200/10 ',
-                    hoverBackground: 'hover:bg-primary-800/5 dark:hover:bg-primary-200/5 ',
+                    border: 'border-primary-300/90 dark:border-primary-700/90 ',
+                    hoverBackground: 'hover:bg-primary-300/50 dark:hover:bg-primary-700/70 ',
                     focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                   }}
                   className="!font-medium !text-primary-950 dark:!text-accent-50"
