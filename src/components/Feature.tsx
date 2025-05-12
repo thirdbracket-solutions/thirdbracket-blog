@@ -6,7 +6,7 @@ const cards = [
     name: 'speed',
     props: {
       header: (
-        <span className="font-semibold text-primary-950 dark:text-primary-50">
+        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
           Fast Website That Ranks
         </span>
       ),
@@ -22,7 +22,7 @@ const cards = [
     name: 'scalability',
     props: {
       header: (
-        <span className="font-semibold text-primary-950 dark:text-primary-50">
+        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
           Enterprise Level Website
         </span>
       ),
@@ -36,7 +36,7 @@ const cards = [
     name: 'white-label',
     props: {
       header: (
-        <span className="font-semibold text-primary-950 dark:text-primary-50">
+        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
           White Level Development
         </span>
       ),
@@ -50,7 +50,9 @@ const cards = [
     name: 'api',
     props: {
       header: (
-        <span className="font-semibold text-primary-950 dark:text-primary-50">API Integration</span>
+        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+          API Integration
+        </span>
       ),
 
       href: '/services',
@@ -63,7 +65,7 @@ const cards = [
     name: 'design',
     props: {
       header: (
-        <span className="font-semibold text-primary-950 dark:text-primary-50">
+        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
           Design that Reflects Your Brand
         </span>
       ),
@@ -78,7 +80,11 @@ const cards = [
   {
     name: 'webaps',
     props: {
-      header: <span className="font-semibold text-primary-950 dark:text-primary-50">PWA</span>,
+      header: (
+        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+          PWA
+        </span>
+      ),
       cover: '/webdev.svg',
       href: '/services',
 
@@ -91,7 +97,7 @@ const cards = [
     name: 'ecommerce',
     props: {
       header: (
-        <span className="font-semibold text-primary-950 dark:text-primary-50">
+        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
           Ecommerce Solution
         </span>
       ),
@@ -107,7 +113,7 @@ const cards = [
     name: 'custom',
     props: {
       header: (
-        <span className="font-semibold text-primary-950 dark:text-primary-50">
+        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
           Custom Web Development
         </span>
       ),
@@ -121,7 +127,7 @@ const cards = [
     name: 'performance',
     props: {
       header: (
-        <span className="font-semibold text-primary-950 dark:text-primary-50">
+        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
           Performance Optimization
         </span>
       ),
@@ -165,9 +171,9 @@ export default function CardGrid() {
                     theme={{
                       background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary ',
                       border:
-                        'border-opacity-20 dark:border-opacity-30 border-secondary-800 shadow-sm dark:border-secondary-200 shadow-secondary-200/30 dark:shadow-secondary-800/50  ',
+                        'border-opacity-20 dark:border-opacity-25 border-secondary-800 shadow-lg dark:border-secondary-200 shadow-secondary-50 dark:shadow-secondary-900/50  ',
                       hover:
-                        '[@media(hover:hover)]:hover:border-opacity-80 [@media(hover:hover)]dark:hover:border-opacity-70       focus-within:border-opacity-100 active:border-opacity-100  ',
+                        '[@media(hover:hover)]:hover:border-opacity-100 [@media(hover:hover)]:hover:dark:border-opacity-70 [@media(hover:hover)]:hover:shadow-secondary-50/50 [@media(hover:hover)]:hover:dark:shadow-secondary-950        focus-within:border-opacity-100 active:border-opacity-100  ',
 
                       text: 'dark:text-primary-400 text-primary-600  font-light',
                     }}
