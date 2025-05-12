@@ -3,8 +3,17 @@ import { Card } from '@thirdbracket/bracketui'
 import Image from 'next/image'
 import { BsArrowUpRight } from 'react-icons/bs'
 import { Solution } from './types'
+import Link from 'next/link'
+import { TbArrowRight } from 'react-icons/tb'
+import { IoIosArrowForward } from 'react-icons/io'
 
-export default function SolutionCard({ title, description, technologies, image }: Solution) {
+export default function SolutionCard({
+  title,
+  description,
+  technologies,
+  image,
+  features,
+}: Solution) {
   return (
     <Card
       size="lg"
@@ -19,12 +28,12 @@ export default function SolutionCard({ title, description, technologies, image }
       cover={
         image && (
           <div className=" h-[300px] w-full    bg-[linear-gradient(to_right,#f1f2f466_1px,transparent_1px),linear-gradient(to_bottom,#f1f2f466_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f242866_1px,transparent_1px),linear-gradient(to_bottom,#1f242866_1px,transparent_1px)] bg-[size:14px_24px] relative">
-            <Image src={image} alt={title} fill className="object-cover" />
+            <Image src={image} alt={title} fill className="object-cover opacity-85" />
           </div>
         )
       }
       header={
-        <div className="font-bold !text-2xl bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2">
+        <div className="font-bold  bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text my-2">
           {title}
         </div>
       }
@@ -32,14 +41,14 @@ export default function SolutionCard({ title, description, technologies, image }
       <div>
         {technologies && (
           <div className="pb-4">
-            <div className="flex flex-wrap gap-1">
+            <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-2 py-1  text-[10px] text-secondary-800 bg-gradient-secondary-dark dark:bg-gradient-primary dark:text-secondary-200 border-primary-100/50 dark:border-primary-900 rounded-lg border flex flex-col  font-semibold"
+                  className="px-2 py-0.5   text-xs text-secondary-700 bg-gradient-secondary-dark dark:bg-gradient-secondary dark:text-secondary-300 border-primary-100/40 dark:border-primary-800/40 rounded-lg border flex flex-col  font-medium"
                 >
                   <div>{tech.cto}</div>
-                  <div className="text-xs font-normal text-primary-400 dark:text-primary-600">
+                  <div className="text-xs font-normal text-primary-400  dark:text-primary-600">
                     {tech.title}
                   </div>
                 </span>
@@ -47,16 +56,23 @@ export default function SolutionCard({ title, description, technologies, image }
             </div>
           </div>
         )}
+
+        <ul className="list-disc list-inside   space-y-1 text-sm pb-4">
+          {features.map((feature, index) => (
+            <li key={index}>{feature}</li>
+          ))}
+        </ul>
+
         {description && (
-          <a
+          <Link
             href="#"
-            className="text-primary-800 tracking-wide dark:text-primary-200 mb-2 text-sm underline"
+            className="  inline-flex gap-2 items-center group leading-none text-primary-600 dark:text-primary-400 font-normal  mb-2"
           >
             {description}
-            <span className="inline-flex ml-2 items-center">
-              <BsArrowUpRight />
+            <span className="group-hover:underline group-hover:translate-x-1 transition-all ease-in-out duration-200 ">
+              <IoIosArrowForward />
             </span>
-          </a>
+          </Link>
         )}
       </div>
     </Card>
