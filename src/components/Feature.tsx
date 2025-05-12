@@ -6,7 +6,7 @@ const cards = [
     name: 'speed',
     props: {
       header: (
-        <span className="font-bold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2">
+        <span className="font-semibold text-primary-950 dark:text-primary-50">
           Fast Website That Ranks
         </span>
       ),
@@ -22,7 +22,7 @@ const cards = [
     name: 'scalability',
     props: {
       header: (
-        <span className="font-bold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2">
+        <span className="font-semibold text-primary-950 dark:text-primary-50">
           Enterprise Level Website
         </span>
       ),
@@ -36,7 +36,7 @@ const cards = [
     name: 'white-label',
     props: {
       header: (
-        <span className="font-bold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2">
+        <span className="font-semibold text-primary-950 dark:text-primary-50">
           White Level Development
         </span>
       ),
@@ -50,9 +50,7 @@ const cards = [
     name: 'api',
     props: {
       header: (
-        <span className="font-bold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2">
-          API Integration
-        </span>
+        <span className="font-semibold text-primary-950 dark:text-primary-50">API Integration</span>
       ),
 
       href: '/services',
@@ -65,7 +63,7 @@ const cards = [
     name: 'design',
     props: {
       header: (
-        <span className="font-bold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2">
+        <span className="font-semibold text-primary-950 dark:text-primary-50">
           Design that Reflects Your Brand
         </span>
       ),
@@ -80,11 +78,7 @@ const cards = [
   {
     name: 'webaps',
     props: {
-      header: (
-        <span className="font-bold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2">
-          PWA
-        </span>
-      ),
+      header: <span className="font-semibold text-primary-950 dark:text-primary-50">PWA</span>,
       cover: '/webdev.svg',
       href: '/services',
 
@@ -97,7 +91,7 @@ const cards = [
     name: 'ecommerce',
     props: {
       header: (
-        <span className="font-bold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2">
+        <span className="font-semibold text-primary-950 dark:text-primary-50">
           Ecommerce Solution
         </span>
       ),
@@ -113,7 +107,7 @@ const cards = [
     name: 'custom',
     props: {
       header: (
-        <span className="font-bold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2">
+        <span className="font-semibold text-primary-950 dark:text-primary-50">
           Custom Web Development
         </span>
       ),
@@ -127,7 +121,7 @@ const cards = [
     name: 'performance',
     props: {
       header: (
-        <span className="font-bold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text mb-2">
+        <span className="font-semibold text-primary-950 dark:text-primary-50">
           Performance Optimization
         </span>
       ),
@@ -156,15 +150,7 @@ export default function CardGrid() {
               websites with a clean, minimal design that aligns with your brand.
             </p>
           </div>
-          {/* <div className="mb-12 sm:mb-14 lg:mb-16 lg:flex lg:items-center lg:justify-between lg:gap-6">
-            <h2 className="mb-4 md:mb-6 text-3xl lg:text-[1.75rem]/[2.2rem]  font-extrabold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text lg:mb-0 text-left sm:text-center lg:text-right ">
-              Looking for Fast & Beautiful Websites for Your Business?
-            </h2>
-            <p className="dark:text-primary-500 text-primary-500 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center lg:text-left ">
-              Whether you are a startup or an agency, we help you build scalable, SEO-optimized
-              websites with a clean, minimal design that aligns with your brand.
-            </p>
-          </div> */}
+
           {/* Cards */}
           <div className="space-y-8">
             <div className="columns-1 sm:columns-2 lg:columns-3 gap-6   [column-fill:_balance]">
@@ -177,12 +163,15 @@ export default function CardGrid() {
                   <Card
                     size="lg"
                     theme={{
-                      background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                      border: ' border-primary-200 dark:border-primary-800  ',
-                      hover: 'md:hover:border-primary-400 md:hover:dark:border-primary-600 ',
+                      background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary ',
+                      border:
+                        'border-opacity-20 dark:border-opacity-30 border-secondary-800 shadow-sm dark:border-secondary-200 shadow-secondary-200/30 dark:shadow-secondary-800/50  ',
+                      hover:
+                        '[@media(hover:hover)]:hover:border-opacity-80 [@media(hover:hover)]dark:hover:border-opacity-70       focus-within:border-opacity-100 active:border-opacity-100  ',
 
-                      text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
+                      text: 'dark:text-primary-400 text-primary-600  font-light',
                     }}
+                    className="!delay-50   motion-reduce:!transition-none motion-reduce:hover:!transform-none"
                     {...props}
                   />
                 </div>

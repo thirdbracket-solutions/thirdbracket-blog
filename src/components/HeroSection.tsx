@@ -13,7 +13,7 @@ const featuredLogos = [
 
 export const Hero: React.FC = () => {
   return (
-    <section className="pb-12 sm:pb-14 lg:pb-16 pt-24 sm:pt-28 lg:pt-32 bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1c1c1c_1px,transparent_1px)]  [background-size:16px_16px]">
+    <section className="pb-12 sm:pb-14 lg:pb-16 pt-24 sm:pt-28 lg:pt-32 bg-[radial-gradient(#f1f2f4_1px,transparent_1px)] dark:bg-[radial-gradient(#171a1c_1px,transparent_1px)]  [background-size:16px_16px]">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
           <div className="flex flex-col items-start sm:items-center space-y-12 sm:space-y-14 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl">
@@ -35,8 +35,8 @@ export const Hero: React.FC = () => {
                   background: 'bg-gradient-primary dark:bg-gradient-primary-dark',
                   hoverBackground: '[@media(hover:hover)]:hover:opacity-85',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
+                  text: 'text-primary-50 dark:text-primary-950',
                 }}
-                className="!font-medium !text-primary-50 dark:!text-primary-950"
                 href="/about"
               >
                 About Us
@@ -55,11 +55,11 @@ export const Hero: React.FC = () => {
                 href="/contact"
                 size="md"
                 theme={{
-                  border: 'border-primary-200/30 dark:border-primary-800/60 ',
-                  hoverBackground: 'hover:bg-primary-200/20 dark:hover:bg-primary-800/50 ',
+                  border: 'border-secondary-200/30 dark:border-secondary-800/50 ',
+                  hoverBackground: 'hover:bg-secondary-50 dark:hover:bg-secondary-900/70 ',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
+                  text: 'text-primary-900 dark:text-primary-100 ',
                 }}
-                className="!font-medium !text-primary-950 dark:!text-primary-50"
               >
                 <svg className="size-4 mr-2" fill="currentColor" viewBox="0 0 1000 1000">
                   <path d="M860 265h-61q-8 0-13.5 5.5T780 284v246q0 39-28 67t-68 28H279q-8 0-13.5 5.5T260 644v61q0 17 11.5 28.5T300 745h415q25 0 43 18l110 110q4 4 9.5 5t11-1 8.5-7 3-11V305q0-17-11.5-28.5T860 265zM700 505V145q0-17-11.5-28.5T660 105H140q-17 0-28.5 11.5T100 145v514q0 6 3 11t8.5 7 11 1 9.5-5l110-110q18-18 43-18h375q17 0 28.5-12t11.5-28z" />
@@ -69,7 +69,7 @@ export const Hero: React.FC = () => {
             </div>
 
             <div className="px-0 sm:px-4 py-4 text-left sm:text-center lg:px-36">
-              <span className="uppercase dark:text-primary-200/50 text-primary-800/60 font-medium backdrop-blur-sm">
+              <span className="uppercase bg-gradient-secondary opacity-65 dark:bg-gradient-secondary-dark text-transparent bg-clip-text font-medium backdrop-blur-sm">
                 FEATURED IN
               </span>
               <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 lg:gap-12 sm:items-center dark:text-primary-500/40 text-primary-600/50 justify-start sm:justify-between">

@@ -40,35 +40,39 @@ export const ClientTestimonials = () => {
             Trusted by Early-stage Startups
           </h2>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-0 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((item, i) => (
               <Card
                 isIcon
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                  border: 'border-primary-200 dark:border-primary-800',
-
-                  text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
+                  border:
+                    'border-opacity-20 dark:border-opacity-30 border-secondary-800 dark:border-secondary-200 shadow-sm shadow-secondary-200/30 dark:shadow-secondary-800/50',
+                  hover:
+                    '[@media(hover:hover)]:hover:border-opacity-30 [@media(hover:hover)]hover:dark:border-opacity-40       focus-within:border-opacity-100 active:border-opacity-100  ',
+                  text: 'dark:text-primary-400 text-primary-600  font-light',
                 }}
                 key={i}
                 size="lg"
+                header={
+                  <blockquote className="bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-4 font-light text-lg  ">
+                    “{item.quote}”
+                  </blockquote>
+                }
                 cover={
                   item.logo && (
-                    <div>
+                    <div className="w-32 h-10 mb-4 flex items-center  justify-center border-[0.5px] border-secondary-200 dark:border-secondary-800 shadow-sm shadow-secondary-200/30 dark:shadow-secondary-800/50        rounded-full bg-gradient-secondary-dark dark:bg-gradient-secondary">
                       <Image
                         src={item.logo}
                         alt={`${item.client} logo`}
                         height={30}
                         width={90}
-                        className="object-cover  grayscale dark:invert  opacity-60 sm:pt-2 sm:pl-2 mb-16"
+                        className="object-cover  grayscale dark:invert  opacity-60 text-primary-900 dark:text-primary-100"
                       />
-                      <blockquote className="bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text backdrop-blur-md   text-base   ">
-                        “{item.quote}”
-                      </blockquote>
                     </div>
                   )
                 }
-                className="  !rounded-3xl   "
+                className="  rounded-none md:!border-y  border-y-[0.5px]   "
               >
                 <p className="text-sm font-medium text-primary-800 dark:text-primary-300">
                   {item.client}
