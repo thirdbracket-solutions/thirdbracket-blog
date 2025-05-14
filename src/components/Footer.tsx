@@ -8,17 +8,8 @@ import {
   FooterText,
   ThemeToggle,
 } from '@thirdbracket/bracketui'
-import Image from 'next/image'
-import Link from 'next/link'
 
-import {
-  RiFacebookLine,
-  RiGithubLine,
-  RiLinkedinLine,
-  RiMailLine,
-  RiPhoneLine,
-} from 'react-icons/ri'
-import { Logo } from './Logo/Logo'
+import { RiFacebookLine, RiGithubLine, RiLinkedinLine } from 'react-icons/ri'
 
 const SiteFooter = () => {
   return (
@@ -176,31 +167,6 @@ const SiteFooter = () => {
           }}
         >
           UK Web Designers - Directory of Web Design Companies in the UK
-        </FooterLink>
-        <FooterLink
-          href="https://www.business-directory.org.uk/"
-          target="_blank"
-          rel="noopener noreferrer"
-          theme={{
-            text: 'text-primary-800   dark:text-primary-100',
-            states:
-              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-          }}
-
-          // className="w-full flex justify-center mt-6"
-        >
-          <img
-            src="https://www.business-directory.org.uk/c.php?id=117346"
-            style={{ position: 'absolute', visibility: 'hidden' }}
-            alt="Business Directory Tracker"
-          />
-          {/* <a href="https://www.business-directory.org.uk/"> */}
-          <img
-            src="https://www.business-directory.org.uk/free-business-directory.png"
-            alt="Free Business Directory"
-            style={{ border: 0 }}
-          />
-          {/* </a> */}
         </FooterLink>
       </FooterSection>
 

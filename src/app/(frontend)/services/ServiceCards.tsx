@@ -1,4 +1,4 @@
-import { Button, Card } from '@thirdbracket/bracketui'
+import { Card } from '@thirdbracket/bracketui'
 import { IconType } from 'react-icons'
 
 interface ServiceCardProps {
@@ -13,7 +13,7 @@ export default function ServiceCard({
   title,
   description,
   features,
-  badge,
+
   icon: Icon,
 }: ServiceCardProps) {
   return (

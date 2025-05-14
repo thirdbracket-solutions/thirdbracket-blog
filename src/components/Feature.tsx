@@ -169,11 +169,13 @@ export default function CardGrid() {
                   <Card
                     size="lg"
                     theme={{
-                      background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary ',
+                      background: 'bg-conic-card dark:bg-conic-cardDark ',
                       border:
-                        'border-opacity-20 dark:border-opacity-25 border-secondary-800 shadow-lg dark:border-secondary-200 shadow-secondary-50 dark:shadow-secondary-900/50  ',
+                        'border-opacity-20 dark:border-opacity-20 border-primary-900 dark:border-primary-100  dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]   ',
+
+                      //shadow-secondary-100 dark:shadow-secondary-900/50
                       hover:
-                        '[@media(hover:hover)]:hover:border-opacity-100 [@media(hover:hover)]:hover:dark:border-opacity-70 [@media(hover:hover)]:hover:shadow-secondary-50/50 [@media(hover:hover)]:hover:dark:shadow-secondary-950        focus-within:border-opacity-100 active:border-opacity-100  ',
+                        '[@media(hover:hover)]:hover:border-opacity-100 [@media(hover:hover)]hover:dark:border-opacity-50 [@media(hover:hover)]:hover:shadow-[0_0_4px_rgba(11,13,15,0.20)] [@media(hover:hover)]:dark:hover:shadow-[0_0_4px_rgba(240,242,244,0.20)] [@media(hover:hover)]:hover:dark:shadow-secondary-950        focus-within:border-opacity-100 active:border-opacity-100  ',
 
                       text: 'dark:text-primary-400 text-primary-600  font-light',
                     }}

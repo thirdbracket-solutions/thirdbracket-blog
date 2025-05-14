@@ -1,8 +1,8 @@
 // data/solutions.ts
-import { FaWpforms, FaWordpress } from 'react-icons/fa'
-import { SiNextdotjs, SiGithubactions, SiNotion } from 'react-icons/si'
-import { MdAutorenew, MdBusiness, MdShoppingCart } from 'react-icons/md'
-import { TbBrandReact } from 'react-icons/tb'
+import { FaWpforms } from 'react-icons/fa'
+import { SiGithubactions } from 'react-icons/si'
+import { MdAutorenew } from 'react-icons/md'
+
 import { SolutionCategory } from './types'
 
 export const solutionCategories: SolutionCategory[] = [

@@ -1,6 +1,6 @@
 // components/Steps.tsx
 import { Bracket } from '@thirdbracket/bracketui'
-import { BsArrowRight } from 'react-icons/bs'
+
 import { FaRegComments } from 'react-icons/fa'
 import { MdOutlineDesignServices, MdRocketLaunch } from 'react-icons/md'
 import { TbCodeDots } from 'react-icons/tb'

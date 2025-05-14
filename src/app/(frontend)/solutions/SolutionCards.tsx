@@ -1,10 +1,10 @@
 // components/SolutionCard.tsx
 import { Card } from '@thirdbracket/bracketui'
 import Image from 'next/image'
-import { BsArrowUpRight } from 'react-icons/bs'
+
 import { Solution } from './types'
 import Link from 'next/link'
-import { TbArrowRight } from 'react-icons/tb'
+
 import { IoIosArrowForward } from 'react-icons/io'
 
 export default function SolutionCard({

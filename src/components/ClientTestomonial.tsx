@@ -47,26 +47,25 @@ export const ClientTestimonials = () => {
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   border:
-                    'border-opacity-20 dark:border-opacity-30 border-secondary-800 dark:border-secondary-200 shadow-sm shadow-secondary-200/30 dark:shadow-secondary-800/50',
-                  hover:
-                    '[@media(hover:hover)]:hover:border-opacity-30 [@media(hover:hover)]hover:dark:border-opacity-40       focus-within:border-opacity-100 active:border-opacity-100  ',
+                    'border-opacity-20 dark:border-opacity-20 border-primary-900 dark:border-primary-100  dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+
                   text: 'dark:text-primary-400 text-primary-600  font-light',
                 }}
                 key={i}
                 size="lg"
                 header={
-                  <blockquote className="bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-4 font-light text-lg  ">
+                  <blockquote className="bg-gradient-primary dark:bg-gradient-secondary-dark text-transparent bg-clip-text mb-4 font-normal text-base  ">
                     “{item.quote}”
                   </blockquote>
                 }
                 cover={
                   item.logo && (
-                    <div className="w-32 h-10 mb-4 flex items-center  justify-center border-[0.5px] border-secondary-200 dark:border-secondary-800 shadow-sm shadow-secondary-200/30 dark:shadow-secondary-800/50        rounded-full bg-gradient-secondary-dark dark:bg-gradient-secondary">
+                    <div className="w-[75px] h-[30px] mb-4 flex items-center  justify-center border-[0.5px] border-primary-200 dark:border-primary-800 dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]        rounded-full bg-gradient-secondary-dark dark:bg-gradient-secondary">
                       <Image
                         src={item.logo}
                         alt={`${item.client} logo`}
-                        height={30}
-                        width={90}
+                        height={20}
+                        width={60}
                         className="object-cover  grayscale dark:invert  opacity-60 text-primary-900 dark:text-primary-100"
                       />
                     </div>
@@ -74,7 +73,7 @@ export const ClientTestimonials = () => {
                 }
                 className="  rounded-none md:!border-y  border-y-[0.5px]   "
               >
-                <p className="text-sm font-medium text-primary-800 dark:text-primary-300">
+                <p className="text-sm font-normal text-primary-600 dark:text-primary-400">
                   {item.client}
                 </p>
                 <p className="text-sm text-primary-500">{item.role}</p>

@@ -1,10 +1,10 @@
 // page.tsx
-import { Bracket } from '@thirdbracket/bracketui'
+
 import PageHeader from '@/components/PageHeader'
 import { Metadata } from 'next'
 import { solutionCategories } from './Solutions'
 import CategorySection from './CategorySection'
-import CTABlock from './CTABlock'
+
 import CTASection from '@/components/CTASection'
 import Steps from './Steps'
 

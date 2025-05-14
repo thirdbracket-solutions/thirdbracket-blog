@@ -15,8 +15,6 @@ import {
   uiUxSolutionsItems,
   businessSolutionsItems,
   infrastructureSolutionsItems,
-  templateItems,
-  themeItems,
   getNavlinkTheme,
 } from '../data/navigationData'
 

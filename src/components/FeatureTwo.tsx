@@ -72,7 +72,8 @@ export function WhyChooseUsSection() {
                 isIcon
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-                  border: 'border-primary-200 dark:border-primary-800',
+                  border:
+                    'border-opacity-20 dark:border-opacity-20 border-primary-900 dark:border-primary-100 dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)] ',
 
                   text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
                 }}

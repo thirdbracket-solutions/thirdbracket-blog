@@ -1,6 +1,7 @@
 import { Bracket } from '@thirdbracket/bracketui'
 import ServiceCard from './ServiceCards'
 import { IconType } from 'react-icons'
+import Image from 'next/image'
 
 interface CategoryProps {
   title: string
@@ -47,9 +48,11 @@ export default function Category({
           </div>
 
           <div className="lg:w-1/2 hidden sm:flex ">
-            <img
+            <Image
               src={illustration.src}
               alt={illustration.alt}
+              width={334}
+              height={250}
               className="w-full h-auto max-w-xs mx-auto"
             />
           </div>

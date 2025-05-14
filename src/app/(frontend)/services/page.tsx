@@ -4,7 +4,7 @@ import Category from './Catagory'
 import Stats from './Stats'
 import TechStack from './TechStack'
 import { Metadata } from 'next'
-import { IoTimerOutline } from 'react-icons/io5'
+
 import { SiNextdotjs, SiWordpress } from 'react-icons/si'
 import {
   FaCode,
