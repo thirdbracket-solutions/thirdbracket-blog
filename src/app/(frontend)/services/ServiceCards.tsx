@@ -21,14 +21,16 @@ export default function ServiceCard({
       size="xl"
       isIcon
       theme={{
-        background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-        border: 'border-primary-200 dark:border-primary-800',
-        hover: 'md:hover:border-primary-400 md:hover:dark:border-primary-600 ',
+        background: 'bg-conic-card dark:bg-conic-cardDark',
+        border:
+          'border-opacity-30 dark:border-opacity-40 border-primary-600 dark:border-primary-400  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+        hover:
+          '[@media(hover:hover)]:hover:border-opacity-60 [@media(hover:hover)]:hover:dark:border-opacity-70   [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100 ',
 
-        text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
+        text: 'dark:text-primary-400 text-primary-700  font-light leading-[1.45]',
       }}
       cover={
-        <div className="w-12 h-12 mb-4 flex items-center  justify-center   border border-primary-500/40  bg-gradient-primary-dark dark:bg-gradient-primary  rounded-lg">
+        <div className="w-12 h-12 mb-4 flex items-center  justify-center   border-[0.5px] border-primary-600/30 dark:border-primary-400/40  bg-white dark:bg-black   rounded-lg">
           <Icon className="w-6 h-6 text-primary-900 dark:text-primary-100" />
         </div>
       }

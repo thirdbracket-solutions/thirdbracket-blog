@@ -18,12 +18,16 @@ const config = {
     extend: {
       backgroundImage: {
         'gradient-primary-dark': 'conic-gradient(at bottom left, #f2f2f2, #dbdbdb, #c4c4c4 )',
-        'gradient-primary': 'conic-gradient(at bottom left, #0d0d0d, #0d0d0d, #3b3b3b  )',
+        'gradient-primary':
+          'conic-gradient(from 180deg at center, #0d0d0d, #242424, #242424, #0d0d0d  )',
         'gradient-secondary-dark': 'conic-gradient(at bottom left, #fff, #f1f2f4, #dbdbdb )',
         'gradient-secondary': 'conic-gradient(at bottom left, #000, #0b0d0e, #3b3b3b )',
 
         'conic-cardDark': 'conic-gradient( at bottom left, #000,#0b0d0f , #3b3b3b)',
         'conic-card': 'conic-gradient(at bottom left, #fff, #f0f2f4, #c4c4c4 )',
+        'overlayDot-light': 'radial-gradient( #e0e3e666 1px, transparent 1px)',
+        'overlayDot-dark': 'radial-gradient(   #22283099 1px, transparent 1px)',
+
         'overlay-radial': 'radial-gradient(#f1f2f4_1px,transparent_1px)',
         'overlay-radial-dark': 'radial-gradient(#0b0d0e_1px,transparent_1px)',
 
@@ -46,17 +50,17 @@ const config = {
         },
 
         secondary: {
-          50: '#f0f2f4',
-          100: '#d6dae0',
-          200: '#bdc3cc',
-          300: '#a4abb7',
-          400: '#8b95a2',
-          500: '#737e8c',
-          600: '#5d6774',
-          700: '#48515b',
-          800: '#333a42',
-          900: '#1f2429',
-          950: '#0b0d0f',
+          50: '#f6f7f8', // hsl(210, 12%, 97%)
+          100: '#e0e3e6', // hsl(210, 11%, 89%)
+          200: '#c4c9cf', // hsl(213, 10%, 79%)
+          300: '#a8afb8', // hsl(214, 10%, 69%)
+          400: '#8c95a1', // hsl(214, 10%, 59%)
+          500: '#737e8c', // hsl(214, 10%, 50%)
+          600: '#5d6774', // hsl(213, 11%, 41%)
+          700: '#48515b', // hsl(212, 12%, 32%)
+          800: '#333b48', // hsl(215, 17%, 24%)
+          900: '#222830', // hsl(214, 17%, 16%)
+          950: '#0f1215', // hsl(210,17%,7%)
         },
 
         primary: {

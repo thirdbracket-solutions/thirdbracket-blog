@@ -16,14 +16,16 @@ export default function SolutionCard({
 }: Solution) {
   return (
     <Card
-      size="lg"
+      size="xl"
       // isIcon
       theme={{
-        background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
-        border: 'border-primary-200 dark:border-primary-800',
-        hover: 'md:hover:border-primary-400 md:hover:dark:border-primary-600',
+        background: 'bg-conic-card dark:bg-conic-cardDark',
+        border:
+          'border-opacity-30 dark:border-opacity-40 border-primary-600 dark:border-primary-400  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+        hover:
+          '[@media(hover:hover)]:hover:border-opacity-60 [@media(hover:hover)]:hover:dark:border-opacity-70   [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100',
 
-        text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
+        text: 'dark:text-primary-400 text-primary-700  font-light leading-[1.45]',
       }}
       cover={
         image && (
@@ -33,19 +35,20 @@ export default function SolutionCard({
         )
       }
       header={
-        <div className="font-bold  bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text my-2">
-          {title}
-        </div>
+        // <div className="font-bold  bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text my-2">
+        title
       }
+
+      // </div>
     >
       <div>
         {technologies && (
-          <div className="pb-4">
+          <div className="py-4">
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-2 py-0.5   text-xs text-secondary-700 bg-gradient-secondary-dark dark:bg-gradient-secondary dark:text-secondary-300 border-primary-100/40 dark:border-primary-800/40 rounded-lg border flex flex-col  font-medium"
+                  className="px-2 py-0.5   text-xs text-secondary-800 bg-white dark:bg-black dark:text-secondary-200  rounded-lg flex flex-col  font-medium border-[0.5px] border-primary-600/30 dark:border-primary-400/40"
                 >
                   <div>{tech.cto}</div>
                   <div className="text-xs font-normal text-primary-400  dark:text-primary-600">

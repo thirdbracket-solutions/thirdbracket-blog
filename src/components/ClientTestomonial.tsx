@@ -40,16 +40,18 @@ export const ClientTestimonials = () => {
             Trusted by Early-stage Startups
           </h2>
 
-          <div className="grid gap-0 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {testimonials.map((item, i) => (
               <Card
                 isIcon
                 theme={{
-                  background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                  background: 'bg-conic-card dark:bg-conic-cardDark',
                   border:
-                    'border-opacity-20 dark:border-opacity-20 border-primary-900 dark:border-primary-100  dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+                    'border-opacity-30 dark:border-opacity-40 border-primary-600 dark:border-primary-400  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
 
-                  text: 'dark:text-primary-400 text-primary-600  font-light',
+                  text: 'dark:text-primary-400 text-primary-600  font-light leading-[1.45]',
+                  hover:
+                    '[@media(hover:hover)]:hover:border-opacity-60 [@media(hover:hover)]:hover:dark:border-opacity-70   [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100',
                 }}
                 key={i}
                 size="lg"
@@ -60,7 +62,7 @@ export const ClientTestimonials = () => {
                 }
                 cover={
                   item.logo && (
-                    <div className="w-[75px] h-[30px] mb-4 flex items-center  justify-center border-[0.5px] border-primary-200 dark:border-primary-800 dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]        rounded-full bg-gradient-secondary-dark dark:bg-gradient-secondary">
+                    <div className="w-[100px] h-[45px] mb-4 flex items-center  justify-center border-[0.5px] border-primary-600/30 dark:border-primary-400/40 dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]        rounded-full bg-gradient-secondary-dark dark:bg-gradient-secondary">
                       <Image
                         src={item.logo}
                         alt={`${item.client} logo`}
@@ -71,7 +73,7 @@ export const ClientTestimonials = () => {
                     </div>
                   )
                 }
-                className="  rounded-none md:!border-y  border-y-[0.5px]   "
+                className="  rounded    "
               >
                 <p className="text-sm font-normal text-primary-600 dark:text-primary-400">
                   {item.client}

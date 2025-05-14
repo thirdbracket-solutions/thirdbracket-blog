@@ -71,14 +71,16 @@ export function WhyChooseUsSection() {
                 size="lg"
                 isIcon
                 theme={{
-                  background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                  background: 'bg-conic-card dark:bg-conic-cardDark',
                   border:
-                    'border-opacity-20 dark:border-opacity-20 border-primary-900 dark:border-primary-100 dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)] ',
+                    '  border-opacity-30 dark:border-opacity-40 border-primary-600 dark:border-primary-400  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
 
                   text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
+                  hover:
+                    '[@media(hover:hover)]:hover:border-opacity-60 [@media(hover:hover)]:hover:dark:border-opacity-70   [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100',
                 }}
                 cover={
-                  <div className="w-16 h-16 mb-4 flex items-center  justify-center   border  border-primary-100 dark:border-primary-900    rounded-xl bg-white dark:bg-black">
+                  <div className="w-16 h-16 mb-4 flex items-center  justify-center   border-[0.5px]  border-primary-600/30 dark:border-primary-400/40    rounded-xl bg-white dark:bg-black">
                     <Icon size={36} className="text-secondary-900 dark:text-secondary-100" />
                   </div>
                 }

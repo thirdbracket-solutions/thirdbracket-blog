@@ -171,13 +171,13 @@ export default function CardGrid() {
                     theme={{
                       background: 'bg-conic-card dark:bg-conic-cardDark ',
                       border:
-                        'border-opacity-20 dark:border-opacity-20 border-primary-900 dark:border-primary-100  dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]   ',
+                        '  border-opacity-30 dark:border-opacity-40 border-primary-600 dark:border-primary-400  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]   ',
 
                       //shadow-secondary-100 dark:shadow-secondary-900/50
                       hover:
-                        '[@media(hover:hover)]:hover:border-opacity-100 [@media(hover:hover)]hover:dark:border-opacity-50 [@media(hover:hover)]:hover:shadow-[0_0_4px_rgba(11,13,15,0.20)] [@media(hover:hover)]:dark:hover:shadow-[0_0_4px_rgba(240,242,244,0.20)] [@media(hover:hover)]:hover:dark:shadow-secondary-950        focus-within:border-opacity-100 active:border-opacity-100  ',
+                        '[@media(hover:hover)]:hover:border-opacity-60 [@media(hover:hover)]:hover:dark:border-opacity-70   [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100 ',
 
-                      text: 'dark:text-primary-400 text-primary-600  font-light',
+                      text: 'dark:text-primary-400 text-primary-600  font-light leading-[1.45]',
                     }}
                     className="!delay-50   motion-reduce:!transition-none motion-reduce:hover:!transform-none"
                     {...props}
