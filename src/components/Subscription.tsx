@@ -41,26 +41,26 @@ const Subscription = () => {
   }
 
   return (
-    <section className="   py-10 sm:py-12  lg:py-14 xl:py-16   ">
-      <Bracket fluid centered padding="medium">
-        <div className="max-w-screen-xl  bg-accent-radial dark:bg-accent-radial-dark  rounded-xl p-8 lg:p-12 border border-primary-200 dark:border-primary-800 ">
+    <section className="     pb-[2rem] sm:pb-[2.5rem] lg:pb-[3rem]  bg-white dark:bg-black">
+      <Bracket fluid centered>
+        <div className="max-w-screen-xl  bg-accent-radial dark:bg-accent-radial-dark  rounded-xl p-8 lg:p-12 border border-primary-500/20 ">
           {state.isSuccess ? (
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12">
               <div className="text-5xl mb-4">🎉</div>
-              <h3 className="text-3xl font-extrabold  bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text   mb-2 lg:mb-6">
+              <h2 className="text-3xl font-extrabold  bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text   mb-2 lg:mb-6">
                 Thank you for subscribing!
-              </h3>
-              <p className="dark:text-primary-500 text-primary-600 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  max-w-md font-light">
+              </h2>
+              <p className="dark:text-primary-300 text-primary-700 text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  max-w-md font-light">
                 We will keep you updated with the latest news and updates.
               </p>
             </div>
           ) : (
             <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12 ">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-extrabold  bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text  mb-2 lg:mb-6">
+                <h2 className="text-3xl lg:text-4xl font-extrabold  bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  mb-2 lg:mb-6">
                   Stay Updated
                 </h2>
-                <p className="dark:text-primary-200 text-primary-800 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   max-w-md ">
+                <p className="dark:text-primary-300 text-primary-700 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]   max-w-md ">
                   Subscribe to our newsletter for updates and exclusive content delivered straight
                   to your inbox.
                 </p>
@@ -81,7 +81,7 @@ const Subscription = () => {
                           email: e.target.value,
                         }))
                       }
-                      className="w-full pl-4 pr-32 h-14 text-base rounded-md border  border-primary-600/30   dark:border-primary-500/30   !bg-white  focus:!ring-primary-400 text-primary-700   dark:!bg-black  dark:focus:!ring-primary-400 dark:!text-primary-400 placeholder:text-primary-500/70"
+                      className="w-full pl-4 pr-32 h-14 text-base rounded-md border  border-primary-500/20   !bg-white  focus:!ring-primary-400 text-primary-700   dark:!bg-black  dark:focus:!ring-primary-400 dark:!text-primary-400 placeholder:text-primary-500/70"
                     ></FormInput>
                     <div className="absolute right-1 top-1/2 -translate-y-1/2">
                       <Button
@@ -90,7 +90,7 @@ const Subscription = () => {
                         isLoading={state.isSubmitting}
                         size="md"
                         theme={{
-                          background: 'bg-gradient-primary dark:bg-gradient-primary-dark',
+                          background: 'bg-gradient-text dark:bg-gradient-text-dark',
                           hoverBackground: '[@media(hover:hover)]:hover:opacity-85',
                           focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                         }}

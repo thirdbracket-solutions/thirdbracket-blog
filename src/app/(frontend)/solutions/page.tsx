@@ -14,31 +14,29 @@ export const metadata: Metadata = {
 
 export default function Solutions() {
   return (
-    <section>
+    <section className="bg-gradient-primary-dark dark:bg-gradient-primary">
       <PageHeader
         title="Solutions"
         description="Comprehensive digital solutions for modern businesses"
       />
 
-      <div className="mx-auto max-w-screen-xl py-10 sm:py-12 md:py-16 lg:py-20 xl:py-24">
-        {solutionCategories.map((category, index) => (
-          <CategorySection key={index} {...category} />
-        ))}
-        <Steps />
+      {solutionCategories.map((category, index) => (
+        <CategorySection key={index} {...category} />
+      ))}
+      <Steps />
 
-        <CTASection
-          title="Ready to Transform Your Digital Presence?"
-          description="Let us discuss how our solutions can help you achieve your goals"
-          primary={{
-            label: 'Consult Us',
-            href: '/contact',
-          }}
-          secondary={{
-            label: 'About Us',
-            href: '/projects',
-          }}
-        />
-      </div>
+      <CTASection
+        title="Ready to Transform Your Digital Presence?"
+        description="Let us discuss how our solutions can help you achieve your goals"
+        primary={{
+          label: 'Contact Us',
+          href: '/contact',
+        }}
+        secondary={{
+          label: 'View Services',
+          href: '/services',
+        }}
+      />
     </section>
   )
 }

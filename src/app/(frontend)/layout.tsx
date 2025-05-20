@@ -132,11 +132,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${roboto.className} antialiased dark:bg-primary-950 dark:text-white`}
-      suppressHydrationWarning
-    >
+    <html lang="en" className={`${roboto.className} antialiased `} suppressHydrationWarning>
       <head>
         {/* Google Tag Manager - Head */}
         {/* <Script

@@ -19,13 +19,13 @@ export default function SolutionCard({
       size="xl"
       // isIcon
       theme={{
-        background: 'bg-conic-card dark:bg-conic-cardDark',
+        background: 'bg-white dark:bg-black',
         border:
-          'border-opacity-30 dark:border-opacity-40 border-primary-600 dark:border-primary-400  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+          'border-opacity-50  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)] ',
         hover:
-          '[@media(hover:hover)]:hover:border-opacity-60 [@media(hover:hover)]:hover:dark:border-opacity-70   [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100',
+          '[@media(hover:hover)]:hover:border-opacity-100    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100',
 
-        text: 'dark:text-primary-400 text-primary-700  font-light leading-[1.45]',
+        text: 'dark:text-primary-400 text-primary-600  font-light leading-[1.45]',
       }}
       cover={
         image && (
@@ -48,7 +48,7 @@ export default function SolutionCard({
               {technologies.map((tech, index) => (
                 <span
                   key={index}
-                  className="px-2 py-0.5   text-xs text-secondary-800 bg-white dark:bg-black dark:text-secondary-200  rounded-lg flex flex-col  font-medium border-[0.5px] border-primary-600/30 dark:border-primary-400/40"
+                  className="px-2 py-0.5   text-xs text-primary-900 dark:text-primary-100 bg-white dark:bg-black   rounded-lg flex flex-col  font-medium border border-primary-400/20"
                 >
                   <div>{tech.cto}</div>
                   <div className="text-xs font-normal text-primary-400  dark:text-primary-600">

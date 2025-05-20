@@ -30,14 +30,14 @@ export default function Category({
   services,
 }: CategoryProps) {
   return (
-    <section className="py-10  sm:py-12 lg:py-14 xl:py-16">
+    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] ">
       <Bracket fluid centered padding="medium">
         <div className="flex flex-col-reverse lg:flex-row-reverse gap-y-8 sm:gap-x-0 items-center  mb-8 md:mb-12 lg:mb-16 ">
           <div className="lg:w-1/2 ">
-            <h2 className="text-3xl lg:text-4xl font-bold text-primary-900 dark:text-primary-100 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">
               {title}
             </h2>
-            <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-500 mb-6">
+            <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-400 mb-6">
               {description}
             </p>
             <div className="flex flex-wrap gap-4 mb-6 text-primary-800 dark:text-primary-200">

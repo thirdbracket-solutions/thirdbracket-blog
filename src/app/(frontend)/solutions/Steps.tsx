@@ -38,7 +38,7 @@ const steps = [
 
 export default function Steps() {
   return (
-    <section className="py-10  sm:py-12 lg:py-14 xl:py-16">
+    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] bg-white dark:bg-black">
       <Bracket fluid centered padding="medium">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary-950 dark:text-primary-50 mb-4 ">

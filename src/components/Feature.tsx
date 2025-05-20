@@ -6,7 +6,7 @@ const cards = [
     name: 'speed',
     props: {
       header: (
-        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
           Fast Website That Ranks
         </span>
       ),
@@ -22,7 +22,7 @@ const cards = [
     name: 'scalability',
     props: {
       header: (
-        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
           Enterprise Level Website
         </span>
       ),
@@ -36,7 +36,7 @@ const cards = [
     name: 'white-label',
     props: {
       header: (
-        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
           White Level Development
         </span>
       ),
@@ -50,7 +50,7 @@ const cards = [
     name: 'api',
     props: {
       header: (
-        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
           API Integration
         </span>
       ),
@@ -65,7 +65,7 @@ const cards = [
     name: 'design',
     props: {
       header: (
-        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
           Design that Reflects Your Brand
         </span>
       ),
@@ -81,7 +81,7 @@ const cards = [
     name: 'webaps',
     props: {
       header: (
-        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
           PWA
         </span>
       ),
@@ -97,7 +97,7 @@ const cards = [
     name: 'ecommerce',
     props: {
       header: (
-        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
           Ecommerce Solution
         </span>
       ),
@@ -113,7 +113,7 @@ const cards = [
     name: 'custom',
     props: {
       header: (
-        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
           Custom Web Development
         </span>
       ),
@@ -127,7 +127,7 @@ const cards = [
     name: 'performance',
     props: {
       header: (
-        <span className=" bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text font-semibold">
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
           Performance Optimization
         </span>
       ),
@@ -142,13 +142,13 @@ const cards = [
 
 export default function CardGrid() {
   return (
-    <section className="py-12 sm:py-14  lg:py-16 ">
+    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem]  ">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
           {/* Header */}
 
           <div className="mb-8 sm:mb-12 lg:mb-16 grid gap-6  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
-            <h2 className="  text-3xl lg:text-4xl font-extrabold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right ">
+            <h2 className="  text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right ">
               Looking for Fast & Beautiful Websites for Your Business?
             </h2>
             <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light dark:text-primary-400 text-primary-600 text-left sm:text-center lg:text-left">
@@ -159,7 +159,7 @@ export default function CardGrid() {
 
           {/* Cards */}
           <div className="space-y-8">
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-6   [column-fill:_balance]">
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-8   [column-fill:_balance]">
               {cards.map(({ name, props }, index) => (
                 <div
                   key={index}
@@ -169,17 +169,17 @@ export default function CardGrid() {
                   <Card
                     size="lg"
                     theme={{
-                      background: 'bg-conic-card dark:bg-conic-cardDark ',
+                      background: 'bg-white dark:bg-black',
                       border:
-                        '  border-opacity-30 dark:border-opacity-40 border-primary-600 dark:border-primary-400  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]   ',
+                        '  border-opacity-50  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]   ',
 
                       //shadow-secondary-100 dark:shadow-secondary-900/50
                       hover:
-                        '[@media(hover:hover)]:hover:border-opacity-60 [@media(hover:hover)]:hover:dark:border-opacity-70   [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100 ',
+                        '[@media(hover:hover)]:hover:border-opacity-100    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100 ',
 
                       text: 'dark:text-primary-400 text-primary-600  font-light leading-[1.45]',
                     }}
-                    className="!delay-50   motion-reduce:!transition-none motion-reduce:hover:!transform-none"
+                    className="!delay-50   motion-reduce:!transition-none motion-reduce:hover:!transform-none "
                     {...props}
                   />
                 </div>

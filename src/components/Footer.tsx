@@ -48,7 +48,7 @@ const SiteFooter = () => {
       <FooterSection title="About">
         <FooterLink
           theme={{
-            text: 'text-primary-800   dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -58,7 +58,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800   dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -71,7 +71,7 @@ const SiteFooter = () => {
       <FooterSection title="Partners">
         <FooterLink
           theme={{
-            text: 'text-primary-800   dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -81,7 +81,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800   dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -91,7 +91,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800   dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -104,7 +104,7 @@ const SiteFooter = () => {
       <FooterSection title="Legal">
         <FooterLink
           theme={{
-            text: 'text-primary-800   dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -114,7 +114,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800   dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -126,7 +126,7 @@ const SiteFooter = () => {
       <FooterSection title="Bracket UI">
         <FooterLink
           theme={{
-            text: 'text-primary-800   dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -136,7 +136,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800  dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -146,7 +146,7 @@ const SiteFooter = () => {
         </FooterLink>
         <FooterLink
           theme={{
-            text: 'text-primary-800   dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
@@ -161,7 +161,7 @@ const SiteFooter = () => {
           target="_blank"
           rel="noopener noreferrer"
           theme={{
-            text: 'text-primary-800   dark:text-primary-100',
+            text: 'text-primary-900 dark:text-primary-50',
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}

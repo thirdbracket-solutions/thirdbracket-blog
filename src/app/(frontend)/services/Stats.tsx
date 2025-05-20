@@ -4,7 +4,7 @@ import { Bracket } from '@thirdbracket/bracketui'
 
 export default function Stats() {
   return (
-    <section className="py-10 sm:py-12  lg:py-14 xl:py-16">
+    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] bg-white dark:bg-black">
       <Bracket fluid centered padding="medium">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
           <div>

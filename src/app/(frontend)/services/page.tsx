@@ -209,7 +209,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <section>
+    <section className="bg-gradient-primary-dark dark:bg-gradient-primary">
       <PageHeader
         title="Services"
         description="Full-service modern web development & marketing for small businesses, agencies, and startups in the UK."
@@ -225,12 +225,12 @@ export default function ServicesPage() {
         title="Ready to Build Your Next Project?"
         description="Let's create something amazing together. Our team is ready to help you bring your vision to life."
         primary={{
-          label: 'Get Started',
+          label: 'Contact Us',
           href: '/contact',
         }}
         secondary={{
-          label: 'View Projects',
-          href: '/projects',
+          label: 'View Solutions',
+          href: '/solutions',
         }}
       />
     </section>

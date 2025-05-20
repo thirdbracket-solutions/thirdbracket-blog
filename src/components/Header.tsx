@@ -31,7 +31,7 @@ const Header: FC = () => {
         href={item.href}
         isDropdownItem={item.isDropdownItem}
         cto={item.cto}
-        className={item.icon ? 'block md:inline-flex md:items-center gap-1' : undefined}
+        className={item.icon ? 'block md:inline-flex md:items-center gap-1 ' : undefined}
       >
         {item.label}
         {item.icon && <span>{item.icon}</span>}
@@ -57,7 +57,7 @@ const Header: FC = () => {
                 ? {
                     text: 'text-primary-900 dark:text-primary-200 text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                    menu: 'bg-white dark:bg-black',
                   }
                 : {
                     text: 'text-primary-900 dark:text-primary-200 text-base md:text-sm',
@@ -454,7 +454,7 @@ const Header: FC = () => {
               theme={{
                 text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                 states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                menu: 'bg-white dark:bg-black',
               }}
             >
               <div className="space-y-2 py-1.5">
@@ -463,7 +463,7 @@ const Header: FC = () => {
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                    menu: 'bg-white dark:bg-black',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
@@ -475,7 +475,7 @@ const Header: FC = () => {
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                    menu: 'bg-white dark:bg-black',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
@@ -488,7 +488,7 @@ const Header: FC = () => {
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                    menu: 'bg-white dark:bg-black',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
@@ -503,7 +503,7 @@ const Header: FC = () => {
               theme={{
                 text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                 states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                menu: 'bg-white dark:bg-black',
               }}
             >
               <div className="space-y-2 py-1.5">
@@ -512,7 +512,7 @@ const Header: FC = () => {
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                    menu: 'bg-white dark:bg-black',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
@@ -525,7 +525,7 @@ const Header: FC = () => {
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                    menu: 'bg-white dark:bg-black',
                   }}
                 >
                   <div className="space-y-2 py-1.5">
@@ -538,7 +538,7 @@ const Header: FC = () => {
                   theme={{
                     text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
                     states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
+                    menu: 'bg-white dark:bg-black',
                   }}
                 >
                   <div className="space-y-2 py-1.5">

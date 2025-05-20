@@ -14,10 +14,10 @@ const featuredLogos = [
 export const Hero: React.FC = () => {
   return (
     <section className="pb-12 sm:pb-14 lg:pb-16 pt-24 sm:pt-28 lg:pt-32 bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:16px_16px]">
-      <Bracket fluid centered padding="medium">
+      <Bracket fluid centered>
         <div className="mx-auto max-w-screen-xl">
           <div className="flex flex-col items-start sm:items-center space-y-12 sm:space-y-14 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl">
-            <h1 className="text-[2.55rem]/[1]   md:text-[2.95rem]/[1.1] lg:text-[3.45rem]/[1.1] font-extrabold text-left sm:text-center bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text capitalize">
+            <h1 className="text-[2.55rem]/[1]   md:text-[2.95rem]/[1.1] lg:text-[3.45rem]/[1.1] font-extrabold text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text capitalize">
               Next.js Web Development for UK Agencies & Startups
             </h1>
 
@@ -32,7 +32,7 @@ export const Hero: React.FC = () => {
                 size="md"
                 as={Link}
                 theme={{
-                  background: 'bg-gradient-primary dark:bg-gradient-primary-dark',
+                  background: 'bg-gradient-text dark:bg-gradient-text-dark',
                   hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                   text: 'text-primary-50 dark:text-primary-950',
@@ -55,7 +55,7 @@ export const Hero: React.FC = () => {
                 href="/contact"
                 size="md"
                 theme={{
-                  border: 'border-secondary-950/10 dark:border-secondary-50/20',
+                  border: 'border-primary-100/70 dark:border-primary-900/80',
 
                   hoverBackground: 'hover:bg-primary-50 dark:hover:bg-primary-900 ',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',

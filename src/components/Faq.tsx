@@ -39,10 +39,10 @@ export const FAQ = () => {
   }
 
   return (
-    <section className="py-10 sm:py-12  lg:py-14 xl:py-16 ">
-      <Bracket fluid centered padding="medium">
+    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] bg-white dark:bg-black">
+      <Bracket fluid centered>
         <div className="mx-auto max-w-screen-xl">
-          <h2 className="text-3xl lg:text-4xl font-extrabold bg-gradient-primary dark:bg-gradient-primary-dark text-transparent bg-clip-text text-left sm:text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center mb-12">
             FAQs
           </h2>
 
@@ -50,14 +50,14 @@ export const FAQ = () => {
             {faqData.map((item, i) => (
               <div
                 key={i}
-                className="border border-primary-100 dark:border-primary-900  rounded-lg  bg-gradient-secondary-dark dark:bg-gradient-secondary"
+                className="border border-primary-500/20 rounded-lg  bg-gradient-secondary-dark dark:bg-gradient-secondary"
               >
                 <button
                   onClick={() => toggle(i)}
                   className="w-full flex justify-between items-center px-6 py-4 font-medium text-left text-primary-900 dark:text-primary-100  focus:outline-none"
                 >
                   <span>{item.question}</span>
-                  <span className="ml-4 text-primary-800 dark:text-primary-200">
+                  <span className="ml-4 bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text">
                     {openIndex === i ? '-' : '+'}
                   </span>
                 </button>

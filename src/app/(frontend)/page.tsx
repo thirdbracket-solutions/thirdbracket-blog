@@ -15,7 +15,7 @@ import { Hero } from '@/components/HeroSection'
 
 export default function Home() {
   return (
-    <section>
+    <section className="bg-gradient-primary-dark dark:bg-gradient-primary">
       {/* <HeroSection /> */}
       <Hero />
       {/* <FeatureOne /> */}

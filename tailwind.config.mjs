@@ -17,14 +17,15 @@ const config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-primary-dark': 'conic-gradient(at bottom left, #f2f2f2, #dbdbdb, #c4c4c4 )',
+        'gradient-primary-dark':
+          'conic-gradient(from 0deg at center, #fff, #f6f7f899, #f6f7f899,#fff  )',
         'gradient-primary':
-          'conic-gradient(from 180deg at center, #0d0d0d, #242424, #242424, #0d0d0d  )',
-        'gradient-secondary-dark': 'conic-gradient(at bottom left, #fff, #f1f2f4, #dbdbdb )',
-        'gradient-secondary': 'conic-gradient(at bottom left, #000, #0b0d0e, #3b3b3b )',
+          'conic-gradient(from 0deg at center, #000, #0f121599, #0f121599, #000  )',
+        'gradient-secondary-dark': 'conic-gradient(at bottom left, #fff, #f6f7f8, #c4c4c4 )',
+        'gradient-secondary': 'conic-gradient(at bottom left, #000, #0f1215, #3b3b3b )',
 
-        'conic-cardDark': 'conic-gradient( at bottom left, #000,#0b0d0f , #3b3b3b)',
-        'conic-card': 'conic-gradient(at bottom left, #fff, #f0f2f4, #c4c4c4 )',
+        'gradient-text': 'conic-gradient(at bottom left, #0d0d0d, #242424, #3b3b3b  )',
+        'gradient-text-dark': 'conic-gradient(at bottom left, #f2f2f2, #dbdbdb, #c4c4c4 )',
         'overlayDot-light': 'radial-gradient( #e0e3e666 1px, transparent 1px)',
         'overlayDot-dark': 'radial-gradient(   #22283099 1px, transparent 1px)',
 
