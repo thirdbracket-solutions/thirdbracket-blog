@@ -6,14 +6,27 @@
 
 // import { Button, Card } from "@thirdbracket/core";
 
-import Subscription from '../../components/Subscription'
+import FormBlockSubscription from '@/blocks/Form/SubscriptionFormBlock'
+
 import { ClientTestimonials } from '@/components/ClientTestomonial'
 import { FAQ } from '@/components/Faq'
 import CardGrid from '@/components/Feature'
 import { WhyChooseUsSection } from '@/components/FeatureTwo'
 import { Hero } from '@/components/HeroSection'
 
-export default function Home() {
+async function getFormData() {
+  const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/2`, {
+    cache: 'force-cache',
+    next: { revalidate: 3600 },
+    // Ensures fresh data on each request
+  })
+
+  if (!res.ok) return null
+  return res.json()
+}
+
+export default async function Home() {
+  const form = await getFormData()
   return (
     <section className="bg-gradient-primary-dark dark:bg-gradient-primary">
       {/* <HeroSection /> */}
@@ -25,7 +38,8 @@ export default function Home() {
       {/* <FeatureTwo /> */}
       <ClientTestimonials />
       <FAQ />
-      <Subscription />
+      {/* <Subscription /> */}
+      <FormBlockSubscription form={form} />
     </section>
   )
 }

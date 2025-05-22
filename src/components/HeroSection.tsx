@@ -13,21 +13,21 @@ const featuredLogos = [
 
 export const Hero: React.FC = () => {
   return (
-    <section className="pb-12 sm:pb-14 lg:pb-16 pt-24 sm:pt-28 lg:pt-32 bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:16px_16px]">
+    <section className="pb-[4.5rem] sm:pb-[5rem] lg:pb-[6rem] pt-[8rem] sm:pt-[9rem] lg:pt-[10rem] bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:16px_16px]">
       <Bracket fluid centered>
-        <div className="mx-auto max-w-screen-xl">
+        <div className="mx-auto max-w-screen-xl ">
           <div className="flex flex-col items-start sm:items-center space-y-12 sm:space-y-14 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-4xl">
             <h1 className="text-[2.55rem]/[1]   md:text-[2.95rem]/[1.1] lg:text-[3.45rem]/[1.1] font-extrabold text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text capitalize">
               Next.js Web Development for UK Agencies & Startups
             </h1>
 
-            <p className="dark:text-primary-400 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center backdrop-blur-sm">
+            <p className="dark:text-primary-400 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center backdrop-blur-[1px]">
               We build fast, SEO-optimized websites using Next.js and TailwindCSS. Our custom React
               component library delivers minimal, professional design that’s hard to outsource
               without an in-house team.
             </p>
 
-            <div className="flex justify-center gap-4 md:gap-6 backdrop-blur-sm">
+            <div className="flex justify-center gap-4 md:gap-6 backdrop-blur-[2px]">
               <Button
                 size="md"
                 as={Link}

@@ -57,7 +57,7 @@ export const ClientTestimonials = () => {
                 key={i}
                 size="lg"
                 header={
-                  <blockquote className="bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4 font-normal  ">
+                  <blockquote className="bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4 font-medium text-lg  backdrop-blur-[1px]">
                     “{item.quote}”
                   </blockquote>
                 }
@@ -76,10 +76,10 @@ export const ClientTestimonials = () => {
                 }
                 className="  rounded    "
               >
-                <p className="text-sm font-normal text-primary-600 dark:text-primary-400">
+                <p className="text-sm font-normal text-primary-600 dark:text-primary-400 backdrop-blur-[1px]">
                   {item.client}
                 </p>
-                <p className="text-sm text-primary-500">{item.role}</p>
+                <p className="text-sm text-primary-500 backdrop-blur-[1px]">{item.role}</p>
               </Card>
             ))}
           </div>

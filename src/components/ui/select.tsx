@@ -2,8 +2,9 @@
 
 import { cn } from '@/utilities/ui'
 import * as SelectPrimitive from '@radix-ui/react-select'
-import { Check, ChevronDown, ChevronUp } from 'lucide-react'
+
 import * as React from 'react'
+import { IoCheckmark, IoChevronDown, IoChevronUp } from 'react-icons/io5'
 
 const Select = SelectPrimitive.Root
 
@@ -24,7 +25,7 @@ const SelectTrigger: React.FC<
   >
     {children}
     <SelectPrimitive.Icon asChild>
-      <ChevronDown className="h-4 w-4 opacity-50" />
+      <IoChevronDown className="h-4 w-4 opacity-50" />
     </SelectPrimitive.Icon>
   </SelectPrimitive.Trigger>
 )
@@ -37,7 +38,7 @@ const SelectScrollUpButton: React.FC<
     ref={ref}
     {...props}
   >
-    <ChevronUp className="h-4 w-4" />
+    <IoChevronUp className="h-4 w-4" />
   </SelectPrimitive.ScrollUpButton>
 )
 
@@ -51,7 +52,7 @@ const SelectScrollDownButton: React.FC<
     ref={ref}
     {...props}
   >
-    <ChevronDown className="h-4 w-4" />
+    <IoChevronUp className="h-4 w-4" />
   </SelectPrimitive.ScrollDownButton>
 )
 
@@ -112,7 +113,7 @@ const SelectItem: React.FC<
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <SelectPrimitive.ItemIndicator>
-        <Check className="h-4 w-4" />
+        <IoCheckmark className="h-4 w-4" />
       </SelectPrimitive.ItemIndicator>
     </span>
 

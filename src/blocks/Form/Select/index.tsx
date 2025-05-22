@@ -14,6 +14,7 @@ import { Controller } from 'react-hook-form'
 
 import { Error } from '../Error'
 import { Width } from '../Width'
+import { FormLabel } from '@thirdbracket/bracketui'
 
 export const Select: React.FC<
   SelectField & {
@@ -23,14 +24,14 @@ export const Select: React.FC<
 > = ({ name, control, errors, label, options, required, width }) => {
   return (
     <Width width={width}>
-      <Label htmlFor={name}>
+      <FormLabel htmlFor={name}>
         {label}
         {required && (
           <span className="required">
             * <span className="sr-only">(required)</span>
           </span>
         )}
-      </Label>
+      </FormLabel>
       <Controller
         control={control}
         defaultValue=""
@@ -41,7 +42,10 @@ export const Select: React.FC<
           return (
             <SelectComponent onValueChange={(val) => onChange(val)} value={controlledValue?.value}>
               <SelectTrigger className="w-full" id={name}>
-                <SelectValue placeholder={label} />
+                <SelectValue
+                  placeholder={label}
+                  className="!bg-secondary-50 dark:!bg-secondary-950 !border-primary-100 dark:!border-primary-900 focus:!ring-primary-500 dark:focus:!ring-primary-400"
+                />
               </SelectTrigger>
               <SelectContent>
                 {options.map(({ label, value }) => {

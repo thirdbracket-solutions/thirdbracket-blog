@@ -10,7 +10,9 @@ import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical
 
 import { fields } from './fields'
 import { getClientSideURL } from '@/utilities/getURL'
+
 import { Button } from '@/components/ui/button'
+import { Bracket } from '@thirdbracket/bracketui'
 
 export type FormBlockType = {
   blockName?: string
@@ -115,11 +117,12 @@ export const FormBlock: React.FC<
   )
 
   return (
-    <div className="container mx-auto lg:max-w-[48rem]">
+    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] ">
       {enableIntro && introContent && !hasSubmitted && (
         <RichText className="mb-8 lg:mb-12" data={introContent} enableGutter={false} />
       )}
-      <div className="p-4 lg:p-6 border border-primary-500  border-opacity-40 rounded-md">
+
+      <div className="p-6 lg:p-8 border border-primary-500/20 bg-gradient-primary-dark dark:bg-gradient-primary  rounded-xl">
         <FormProvider {...formMethods}>
           {!isLoading && hasSubmitted && confirmationType === 'message' && (
             <RichText data={confirmationMessage} />
@@ -152,13 +155,13 @@ export const FormBlock: React.FC<
                   })}
               </div>
 
-              <Button form={formID} type="submit" variant="default">
+              <Button form={formID} type="submit">
                 {submitButtonLabel}
               </Button>
             </form>
           )}
         </FormProvider>
       </div>
-    </div>
+    </section>
   )
 }

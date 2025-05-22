@@ -1,0 +1,18 @@
+# Modern browsers only
+# This configuration will target modern browsers and avoid unnecessary polyfills
+# https://browserslist.dev/
+
+# Last 2 versions of major browsers
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Safari versions
+last 2 Edge versions
+
+# Browsers with significant market share
+> 0.5%
+
+# Not dead browsers
+not dead
+
+# No IE support
+not ie 11

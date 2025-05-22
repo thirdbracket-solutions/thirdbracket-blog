@@ -7,6 +7,7 @@ import React from 'react'
 
 import { Error } from '../Error'
 import { Width } from '../Width'
+import { FormLabel, FormTextarea } from '@thirdbracket/bracketui'
 
 export const Textarea: React.FC<
   TextField & {
@@ -17,7 +18,7 @@ export const Textarea: React.FC<
 > = ({ name, defaultValue, errors, label, register, required, rows = 3, width }) => {
   return (
     <Width width={width}>
-      <Label htmlFor={name}>
+      <FormLabel htmlFor={name}>
         {label}
 
         {required && (
@@ -25,13 +26,14 @@ export const Textarea: React.FC<
             * <span className="sr-only">(required)</span>
           </span>
         )}
-      </Label>
+      </FormLabel>
 
-      <TextAreaComponent
+      <FormTextarea
         defaultValue={defaultValue}
         id={name}
         rows={rows}
         {...register(name, { required: required })}
+        className="!bg-secondary-50 dark:!bg-secondary-950 !border-primary-100 dark:!border-primary-900 focus:!ring-primary-500 dark:focus:!ring-primary-400"
       />
 
       {errors[name] && <Error name={name} />}

@@ -19,7 +19,8 @@ const buttonVariants = cva(
         sm: 'h-9 rounded px-3',
       },
       variant: {
-        default: 'bg-primary-900 dark:bg-primary-50 text-white dark:text-black hover:bg-opacity-90',
+        default:
+          'bg-gradient-text dark:bg-gradient-text-dark text-white dark:text-black [@media(hover:hover)]:hover:opacity-90',
         destructive: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
         ghost: 'hover:bg-card hover:text-accent-foreground',
         link: 'text-primary items-start justify-start underline-offset-4 hover:underline',

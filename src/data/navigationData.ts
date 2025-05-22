@@ -41,7 +41,8 @@ const desktopNavlinkTheme = {
     'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
 }
 
-const megamenuTheme = {
+// Unused but kept for reference - prefix with underscore to satisfy ESLint
+const _megamenuTheme = {
   text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
   states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
   menu: 'bg-white dark:bg-black',
@@ -253,6 +254,6 @@ export const mobileNavigation: NavigationSection[] = [
 ]
 
 // Helper function to render navlinks with consistent theme
-export const getNavlinkTheme = (isMobile: boolean = false, isDropdown: boolean = false) => {
+export const getNavlinkTheme = (isMobile: boolean = false, _isDropdown: boolean = false) => {
   return isMobile ? defaultNavlinkTheme : desktopNavlinkTheme
 }

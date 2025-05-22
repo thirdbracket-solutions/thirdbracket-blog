@@ -39,8 +39,9 @@ const Header: FC = () => {
     )
   }
 
-  // Helper function to render megamenu items recursively
-  const renderMegamenuItems = (
+  // Note: This function is currently not used but kept for future reference
+  // If you need to use it later, remove the underscore prefix
+  const _renderMegamenuItems = (
     items: (NavlinkItem | MegamenuItem)[],
     isMobile: boolean = false,
   ) => {
@@ -66,7 +67,7 @@ const Header: FC = () => {
                   })
             }
           >
-            <div className="space-y-2 py-1.5">{renderMegamenuItems(item.items, isMobile)}</div>
+            <div className="space-y-2 py-1.5">{_renderMegamenuItems(item.items, isMobile)}</div>
           </Megamenu>
         )
       } else {
