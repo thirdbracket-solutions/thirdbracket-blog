@@ -60,7 +60,7 @@ const FormBlockSubscription: React.FC<Props> = ({ form: { id: formID } = {} }) =
   }
 
   return (
-    <section className="pb-[2rem] sm:pb-[2.5rem] lg:pb-[3rem] bg-white dark:bg-black">
+    <section className=" pt-[3rem] sm:pt-[3.75rem]  lg:pt-[4rem]">
       <Bracket fluid centered>
         <div className="max-w-screen-xl bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-500/20">
           {isSuccess ? (

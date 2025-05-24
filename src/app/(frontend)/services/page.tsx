@@ -209,7 +209,7 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <section className="bg-gradient-primary-dark dark:bg-gradient-primary">
+    <section>
       <PageHeader
         title="Services"
         description="Full-service modern web development & marketing for small businesses, agencies, and startups in the UK."

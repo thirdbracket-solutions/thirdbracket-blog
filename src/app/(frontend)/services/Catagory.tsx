@@ -30,7 +30,7 @@ export default function Category({
   services,
 }: CategoryProps) {
   return (
-    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] ">
+    <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] ">
       <Bracket fluid centered padding="medium">
         <div className="flex flex-col-reverse lg:flex-row-reverse gap-y-8 sm:gap-x-0 items-center  mb-8 md:mb-12 lg:mb-16 ">
           <div className="lg:w-1/2 ">

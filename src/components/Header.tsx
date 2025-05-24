@@ -82,16 +82,11 @@ const Header: FC = () => {
       <Navbar
         theme={{
           background: 'bg-white dark:bg-black',
-          border: 'border-b border-secondary-200 dark:border-secondary-800',
+          border: 'border-b border-primary-500/40',
           mobileMenu: 'bg-white dark:bg-black',
         }}
       >
-        <Navbrand
-          logo={
-            <Logo className="w-auto h-[18px] md:h-[22px] dark:invert" priority loading="eager" />
-          }
-          href="/"
-        ></Navbrand>
+        <Navbrand logo={<Logo />} href="/"></Navbrand>
 
         <NavItem>
           {/* Services Megamenu */}

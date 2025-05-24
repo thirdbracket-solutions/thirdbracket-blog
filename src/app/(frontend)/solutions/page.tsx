@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function Solutions() {
   return (
-    <section className="bg-gradient-primary-dark dark:bg-gradient-primary">
+    <section>
       <PageHeader
         title="Solutions"
         description="Comprehensive digital solutions for modern businesses"

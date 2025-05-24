@@ -117,7 +117,7 @@ export const FormBlock: React.FC<
   )
 
   return (
-    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] ">
+    <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]">
       {enableIntro && introContent && !hasSubmitted && (
         <RichText className="mb-8 lg:mb-12" data={introContent} enableGutter={false} />
       )}

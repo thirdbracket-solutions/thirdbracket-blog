@@ -51,10 +51,10 @@ const features = [
 
 export function WhyChooseUsSection() {
   return (
-    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] ">
+    <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] ">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
-          <div className="mb-8 sm:mb-12 lg:mb-16">
+          <div className="mb-8 md:mb-10 lg:mb-16">
             <h2 className="mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
               Why Choose Us for Proffessional Web Development Service?
             </h2>
@@ -71,16 +71,16 @@ export function WhyChooseUsSection() {
                 size="lg"
                 isIcon
                 theme={{
-                  background: 'bg-white dark:bg-black',
+                  background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   border:
-                    '  border-opacity-50  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+                    'border-opacity-30  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
 
                   text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
                   hover:
                     '[@media(hover:hover)]:hover:border-opacity-100    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100',
                 }}
                 cover={
-                  <div className="w-16 h-16 mb-4 flex items-center  justify-center   border  border-primary-500/20     rounded-xl bg-white dark:bg-black">
+                  <div className="w-16 h-16 mb-4 flex items-center  justify-center   border  border-primary-400/25     rounded-xl bg-white dark:bg-black">
                     <Icon size={36} className="text-secondary-900 dark:text-secondary-100" />
                   </div>
                 }

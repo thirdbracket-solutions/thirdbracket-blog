@@ -142,12 +142,12 @@ const cards = [
 
 export default function CardGrid() {
   return (
-    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem]  ">
+    <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]  ">
       <Bracket fluid centered padding="medium">
         <div className="mx-auto max-w-screen-xl">
           {/* Header */}
 
-          <div className="mb-8 sm:mb-12 lg:mb-16 grid gap-6  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
+          <div className=" mb-8 md:mb-10 lg:mb-16 grid gap-6  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
             <h2 className="  text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right ">
               Looking for Fast & Beautiful Websites for Your Business?
             </h2>
@@ -171,7 +171,7 @@ export default function CardGrid() {
                     theme={{
                       background: 'bg-white dark:bg-black',
                       border:
-                        '  border-opacity-50  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]   ',
+                        '  border-opacity-35  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]   ',
 
                       //shadow-secondary-100 dark:shadow-secondary-900/50
                       hover:

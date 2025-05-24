@@ -1,11 +1,3 @@
-// import PageTemplate, { generateMetadata } from './[slug]/page'
-
-// export default PageTemplate
-
-// export { generateMetadata }
-
-// import { Button, Card } from "@thirdbracket/core";
-
 import FormBlockSubscription from '@/blocks/Form/SubscriptionFormBlock'
 
 import { ClientTestimonials } from '@/components/ClientTestomonial'
@@ -28,7 +20,7 @@ async function getFormData() {
 export default async function Home() {
   const form = await getFormData()
   return (
-    <section className="bg-gradient-primary-dark dark:bg-gradient-primary">
+    <section>
       {/* <HeroSection /> */}
       <Hero />
       {/* <FeatureOne /> */}

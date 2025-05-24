@@ -9,24 +9,28 @@ import {
   ThemeToggle,
 } from '@thirdbracket/bracketui'
 
-import { RiFacebookLine, RiGithubLine, RiLinkedinLine } from 'react-icons/ri'
+import { RiFacebookLine, RiGithubLine, RiLinkedinLine, RiWhatsappLine } from 'react-icons/ri'
+import { Logo } from './Logo/Logo'
 
 const SiteFooter = () => {
   return (
     <Footer
       theme={{
         background: 'bg-white dark:bg-black',
-        border: 'border-primary-200 dark:border-primary-800',
+        border: 'border-primary-500/40',
       }}
     >
-      <FooterSection className="col-span-2 ">
-        <FooterBrand logo="/logo.svg">
-          <p className="text-primary-600 dark:text-primary-500 text-sm">
+      <FooterSection className="col-span-2 !py-4 md:py-0">
+        <FooterBrand logo={<Logo className="h-4 lg:h-5" />}>
+          <p className="text-primary-600 dark:text-primary-500 text-base ">
             Making the web a better place with Third Bracket Solutions.
+          </p>
+          <p className="text-primary-600 dark:text-primary-500 text-base ">
+            hello@thirdbracket.co.uk
           </p>
         </FooterBrand>
 
-        <div className="flex  gap-x-4 justify-start items-center">
+        <div className="flex  gap-x-6 justify-start items-center">
           <FooterSocial
             href="https://www.facebook.com/thirdbracket.co.uk"
             icon={<RiFacebookLine size={20} />}
@@ -42,6 +46,11 @@ const SiteFooter = () => {
             icon={<RiGithubLine size={20} />}
             label="Facebook"
           />
+          <FooterSocial
+            href="https://wa.me/881765692886"
+            icon={<RiWhatsappLine size={20} />}
+            label="Whatsapp"
+          />
         </div>
       </FooterSection>
 
@@ -54,7 +63,7 @@ const SiteFooter = () => {
           }}
           href="#"
         >
-          About Third Bracket
+          Company
         </FooterLink>
         <FooterLink
           theme={{
@@ -64,7 +73,37 @@ const SiteFooter = () => {
           }}
           href="#"
         >
-          Our Team
+          Team
+        </FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-primary-50',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Roadmap
+        </FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-primary-50',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Open Source
+        </FooterLink>
+        <FooterLink
+          theme={{
+            text: 'text-primary-900 dark:text-primary-50',
+            states:
+              'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+          }}
+          href="#"
+        >
+          Work culture
         </FooterLink>
       </FooterSection>
 
@@ -77,7 +116,7 @@ const SiteFooter = () => {
           }}
           href="#"
         >
-          Verify Properties
+          Verify Property
         </FooterLink>
         <FooterLink
           theme={{
@@ -87,7 +126,7 @@ const SiteFooter = () => {
           }}
           href="#"
         >
-          Products of Bangladesh
+          Products of Bd
         </FooterLink>
         <FooterLink
           theme={{
@@ -120,7 +159,7 @@ const SiteFooter = () => {
           }}
           href="#"
         >
-          Terms of Service
+          Terms
         </FooterLink>
       </FooterSection>
       <FooterSection title="Bracket UI">
@@ -155,7 +194,7 @@ const SiteFooter = () => {
           Pages
         </FooterLink>
       </FooterSection>
-      <FooterSection title="Useful Links">
+      {/* <FooterSection title="Useful Links">
         <FooterLink
           href="https://www.business-directory-uk.co.uk/web-design.htm"
           target="_blank"
@@ -168,10 +207,10 @@ const SiteFooter = () => {
         >
           UK Web Designers - Directory of Web Design Companies in the UK
         </FooterLink>
-      </FooterSection>
+      </FooterSection> */}
 
       <FooterBottom>
-        <FooterText>© 2025 Third Bracket Solution.</FooterText>
+        <FooterText>© 2025 Third Bracket.</FooterText>
 
         <ThemeToggle />
         {/* <div className="flex flex-col md:flex-row gap-2 md:gap-4 items-start md:items-center">

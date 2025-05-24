@@ -33,10 +33,10 @@ const testimonials: Testimonial[] = [
 
 export const ClientTestimonials = () => {
   return (
-    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem]  ">
+    <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]  ">
       <Bracket fluid centered>
         <div className="mx-auto max-w-screen-xl">
-          <h2 className="text-3xl lg:text-4xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center mb-12">
+          <h2 className="text-3xl lg:text-4xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  text-center mb-14">
             Trusted by Early-stage Startups
           </h2>
 
@@ -46,9 +46,9 @@ export const ClientTestimonials = () => {
                 isIcon
                 theme={{
                   background:
-                    'bg-white dark:bg-black bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:16px_16px] dark:bg-[linear-gradient(to_right,#1f242866_1px,transparent_1px),linear-gradient(to_bottom,#1f242866_1px,transparent_1px)] bg-[size:14px_24px] ',
+                    'bg-white/85 dark:bg-black/70 bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:32px_32px]  ',
                   border:
-                    'border-opacity-50  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+                    'border-opacity-30  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
 
                   text: 'dark:text-primary-400 text-primary-600  font-light leading-[1.45]',
                   hover:
@@ -57,13 +57,13 @@ export const ClientTestimonials = () => {
                 key={i}
                 size="lg"
                 header={
-                  <blockquote className="bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4 font-medium text-lg  backdrop-blur-[1px]">
+                  <blockquote className="text-primary-950 dark:text-primary-50 mb-6 font-medium text-lg  ">
                     “{item.quote}”
                   </blockquote>
                 }
                 cover={
                   item.logo && (
-                    <div className="w-[100px] h-[45px] mb-4 flex items-center  justify-center border-[0.5px] border-primary-200 dark:border-primary-800 dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]        rounded-full bg-gradient-secondary-dark dark:bg-gradient-secondary">
+                    <div className="w-[100px] h-[45px] flex items-center  justify-center border border-primary-500/20  dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]        rounded-full bg-gradient-secondary-dark dark:bg-gradient-secondary">
                       <Image
                         src={item.logo}
                         alt={`${item.client} logo`}

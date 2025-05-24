@@ -26,8 +26,8 @@ export default async function ContactPage() {
   if (!form) return <p>Form not found</p>
 
   return (
-    <section className="bg-white dark:bg-black">
-      <Bracket fluid centered padding="medium">
+    <section>
+      <Bracket fluid centered>
         <PageHeader title="Contact Us" description="Get in touch with our team" />
         <div className="max-w-7xl mx-auto ">
           <FormBlock form={form} enableIntro={false} />

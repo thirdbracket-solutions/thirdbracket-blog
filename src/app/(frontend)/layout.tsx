@@ -30,7 +30,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const roboto = Roboto({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  // weight: ['300', '400', '500', '600', '700', '800', '900'],
   display: 'swap',
 })
 
@@ -171,7 +171,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           ></iframe>
         </noscript> */}
         <Header />
-        <main className="min-h-screen py-8 sm:py-12 md:py-16  bg-white dark:bg-black">
+        <main className="bg-gradient-primary-dark dark:bg-gradient-primary py-[6rem] sm:py-[6.5rem]  lg:py-[8rem]  ">
           {children}
         </main>
         <SiteFooter />
