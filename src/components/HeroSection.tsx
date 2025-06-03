@@ -87,6 +87,7 @@ export const Hero: React.FC = () => {
                       alt={logo.alt}
                       width={logo.width}
                       height={logo.height}
+                      fetchPriority="high"
                       priority
                       loading="eager"
                       className="w-auto h-5 md:h-6 object-contain"

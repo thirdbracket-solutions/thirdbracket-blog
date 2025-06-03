@@ -5,6 +5,7 @@ import {
   imagealt,
   keywords,
   sitename,
+  socialLinks,
   twitterhandle,
   url,
   urlimage,
@@ -15,6 +16,7 @@ import { OpenGraph, TwitterCard } from './metadata'
 export const Company = {
   name: companyname,
   link: companylink,
+  socialLinks: socialLinks,
 }
 
 export const Settings = {

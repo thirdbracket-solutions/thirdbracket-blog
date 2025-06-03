@@ -1,12 +1,12 @@
 export const url = 'https://www.thirdbracket.co.uk'
 // export const siteicon = "/icon.png";
 
-// export const gtm = "GTM-XXXXXXX"
-// export const gtmconnected = true
+export const gtm = "GTM-5LLRMTFW"
+export const gtmconnected = true
 
 export const sitename = 'Third Bracket'
 export const description =
-  'We specialize in Next.js web development and React component libraries, helping UK startups, agencies, and businesses outsource high-quality web development and design.'
+  'We specialize in web development for agencies, startups, and vendors. Offering fast, SEO-friendly websites built with the power of Next.js.'
 export const keywords = [
   'Next.js web development UK',
   'SEO-optimized websites UK',
@@ -33,5 +33,12 @@ export const urlimage = '/og-image.png'
 export const imagealt = 'Third Bracket'
 export const twitterhandle = '@ThirdbracketStudio'
 
-export const companyname = 'Third Bracket Studio'
+export const companyname = 'Third Bracket Solutions'
 export const companylink = 'https://www.thirdbracket.co.uk'
+
+export const socialLinks = {
+  facebook: 'https://www.facebook.com/thirdbracket.co.uk',
+  linkedin: 'https://www.linkedin.com/company/106720973',
+  github: 'https://www.github.com/thirdbracket-solutions',
+  googleBusiness: 'https://g.co/kgs/X44FuDP',
+}

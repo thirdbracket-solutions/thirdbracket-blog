@@ -1,6 +1,7 @@
 import FormBlockSubscription from '@/blocks/Form/SubscriptionFormBlock'
 
 import { ClientTestimonials } from '@/components/ClientTestomonial'
+import { DynamicHero } from '@/components/DynamicHeroSection'
 import { FAQ } from '@/components/Faq'
 import CardGrid from '@/components/Feature'
 import { WhyChooseUsSection } from '@/components/FeatureTwo'
@@ -22,7 +23,8 @@ export default async function Home() {
   return (
     <section>
       {/* <HeroSection /> */}
-      <Hero />
+      {/* <Hero /> */}
+      <DynamicHero />
       {/* <FeatureOne /> */}
       <CardGrid />
       {/* <FeatureShowcaseSection /> */}
