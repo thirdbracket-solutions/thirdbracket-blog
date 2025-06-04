@@ -33,7 +33,9 @@ export default async function Home() {
       <ClientTestimonials />
       <FAQ />
       {/* <Subscription /> */}
-      <FormBlockSubscription form={form} />
+      <section id="subscription" className="scroll-mt-24">
+        <FormBlockSubscription form={form} />
+      </section>
     </section>
   )
 }

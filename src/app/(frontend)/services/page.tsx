@@ -202,7 +202,7 @@ const categories = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Services | Third Bracket',
+  title: 'Services',
   description:
     'Explore our modern web development and digital marketing services crafted for UK agencies and small businesses. We deliver speed, SEO, and clean design.',
 }

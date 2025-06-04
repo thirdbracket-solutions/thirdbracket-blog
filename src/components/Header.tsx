@@ -82,7 +82,7 @@ const Header: FC = () => {
       <Navbar
         theme={{
           background: 'bg-white dark:bg-black',
-          border: 'border-b border-primary-500/40',
+          border: 'border-b border-primary-500/30',
           mobileMenu: 'bg-white dark:bg-black',
         }}
       >

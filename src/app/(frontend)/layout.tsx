@@ -25,7 +25,7 @@ export const jsonLd: Graph = {
       name: 'Third Bracket',
       url: 'https://www.thirdbracket.co.uk/',
       description:
-        'Third Bracket is a UK-based web development agency specializing in fast, SEO-optimized websites built with the power of Next.js.',
+        'Third Bracket is a modern Next.js web development agency in the UK. We build fast, affordable, SEO-optimized websites with clean and minimal design.',
       publisher: { '@id': 'https://www.thirdbracket.co.uk/#organization' },
     },
     {
@@ -47,7 +47,7 @@ export const jsonLd: Graph = {
       name: 'Third Bracket',
       url: 'https://www.thirdbracket.co.uk/',
       description:
-        'We specialize in web development for agencies, startups, and vendors. Offering fast, SEO-friendly websites built with the power of Next.js.',
+        'Third Bracket is a modern Next.js web development agency in the UK. We build fast, affordable, SEO-optimized websites with clean and minimal design.',
       isPartOf: { '@id': 'https://www.thirdbracket.co.uk/#website' },
       publisher: { '@id': 'https://www.thirdbracket.co.uk/#organization' },
       about: { '@id': 'https://www.thirdbracket.co.uk/#organization' },
@@ -60,7 +60,7 @@ const baseUrl = Settings.metadataBase
 export const metadata: Metadata = {
   title: {
     template: `%s | ${Settings.title}`,
-    default: `Next.js Web Development & SEO-Optimized Websites for UK Startups, Agencies, and Businesses | ${Settings.title}`,
+    default: `Full Stack Web Development UK |  ${Settings.title}`,
   },
 
   metadataBase: new URL(baseUrl),
@@ -95,7 +95,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${roboto.className} antialiased `} suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${roboto.className} antialiased scroll-smooth`}
+      suppressHydrationWarning
+    >
       <head>
         {/* Google Tag Manager - Head */}
         {/* <Script

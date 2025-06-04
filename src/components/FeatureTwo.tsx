@@ -1,51 +1,59 @@
 'use client'
 
-import { MdOutlineAutoGraph } from 'react-icons/md'
-import { RiMedal2Line } from 'react-icons/ri'
 import {
-  IoGitNetworkOutline,
-  IoLayersOutline,
-  IoLockOpenOutline,
-  IoTimerOutline,
-} from 'react-icons/io5'
+  RiArticleLine,
+  RiLayout2Line,
+  RiShoppingCart2Line,
+  RiStackLine,
+  RiTailwindCssFill,
+  RiUbuntuLine,
+} from 'react-icons/ri'
+
 import { Bracket, Card } from '@thirdbracket/bracketui'
+import Link from 'next/link'
 
 const features = [
   {
-    icon: RiMedal2Line,
-    header: 'Expertise & Flexibility',
+    icon: RiStackLine,
+    header: 'Custom Full Stack Development',
+    href: '/services',
     description:
-      'Get senior-level skills with startup agility. Experience agency expertise with freelancer flexibility. Access a unified team of top-rated professionals, not just scattered freelancers.',
+      'Full stack web development for UK businesses — combining robust backends with fast, modern Next.js frontends.',
   },
   {
-    icon: IoLayersOutline,
-    header: 'Modern Stack',
+    icon: RiArticleLine,
+    header: 'Modern Blog Platforms',
+    href: '/solutions',
     description:
-      'Next.js, TailwindCSS & Typescript. We build with the technologies powering today’s best-performing websites—ensuring fast loads, clean code, and easy scaling.',
+      'Affordable blog solutions using Notion as the CMS and Next.js for the frontend — perfect for growing content-driven brands.',
   },
   {
-    icon: MdOutlineAutoGraph,
-    header: 'Built for Growth',
+    icon: RiShoppingCart2Line,
+    header: 'Scalable Ecommerce Solutions',
+    href: '/solutions',
     description:
-      'Future-ready websites that evolve with you. Every site is architected to support SEO, performance, and feature expansion—perfect for startups aiming to scale or agencies needing long-term solutions.',
+      'Built with Payload CMS and Next.js, our ecommerce platforms include a powerful admin panel and lightning-fast storefront.',
   },
   {
-    icon: IoGitNetworkOutline,
-    header: 'Seamless Collaboration',
+    icon: RiLayout2Line,
+    header: 'Minimal BracketUI Component Library',
+    href: '/solutions',
     description:
-      'We work like part of your team. Slack, Notion, GitHub—whatever you use, we integrate smoothly. Communication is clear, responsive, and always aligned with your timelines.',
+      'Our open-source TailwindCSS component library — inspired by Vercel and Apple, optimized for speed and elegance.',
   },
   {
-    icon: IoLockOpenOutline,
-    header: 'No Lock-in, No Bloat',
+    icon: RiTailwindCssFill,
+    header: 'Tailored UI/UX Design',
+    href: '/services',
     description:
-      'You pay for what you need—no unnecessary subscriptions, yearly lock-ins, or bloated retainers. Just clean code, full ownership, and total freedom to move forward on your terms.',
+      'Custom interface design using TailwindCSS — responsive, minimal, and crafted to fit your brand perfectly.',
   },
   {
-    icon: IoTimerOutline,
-    header: 'Timely Deliveries',
+    icon: RiUbuntuLine,
+    header: 'Custom Infrastructure & DevOps',
+    href: '/services',
     description:
-      'Fast doesn’t mean rushed. We always deliver on time, without compromising quality. Our process is built around clear milestones and predictable outputs.',
+      'Reliable VPS setups, cloud integration, and DevOps workflows — built for scalability and long-term performance.',
   },
 ]
 
@@ -56,24 +64,26 @@ export function WhyChooseUsSection() {
         <div className="mx-auto max-w-screen-xl">
           <div className="mb-8 md:mb-10 lg:mb-16">
             <h2 className="mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
-              Why Choose Us for Proffessional Web Development Service?
+              What We Build & Deliver
             </h2>
             <p className="dark:text-primary-400 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
-              Our approach combines technical excellence with real-world flexibility—designed to
-              meet the needs of growing businesses that care about speed, SEO, and design clarity.
+              From modern blogs to full-stack platforms, we create fast, scalable web solutions for
+              UK businesses.
             </p>
           </div>
 
           <div className="space-y-8 sm:grid sm:grid-cols-2 sm:gap-8 sm:space-y-0 lg:grid-cols-3">
-            {features.map(({ icon: Icon, header, description }, index) => (
+            {features.map(({ icon: Icon, header, description, href }, index) => (
               <Card
                 key={index}
                 size="lg"
+                as={Link}
+                href={href}
                 isIcon
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   border:
-                    'border-opacity-30  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+                    'border-opacity-20  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
 
                   text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
                   hover:

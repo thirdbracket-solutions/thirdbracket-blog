@@ -17,14 +17,16 @@ export const Hero: React.FC = () => {
       <Bracket fluid centered>
         <div className="mx-auto max-w-screen-xl ">
           <div className="flex flex-col items-start sm:items-center space-y-8 md:space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-[720px] lg:max-w-[980px]">
-            <h1 className="text-[2.55rem]/[1]   md:text-5xl lg:text-6xl font-extrabold text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text capitalize  ">
-              Next.js Web Development for UK Agencies & Startups
+            <h1 className="text-[2.55rem]/[1]   md:text-5xl lg:text-6xl  text-left sm:text-center bg-gradient-text font-extrabold dark:bg-gradient-text-dark text-transparent bg-clip-text   ">
+              Full Stack Web Development for UK Brands
+              {/* <span className=" font-semibold italic text-lg md:text-xl lg:text-2xl block mt-2 tracking-tight">
+                Powered by Next.js
+              </span> */}
             </h1>
 
             <p className="dark:text-primary-400 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center  md:px-12 backdrop-blur-sm">
-              We build fast, SEO-optimized websites using Next.js and TailwindCSS. Our custom React
-              component library delivers minimal, professional design that’s hard to outsource
-              without an in-house team.
+              Build fast, modern, and SEO-optimized websites with a clean, minimal design — powered
+              by our Next.js expertise and tailored for UK businesses.
             </p>
 
             <div className="flex justify-center gap-4 md:gap-6 backdrop-blur-[2px]">
@@ -52,7 +54,7 @@ export const Hero: React.FC = () => {
               <Button
                 outline
                 as={Link}
-                href="/contact"
+                href="#subscription"
                 size="md"
                 theme={{
                   border: 'border-primary-100/70 dark:border-primary-900/80',
@@ -65,7 +67,7 @@ export const Hero: React.FC = () => {
                 <svg className="size-4 mr-2" fill="currentColor" viewBox="0 0 1000 1000">
                   <path d="M860 265h-61q-8 0-13.5 5.5T780 284v246q0 39-28 67t-68 28H279q-8 0-13.5 5.5T260 644v61q0 17 11.5 28.5T300 745h415q25 0 43 18l110 110q4 4 9.5 5t11-1 8.5-7 3-11V305q0-17-11.5-28.5T860 265zM700 505V145q0-17-11.5-28.5T660 105H140q-17 0-28.5 11.5T100 145v514q0 6 3 11t8.5 7 11 1 9.5-5l110-110q18-18 43-18h375q17 0 28.5-12t11.5-28z" />
                 </svg>
-                Contact Us
+                Lets Talk
               </Button>
             </div>
 

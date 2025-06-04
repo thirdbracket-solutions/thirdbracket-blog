@@ -20,7 +20,7 @@ const config = {
         'gradient-primary-dark':
           'conic-gradient(from 0deg at center, #fff, #f6f7f8, #f7f7f7, #f6f7f8,#f7f7f7, #fff  )',
         'gradient-primary':
-          'conic-gradient(from 0deg at center, #000000, #0f1215,#080808,#0f1215,   #080808,  #000000  )',
+          'conic-gradient(from 0deg at center, #000000, #0f1215,#0f1215,     #000000  )',
         'gradient-secondary-dark': 'conic-gradient(at bottom left, #fff,#f7f7f7, #f6f7f8  )',
         'gradient-secondary': 'conic-gradient(at bottom left, #000, #080808, #0f1215 )',
 
