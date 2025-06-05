@@ -60,7 +60,7 @@ const baseUrl = Settings.metadataBase
 export const metadata: Metadata = {
   title: {
     template: `%s | ${Settings.title}`,
-    default: `Full Stack Web Development UK |  ${Settings.title}`,
+    default: `Full Stack Web Development Agency UK |  ${Settings.title}`,
   },
 
   metadataBase: new URL(baseUrl),
@@ -90,6 +90,9 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: baseUrl,
+    languages: {
+      'en-GB': baseUrl,
+    },
   },
 }
 

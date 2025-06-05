@@ -18,7 +18,7 @@ export const Hero: React.FC = () => {
         <div className="mx-auto max-w-screen-xl ">
           <div className="flex flex-col items-start sm:items-center space-y-8 md:space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-[720px] lg:max-w-[980px]">
             <h1 className="text-[2.55rem]/[1]   md:text-5xl lg:text-6xl  text-left sm:text-center bg-gradient-text font-extrabold dark:bg-gradient-text-dark text-transparent bg-clip-text   ">
-              Full Stack Web Development for UK Brands
+              Full Stack Web and Development Solutions in the UK
               {/* <span className=" font-semibold italic text-lg md:text-xl lg:text-2xl block mt-2 tracking-tight">
                 Powered by Next.js
               </span> */}

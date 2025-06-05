@@ -20,7 +20,7 @@ const config = {
         'gradient-primary-dark':
           'conic-gradient(from 0deg at center, #fff, #f6f7f8, #f7f7f7, #f6f7f8,#f7f7f7, #fff  )',
         'gradient-primary':
-          'conic-gradient(from 0deg at center, #000000, #0f1215,#0f1215,     #000000  )',
+          'conic-gradient(from 0deg at center, #000000, #050708, #080808,#050708, #080808  ,   #000000  )',
         'gradient-secondary-dark': 'conic-gradient(at bottom left, #fff,#f7f7f7, #f6f7f8  )',
         'gradient-secondary': 'conic-gradient(at bottom left, #000, #080808, #0f1215 )',
 
@@ -61,7 +61,7 @@ const config = {
           700: '#48515b', // hsl(212, 12%, 32%)
           800: '#333b48', // hsl(215, 17%, 24%)
           900: '#222830', // hsl(214, 17%, 16%)
-          950: '#0f1215', // hsl(210,17%,7%)
+          950: '#050708', // hsl(210,17%,7%)
         },
 
         primary: {

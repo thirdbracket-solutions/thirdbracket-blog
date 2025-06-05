@@ -83,7 +83,7 @@ export function WhyChooseUsSection() {
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   border:
-                    'border-opacity-20  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+                    'border-opacity-30  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
 
                   text: 'dark:text-primary-400 text-primary-600 leading-[1.45] font-light',
                   hover:

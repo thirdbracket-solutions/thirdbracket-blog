@@ -159,7 +159,7 @@ export default function CardGrid() {
                     theme={{
                       background: 'bg-white dark:bg-black',
                       border:
-                        '  border-opacity-35  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]   ',
+                        'border-opacity-30  border-primary-500 dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]   ',
 
                       //shadow-secondary-100 dark:shadow-secondary-900/50
                       hover:
