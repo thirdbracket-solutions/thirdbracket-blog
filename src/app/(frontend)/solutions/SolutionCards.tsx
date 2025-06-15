@@ -30,7 +30,7 @@ export default function SolutionCard({
       cover={
         image && (
           <div className=" h-[300px] w-full    bg-[linear-gradient(to_right,#f1f2f466_1px,transparent_1px),linear-gradient(to_bottom,#f1f2f466_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#1f242866_1px,transparent_1px),linear-gradient(to_bottom,#1f242866_1px,transparent_1px)] bg-[size:14px_24px] relative">
-            <Image src={image} alt={title} fill className="object-cover opacity-85" />
+            <Image src={image} alt={title} fill className="object-contain opacity-85" />
           </div>
         )
       }
@@ -46,15 +46,17 @@ export default function SolutionCard({
           <div className="py-4">
             <div className="flex flex-wrap gap-2">
               {technologies.map((tech, index) => (
-                <span
+                <div
                   key={index}
-                  className="px-2 py-0.5   text-xs text-primary-900 dark:text-primary-100 bg-white dark:bg-black   rounded-lg flex flex-col  font-medium border border-primary-400/20"
+                  className="px-2 py-[2px]     bg-secondary-50 dark:bg-secondary-900/40   rounded-lg    border  border-secondary-500/20"
                 >
-                  <div>{tech.cto}</div>
-                  <div className="text-xs font-normal text-primary-400  dark:text-primary-600">
+                  <div className="!text-[12px] font-medium  text-secondary-600 dark:text-primary-400">
+                    {tech.cto}
+                  </div>
+                  <div className="text-[9px] font-medium text-primary-400  dark:text-primary-600">
                     {tech.title}
                   </div>
-                </span>
+                </div>
               ))}
             </div>
           </div>

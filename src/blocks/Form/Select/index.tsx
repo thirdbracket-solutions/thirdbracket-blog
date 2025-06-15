@@ -1,7 +1,8 @@
 import type { SelectField } from '@payloadcms/plugin-form-builder/types'
 import type { Control, FieldErrorsImpl } from 'react-hook-form'
 
-import { Label } from '@/components/ui/label'
+// Unused import removed
+// import { Label } from '@/components/ui/label'
 import {
   Select as SelectComponent,
   SelectContent,

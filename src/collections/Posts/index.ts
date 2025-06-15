@@ -49,6 +49,8 @@ export const Posts: CollectionConfig<'posts'> = {
   },
   admin: {
     defaultColumns: ['title', 'slug', 'updatedAt'],
+    //@ts-expect-error: defaultSort is supported but not typed
+    defaultSort: '-publishedAt',
     livePreview: {
       url: ({ data, req }) => {
         const path = generatePreviewPath({

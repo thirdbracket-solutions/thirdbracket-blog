@@ -223,17 +223,17 @@ export const PostCard: React.FC<{
       href={href}
       as="a"
       className={cn(
-        'bg-gradient-secondary-dark dark:bg-gradient-secondary hover:cursor-pointer transition-all duration-300 ease-in-out focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100',
+        'bg-gradient-secondary-dark dark:bg-gradient-secondary hover:cursor-pointer transition-all duration-300 ease-in-out p-4 focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100',
         className,
       )}
     >
-      <div className="relative w-full">
+      <div className="relative w-full ">
         {!metaImage && <div>No image</div>}
-        {metaImage && typeof metaImage !== 'string' && <Media resource={metaImage} size="33vw" />}
+        {metaImage && typeof metaImage !== 'string' && <Media resource={metaImage} />}
       </div>
       <div className="py-4">
         {showCategories && hasCategories && (
-          <div className="uppercase px-2 py-0.5    text-primary-950 dark:text-primary-50 bg-accent-50 dark:bg-accent-950   rounded-lg flex flex-col  font-medium border border-primary-400/20 w-fit text-[9px]  mb-2 ">
+          <div className="uppercase px-[6px] py-0    text-primary-900 dark:text-primary-50 bg-secondary-50 dark:bg-secondary-900/80  rounded-full flex flex-col  font-medium border border-accent-50 dark:border-accent-950 w-fit text-[8px]  mb-2 ">
             {categories?.map((category, index) => {
               if (typeof category === 'object') {
                 const { title: titleFromCategory } = category

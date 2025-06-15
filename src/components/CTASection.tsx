@@ -23,9 +23,7 @@ const CTASection = ({
   className = '',
 }: CTASectionProps) => {
   return (
-    <section
-      className={` pb-[2rem] sm:pb-[2.5rem] lg:pb-[3rem]  bg-white dark:bg-black ${className}`}
-    >
+    <section className={` pb-[2rem] sm:pb-[2.5rem] lg:pb-[3rem]   ${className}`}>
       <Bracket fluid centered>
         <div className="max-w-screen-xl bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-200 dark:border-primary-800  ">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12">
@@ -59,10 +57,10 @@ const CTASection = ({
                   outline
                   size="md"
                   theme={{
-                    border: 'border-primary-700/40 dark:border-primary-300/40 ',
-                    hoverBackground: 'hover:bg-primary-200 dark:hover:bg-primary-800 ',
-                    focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
-                    text: 'text-primary-900 dark:text-primary-100 ',
+                    border: 'border-black/40 dark:border-white/40 ',
+                    hoverBackground: 'hover:bg-white/10 dark:hover:bg-black/10 ',
+                    focusRing: 'focus:ring-white/30 dark:focus:ring-black/30',
+                    text: 'text-black dark:text-white ',
                   }}
                 >
                   {secondary.label}

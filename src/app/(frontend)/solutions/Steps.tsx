@@ -1,27 +1,26 @@
 // components/Steps.tsx
 import { Bracket } from '@thirdbracket/bracketui'
 
-import { FaRegComments } from 'react-icons/fa'
-import { MdOutlineDesignServices, MdRocketLaunch } from 'react-icons/md'
-import { TbCodeDots } from 'react-icons/tb'
+import { MdRocketLaunch } from 'react-icons/md'
+import { RiChat1Fill, RiFileCodeFill, RiPenNibFill } from 'react-icons/ri'
 
 const steps = [
   {
-    icon: FaRegComments,
+    icon: RiChat1Fill,
     title: 'Initial Consultation',
     // description:
     //   'We start with a detailed discussion to understand your business needs, goals, and project requirements.',
     color: 'text-primary-900 dark:text-primary-100',
   },
   {
-    icon: MdOutlineDesignServices,
+    icon: RiPenNibFill,
     title: 'Planning & Design',
     // description:
     //   'Our team creates a comprehensive project plan and design mockups tailored to your specifications.',
     color: 'text-primary-900 dark:text-primary-100',
   },
   {
-    icon: TbCodeDots,
+    icon: RiFileCodeFill,
     title: 'Development',
     // description:
     //   'We build your solution using modern technologies and best practices, with regular updates and feedback.',
@@ -38,7 +37,7 @@ const steps = [
 
 export default function Steps() {
   return (
-    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] bg-white dark:bg-black">
+    <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] ">
       <Bracket fluid centered padding="medium">
         <div className="text-center mb-12 md:mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-primary-950 dark:text-primary-50 mb-4 ">
@@ -57,7 +56,7 @@ export default function Steps() {
               <div key={index} className="relative flex flex-col items-center text-center group">
                 {/* Connector Line */}
                 {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-1/2 w-full h-[1px] bg-primary-100 dark:bg-primary-900"></div>
+                  <div className="hidden lg:block absolute top-8 left-1/2 w-full h-2 bg-primary-100 dark:bg-primary-900"></div>
                 )}
 
                 {/* Icon */}

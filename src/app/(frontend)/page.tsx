@@ -5,7 +5,7 @@ import { DynamicHero } from '@/components/DynamicHeroSection'
 import { FAQ } from '@/components/Faq'
 import CardGrid from '@/components/Feature'
 import { WhyChooseUsSection } from '@/components/FeatureTwo'
-import { Hero } from '@/components/HeroSection'
+import { Hero as _Hero } from '@/components/HeroSection'
 
 async function getFormData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/2`, {

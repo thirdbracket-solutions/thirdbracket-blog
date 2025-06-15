@@ -11,8 +11,7 @@ import type { SerializedEditorState } from '@payloadcms/richtext-lexical/lexical
 import { fields } from './fields'
 import { getClientSideURL } from '@/utilities/getURL'
 
-import { Button } from '@/components/ui/button'
-import { Bracket } from '@thirdbracket/bracketui'
+import { Bracket, Button } from '@thirdbracket/bracketui'
 
 export type FormBlockType = {
   blockName?: string
@@ -117,51 +116,131 @@ export const FormBlock: React.FC<
   )
 
   return (
-    <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]">
-      {enableIntro && introContent && !hasSubmitted && (
-        <RichText className="mb-8 lg:mb-12" data={introContent} enableGutter={false} />
-      )}
+    // <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]">
+    //   {enableIntro && introContent && !hasSubmitted && (
+    //     <RichText className="mb-8 lg:mb-12" data={introContent} enableGutter={false} />
+    //   )}
 
-      <div className="p-6 lg:p-8 border border-primary-500/20 bg-gradient-primary-dark dark:bg-gradient-primary  rounded-xl">
-        <FormProvider {...formMethods}>
-          {!isLoading && hasSubmitted && confirmationType === 'message' && (
-            <RichText data={confirmationMessage} />
-          )}
-          {isLoading && !hasSubmitted && <p>Loading, please wait...</p>}
-          {error && <div>{`${error.status || '500'}: ${error.message || ''}`}</div>}
-          {!hasSubmitted && (
-            <form id={formID} onSubmit={handleSubmit(onSubmit)}>
-              <div className="mb-4 last:mb-0">
-                {formFromProps &&
-                  formFromProps.fields &&
-                  formFromProps.fields?.map((field, index) => {
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    const Field: React.FC<any> = fields?.[field.blockType as keyof typeof fields]
-                    if (Field) {
-                      return (
-                        <div className="mb-6 last:mb-0" key={index}>
-                          <Field
-                            form={formFromProps}
-                            {...field}
-                            {...formMethods}
-                            control={control}
-                            errors={errors}
-                            register={register}
-                          />
-                        </div>
-                      )
-                    }
-                    return null
-                  })}
-              </div>
+    //   <div className="p-6 lg:p-8 border border-primary-500/20 bg-gradient-primary-dark dark:bg-gradient-primary  rounded-xl">
+    //     <FormProvider {...formMethods}>
+    //       {!isLoading && hasSubmitted && confirmationType === 'message' && (
+    //         <RichText data={confirmationMessage} />
+    //       )}
+    //       {isLoading && !hasSubmitted && <p>Loading, please wait...</p>}
+    //       {error && <div>{`${error.status || '500'}: ${error.message || ''}`}</div>}
+    //       {!hasSubmitted && (
+    //         <form id={formID} onSubmit={handleSubmit(onSubmit)}>
+    //           <div className="mb-4 last:mb-0">
+    //             {formFromProps &&
+    //               formFromProps.fields &&
+    //               formFromProps.fields?.map((field, index) => {
+    //                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    //                 const Field: React.FC<any> = fields?.[field.blockType as keyof typeof fields]
+    //                 if (Field) {
+    //                   return (
+    //                     <div className="mb-6 last:mb-0" key={index}>
+    //                       <Field
+    //                         form={formFromProps}
+    //                         {...field}
+    //                         {...formMethods}
+    //                         control={control}
+    //                         errors={errors}
+    //                         register={register}
+    //                       />
+    //                     </div>
+    //                   )
+    //                 }
+    //                 return null
+    //               })}
+    //           </div>
 
-              <Button form={formID} type="submit">
-                {submitButtonLabel}
-              </Button>
-            </form>
+    //           <Button form={formID} type="submit">
+    //             {submitButtonLabel}
+    //           </Button>
+    //         </form>
+    //       )}
+    //     </FormProvider>
+    //   </div>
+    // </section>
+
+    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
+      <Bracket fluid centered>
+        <div className="max-w-screen-md w-full mx-auto">
+          {enableIntro && introContent && !hasSubmitted && (
+            <div className="mb-8 lg:mb-12">
+              <h2 className="text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">
+                Get in Touch
+              </h2>
+              <RichText data={introContent} enableGutter={false} />
+            </div>
           )}
-        </FormProvider>
-      </div>
+
+          <div className="bg-white dark:bg-black border border-primary-500/20 rounded-xl p-8 lg:p-12">
+            <FormProvider {...formMethods}>
+              {!isLoading && hasSubmitted && confirmationType === 'message' && (
+                <div className="text-center">
+                  <h2 className="text-3xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">
+                    Message Sent!
+                  </h2>
+                  <RichText data={confirmationMessage} />
+                </div>
+              )}
+
+              {isLoading && !hasSubmitted && (
+                <p className="text-center text-primary-700 dark:text-primary-300">
+                  Processing your request...
+                </p>
+              )}
+
+              {error && (
+                <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-md text-red-600 dark:text-red-400 mb-4">
+                  {`${error.status || 'Error'}: ${error.message || 'Something went wrong'}`}
+                </div>
+              )}
+
+              {!hasSubmitted && (
+                <form id={formID} onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                  {formFromProps &&
+                    formFromProps.fields &&
+                    formFromProps.fields?.map((field, index) => {
+                      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                      const Field: React.FC<any> = fields?.[field.blockType as keyof typeof fields]
+                      if (Field) {
+                        return (
+                          <div key={index}>
+                            <Field
+                              form={formFromProps}
+                              {...field}
+                              {...formMethods}
+                              control={control}
+                              errors={errors}
+                              register={register}
+                            />
+                          </div>
+                        )
+                      }
+                      return null
+                    })}
+
+                  <Button
+                    type="submit"
+                    isLoading={isLoading}
+                    disabled={isLoading}
+                    theme={{
+                      background: 'bg-gradient-text dark:bg-gradient-text-dark',
+                      hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
+                      focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
+                      text: 'text-primary-50 dark:text-primary-950',
+                    }}
+                  >
+                    {submitButtonLabel || 'Submit'}
+                  </Button>
+                </form>
+              )}
+            </FormProvider>
+          </div>
+        </div>
+      </Bracket>
     </section>
   )
 }
