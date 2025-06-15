@@ -231,9 +231,9 @@ export const PostCard: React.FC<{
         {!metaImage && <div>No image</div>}
         {metaImage && typeof metaImage !== 'string' && <Media resource={metaImage} size="33vw" />}
       </div>
-      <div className="p-4">
+      <div className="py-4">
         {showCategories && hasCategories && (
-          <div className="uppercase px-1 border border-primary-600/30 text-primary-700 dark:text-primary-300 w-fit text-xs rounded mb-2 bg-accent-radial dark:bg-accent-radial-dark">
+          <div className="uppercase px-2 py-0.5    text-primary-950 dark:text-primary-50 bg-accent-50 dark:bg-accent-950   rounded-lg flex flex-col  font-medium border border-primary-400/20 w-fit text-[9px]  mb-2 ">
             {categories?.map((category, index) => {
               if (typeof category === 'object') {
                 const { title: titleFromCategory } = category
@@ -252,7 +252,7 @@ export const PostCard: React.FC<{
           </div>
         )}
         {titleToUse && (
-          <h3 className="font-bold text-primary-900 dark:text-primary-50 mb-2 text-lg line-clamp-2">
+          <h3 className="font-bold text-primary-900 dark:text-primary-50 mb-2 text-lg leading-tight line-clamp-2">
             {titleToUse}
           </h3>
         )}

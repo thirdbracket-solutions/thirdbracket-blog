@@ -33,7 +33,7 @@ const config = {
         'overlay-radial-dark': 'radial-gradient(#0b0d0e_1px,transparent_1px)',
 
         'accent-radial': 'radial-gradient(circle at center,      #df9faf  , #eec4ce )',
-        'accent-radial-dark': 'radial-gradient(circle at center,     #8a2841, #66192d )',
+        'accent-radial-dark': 'radial-gradient(circle at center,     #66192d, #3d0f1b )',
       },
       colors: {
         accent: {
@@ -58,7 +58,7 @@ const config = {
           400: '#8c95a1', // hsl(214, 10%, 59%)
           500: '#737e8c', // hsl(214, 10%, 50%)
           600: '#5d6774', // hsl(213, 11%, 41%)
-          700: '#48515b', // hsl(212, 12%, 32%)
+          700: '#48515b', // hsl(212, 12%, 32%) #222222
           800: '#333b48', // hsl(215, 17%, 24%)
           900: '#222830', // hsl(214, 17%, 16%)
           950: '#050708', // hsl(210,17%,7%)
