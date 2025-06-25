@@ -52,6 +52,84 @@ export const jsonLd: Graph = {
       publisher: { '@id': 'https://www.thirdbracket.co.uk/#organization' },
       about: { '@id': 'https://www.thirdbracket.co.uk/#organization' },
     },
+    {
+      '@type': 'FAQPage',
+      '@id': 'https://www.thirdbracket.co.uk/#faq',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What services does your full stack web development agency offer?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text:
+              'We offer full stack web development for startups and small businesses in the UK — including custom Next.js websites, WordPress/Elementor builds, SEO optimization, and post-launch support.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you build websites using WordPress and Elementor?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text:
+              'Yes. For clients who prefer easy content editing, we build fast and modern websites using WordPress and Elementor — fully responsive and SEO-optimized.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Why choose a Next.js web development agency like Third Bracket?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text:
+              'Next.js is perfect for businesses that need speed, scalability, and SEO. As a UK-based agency, we specialize in building modern websites that perform well and rank high.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How do you ensure websites are SEO-optimized and fast?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text:
+              'We build every site — whether in Next.js or WordPress — with Core Web Vitals, semantic HTML, metadata, and performance in mind to meet Google’s SEO standards.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you offer affordable web development services for UK startups?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text:
+              'Yes. We’re a lean team focused on delivering affordable, high-quality websites without the overhead of traditional agencies — perfect for startups and solo founders.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Can you redesign my current website to improve speed and SEO?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text:
+              'Absolutely. We audit and rebuild websites for performance, accessibility, and SEO — whether your current site is built with WordPress, Squarespace, or something else.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How long does a typical project take from start to launch?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text:
+              'We can launch small sites in 2–3 weeks. Larger builds with custom features usually take 4–6 weeks. We’ll give you a clear timeline based on scope.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do you provide ongoing support after launch?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text:
+              'Yes. We offer flexible maintenance and support packages — including content updates, plugin care (for WordPress), and performance monitoring for custom sites.',
+          },
+        },
+      ],
+    },
   ],
 }
 
