@@ -23,6 +23,7 @@ export const jsonLd: Graph = {
       '@type': 'WebSite',
       '@id': 'https://www.thirdbracket.co.uk/#website',
       name: 'Third Bracket',
+  "alternateName": "Third Bracket Solutions",
       url: 'https://www.thirdbracket.co.uk/',
       description:
         'Third Bracket is a modern Next.js web development agency in the UK. We build fast, affordable, SEO-optimized websites with clean and minimal design.',
@@ -34,6 +35,10 @@ export const jsonLd: Graph = {
       name: 'Third Bracket Solutions',
       legalName: 'Third Bracket Solution',
       url: 'https://www.thirdbracket.co.uk/',
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.thirdbracket.co.uk/logo.svg"
+  },
       sameAs: [
         'https://www.facebook.com/thirdbracket.co.uk',
         'https://www.linkedin.com/company/106720973',
