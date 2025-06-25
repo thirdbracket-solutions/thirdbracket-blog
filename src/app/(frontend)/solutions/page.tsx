@@ -4,6 +4,7 @@ import PageHeader from '@/components/PageHeader'
 import { Metadata } from 'next'
 import { solutionCategories } from './Solutions'
 import CategorySection from './CategorySection'
+import PageData from './page-data'
 
 import CTASection from '@/components/CTASection'
 import Steps from './Steps'
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
 export default function Solutions() {
   return (
     <section>
+      <PageData />
       <PageHeader
         title="Solutions"
         description="Comprehensive digital solutions for modern businesses"

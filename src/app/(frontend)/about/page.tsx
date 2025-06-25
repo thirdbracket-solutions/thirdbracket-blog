@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import PageHeader from '@/components/PageHeader'
 import Company from './Company'
 import Team from './Team'
+import PageData from './page-data'
 import Roadmap from './Roadmap'
 import OpenSource from './OpenSource'
 import WorkCulture from './WorkCulture'
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <section>
+      <PageData />
       <PageHeader
         title="About Us"
         description="Get to know the team behind Third Bracket and our approach to web development"

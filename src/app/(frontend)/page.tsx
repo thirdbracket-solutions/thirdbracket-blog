@@ -6,6 +6,7 @@ import { FAQ } from '@/components/Faq'
 import CardGrid from '@/components/Feature'
 import { WhyChooseUsSection } from '@/components/FeatureTwo'
 import { Hero as _Hero } from '@/components/HeroSection'
+import HomePageData from './page-data'
 
 async function getFormData() {
   const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/2`, {
@@ -22,6 +23,7 @@ export default async function Home() {
   const form = await getFormData()
   return (
     <section>
+      <HomePageData />
       {/* <HeroSection /> */}
       {/* <Hero /> */}
       <DynamicHero />

@@ -107,7 +107,8 @@ export default function Stats() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {stats.map((stat, index) => {
-            const Icon = stat.icon
+            // Unused variable renamed with underscore prefix
+            const _Icon = stat.icon
             return (
               <div key={index} className="relative flex flex-col items-center text-center group">
                 {/* Connector Line */}

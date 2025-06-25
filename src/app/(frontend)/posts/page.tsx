@@ -9,6 +9,7 @@ import React from 'react'
 import PageClient from './page.client'
 import { Bracket } from '@thirdbracket/bracketui'
 import PageHeader from '@/components/PageHeader'
+import PageData from './page-data'
 
 export const dynamic = 'force-static'
 export const revalidate = 600
@@ -33,6 +34,7 @@ export default async function Page() {
 
   return (
     <Bracket>
+      <PageData />
       <PageClient />
       {/* <div className="container mb-16">
           <div className="prose dark:prose-invert max-w-none">

@@ -1,8 +1,10 @@
 import React from 'react'
 
-import { Bracket } from '@thirdbracket/bracketui'
+// Bracket is not used
+// import { Bracket } from '@thirdbracket/bracketui'
 import PageHeader from '@/components/PageHeader'
 import { FormBlock } from '@/blocks/Form/Component'
+import PageData from './page-data'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
@@ -27,6 +29,7 @@ export default async function ContactPage() {
 
   return (
     <section>
+      <PageData />
       <PageHeader title="Contact Us" description="Get in touch with our team" />
       <div className="max-w-7xl mx-auto ">
         <FormBlock form={form} enableIntro={false} />

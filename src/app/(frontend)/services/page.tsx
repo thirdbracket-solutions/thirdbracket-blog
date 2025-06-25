@@ -1,6 +1,6 @@
 import PageHeader from '@/components/PageHeader'
 import Category from './Catagory'
-
+import PageData from './page-data'
 import Stats from './Stats'
 import TechStack from './TechStack'
 import { Metadata } from 'next'
@@ -210,6 +210,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <section>
+      <PageData />
       <PageHeader
         title="Services"
         description="Full-service modern web development & marketing for small businesses, agencies, and startups in the UK."
