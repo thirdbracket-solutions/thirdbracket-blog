@@ -218,7 +218,7 @@ export const PostCard: React.FC<{
   const href = `/${relationTo}/${slug}`
 
   return (
-    <a ref={card.ref} href={href} className={cn('block', className)}>
+    <a ref={card.ref as React.RefObject<HTMLAnchorElement>} href={href} className={cn('block', className)}>
       <Card
         size="lg"
         theme={{
