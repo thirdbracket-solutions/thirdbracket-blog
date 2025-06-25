@@ -7,44 +7,46 @@ import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 
 const team = [
   {
-    name: 'John Smith',
-    role: 'Founder & Lead Developer',
-    bio: 'Full-stack developer with 10+ years of experience in web technologies.',
-    image: '/ui.svg',
-    social: {
-      linkedin: 'https://linkedin.com/',
-      github: 'https://github.com/',
-      twitter: 'https://twitter.com/',
-    },
-  },
-  {
-    name: 'Sarah Johnson',
-    role: 'UI/UX Designer',
-    bio: 'Creative designer focused on creating intuitive and engaging user experiences.',
-    image: '/ui.svg',
-    social: {
-      linkedin: 'https://linkedin.com/',
-      github: 'https://github.com/',
-    },
-  },
-  {
-    name: 'Michael Brown',
-    role: 'Backend Developer',
-    bio: 'Specialized in building robust and scalable backend systems.',
-    image: '/ui.svg',
-    social: {
-      linkedin: 'https://linkedin.com/',
-      github: 'https://github.com/',
-    },
-  },
-  {
-    name: 'Emily Davis',
-    role: 'Digital Marketing Specialist',
-    bio: 'Expert in SEO and content strategy with a focus on growth.',
-    image: '/ui.svg',
+    name: 'Abdul Malik',
+    role: 'Founder & Director',
+    bio: 'Founder of Third Bracket & Habiganj Properties Ltd',
+    image: '/malik.svg',
     social: {
       linkedin: 'https://linkedin.com/',
       twitter: 'https://twitter.com/',
+    },
+  },
+  {
+    name: 'Zakir Hussain',
+    role: 'Co-Founder & Director of Operations',
+    bio: 'Founder of Nicky Limited and 10+ other businessses in Manchester which includes Retail and Real Estate',
+    image: '/zakir.svg',
+    social: {
+      linkedin: 'https://linkedin.com/',
+      twitter: 'https://twitter.com/',
+    },
+  },
+
+  {
+    name: 'Naznin Hussain',
+    role: 'Director of Strategy and Communication',
+    bio: 'Co-Founder of Nicky Limited, Founder of NB Beauty Parlour & Bangla Bazar',
+    image: '/naznin.svg',
+    social: {
+      linkedin: 'https://linkedin.com/',
+
+      twitter: 'https://twitter.com/',
+    },
+  },
+
+  {
+    name: 'Musabbir Sagar',
+    role: 'Chief Executive Officer',
+    bio: 'Founder of Third Bracket, NomadGang, ProductsofBangladesh and biggest contributor to open source with things like Bracket UI. ',
+    image: '/sagar.svg',
+    social: {
+      linkedin: 'https://my.linkedin.com/in/musabbirsagar',
+      github: 'https://github.com/sagarmusabbir',
     },
   },
 ]

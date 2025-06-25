@@ -65,7 +65,7 @@ export default function Roadmap() {
                 >
                   <div className="md:w-1/2"></div>
                   <div className={`md:w-1/2 p-6 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                    <div className="bg-white dark:bg-black border border-primary-200 dark:border-primary-800 rounded-lg p-6">
+                    <div className="bg-white dark:bg-black border border-primary-200 dark:border-primary-800 rounded-lg p-4">
                       <div className="inline-block px-3 py-1 bg-accent-100 dark:bg-accent-900 text-accent-800 dark:text-accent-200 rounded-full text-sm font-medium mb-3">
                         {item.year}
                       </div>

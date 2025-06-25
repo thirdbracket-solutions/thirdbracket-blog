@@ -164,7 +164,7 @@ export const FormBlock: React.FC<
     // </section>
 
     <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
-      <Bracket fluid centered>
+      <Bracket fluid centered padding="medium">
         <div className="max-w-screen-md w-full mx-auto">
           {enableIntro && introContent && !hasSubmitted && (
             <div className="mb-8 lg:mb-12">
@@ -175,7 +175,7 @@ export const FormBlock: React.FC<
             </div>
           )}
 
-          <div className="bg-white dark:bg-black border border-primary-500/20 rounded-xl p-8 lg:p-12">
+          <div className="bg-white dark:bg-black border border-primary-500/20 rounded-lg p-8 lg:p-12">
             <FormProvider {...formMethods}>
               {!isLoading && hasSubmitted && confirmationType === 'message' && (
                 <div className="text-center">
@@ -227,7 +227,7 @@ export const FormBlock: React.FC<
                     isLoading={isLoading}
                     disabled={isLoading}
                     theme={{
-                      background: 'bg-gradient-text dark:bg-gradient-text-dark',
+                      background: 'bg-gradient-text dark:bg-gradient-text-dark w-full',
                       hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
                       focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                       text: 'text-primary-50 dark:text-primary-950',

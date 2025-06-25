@@ -218,22 +218,25 @@ export const PostCard: React.FC<{
   const href = `/${relationTo}/${slug}`
 
   return (
-    <Card
-      ref={card.ref}
-      href={href}
-      as="a"
-      className={cn(
-        'bg-gradient-secondary-dark dark:bg-gradient-secondary hover:cursor-pointer transition-all duration-300 ease-in-out p-4 focus-within:border-opacity-100 active:border-opacity-100 md:hover:border-opacity-100',
-        className,
-      )}
-    >
-      <div className="relative w-full ">
-        {!metaImage && <div>No image</div>}
-        {metaImage && typeof metaImage !== 'string' && <Media resource={metaImage} />}
-      </div>
-      <div className="py-4">
+    <a ref={card.ref} href={href} className={cn('block', className)}>
+      <Card
+        size="lg"
+        theme={{
+          background: 'bg-white dark:bg-black',
+          border: 'border-opacity-30 border-primary-500 dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+          hover: '[@media(hover:hover)]:hover:border-opacity-100 [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] focus-within:border-opacity-100 active:border-opacity-100',
+          text: 'dark:text-primary-400 text-primary-600 font-light leading-[1.45]'
+        }}
+        className="!delay-50 motion-reduce:!transition-none motion-reduce:hover:!transform-none"
+        cover={metaImage && typeof metaImage !== 'string' ? <Media resource={metaImage} /> : undefined}
+        header={titleToUse ? (
+          <span className="bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+            {titleToUse}
+          </span>
+        ) : undefined}
+      >
         {showCategories && hasCategories && (
-          <div className="uppercase px-[6px] py-0    text-primary-900 dark:text-primary-50 bg-secondary-50 dark:bg-secondary-900/80  rounded-full flex flex-col  font-medium border border-accent-50 dark:border-accent-950 w-fit text-[8px]  mb-2 ">
+          <div className="uppercase px-[6px] py-0 text-primary-900 dark:text-primary-50 bg-secondary-50 dark:bg-secondary-900/80 rounded-full flex flex-col font-medium border border-accent-50 dark:border-accent-950 w-fit text-[8px] mb-2">
             {categories?.map((category, index) => {
               if (typeof category === 'object') {
                 const { title: titleFromCategory } = category
@@ -251,15 +254,8 @@ export const PostCard: React.FC<{
             })}
           </div>
         )}
-        {titleToUse && (
-          <h3 className="font-bold text-primary-900 dark:text-primary-50 mb-2 text-lg leading-tight line-clamp-2">
-            {titleToUse}
-          </h3>
-        )}
-        {description && (
-          <p className="text-gray-600 text-sm line-clamp-2 mt-2">{sanitizedDescription}</p>
-        )}
-      </div>
-    </Card>
+        {description && sanitizedDescription}
+      </Card>
+    </a>
   )
 }

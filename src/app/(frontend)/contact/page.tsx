@@ -27,12 +27,10 @@ export default async function ContactPage() {
 
   return (
     <section>
-      <Bracket fluid centered>
-        <PageHeader title="Contact Us" description="Get in touch with our team" />
-        <div className="max-w-7xl mx-auto ">
-          <FormBlock form={form} enableIntro={false} />
-        </div>
-      </Bracket>
+      <PageHeader title="Contact Us" description="Get in touch with our team" />
+      <div className="max-w-7xl mx-auto ">
+        <FormBlock form={form} enableIntro={false} />
+      </div>
     </section>
   )
 }
