@@ -108,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <SiteFooter />
         <GTM />
-       // <SpeedInsights />
+     
       </body>
     </html>
   )
