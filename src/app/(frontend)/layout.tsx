@@ -7,7 +7,7 @@ import { Metadata } from 'next'
 
 import GTM from '@/components/GTM'
 import { Roboto } from 'next/font/google'
-import { SpeedInsights } from '@vercel/speed-insights/next'
+//import { SpeedInsights } from '@vercel/speed-insights/next'
 import StructuredData from '@/components/StructuredData'
 
 const roboto = Roboto({
@@ -108,7 +108,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <SiteFooter />
         <GTM />
-        <SpeedInsights />
+       // <SpeedInsights />
       </body>
     </html>
   )
