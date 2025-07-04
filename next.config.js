@@ -8,11 +8,10 @@ const NEXT_PUBLIC_SERVER_URL = process.env.VERCEL_PROJECT_PRODUCTION_URL
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    experimental: {
-    legacyBrowsers: false, // ✅ disables old browser support (and polyfills)
+  experimental: {
+    // Modern Next.js no longer uses legacyBrowsers option
   },
-  // Optional: enable SWC minification (it's default now in most Next.js versions)
-  swcMinify: true,
+  // SWC minification is enabled by default in recent Next.js versions
   images: {
     remotePatterns: [
       ...[NEXT_PUBLIC_SERVER_URL /* 'https://example.com' */].map((item) => {

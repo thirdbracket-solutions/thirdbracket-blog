@@ -102,16 +102,16 @@ export const EmailSender: CollectionConfig = {
         if (operation === 'create' && !doc.sent) {
           try {
             // Format the from field as "Name <email>"
-            const formattedFrom = `${doc.fromName} <${doc.fromEmail}>`
+            const formattedFrom = `${doc.fromName as string} <${doc.fromEmail as string}>`
 
             // Process the HTML content to replace placeholders
-            let processedHtml = doc.html || '<p>Email content</p>'
+            let processedHtml = (doc.html as string) || '<p>Email content</p>'
             
             // Replace [email] placeholder with the sender's email
-            processedHtml = processedHtml.replace(/\[email\]/g, doc.fromEmail)
+            processedHtml = processedHtml.replace(/\[email\]/g, doc.fromEmail as string)
             
             // Replace [Recipient Email] placeholder with the recipient's email
-            processedHtml = processedHtml.replace(/\[Recipient Email\]/g, doc.to)
+            processedHtml = processedHtml.replace(/\[Recipient Email\]/g, doc.to as string)
             
             // Check if reply-to is different from sender email
             const replyToDifferent = doc.replyTo && doc.replyTo !== doc.fromEmail
@@ -119,7 +119,7 @@ export const EmailSender: CollectionConfig = {
             // Handle conditional reply-to section
             if (replyToDifferent) {
               // Replace [reply-to] placeholder with the reply-to email
-              processedHtml = processedHtml.replace(/\[reply-to\]/g, doc.replyTo)
+              processedHtml = processedHtml.replace(/\[reply-to\]/g, doc.replyTo as string)
               
               // Replace the conditional handlebars syntax with the content
               processedHtml = processedHtml.replace(
@@ -137,24 +137,24 @@ export const EmailSender: CollectionConfig = {
             // Prepare email options
             const emailOptions: EmailOptions = {
               from: formattedFrom,
-              to: doc.to,
-              subject: doc.subject,
+              to: doc.to as string,
+              subject: doc.subject as string,
               html: processedHtml,
             }
 
             // Add Reply-To, CC and BCC if provided
-            if (doc.replyTo) emailOptions.replyTo = doc.replyTo
-            if (doc.cc) emailOptions.cc = doc.cc
-            if (doc.bcc) emailOptions.bcc = doc.bcc
+            if (doc.replyTo) emailOptions.replyTo = doc.replyTo as string
+            if (doc.cc) emailOptions.cc = doc.cc as string
+            if (doc.bcc) emailOptions.bcc = doc.bcc as string
 
             // Send the email
             await req.payload.sendEmail(emailOptions)
             
             // Log a clear success message
-            console.log('✅ Email sent successfully to:', doc.to)
-            console.log(`Subject: ${doc.subject}`)
-            console.log(`From: ${doc.fromName} <${doc.fromEmail}>`)
-            console.log(`To: ${doc.to}`)
+            console.log('✅ Email sent successfully to:', doc.to as string)
+            console.log(`Subject: ${doc.subject as string}`)
+            console.log(`From: ${doc.fromName as string} <${doc.fromEmail as string}>`)
+            console.log(`To: ${doc.to as string}`)
             
             // Mark as sent - with a small delay to ensure document is fully created
             try {
@@ -163,7 +163,7 @@ export const EmailSender: CollectionConfig = {
                 try {
                   await req.payload.update({
                     collection: 'email-sender',
-                    id: doc.id,
+                    id: doc.id as string,
                     data: {
                       sent: true,
                     },
