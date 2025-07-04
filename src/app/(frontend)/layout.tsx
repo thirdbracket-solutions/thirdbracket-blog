@@ -14,6 +14,8 @@ const roboto = Roboto({
   subsets: ['latin'],
   // weight: ['300', '400', '500', '600', '700', '800', '900'],
   display: 'swap',
+  preload: true,
+  variable: '--font-roboto',
 })
 
 // Structured data is now handled by the StructuredData component
@@ -65,7 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${roboto.className} antialiased scroll-smooth`}
+      className={`${roboto.variable} antialiased scroll-smooth`}
       suppressHydrationWarning
     >
       <head>

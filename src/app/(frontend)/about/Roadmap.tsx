@@ -69,7 +69,7 @@ export default function Roadmap() {
                       <div className="inline-block px-3 py-1 bg-accent-100 dark:bg-accent-900 text-accent-800 dark:text-accent-200 rounded-full text-sm font-medium mb-3">
                         {item.year}
                       </div>
-                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                      <h3 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-2">{item.title}</h3>
                       <p className="text-primary-600 dark:text-primary-400">{item.description}</p>
                     </div>
                   </div>

@@ -72,6 +72,7 @@ export interface Config {
     media: Media;
     categories: Category;
     users: User;
+    'email-sender': EmailSender;
     redirects: Redirect;
     forms: Form;
     'form-submissions': FormSubmission;
@@ -88,6 +89,7 @@ export interface Config {
     media: MediaSelect<false> | MediaSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
+    'email-sender': EmailSenderSelect<false> | EmailSenderSelect<true>;
     redirects: RedirectsSelect<false> | RedirectsSelect<true>;
     forms: FormsSelect<false> | FormsSelect<true>;
     'form-submissions': FormSubmissionsSelect<false> | FormSubmissionsSelect<true>;
@@ -728,6 +730,53 @@ export interface Form {
   createdAt: string;
 }
 /**
+ * Send emails from the admin panel
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "email-sender".
+ */
+export interface EmailSender {
+  id: number;
+  /**
+   * Name that will appear in the recipient's inbox
+   */
+  fromName: string;
+  /**
+   * Email address that will be used to send the email
+   */
+  fromEmail: string;
+  /**
+   * Reply-to email address (if different from sender)
+   */
+  replyTo?: string | null;
+  /**
+   * Recipient email address
+   */
+  to: string;
+  /**
+   * CC recipient (optional)
+   */
+  cc?: string | null;
+  /**
+   * BCC recipient (optional)
+   */
+  bcc?: string | null;
+  /**
+   * Email subject line
+   */
+  subject: string;
+  /**
+   * HTML content of your email
+   */
+  html?: string | null;
+  /**
+   * Whether this email has been sent
+   */
+  sent?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "redirects".
  */
@@ -918,6 +967,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'users';
         value: number | User;
+      } | null)
+    | ({
+        relationTo: 'email-sender';
+        value: number | EmailSender;
       } | null)
     | ({
         relationTo: 'redirects';
@@ -1275,6 +1328,23 @@ export interface UsersSelect<T extends boolean = true> {
   hash?: T;
   loginAttempts?: T;
   lockUntil?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "email-sender_select".
+ */
+export interface EmailSenderSelect<T extends boolean = true> {
+  fromName?: T;
+  fromEmail?: T;
+  replyTo?: T;
+  to?: T;
+  cc?: T;
+  bcc?: T;
+  subject?: T;
+  html?: T;
+  sent?: T;
+  updatedAt?: T;
+  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

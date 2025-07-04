@@ -16,6 +16,9 @@ const config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-roboto)'],
+      },
       backgroundImage: {
         'gradient-primary-dark':
           'conic-gradient(from 0deg at center, #fff, #f6f7f8, #f7f7f7, #f6f7f8,#f7f7f7, #fff  )',

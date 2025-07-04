@@ -27,6 +27,26 @@ const nextConfig = {
   },
   reactStrictMode: true,
   redirects,
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      // Don't resolve Node.js built-in modules on the client
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        worker_threads: false,
+        fs: false,
+        path: false,
+        os: false,
+        assert: false,
+        module: false,
+        'node:assert': false,
+        'node:fs': false,
+        'node:module': false,
+        'node:os': false,
+        'node:path': false,
+      }
+    }
+    return config
+  },
 }
 
 export default withPayload(nextConfig, { devBundleServerPackages: false })

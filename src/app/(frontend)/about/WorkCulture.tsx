@@ -60,7 +60,7 @@ export default function WorkCulture() {
           </div>
         </div>
 
-        <h2 className="text-3xl text-center lg:text-4xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-12">
+        <h2 className="text-3xl text-center lg:text-4xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  mb-12">
           Our Core Values
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -71,7 +71,7 @@ export default function WorkCulture() {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-secondary-dark dark:bg-gradient-secondary border border-primary-100 dark:border-primary-900 flex items-center justify-center">
                   <Icon size={28} className="text-primary-900 dark:text-primary-100" />
                 </div>
-                <h4 className="text-xl font-semibold mb-2">{value.title}</h4>
+                <h4 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-2">{value.title}</h4>
                 <p className="text-primary-600 dark:text-primary-400">{value.description}</p>
               </div>
             )

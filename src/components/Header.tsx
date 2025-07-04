@@ -3,7 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { FC } from 'react'
 import { BiChevronRight } from 'react-icons/bi'
-import { MdSearch } from 'react-icons/md'
+// import { MdSearch } from 'react-icons/md'
 import { Logo } from './Logo/Logo'
 import {
   NavlinkItem,
@@ -430,7 +430,7 @@ const Header: FC = () => {
           {/* Main navigation items */}
           {mainNavItems.map((item) => renderNavlink(item))}
 
-          <Navlink
+          {/* <Navlink
             theme={{
               text: 'text-primary-900 dark:text-primary-50',
               states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
@@ -440,7 +440,7 @@ const Header: FC = () => {
           >
             <span className="sr-only">Search</span>
             <MdSearch className="w-5 text-primary" />
-          </Navlink>
+          </Navlink> */}
         </NavItem>
 
         <MobileNav>

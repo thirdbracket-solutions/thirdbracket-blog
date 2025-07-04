@@ -44,7 +44,7 @@ export default function OpenSource() {
               key={index}
               className="border border-primary-200 dark:border-primary-800 rounded-lg p-6 bg-white dark:bg-black"
             >
-              <h3 className="text-xl font-semibold mb-3">{project.name}</h3>
+              <h3 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-3">{project.name}</h3>
               <p className="text-primary-600 dark:text-primary-400 mb-4">{project.description}</p>
               <div className="flex justify-between items-center">
                 <div className="flex items-center text-primary-500 dark:text-primary-400">
