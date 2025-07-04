@@ -174,7 +174,7 @@ export const EmailSender: CollectionConfig = {
               setTimeout(async () => {
                 try {
                   await req.payload.update({
-                    collection: 'email-sender',
+                    collection: 'email-sender' as const,
                     id: doc.id as string,
                     data: {
                       sent: true,
