@@ -11,8 +11,17 @@ interface EmailOptions {
   bcc?: string
 }
 
+import { anyone } from '../access/anyone'
+import { authenticated } from '../access/authenticated'
+
 export const EmailSender: CollectionConfig = {
   slug: 'email-sender',
+  access: {
+    create: authenticated,
+    delete: authenticated,
+    read: authenticated,
+    update: authenticated,
+  },
   admin: {
     useAsTitle: 'subject',
     description: 'Send emails from the admin panel',
@@ -96,6 +105,9 @@ export const EmailSender: CollectionConfig = {
       },
     },
   ],
+  versions: {
+    drafts: true,
+  },
   hooks: {
     afterChange: [
       async ({ req, doc, operation }: { req: PayloadRequest; doc: Record<string, unknown>; operation: string }) => {
