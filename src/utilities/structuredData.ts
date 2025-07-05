@@ -20,8 +20,9 @@ export const baseJsonLd: Graph = {
     {
       '@type': 'Organization',
       '@id': `${baseUrl}#organization`,
-      name: 'Third Bracket Solutions',
-      legalName: 'Third Bracket Solution',
+      name: 'Third Bracket',
+      legalName: 'Third Bracket',
+      alternateName: 'Third Bracket Solutions',
       url: baseUrl,
       logo: {
         '@type': 'ImageObject',
