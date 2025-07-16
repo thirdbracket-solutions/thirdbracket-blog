@@ -1,6 +1,6 @@
 import PageHeader from '@/components/PageHeader'
 import Category from './Catagory'
-import PageData from './page-data'
+// Structured data now in layout.tsx
 import Stats from './Stats'
 import TechStack from './TechStack'
 import { Metadata } from 'next'
@@ -32,7 +32,7 @@ const categories = [
     description:
       'We build modern, high-performance web solutions using cutting-edge technologies with a focus on scalability and maintainability.',
     illustration: {
-      src: '/5.svg',
+      src: '/services/web.svg',
       alt: 'Web Development Illustration',
     },
     stackIcons: TechStack(['SiNextdotjs', 'SiReact', 'SiTypescript', 'SiNodedotjs', 'SiVercel']),
@@ -90,7 +90,7 @@ const categories = [
     description:
       'We create intuitive and engaging user interfaces that balance aesthetic appeal with functional design principles.',
     illustration: {
-      src: '/5.svg',
+      src: '/services/ui.svg',
       alt: 'UI/UX Design Illustration',
     },
     stackIcons: TechStack(['SiTailwindcss', 'SiFigma', 'SiAdobeillustrator', 'SiFramer']),
@@ -147,7 +147,7 @@ const categories = [
     description:
       'We implement data-driven digital marketing strategies to improve visibility, engagement, and conversion rates.',
     illustration: {
-      src: '/5.svg',
+      src: '/services/digital.svg',
       alt: 'Digital Marketing Illustration',
     },
     stackIcons: TechStack(['SiGoogleanalytics', 'SiGooglesearchconsole', 'SiWordpress']),
@@ -210,7 +210,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <section>
-      <PageData />
+      {/* Structured data now in layout.tsx */}
       <PageHeader
         title="Services"
         description="Full-service modern web development & marketing for small businesses, agencies, and startups in the UK."

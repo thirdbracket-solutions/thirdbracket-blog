@@ -16,15 +16,15 @@ export const Hero: React.FC = () => {
     <section className=" py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:36px_36px]">
       <Bracket fluid centered>
         <div className="mx-auto max-w-screen-xl ">
-          <div className="flex flex-col items-start sm:items-center space-y-8 md:space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-[720px] lg:max-w-[980px]">
-            <h1 className="text-[2.55rem]/[1]   md:text-5xl lg:text-6xl  text-left sm:text-center bg-gradient-text font-extrabold dark:bg-gradient-text-dark text-transparent bg-clip-text   ">
-              Full Stack Web and Development Solutions in the UK
+          <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-[700px] lg:max-w-[980px]">
+            <h1 className="text-[2.65rem] leading-none    md:text-5xl lg:text-6xl  text-left sm:text-center bg-gradient-text font-black dark:bg-gradient-text-dark text-transparent bg-clip-text   ">
+              Affordable Web Develoment Services for UK Startups
               {/* <span className=" font-semibold italic text-lg md:text-xl lg:text-2xl block mt-2 tracking-tight">
                 Powered by Next.js
               </span> */}
             </h1>
 
-            <p className="dark:text-primary-400 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center  md:px-12 backdrop-blur-sm">
+            <p className="dark:text-primary-400 text-primary-700 font-light text-base/[1.8rem]  lg:text-xl/[1.95rem] text-left sm:text-center   backdrop-blur-sm">
               Build fast, modern, and SEO-optimized websites with a clean, minimal design — powered
               by our Next.js expertise and tailored for UK businesses.
             </p>
@@ -72,7 +72,7 @@ export const Hero: React.FC = () => {
             </div>
 
             <div className="px-0 sm:px-4 py-4 text-left sm:text-center lg:px-36">
-              <span className="uppercase bg-gradient-secondary opacity-65 dark:bg-gradient-secondary-dark text-transparent bg-clip-text font-medium backdrop-blur-sm">
+              <span className="uppercase bg-gradient-secondary opacity-75 dark:bg-gradient-secondary-dark text-transparent bg-clip-text font-medium backdrop-blur-sm">
                 FEATURED IN
               </span>
               <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 lg:gap-12 sm:items-center dark:text-primary-500/40 text-primary-600/50 justify-start sm:justify-between">

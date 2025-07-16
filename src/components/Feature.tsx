@@ -139,7 +139,7 @@ export default function CardGrid() {
             <h2 className="  text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right ">
               Looking for Fast & Affordable Web Development in the UK?
             </h2>
-            <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light dark:text-primary-400 text-primary-600 text-left sm:text-center lg:text-left">
+            <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light dark:text-primary-300 text-primary-700 text-left sm:text-center lg:text-left">
               We build modern, high-performance websites with clean UI, lightning-fast speed, and
               SEO built in — all powered by Next.js. Here’s how we bring that promise to life:
             </p>

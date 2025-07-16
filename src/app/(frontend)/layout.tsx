@@ -8,8 +8,6 @@ import { Metadata } from 'next'
 import GTM from '@/components/GTM'
 import { Roboto } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-import StructuredData from '@/components/StructuredData'
-
 const roboto = Roboto({
   subsets: ['latin'],
   // weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -18,14 +16,12 @@ const roboto = Roboto({
   variable: '--font-roboto',
 })
 
-// Structured data is now handled by the StructuredData component
-
 const baseUrl = Settings.metadataBase
 
 export const metadata: Metadata = {
   title: {
     template: `%s | ${Settings.title}`,
-    default: `Full Stack Web Development Agency UK |  ${Settings.title}`,
+    default: `Affordable Web Design Agency for UK Businesses |  ${Settings.title}`,
   },
 
   metadataBase: new URL(baseUrl),
@@ -62,8 +58,6 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  // Optional: dynamically append other JSON-LD
-
   return (
     <html
       lang="en"
@@ -90,7 +84,40 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <meta name="msvalidate.01" content="46803F5EEF01F535EF3999B5E1F48682" />
         <ThemeScript />
-        <StructuredData />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Third Bracket',
+              url: baseUrl,
+              logo: `${baseUrl}logo.svg`,
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Third Bracket',
+              url: baseUrl,
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebPage',
+              url: baseUrl,
+              name: Settings.title,
+            }),
+          }}
+        />
         <meta name="facebook-domain-verification" content="jvzc8wivgbd7yp2malwzexmw1rj7rh" />
       </head>
       <body suppressHydrationWarning>
