@@ -27,7 +27,7 @@ export const Settings = {
   keywords: keywords,
   openGraph: {
     type: 'website',
-    title: 'Affordable Web Design Agency for UK Businesses | Third Bracket',
+    title: 'Trusted Web Design & Development Services in the UK | Third Bracket',
     description: description,
     siteName: sitename,
     images: [
@@ -41,7 +41,7 @@ export const Settings = {
   } as OpenGraph,
   twitter: {
     card: 'summary_large_image',
-    title: 'Affordable Web Design Agency for UK Businesses | Third Bracket',
+    title: 'Trusted Web Design & Development Services in the UK | Third Bracket',
     description: description,
     site: twitterhandle,
     images: [

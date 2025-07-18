@@ -10,8 +10,14 @@ import WorkCulture from './WorkCulture'
 import CTASection from '@/components/CTASection'
 
 export const metadata: Metadata = {
-  title: 'About Us',
-  description: 'Learn about Third Bracket, our team, values, and journey in web development.',
+  title: 'About Third Bracket',
+  description:
+    'We’re a UK-based web design studio focused on clean design, scalable architecture, and performance-first websites.',
+  openGraph: {
+    title: 'Meet the Team Behind Third Bracket',
+    description:
+      'Get to know our mission, values, and the team building high-performance websites for businesses.',
+  },
 }
 
 export default function AboutPage() {

@@ -9,6 +9,13 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Get In Touch',
+  description:
+    'Get in touch for web design consultations, project quotes, or partnership opportunities. We’d love to hear from you.',
+  openGraph: {
+    title: 'Contact Third Bracket',
+    description:
+      'Have a project or question? Reach out to our web design and development team today.',
+  },
 }
 
 async function getFormData() {

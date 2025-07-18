@@ -21,7 +21,7 @@ const baseUrl = Settings.metadataBase
 export const metadata: Metadata = {
   title: {
     template: `%s | ${Settings.title}`,
-    default: `Affordable Web Design Agency for UK Businesses |  ${Settings.title}`,
+    default: `Affordable Web Design & Development Company in UK  |  ${Settings.title}`,
   },
 
   metadataBase: new URL(baseUrl),
@@ -89,32 +89,66 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'Organization',
-              name: 'Third Bracket',
-              url: baseUrl,
-              logo: `${baseUrl}logo.svg`,
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              name: 'Third Bracket',
-              url: baseUrl,
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebPage',
-              url: baseUrl,
-              name: Settings.title,
+
+              '@graph': [
+                {
+                  '@type': 'WebPage',
+
+                  '@id': 'https://www.thirdbracket.co.uk/',
+
+                  url: 'https://www.thirdbracket.co.uk',
+
+                  name: 'Third Bracket',
+
+                  description:
+                    'Third Bracket is a UK-based web design and development agency offering affordable, high-performance websites for small businesses, startups, and agencies.',
+
+                  isPartOf: {
+                    '@id': 'https://www.thirdbracket.co.uk/#website',
+                  },
+
+                  about: {
+                    '@id': 'https://www.thirdbracket.co.uk/#organization',
+                  },
+                },
+
+                {
+                  '@type': 'WebSite',
+
+                  '@id': 'https://www.thirdbracket.co.uk/#website',
+
+                  url: 'https://www.thirdbracket.co.uk',
+
+                  name: 'Third Bracket',
+
+                  publisher: {
+                    '@id': 'https://www.thirdbracket.co.uk/#organization',
+                  },
+                },
+
+                {
+                  '@type': 'Organization',
+
+                  '@id': 'https://www.thirdbracket.co.uk/#organization',
+                  url: 'https://www.thirdbracket.co.uk',
+                  sameAs: [
+                    'https://www.thirdbracket.co.uk/about',
+
+                    'https://www.linkedin.com/company/thirdbracket/',
+
+                    'https://github.com/thirdbracketuk',
+                    'https://www.facebook.com/thirdbracket.co.uk/',
+                    'https://g.co/kgs/X44FuDP',
+                  ],
+                  logo: 'https://www.thirdbracket.co.uk/logo.svg',
+
+                  name: 'Third Bracket',
+                  description:
+                    'Third Bracket is a UK-based web design and development agency offering affordable, high-performance websites for small businesses, startups, and agencies.',
+                  email: 'hello@thirdbracket.co.uk',
+                  telephone: '+44-7425-694261',
+                },
+              ],
             }),
           }}
         />

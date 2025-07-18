@@ -202,9 +202,14 @@ const categories = [
 ]
 
 export const metadata: Metadata = {
-  title: 'Services',
+  title: 'Web Design & Development Services',
   description:
     'Explore our modern web development and digital marketing services crafted for UK agencies and small businesses. We deliver speed, SEO, and clean design.',
+  openGraph: {
+    title: 'Professional Web Development & Design Services',
+    description:
+      'We privide services in WordPress development, UI/Ux design, and digital marketing',
+  },
 }
 
 export default function ServicesPage() {

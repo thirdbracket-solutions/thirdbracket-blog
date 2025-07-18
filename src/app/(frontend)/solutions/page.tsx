@@ -10,13 +10,21 @@ import CTASection from '@/components/CTASection'
 import Steps from './Steps'
 
 export const metadata: Metadata = {
-  title: 'Web Development & Business Solutions',
+  title: 'Web Solutions Tailored for Your Business',
+  description:
+    'Explore custom web solutions that solve real business problems — from high-performance websites to scalable design systems.',
+  openGraph: {
+    title: 'Custom Web Solutions for Modern Businesses',
+    description:
+      'Third Bracket provides tailored website solutions using modern technologies like WordPress, Elementor, and Next.js.',
+  },
 }
 
 export default function Solutions() {
   return (
     <section>
       {/* Structured data now in layout.tsx */}
+
       <PageHeader
         title="Solutions"
         description="Comprehensive digital solutions for modern businesses"
