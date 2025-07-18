@@ -3,7 +3,7 @@ import { Bracket, Card } from '@thirdbracket/bracketui'
 
 const cards = [
   {
-    name: 'speed',
+    name: 'nextjs',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
@@ -13,12 +13,12 @@ const cards = [
       cover: '/website.svg',
 
       children:
-        'We build high-performance apps using Next.js — the core of our fast, modern development stack.',
+        'We use Next.js to build fast, scalable, and secure applications trusted by startups and enterprise teams alike.',
     },
   },
 
   {
-    name: 'scalability',
+    name: 'design',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
@@ -27,11 +27,11 @@ const cards = [
       ),
 
       children:
-        'Minimal, responsive interfaces inspired by Apple and Vercel — clean, user-focused, and sleek.',
+        'We create sleek, user-friendly interfaces focused on usability, branding, and accessibility — no clutter, just clarity.',
     },
   },
   {
-    name: 'white-label',
+    name: 'seo',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
@@ -40,11 +40,11 @@ const cards = [
       ),
 
       children:
-        'Our sites are fast, structured, and optimized for search engines and Core Web Vitals.',
+        'Every website we build is SEO-ready with structured data, speed optimization, and best practices baked in.',
     },
   },
   {
-    name: 'api',
+    name: 'affordable',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
@@ -53,11 +53,11 @@ const cards = [
       ),
 
       children:
-        'Enterprise-grade quality at accessible pricing — ideal for startups and growing UK brands.',
+        'We offer honest, competitive rates with no surprises — perfect for small businesses and growing teams.',
     },
   },
   {
-    name: 'design',
+    name: 'minimal',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
@@ -67,12 +67,12 @@ const cards = [
       cover: '/ui.svg',
 
       children:
-        'Slick, clutter-free designs that prioritize clarity and conversion across all devices.',
+        'Our design philosophy emphasizes whitespace, clarity, and strong visual hierarchy that enhances brand perception.',
     },
   },
 
   {
-    name: 'webaps',
+    name: 'pwa',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
@@ -82,12 +82,12 @@ const cards = [
       cover: '/webdev.svg',
 
       children:
-        'We build Progressive Web Apps that feel like native apps — fast, installable, and offline-ready.',
+        'Want app-like performance? We deliver progressive web apps (PWAs) that load fast and work offline.',
     },
   },
 
   {
-    name: 'ecommerce',
+    name: 'whitelabel',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
@@ -95,12 +95,13 @@ const cards = [
         </span>
       ),
 
-      children: 'Perfect for agencies — deliver premium web solutions under your own brand.',
+      children:
+        'We’re agency-ready. Our systems and components are reusable, documented, and easily integrated into your workflows.',
     },
   },
 
   {
-    name: 'custom',
+    name: 'devops',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
@@ -109,11 +110,11 @@ const cards = [
       ),
 
       children:
-        'From CI/CD to scalable infrastructure, we build with performance and deployment in mind.',
+        'We build for scale — CI/CD pipelines, staging environments, and performance monitoring come standard.',
     },
   },
   {
-    name: 'performance',
+    name: 'bracketui',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
@@ -123,7 +124,7 @@ const cards = [
       cover: '/performance.svg',
 
       children:
-        'Our custom Tailwind-based component system speeds up delivery without sacrificing quality.',
+        'Our custom-built, reusable component library accelerates delivery and ensures consistent UI across your site.',
     },
   },
 ]
@@ -137,11 +138,12 @@ export default function CardGrid() {
 
           <div className=" mb-8 md:mb-10 lg:mb-16 grid gap-6  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
             <h2 className="  text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right ">
-              Looking for Fast & Affordable Web Development in the UK?
+              {/* Looking for Fast & Affordable Web Development in the UK? */}
+              Why Choose Third Bracket?
             </h2>
             <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light dark:text-primary-300 text-primary-700 text-left sm:text-center lg:text-left">
-              We build modern, high-performance websites with clean UI, lightning-fast speed, and
-              SEO built in — all powered by Next.js. Here’s how we bring that promise to life:
+              Modern websites built with the latest technology, clean design principles, and
+              performance-first thinking — tailored for UK businesses.
             </p>
           </div>
 

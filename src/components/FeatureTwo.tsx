@@ -1,59 +1,81 @@
 'use client'
 
 import {
+  RiAdminLine,
   RiArticleLine,
+  RiBox1Line,
   RiLayout2Line,
+  RiNextjsLine,
+  RiSeoLine,
   RiShoppingCart2Line,
   RiStackLine,
   RiTailwindCssFill,
+  RiTailwindCssLine,
   RiUbuntuLine,
+  RiWordpressLine,
 } from 'react-icons/ri'
 
 import { Bracket, Card } from '@thirdbracket/bracketui'
 import Link from 'next/link'
+import { SiElementor } from 'react-icons/si'
 
 const features = [
   {
-    icon: RiStackLine,
-    header: 'Custom Full Stack Development',
+    icon: RiNextjsLine,
+    header: 'Custom Next.js',
     href: '/services',
     description:
-      'Full stack web development for UK businesses — combining robust backends with fast, modern Next.js frontends.',
+      'Scalable web apps with full-stack flexibility, built with TypeScript, API routes, and Next.js best practices.',
   },
   {
-    icon: RiArticleLine,
-    header: 'Modern Blog Platforms',
+    icon: RiWordpressLine,
+    header: 'Optimized WordPress',
     href: '/solutions',
     description:
-      'Affordable blog solutions using Notion as the CMS and Next.js for the frontend — perfect for growing content-driven brands.',
+      'Speed-optimized, secure, and easily manageable WordPress websites — perfect for content-heavy brands.',
   },
   {
-    icon: RiShoppingCart2Line,
-    header: 'Scalable Ecommerce Solutions',
+    icon: RiBox1Line,
+    header: 'Bracket UI',
     href: '/solutions',
     description:
-      'Built with Payload CMS and Next.js, our ecommerce platforms include a powerful admin panel and lightning-fast storefront.',
+      'Our in-house UI kit based on Tailwind CSS gives you a consistent, scalable design system from day one.',
   },
   {
-    icon: RiLayout2Line,
-    header: 'Minimal BracketUI Component Library',
+    icon: RiTailwindCssLine,
+    header: 'Tailwind CSS',
     href: '/solutions',
     description:
-      'Our open-source TailwindCSS component library — inspired by Vercel and Apple, optimized for speed and elegance.',
+      'Clean, responsive interfaces tailored to your brand — built with utility-first code and modern patterns.',
   },
-  {
-    icon: RiTailwindCssFill,
-    header: 'Tailored UI/UX Design',
-    href: '/services',
-    description:
-      'Custom interface design using TailwindCSS — responsive, minimal, and crafted to fit your brand perfectly.',
-  },
+
   {
     icon: RiUbuntuLine,
     header: 'Custom Infrastructure & DevOps',
     href: '/services',
     description:
-      'Reliable VPS setups, cloud integration, and DevOps workflows — built for scalability and long-term performance.',
+      'From deployment pipelines to domain setup and server configs — we take care of everything behind the scenes.',
+  },
+  {
+    icon: SiElementor,
+    header: 'Elementor Template',
+    href: '/services',
+    description:
+      'Pixel-perfect templates for Elementor built with design principles in mind and performance at heart.',
+  },
+  {
+    icon: RiAdminLine,
+    header: 'Custom Custom Admin',
+    href: '/services',
+    description:
+      'Need control? We build intuitive, secure admin dashboards that give you full ownership over your website.',
+  },
+  {
+    icon: RiSeoLine,
+    header: 'Digital Marketing',
+    href: '/services',
+    description:
+      'Integrated solutions for analytics, SEO, and performance tracking to grow traffic and boost conversions.',
   },
 ]
 
@@ -67,8 +89,8 @@ export function WhyChooseUsSection() {
               What We Build & Deliver
             </h2>
             <p className="dark:text-primary-400 text-primary-600 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
-              From modern blogs to full-stack platforms, we create fast, scalable web solutions for
-              UK businesses.
+              From modern websites to tailored systems, we help UK businesses thrive with reliable,
+              high-performance web development.
             </p>
           </div>
 

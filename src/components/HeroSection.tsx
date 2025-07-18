@@ -18,15 +18,16 @@ export const Hero: React.FC = () => {
         <div className="mx-auto max-w-screen-xl ">
           <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-[700px] lg:max-w-[980px]">
             <h1 className="text-[2.65rem] leading-none    md:text-5xl lg:text-6xl  text-left sm:text-center bg-gradient-text font-black dark:bg-gradient-text-dark text-transparent bg-clip-text   ">
-              Affordable Web Develoment Services for UK Startups
+              Affordable Web Design & Development for UK Startups
               {/* <span className=" font-semibold italic text-lg md:text-xl lg:text-2xl block mt-2 tracking-tight">
                 Powered by Next.js
               </span> */}
             </h1>
 
             <p className="dark:text-primary-400 text-primary-700 font-light text-base/[1.8rem]  lg:text-xl/[1.95rem] text-left sm:text-center   backdrop-blur-sm">
-              Build fast, modern, and SEO-optimized websites with a clean, minimal design — powered
-              by our Next.js expertise and tailored for UK businesses.
+              <strong>Third Bracket </strong>helps UK startups and small businesses launch
+              high-quality, conversion-ready websites. From design to development — we make your
+              online presence work for you.
             </p>
 
             <div className="flex justify-center gap-4 md:gap-6 backdrop-blur-[2px]">
@@ -41,7 +42,7 @@ export const Hero: React.FC = () => {
                 }}
                 href="/about"
               >
-                About Us
+                Learn About Us
                 <svg className="size-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
                   <path
                     fillRule="evenodd"
