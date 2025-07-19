@@ -1,6 +1,7 @@
 'use client'
 
 import { Bracket } from '@thirdbracket/bracketui'
+import clsx from 'clsx'
 import { useState } from 'react'
 
 type FAQItem = {
@@ -9,47 +10,46 @@ type FAQItem = {
 }
 
 const faqData: FAQItem[] = [
- {
-  question: 'What services does your full stack web development agency offer?',
-  answer:
-    'We offer full stack web development for startups and small businesses in the UK — including custom Next.js websites, WordPress/Elementor builds, SEO optimization, and post-launch support.',
-},
-{
-  question: 'Do you build websites using WordPress and Elementor?',
-  answer:
-    'Yes. For clients who prefer easy content editing, we build fast and modern websites using WordPress and Elementor — fully responsive and SEO-optimized.',
-},
-{
-  question: 'Why choose a Next.js web development agency like Third Bracket?',
-  answer:
-    'Next.js is perfect for businesses that need speed, scalability, and SEO. As a UK-based agency, we specialize in building modern websites that perform well and rank high.',
-},
-{
-  question: 'How do you ensure websites are SEO-optimized and fast?',
-  answer:
-    'We build every site — whether in Next.js or WordPress — with Core Web Vitals, semantic HTML, metadata, and performance in mind to meet Google’s SEO standards.',
-},
-{
-  question: 'Do you offer affordable web development services for UK startups?',
-  answer:
-    'Yes. We’re a lean team focused on delivering affordable, high-quality websites without the overhead of traditional agencies — perfect for startups and solo founders.',
-},
-{
-  question: 'Can you redesign my current website to improve speed and SEO?',
-  answer:
-    'Absolutely. We audit and rebuild websites for performance, accessibility, and SEO — whether your current site is built with WordPress, Squarespace, or something else.',
-},
-{
-  question: 'How long does a typical project take from start to launch?',
-  answer:
-    'We can launch small sites in 2–3 weeks. Larger builds with custom features usually take 4–6 weeks. We’ll give you a clear timeline based on scope.',
-},
-{
-  question: 'Do you provide ongoing support after launch?',
-  answer:
-    'Yes. We offer flexible maintenance and support packages — including content updates, plugin care (for WordPress), and performance monitoring for custom sites.',
-},
-  
+  {
+    question: 'What services does your full stack web development agency offer?',
+    answer:
+      'We offer full stack web development for startups and small businesses in the UK — including custom Next.js websites, WordPress/Elementor builds, SEO optimization, and post-launch support.',
+  },
+  {
+    question: 'Do you build websites using WordPress and Elementor?',
+    answer:
+      'Yes. For clients who prefer easy content editing, we build fast and modern websites using WordPress and Elementor — fully responsive and SEO-optimized.',
+  },
+  {
+    question: 'Why choose a Next.js web development agency like Third Bracket?',
+    answer:
+      'Next.js is perfect for businesses that need speed, scalability, and SEO. As a UK-based agency, we specialize in building modern websites that perform well and rank high.',
+  },
+  {
+    question: 'How do you ensure websites are SEO-optimized and fast?',
+    answer:
+      'We build every site — whether in Next.js or WordPress — with Core Web Vitals, semantic HTML, metadata, and performance in mind to meet Google’s SEO standards.',
+  },
+  {
+    question: 'Do you offer affordable web development services for UK startups?',
+    answer:
+      'Yes. We’re a lean team focused on delivering affordable, high-quality websites without the overhead of traditional agencies — perfect for startups and solo founders.',
+  },
+  {
+    question: 'Can you redesign my current website to improve speed and SEO?',
+    answer:
+      'Absolutely. We audit and rebuild websites for performance, accessibility, and SEO — whether your current site is built with WordPress, Squarespace, or something else.',
+  },
+  {
+    question: 'How long does a typical project take from start to launch?',
+    answer:
+      'We can launch small sites in 2–3 weeks. Larger builds with custom features usually take 4–6 weeks. We’ll give you a clear timeline based on scope.',
+  },
+  {
+    question: 'Do you provide ongoing support after launch?',
+    answer:
+      'Yes. We offer flexible maintenance and support packages — including content updates, plugin care (for WordPress), and performance monitoring for custom sites.',
+  },
 ]
 
 export const FAQ = () => {
@@ -76,17 +76,30 @@ export const FAQ = () => {
                 <button
                   onClick={() => toggle(i)}
                   className="w-full flex justify-between items-center px-6 py-4 font-medium text-left text-primary-900 dark:text-primary-100  focus:outline-none"
+                  aria-expanded={openIndex === i}
+                  aria-controls={`faq-answer-${i}`}
                 >
                   <span>{item.question}</span>
                   <span className="ml-4 bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text">
                     {openIndex === i ? '-' : '+'}
                   </span>
                 </button>
-                {openIndex === i && (
+                {/* {openIndex === i && (
                   <div className="px-6 pb-4 text-primary-800 dark:text-primary-200 text-sm leading-relaxed">
                     {item.answer}
                   </div>
-                )}
+                )} */}
+                {/* ✅ Answer is always rendered into DOM */}
+                <div
+                  id={`faq-answer-${i}`}
+                  className={clsx(
+                    'px-6 pb-4 text-primary-800 dark:text-primary-200 text-sm leading-relaxed transition-all duration-300 overflow-hidden',
+                    openIndex === i ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0',
+                  )}
+                  aria-hidden={openIndex !== i}
+                >
+                  <p>{item.answer}</p>
+                </div>
               </div>
             ))}
           </div>

@@ -167,7 +167,7 @@ export default function CardGrid() {
                       hover:
                         '[@media(hover:hover)]:hover:border-opacity-100    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100 ',
 
-                      text: 'dark:text-primary-400 text-primary-600  font-light leading-[1.45]',
+                      text: 'text-primary-500 dark:text-primary-600 leading-[1.45] font-[350px]',
                     }}
                     className="!delay-50   motion-reduce:!transition-none motion-reduce:hover:!transform-none "
                     {...props}

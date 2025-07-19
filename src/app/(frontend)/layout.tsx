@@ -57,6 +57,141 @@ export const metadata: Metadata = {
   },
 }
 
+// const organizationJsonLd = {
+//   '@context': 'https://schema.org',
+
+//   '@type': 'Organization',
+
+//   name: 'Third Bracket',
+
+//   url: 'https://www.thirdbracket.co.uk',
+
+//   sameAs: [
+//     'https://www.thirdbracket.co.uk/about',
+
+//     'https://www.linkedin.com/company/thirdbracket/',
+
+//     'https://github.com/thirdbracketuk',
+//     'https://www.facebook.com/thirdbracket.co.uk/',
+//     'https://g.co/kgs/X44FuDP',
+//   ],
+
+//   logo: {
+//     '@type': 'ImageObject',
+//     url: 'https://www.thirdbracket.co.uk/logo.svg',
+//   },
+
+//   areaServed: [
+//     {
+//       '@type': 'Country',
+
+//       name: 'United Kingdom',
+//     },
+
+//     {
+//       '@type': 'Country',
+
+//       name: 'Bangladesh',
+//     },
+//   ],
+
+//   description:
+//     'Third Bracket is a UK-based web design and development agency offering affordable, high-performance websites for small businesses, startups, and agencies.',
+//   email: 'hello@thirdbracket.co.uk',
+//   telephone: '+44-7425-694261',
+// }
+
+const globalJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Website',
+  url: 'https://www.thirdbracket.co.uk',
+  name: 'Third Bracket',
+
+  mainEntity: {
+    '@type': 'ProfessionalService',
+    name: 'Third Bracket',
+    url: 'https://www.thirdbracket.co.uk',
+    logo: {
+      '@type': 'ImageObject',
+      url: 'https://www.thirdbracket.co.uk/logo.svg',
+    },
+    description:
+      'Third Bracket is a UK-based digital agency offering affordable web devlopment, UI/UX design, and digital marketing services...',
+    foundingDate: '2024',
+    email: 'hello@thirdbracket.co.uk',
+    telephone: '+44-7425-694261',
+    founder: {
+      '@type': 'Person',
+      name: 'Musabbir Sagar',
+    },
+    sameAs: [
+      'https://www.facebook.com/thirdbracket.co.uk/',
+      'https://www.linkedin.com/company/thirdbracket/',
+      'https://github.com/thirdbracketuk',
+    ],
+    makesOffer: [
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'Custom Web Development' },
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'WordPress Website Development' },
+      },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tailwind UI Design' } },
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'VPS setup & Cloud Integration' },
+      },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Search Engine Optimization' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Custom Admin Panel' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Digital Marketing' } },
+      {
+        '@type': 'Offer',
+        itemOffered: { '@type': 'Service', name: 'Video Production and Photography' },
+      },
+    ],
+
+    areaServed: [
+      {
+        '@type': 'Country',
+
+        name: 'United Kingdom',
+      },
+
+      {
+        '@type': 'Country',
+
+        name: 'Bangladesh',
+      },
+    ],
+  },
+}
+
+// const websiteJsonLd = {
+//   '@context': 'https://schema.org',
+
+//   '@type': 'WebSite',
+
+//   url: 'https://www.thirdbracket.co.uk',
+
+//   name: 'Third Bracket',
+
+//   publisher: {
+//     '@type': 'Organization',
+
+//     name: 'Third Bracket',
+//   },
+
+//   potentialAction: {
+//     '@type': 'SearchAction',
+
+//     target: 'https://thirdbracket.com/search?q={search_term_string}',
+
+//     'query-input': 'required name=search_term_string',
+//   },
+// }
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
@@ -85,6 +220,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="msvalidate.01" content="46803F5EEF01F535EF3999B5E1F48682" />
         <ThemeScript />
         <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([globalJsonLd]),
+          }}
+        />
+        {/* <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -151,7 +292,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ],
             }),
           }}
-        />
+        /> */}
         <meta name="facebook-domain-verification" content="jvzc8wivgbd7yp2malwzexmw1rj7rh" />
       </head>
       <body suppressHydrationWarning>
