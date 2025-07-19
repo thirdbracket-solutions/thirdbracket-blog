@@ -17,8 +17,8 @@ export const Hero: React.FC = () => {
       <Bracket fluid centered>
         <div className="mx-auto max-w-screen-xl ">
           <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-[700px] lg:max-w-[980px]">
-            <h1 className="text-[2.65rem] leading-tight    md:text-5xl lg:text-6xl  text-left sm:text-center bg-gradient-text font-black dark:bg-gradient-text-dark text-transparent bg-clip-text   ">
-              Affordable Web Design & Development for UK Startups
+            <h1 className="text-[2.65rem] leading-none    md:text-5xl lg:text-6xl  text-left sm:text-center bg-gradient-text font-black dark:bg-gradient-text-dark text-transparent bg-clip-text   ">
+              Affordable Web Design & Development for UK Businesses
               {/* <span className=" font-semibold italic text-lg md:text-xl lg:text-2xl block mt-2 tracking-tight">
                 Powered by Next.js
               </span> */}
@@ -30,10 +30,11 @@ export const Hero: React.FC = () => {
               online presence work for you.
             </p>
 
-            <div className="flex justify-center gap-4 md:gap-6 backdrop-blur-[2px]">
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 backdrop-blur-[2px]">
               <Button
                 size="md"
                 as={Link}
+                className="flex-1 min-w-[150px]"
                 theme={{
                   background: 'bg-gradient-text dark:bg-gradient-text-dark',
                   hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
@@ -55,6 +56,7 @@ export const Hero: React.FC = () => {
               <Button
                 outline
                 as={Link}
+                className="flex-1 min-w-[150px]"
                 href="#subscription"
                 size="md"
                 theme={{
@@ -65,9 +67,9 @@ export const Hero: React.FC = () => {
                   text: 'text-primary-900 dark:text-primary-100 ',
                 }}
               >
-                <svg className="size-4 mr-2" fill="currentColor" viewBox="0 0 1000 1000">
+                {/* <svg className="size-4 mr-2" fill="currentColor" viewBox="0 0 1000 1000">
                   <path d="M860 265h-61q-8 0-13.5 5.5T780 284v246q0 39-28 67t-68 28H279q-8 0-13.5 5.5T260 644v61q0 17 11.5 28.5T300 745h415q25 0 43 18l110 110q4 4 9.5 5t11-1 8.5-7 3-11V305q0-17-11.5-28.5T860 265zM700 505V145q0-17-11.5-28.5T660 105H140q-17 0-28.5 11.5T100 145v514q0 6 3 11t8.5 7 11 1 9.5-5l110-110q18-18 43-18h375q17 0 28.5-12t11.5-28z" />
-                </svg>
+                </svg> */}
                 Start a Partnership
               </Button>
             </div>
