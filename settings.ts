@@ -6,17 +6,18 @@ export const gtmconnected = true
 
 export const sitename = 'Third Bracket'
 export const description =
-  'Third Bracket is a fully remote digital agency offering affordable web development, UI/UX design, and digital marketing services to clients worldwide.'
+  'Third Bracket is a trusted digital agency delivering affordable web development, UI/UX design, and digital marketing for businesses wordldwide.'
 export const keywords = [
-  'Full Stack Web Development Agency UK',
-  'Next.js Web Development Agency UK',
-  'Modern Web Design and Development UK',
-  'Fast SEO-Optimized Websites UK',
-  'Affordable Web Development Services UK',
-  'Clean and Minimal Website Design UK',
+  'web design agency',
+  'web design company',
+  'digital marketing agency',
+  'web development agency',
+  'modern web development',
+  'Third Bracket',
+  'affordable website development',
 ]
 export const urlimage = '/og-image.png'
-export const imagealt = 'Trusted Web Design & Development Services in the UK | Third Bracket'
+export const imagealt = 'Affordable Web Design, Dvelopment & Marketing Solutions | Third Bracket'
 export const twitterhandle = '@ThirdbracketStudio'
 
 export const companyname = 'Third Bracket'
@@ -25,8 +26,8 @@ export const companylink = 'https://www.thirdbracket.co.uk'
 export const socialLinks = {
   facebook: 'https://www.facebook.com/thirdbracket.co.uk/',
   linkedin: 'https://www.linkedin.com/company/thirdbracket/',
-  github: 'https://github.com/thirdbracketuk',
-  googleBusiness: 'https://g.co/kgs/X44FuDP',
+  github: 'https://github.com/https://github.com/thirdbracket-co-uk',
+  googleBusiness: 'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
 }
 
 export type FAQItem = {
