@@ -24,10 +24,12 @@ export const companyname = 'Third Bracket'
 export const companylink = 'https://www.thirdbracket.co.uk'
 
 export const socialLinks = {
-  facebook: 'https://www.facebook.com/thirdbracket.co.uk/',
+  facebook: 'https://www.facebook.com/thirdbracketuk/',
   linkedin: 'https://www.linkedin.com/company/thirdbracket/',
-  github: 'https://github.com/https://github.com/thirdbracket-co-uk',
+  github: 'https://github.com/thirdbracketuk',
   googleBusiness: 'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
+  instagram: 'https://www.instagram.com/thirdbracketuk',
+  youtube: 'https://studio.youtube.com/channel/UC-GXwZTpkrgvr_YCuiFV2kw',
 }
 
 export type FAQItem = {

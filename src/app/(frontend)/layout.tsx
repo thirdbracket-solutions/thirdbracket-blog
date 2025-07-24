@@ -144,15 +144,25 @@ const websiteJsonLd = {
       'https://www.thirdbracket.co.uk/about',
 
       'https://www.linkedin.com/company/thirdbracket/',
+      'https://studio.youtube.com/channel/UC-GXwZTpkrgvr_YCuiFV2kw',
 
       'https://github.com/thirdbracketuk',
-      'https://www.facebook.com/thirdbracket.co.uk/',
-      'https://g.co/kgs/X44FuDP',
+      'https://www.facebook.com/thirdbracketuk/',
+      'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
+      'https://www.instagram.com/thirdbracketuk',
     ],
 
     logo: {
       '@type': 'ImageObject',
       url: 'https://www.thirdbracket.co.uk/logo.svg',
+    },
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '340 Dickenson Rd',
+      addressLocality: 'Longsight',
+      addressCountry: 'GB',
+      addressRegion: 'North-west',
+      postalCode: 'M130NG',
     },
 
     areaServed: [

@@ -53,7 +53,7 @@ const team = [
 
 export default function Team() {
   return (
-    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
+    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]" id="team">
       <Bracket fluid centered padding="medium">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">

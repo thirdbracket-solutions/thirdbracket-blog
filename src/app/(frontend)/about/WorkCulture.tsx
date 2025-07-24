@@ -31,7 +31,7 @@ const values = [
 
 export default function WorkCulture() {
   return (
-    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
+    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]" id="culture">
       <Bracket fluid centered padding="medium">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
@@ -71,7 +71,9 @@ export default function WorkCulture() {
                 <div className="w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-secondary-dark dark:bg-gradient-secondary border border-primary-100 dark:border-primary-900 flex items-center justify-center">
                   <Icon size={28} className="text-primary-900 dark:text-primary-100" />
                 </div>
-                <h4 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-2">{value.title}</h4>
+                <h4 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-2">
+                  {value.title}
+                </h4>
                 <p className="text-primary-600 dark:text-primary-400">{value.description}</p>
               </div>
             )

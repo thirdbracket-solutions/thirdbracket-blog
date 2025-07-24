@@ -39,7 +39,7 @@ const roadmapItems = [
 
 export default function Roadmap() {
   return (
-    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
+    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]" id="roadmap">
       <Bracket fluid centered padding="medium">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">
@@ -69,7 +69,9 @@ export default function Roadmap() {
                       <div className="inline-block px-3 py-1 bg-accent-100 dark:bg-accent-900 text-accent-800 dark:text-accent-200 rounded-full text-sm font-medium mb-3">
                         {item.year}
                       </div>
-                      <h3 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-2">{item.title}</h3>
+                      <h3 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-2">
+                        {item.title}
+                      </h3>
                       <p className="text-primary-600 dark:text-primary-400">{item.description}</p>
                     </div>
                   </div>

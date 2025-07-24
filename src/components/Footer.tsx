@@ -9,7 +9,15 @@ import {
   ThemeToggle,
 } from '@thirdbracket/bracketui'
 
-import { RiFacebookLine, RiGithubLine, RiLinkedinLine, RiWhatsappLine } from 'react-icons/ri'
+import {
+  RiFacebookLine,
+  RiGithubLine,
+  RiGoogleLine,
+  RiInstagramLine,
+  RiLinkedinLine,
+  RiWhatsappLine,
+  RiYoutubeLine,
+} from 'react-icons/ri'
 import { Logo } from './Logo/Logo'
 
 const SiteFooter = () => {
@@ -32,7 +40,7 @@ const SiteFooter = () => {
 
         <div className="flex  gap-x-6 justify-start items-center">
           <FooterSocial
-            href="https://www.facebook.com/thirdbracket.co.uk"
+            href="https://www.facebook.com/thirdbracketuk"
             icon={<RiFacebookLine size={20} />}
             label="Facebook"
           />
@@ -42,14 +50,24 @@ const SiteFooter = () => {
             label="LinkedIn"
           />
           <FooterSocial
-            href="https://github.com/thirdbracket-solutions"
+            href="https://github.com/thirdbracketuk"
             icon={<RiGithubLine size={20} />}
             label="Facebook"
           />
           <FooterSocial
-            href="https://wa.me/881765692886"
-            icon={<RiWhatsappLine size={20} />}
-            label="Whatsapp"
+            href="https://www.instagram.com/thirdbracketuk"
+            icon={<RiInstagramLine size={20} />}
+            label="Instagram"
+          />
+          <FooterSocial
+            href="https://studio.youtube.com/channel/UC-GXwZTpkrgvr_YCuiFV2kw"
+            icon={<RiYoutubeLine size={20} />}
+            label="Youtube"
+          />
+          <FooterSocial
+            href="https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket"
+            icon={<RiGoogleLine size={20} />}
+            label="Business"
           />
         </div>
       </FooterSection>
@@ -61,7 +79,7 @@ const SiteFooter = () => {
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="/about#company"
         >
           Company
         </FooterLink>
@@ -71,7 +89,7 @@ const SiteFooter = () => {
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="/about#team"
         >
           Team
         </FooterLink>
@@ -81,7 +99,7 @@ const SiteFooter = () => {
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="/about#roadmap"
         >
           Roadmap
         </FooterLink>
@@ -91,7 +109,7 @@ const SiteFooter = () => {
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="/about#opensource"
         >
           Open Source
         </FooterLink>
@@ -101,7 +119,7 @@ const SiteFooter = () => {
             states:
               'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
           }}
-          href="#"
+          href="/about#culture"
         >
           Work culture
         </FooterLink>

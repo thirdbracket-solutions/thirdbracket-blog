@@ -27,7 +27,7 @@ const projects = [
 
 export default function OpenSource() {
   return (
-    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]">
+    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]" id="opensource">
       <Bracket fluid centered padding="medium">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">
@@ -44,7 +44,9 @@ export default function OpenSource() {
               key={index}
               className="border border-primary-200 dark:border-primary-800 rounded-lg p-6 bg-white dark:bg-black"
             >
-              <h3 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-3">{project.name}</h3>
+              <h3 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-3">
+                {project.name}
+              </h3>
               <p className="text-primary-600 dark:text-primary-400 mb-4">{project.description}</p>
               <div className="flex justify-between items-center">
                 <div className="flex items-center text-primary-500 dark:text-primary-400">
