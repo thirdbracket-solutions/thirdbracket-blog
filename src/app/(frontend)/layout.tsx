@@ -173,22 +173,13 @@ const websiteJsonLd = {
       postalCode: 'M130NG',
     },
 
-    areaServed: [
-      {
-        '@type': 'Country',
-
-        name: 'United Kingdom',
-      },
-
-      {
-        '@type': 'Country',
-
-        name: 'Bangladesh',
-      },
-    ],
+    areaServed: {
+      '@type': 'AdministrativeArea',
+      name: 'Manchester',
+    },
 
     description:
-      'Third Bracket is a fully remote digital agency offering affordable web development, UI/UX design, and digital marketing services to clients worldwide.',
+      'Third Bracket is a UK based fully remote digital agency offering affordable web development, UI/UX design, and digital marketing services to clients worldwide.',
     email: 'hello@thirdbracket.co.uk',
     telephone: '+44-7425-694261',
   },
