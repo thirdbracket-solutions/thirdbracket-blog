@@ -60,7 +60,7 @@ const SiteFooter = () => {
             label="Instagram"
           />
           <FooterSocial
-            href="https://studio.youtube.com/channel/UC-GXwZTpkrgvr_YCuiFV2kw"
+            href="https://www.youtube.com/@thirdbracketuk"
             icon={<RiYoutubeLine size={20} />}
             label="Youtube"
           />

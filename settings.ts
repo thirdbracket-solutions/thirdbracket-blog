@@ -29,7 +29,7 @@ export const socialLinks = {
   github: 'https://github.com/thirdbracketuk',
   googleBusiness: 'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
   instagram: 'https://www.instagram.com/thirdbracketuk',
-  youtube: 'https://studio.youtube.com/channel/UC-GXwZTpkrgvr_YCuiFV2kw',
+  youtube: 'https://www.youtube.com/@thirdbracketuk',
 }
 
 export type FAQItem = {

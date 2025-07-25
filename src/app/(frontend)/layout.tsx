@@ -144,12 +144,20 @@ const websiteJsonLd = {
       'https://www.thirdbracket.co.uk/about',
 
       'https://www.linkedin.com/company/thirdbracket/',
-      'https://studio.youtube.com/channel/UC-GXwZTpkrgvr_YCuiFV2kw',
+      'https://www.youtube.com/@thirdbracketuk',
 
       'https://github.com/thirdbracketuk',
       'https://www.facebook.com/thirdbracketuk/',
       'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
       'https://www.instagram.com/thirdbracketuk',
+    ],
+
+    image: [
+      'https://www.thirdbracket.co.uk/logo.svg',
+      'https://www.thirdbracket.co.uk/og-image.png',
+      'https://www.thirdbracket.co.uk/services/web.svg',
+      'https://www.thirdbracket.co.uk/services/ui.svg',
+      'https://www.thirdbracket.co.uk/services/digital.svg',
     ],
 
     logo: {
