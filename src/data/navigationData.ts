@@ -56,7 +56,8 @@ const mobileMegamenuTheme = {
 
 // Define navigation data
 export const mainNavItems: NavlinkItem[] = [
-  { label: 'Case Studies', href: '/case-studies' },
+  // { label: 'Case Studies', href: '/case-studies' },
+  { label: 'Portfolios', href: '/portfolio' },
   { label: 'About', href: '/about' },
   { label: 'Blog', href: '/posts' },
   { label: 'Contact', href: '/contact' },

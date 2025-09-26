@@ -15,6 +15,7 @@ export const keywords = [
   'modern web development',
   'Third Bracket',
   'affordable website development',
+  'web development services',
 ]
 export const urlimage = '/og-image.png'
 export const imagealt = 'Affordable Web Design, Dvelopment & Marketing Solutions | Third Bracket'
@@ -25,11 +26,13 @@ export const companylink = 'https://www.thirdbracket.co.uk'
 
 export const socialLinks = {
   facebook: 'https://www.facebook.com/thirdbracketuk/',
+  twitter: 'https://x.com/thirdbracketuk',
   linkedin: 'https://www.linkedin.com/company/thirdbracket/',
   github: 'https://github.com/thirdbracketuk',
   googleBusiness: 'https://www.google.com/search?kgmid=/g/11lnppz35t&q=Third+Bracket',
   instagram: 'https://www.instagram.com/thirdbracketuk',
   youtube: 'https://www.youtube.com/@thirdbracketuk',
+  dribble: 'https://dribbble.com/thirdbracket',
 }
 
 export type FAQItem = {

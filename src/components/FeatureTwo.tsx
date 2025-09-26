@@ -4,6 +4,7 @@ import {
   RiAdminLine,
   RiArticleLine,
   RiBox1Line,
+  RiBracesLine,
   RiLayout2Line,
   RiNextjsLine,
   RiSearchLine,
@@ -72,6 +73,13 @@ const features = [
     description:
       'Integrated solutions for analytics, SEO, and performance tracking to grow traffic and boost conversions.',
   },
+  {
+    icon: RiBracesLine,
+    header: 'Bracket UI',
+    href: '/services',
+    description:
+      'BracketUI is a lightweight React component library designed to help developers ship consistent, responsive UIs faster. Built with Tailwind CSS utilities and modern patterns, it balances flexibility with simplicity.',
+  },
 ]
 
 export function WhyChooseUsSection() {
@@ -89,7 +97,7 @@ export function WhyChooseUsSection() {
             </p>
           </div>
 
-          <div className="space-y-8 sm:grid sm:grid-cols-2 sm:gap-8 sm:space-y-0 lg:grid-cols-3">
+          <div className="space-y-8 sm:grid sm:grid-cols-2 sm:gap-8 sm:space-y-0 lg:grid-cols-3 ">
             {features.map(({ icon: Icon, header, description, href }, index) => (
               <Card
                 key={index}
@@ -97,6 +105,7 @@ export function WhyChooseUsSection() {
                 as={Link}
                 href={href}
                 isIcon
+                className="last:col-span-2  last:rounded-e-full"
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   border:

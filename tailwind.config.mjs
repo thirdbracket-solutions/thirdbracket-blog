@@ -20,6 +20,8 @@ const config = {
         sans: ['var(--font-roboto)'],
       },
       backgroundImage: {
+        'gradient-gray':
+          'conic-gradient(from 180deg at 50% 50%,#6B7280 0%, #6E758A 20%, #64748B 40%, #6E758A 60%, #6B7280 80%, #6B7280 100%)',
         'gradient-primary-dark':
           'conic-gradient(from 0deg at center, #fff, #f6f7f8, #f7f7f7, #f6f7f8,#f7f7f7, #fff  )',
         'gradient-primary':
