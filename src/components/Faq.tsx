@@ -14,8 +14,8 @@ export const FAQ = () => {
 
   return (
     <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] ">
-      <Bracket fluid centered>
-        <div className="mx-auto max-w-screen-xl">
+      <Bracket fluid centered padding="small">
+        <div className="mx-auto md:max-w-screen-xl">
           <h2 className="text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-center mb-14 ">
             FAQs
           </h2>

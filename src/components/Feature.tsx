@@ -132,8 +132,8 @@ const cards = [
 export default function CardGrid() {
   return (
     <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]  ">
-      <Bracket fluid centered padding="medium">
-        <div className="mx-auto max-w-screen-xl">
+      <Bracket fluid centered padding="small">
+        <div className="mx-auto md:max-w-screen-xl">
           {/* Header */}
 
           <div className=" mb-8 md:mb-10 lg:mb-16 grid gap-6  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">

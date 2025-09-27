@@ -38,46 +38,44 @@ const steps = [
 export default function Steps() {
   return (
     <section className="py-[4.5rem] sm:py-[5rem]  lg:py-[6rem] ">
-      <Bracket fluid centered padding="medium">
-        <div className="text-center mb-12 md:mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-primary-950 dark:text-primary-50 mb-4 ">
-            How We Work
-          </h2>
-          <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-500 mb-6">
-            Our streamlined process ensures efficient delivery of high-quality solutions tailored to
-            your needs
-          </p>
-        </div>
+      <div className="text-center mb-12 md:mb-16">
+        <h2 className="text-3xl lg:text-4xl font-bold text-primary-950 dark:text-primary-50 mb-4 ">
+          How We Work
+        </h2>
+        <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-500 mb-6">
+          Our streamlined process ensures efficient delivery of high-quality solutions tailored to
+          your needs
+        </p>
+      </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, index) => {
-            const Icon = step.icon
-            return (
-              <div key={index} className="relative flex flex-col items-center text-center group">
-                {/* Connector Line */}
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-8 left-1/2 w-full h-2 bg-primary-100 dark:bg-primary-900"></div>
-                )}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {steps.map((step, index) => {
+          const Icon = step.icon
+          return (
+            <div key={index} className="relative flex flex-col items-center text-center group">
+              {/* Connector Line */}
+              {index < steps.length - 1 && (
+                <div className="hidden lg:block absolute top-8 left-1/2 w-full h-2 bg-primary-100 dark:bg-primary-900"></div>
+              )}
 
-                {/* Icon */}
-                <div
-                  className={`w-16 h-16 mb-6 rounded-2xl bg-gradient-secondary-dark dark:bg-gradient-secondary border border-primary-100 dark:border-primary-900 flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform duration-300 ${step.color}`}
-                >
-                  <Icon size={28} />
-                </div>
+              {/* Icon */}
+              <div
+                className={`w-16 h-16 mb-6 rounded-2xl bg-gradient-secondary-dark dark:bg-gradient-secondary border border-primary-100 dark:border-primary-900 flex items-center justify-center relative z-10 group-hover:scale-110 transition-transform duration-300 ${step.color}`}
+              >
+                <Icon size={28} />
+              </div>
 
-                {/* Content */}
-                <h3 className="lg:text-base text-sm font-semibold text-primary-800 dark:text-primary-200 ">
-                  {step.title}
-                </h3>
-                {/* <p className="text-primary-950/70 dark:text-primary-50/60 text-sm leading-relaxed">
+              {/* Content */}
+              <h3 className="lg:text-base text-sm font-semibold text-primary-800 dark:text-primary-200 ">
+                {step.title}
+              </h3>
+              {/* <p className="text-primary-950/70 dark:text-primary-50/60 text-sm leading-relaxed">
                   {step.description}
                 </p> */}
-              </div>
-            )
-          })}
-        </div>
-      </Bracket>
+            </div>
+          )
+        })}
+      </div>
     </section>
   )
 }

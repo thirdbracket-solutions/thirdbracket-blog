@@ -6,6 +6,7 @@ import PageHeader from '@/components/PageHeader'
 import { FormBlock } from '@/blocks/Form/Component'
 // Structured data now in layout.tsx
 import { Metadata } from 'next'
+import { Bracket } from '@thirdbracket/bracketui'
 
 export const metadata: Metadata = {
   title: 'Get In Touch',
@@ -49,11 +50,15 @@ export default async function ContactPage() {
 
   return (
     <section>
-      {/* Structured data now in layout.tsx */}
-      <PageHeader title="Contact Us" description="Get in touch with our team" />
-      <div className="max-w-7xl mx-auto ">
-        <FormBlock form={fallbackForm} enableIntro={false} />
-      </div>
+      <Bracket fluid centered padding="small">
+        <div className="md:max-w-screen-xl mx-auto">
+          {/* Structured data now in layout.tsx */}
+          <PageHeader title="Contact Us" description="Get in touch with our team" />
+          <div className="max-w-7xl mx-auto ">
+            <FormBlock form={fallbackForm} enableIntro={false} />
+          </div>
+        </div>
+      </Bracket>
     </section>
   )
 }

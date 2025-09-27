@@ -25,6 +25,7 @@ import {
   FaVectorSquare,
 } from 'react-icons/fa'
 import CTASection from '@/components/CTASection'
+import { Bracket } from '@thirdbracket/bracketui'
 
 const categories = [
   {
@@ -215,30 +216,34 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <section>
-      {/* Structured data now in layout.tsx */}
-      <PageHeader
-        title="Services"
-        description="Full-service modern web development & marketing for small businesses, agencies, and startups in the UK."
-      />
+      <Bracket fluid centered padding="small">
+        <div className="md:max-w-screen-xl mx-auto">
+          {/* Structured data now in layout.tsx */}
+          <PageHeader
+            title="Services"
+            description="Full-service modern web development & marketing for small businesses, agencies, and startups in the UK."
+          />
 
-      {categories.map((cat, index) => (
-        <Category key={index} {...cat} index={index} />
-      ))}
+          {categories.map((cat, index) => (
+            <Category key={index} {...cat} index={index} />
+          ))}
 
-      <Stats />
+          <Stats />
 
-      <CTASection
-        title="Ready to Build Your Next Project?"
-        description="Let's create something amazing together. Our team is ready to help you bring your vision to life."
-        primary={{
-          label: 'Contact Us',
-          href: '/contact',
-        }}
-        secondary={{
-          label: 'View Solutions',
-          href: '/solutions',
-        }}
-      />
+          <CTASection
+            title="Ready to Build Your Next Project?"
+            description="Let's create something amazing together. Our team is ready to help you bring your vision to life."
+            primary={{
+              label: 'Contact Us',
+              href: '/contact',
+            }}
+            secondary={{
+              label: 'View Solutions',
+              href: '/solutions',
+            }}
+          />
+        </div>
+      </Bracket>
     </section>
   )
 }

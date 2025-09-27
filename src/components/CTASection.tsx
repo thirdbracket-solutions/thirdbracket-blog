@@ -24,8 +24,8 @@ const CTASection = ({
 }: CTASectionProps) => {
   return (
     <section className={` pb-[2rem] sm:pb-[2.5rem] lg:pb-[3rem]   ${className}`}>
-      <Bracket fluid centered>
-        <div className="max-w-screen-xl bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-200 dark:border-primary-800  ">
+      <Bracket fluid centered padding="small">
+        <div className="md:max-w-screen-xl mx-auto bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-200 dark:border-primary-800  ">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 lg:gap-12">
             <div>
               <h2 className="text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4 lg:mb-6">

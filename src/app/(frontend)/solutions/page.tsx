@@ -8,6 +8,7 @@ import CategorySection from './CategorySection'
 
 import CTASection from '@/components/CTASection'
 import Steps from './Steps'
+import { Bracket } from '@thirdbracket/bracketui'
 
 export const metadata: Metadata = {
   title: 'Web Solutions Tailored for Your Business',
@@ -24,29 +25,32 @@ export default function Solutions() {
   return (
     <section>
       {/* Structured data now in layout.tsx */}
+      <Bracket fluid centered padding="small">
+        <div className="md:max-w-screen-xl mx-auto">
+          <PageHeader
+            title="Solutions"
+            description="Comprehensive digital solutions for modern businesses"
+          />
 
-      <PageHeader
-        title="Solutions"
-        description="Comprehensive digital solutions for modern businesses"
-      />
+          {solutionCategories.map((category, index) => (
+            <CategorySection key={index} {...category} />
+          ))}
+          <Steps />
 
-      {solutionCategories.map((category, index) => (
-        <CategorySection key={index} {...category} />
-      ))}
-      <Steps />
-
-      <CTASection
-        title="Ready to Transform Your Digital Presence?"
-        description="Let us discuss how our solutions can help you achieve your goals"
-        primary={{
-          label: 'Contact Us',
-          href: '/contact',
-        }}
-        secondary={{
-          label: 'View Services',
-          href: '/services',
-        }}
-      />
+          <CTASection
+            title="Ready to Transform Your Digital Presence?"
+            description="Let us discuss how our solutions can help you achieve your goals"
+            primary={{
+              label: 'Contact Us',
+              href: '/contact',
+            }}
+            secondary={{
+              label: 'View Services',
+              href: '/services',
+            }}
+          />
+        </div>
+      </Bracket>
     </section>
   )
 }

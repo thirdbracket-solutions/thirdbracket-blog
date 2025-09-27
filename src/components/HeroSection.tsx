@@ -14,8 +14,8 @@ const featuredLogos = [
 export const Hero: React.FC = () => {
   return (
     <section className=" py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:36px_36px]">
-      <Bracket fluid centered>
-        <div className="mx-auto max-w-screen-xl ">
+      <Bracket fluid centered padding="large">
+        <div className="mx-auto">
           <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-[700px] lg:max-w-[980px]">
             <h1 className="text-[2.65rem] leading-none    md:text-5xl lg:text-6xl  text-left sm:text-center bg-gradient-text font-black dark:bg-gradient-text-dark text-transparent bg-clip-text   ">
               Affordable Web Design & Development for UK Businesses

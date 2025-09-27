@@ -16,6 +16,7 @@ import {
   RiUbuntuLine,
   RiWordpressLine,
 } from 'react-icons/ri'
+import { PiBracketsSquareBold } from 'react-icons/pi'
 
 import { Bracket, Card } from '@thirdbracket/bracketui'
 import Link from 'next/link'
@@ -74,7 +75,7 @@ const features = [
       'Integrated solutions for analytics, SEO, and performance tracking to grow traffic and boost conversions.',
   },
   {
-    icon: RiBracesLine,
+    icon: PiBracketsSquareBold,
     header: 'Bracket UI',
     href: '/services',
     description:
@@ -85,8 +86,8 @@ const features = [
 export function WhyChooseUsSection() {
   return (
     <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] ">
-      <Bracket fluid centered padding="medium">
-        <div className="mx-auto max-w-screen-xl">
+      <Bracket fluid centered padding="small">
+        <div className="mx-auto md:max-w-screen-xl">
           <div className="mb-8 md:mb-10 lg:mb-16">
             <h2 className="mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
               What We Build & Deliver
@@ -105,13 +106,13 @@ export function WhyChooseUsSection() {
                 as={Link}
                 href={href}
                 isIcon
-                className="last:col-span-2  last:rounded-e-full"
+                className="last:col-span-2  last:rounded-tl-lg last:rounded-br-lg last:rounded-tr-3xl last:rounded-bl-3xl "
                 theme={{
                   background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
                   border:
                     'border-opacity-30  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
 
-                  text: ' text-primary-500 dark:text-primary-600 leading-[1.45] font-[350px] ',
+                  text: ' text-primary-500 dark:text-primary-600 leading-[1.45] font-[350px] last:max-w-3xl',
                   hover:
                     '[@media(hover:hover)]:hover:border-opacity-100    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100',
                 }}

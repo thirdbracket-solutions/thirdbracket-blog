@@ -33,31 +33,33 @@ export default async function Page() {
   })
 
   return (
-    <Bracket>
-      {/* Structured data now in layout.tsx */}
-      <PageClient />
-      {/* <div className="container mb-16">
+    <Bracket fluid centered padding="small">
+      <div className="md:max-w-screen-xl mx-auto">
+        {/* Structured data now in layout.tsx */}
+        <PageClient />
+        {/* <div className="container mb-16">
           <div className="prose dark:prose-invert max-w-none">
             <h1>Posts</h1>
           </div>
         </div> */}
-      <PageHeader title="Blog" description="Bracket Insights and updates from our team" />
-      <div className="max-w-7xl mx-auto  py-8 sm:py-12 md:py-16">
-        <div className="container mb-8">
-          <PageRange
-            collection="posts"
-            currentPage={posts.page}
-            limit={12}
-            totalDocs={posts.totalDocs}
-          />
-        </div>
+        <PageHeader title="Blog" description="Bracket Insights and updates from our team" />
+        <div className="  py-8 sm:py-12 md:py-16">
+          <div className="container mb-8">
+            <PageRange
+              collection="posts"
+              currentPage={posts.page}
+              limit={12}
+              totalDocs={posts.totalDocs}
+            />
+          </div>
 
-        <CollectionArchive posts={posts.docs} />
+          <CollectionArchive posts={posts.docs} />
 
-        <div className="container">
-          {posts.totalPages > 1 && posts.page && (
-            <Pagination page={posts.page} totalPages={posts.totalPages} />
-          )}
+          <div className="container">
+            {posts.totalPages > 1 && posts.page && (
+              <Pagination page={posts.page} totalPages={posts.totalPages} />
+            )}
+          </div>
         </div>
       </div>
     </Bracket>

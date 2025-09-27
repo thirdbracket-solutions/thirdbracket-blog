@@ -40,47 +40,45 @@ const roadmapItems = [
 export default function Roadmap() {
   return (
     <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem]" id="roadmap">
-      <Bracket fluid centered padding="medium">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">
-            Our Journey
-          </h2>
-          <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light text-primary-600 dark:text-primary-400 max-w-2xl mx-auto">
-            The evolution of Third Bracket from inception to present day
-          </p>
-        </div>
+      <div className="text-center mb-12">
+        <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">
+          Our Journey
+        </h2>
+        <p className="text-base/[1.6] md:text-lg/[1.75rem] font-light text-primary-600 dark:text-primary-400 max-w-2xl mx-auto">
+          The evolution of Third Bracket from inception to present day
+        </p>
+      </div>
 
-        <div className="relative">
-          {/* Vertical timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-200 dark:bg-primary-800"></div>
+      <div className="relative">
+        {/* Vertical timeline line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-primary-200 dark:bg-primary-800"></div>
 
-          <div className="space-y-12">
-            {roadmapItems.map((item, index) => (
-              <div key={index} className="relative">
-                {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent-400 dark:bg-accent-600 rounded-full z-10"></div>
+        <div className="space-y-12">
+          {roadmapItems.map((item, index) => (
+            <div key={index} className="relative">
+              {/* Timeline dot */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-accent-400 dark:bg-accent-600 rounded-full z-10"></div>
 
-                <div
-                  className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
-                >
-                  <div className="md:w-1/2"></div>
-                  <div className={`md:w-1/2 p-6 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                    <div className="bg-white dark:bg-black border border-primary-200 dark:border-primary-800 rounded-lg p-4">
-                      <div className="inline-block px-3 py-1 bg-accent-100 dark:bg-accent-900 text-accent-800 dark:text-accent-200 rounded-full text-sm font-medium mb-3">
-                        {item.year}
-                      </div>
-                      <h3 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-2">
-                        {item.title}
-                      </h3>
-                      <p className="text-primary-600 dark:text-primary-400">{item.description}</p>
+              <div
+                className={`flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+              >
+                <div className="md:w-1/2"></div>
+                <div className={`md:w-1/2 p-6 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
+                  <div className="bg-white dark:bg-black border border-primary-200 dark:border-primary-800 rounded-lg p-4">
+                    <div className="inline-block px-3 py-1 bg-accent-100 dark:bg-accent-900 text-accent-800 dark:text-accent-200 rounded-full text-sm font-medium mb-3">
+                      {item.year}
                     </div>
+                    <h3 className="text-xl bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-primary-600 dark:text-primary-400">{item.description}</p>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-      </Bracket>
+      </div>
     </section>
   )
 }
