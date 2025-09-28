@@ -6,6 +6,7 @@ import { PiArrowUpRight } from 'react-icons/pi'
 import { SiGithub } from 'react-icons/si'
 import { RiDribbbleLine, RiGithubLine } from 'react-icons/ri'
 import { FaGlobe } from 'react-icons/fa'
+import { LuGlobe } from 'react-icons/lu'
 
 export const metadata: Metadata = {
   title: 'Portfolio',
@@ -25,9 +26,9 @@ function PortfolioCard({
   website: string
 }) {
   return (
-    <div className="border border-primary-200 dark:border-primary-800 rounded-lg overflow-hidden p-4">
+    <div className="border border-primary-200 dark:border-primary-800 rounded-lg overflow-hidden p-4 md:p-6">
       {/* Behance Embed */}
-      <div className="text-primary-900 dark:text-primary-50 text-2xl mb-3">
+      <div className="text-primary-900 dark:text-primary-50 text-lg sm:text-xl md:text-2xl mb-3 md:mb-4">
         <Link
           className="flex items-center justify-between"
           href={`https://www.behance.net/embed/project/${behanceId}?ilo0=1`}
@@ -35,7 +36,7 @@ function PortfolioCard({
           <h3 className="  font-semibold leading-tight ">{title}</h3>
         </Link>
       </div>
-      <div className="relative w-full h-[300px] max-w-screen-md  mx-auto">
+      <div className="relative w-full h-[300px] max-w-screen-md  mx-auto ">
         <iframe
           src={`https://www.behance.net/embed/project/${behanceId}?ilo0=1`}
           loading="lazy"
@@ -43,7 +44,7 @@ function PortfolioCard({
           height="100%"
           frameBorder="0"
           allowFullScreen
-          className="block w-full h-full border-none overflow-hidden"
+          className="block w-full h-full border-none overflow-hidden "
           scrolling="no"
         ></iframe>
 
@@ -51,15 +52,15 @@ function PortfolioCard({
         <div className="absolute bottom-0 left-0 w-full h-full bg-accent-950 opacity-50" />
       </div>
       <div className="flex items-center justify-between mt-4 text-primary-800 dark:text-primary-200">
-        <div className="flex items-center justify-center gap-4  ">
+        <div className="flex items-center justify-center gap-4  text-lg">
           <Link href={`${github}`}>
-            <RiGithubLine size={24} />
+            <RiGithubLine />
           </Link>
           <Link href={`${dribble}`}>
-            <RiDribbbleLine size={24} />
+            <RiDribbbleLine />
           </Link>
           <Link href={`${website}`}>
-            <FaGlobe size={20} />
+            <LuGlobe />
           </Link>
         </div>
         <PiArrowUpRight size={24} />
@@ -78,8 +79,8 @@ export default function Portfolio() {
       website: '#',
     },
     {
-      title: 'Automatus - Elementor Template Kit',
-      behanceId: '231924415',
+      title: 'Digital Agency - Third Bracket',
+      behanceId: '235532307',
       github: '#',
       dribble: '#',
       website: '#',
@@ -93,7 +94,7 @@ export default function Portfolio() {
       <div className="md:max-w-screen-xl mx-auto">
         <PageHeader title="Portfolio" description="Curated projects from Behance" />
         <div className=" py-8 sm:py-12 md:py-16">
-          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <PortfolioCard key={index} {...project} />
             ))}
