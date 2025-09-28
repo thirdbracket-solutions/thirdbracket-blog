@@ -11,17 +11,28 @@ export const metadata: Metadata = {
   title: 'Portfolio',
 }
 
-function PortfolioCard({ title, behanceId }: { title: string; behanceId: string }) {
+function PortfolioCard({
+  title,
+  behanceId,
+  github,
+  dribble,
+  website,
+}: {
+  title: string
+  behanceId: string
+  github: string
+  dribble: string
+  website: string
+}) {
   return (
-    <div className="border border-primary-200 dark:border-primary-800 rounded-lg overflow-hidden p-6">
+    <div className="border border-primary-200 dark:border-primary-800 rounded-lg overflow-hidden p-4">
       {/* Behance Embed */}
-      <div className="text-primary-900 dark:text-primary-50 text-xl mb-4">
+      <div className="text-primary-900 dark:text-primary-50 text-2xl mb-3">
         <Link
           className="flex items-center justify-between"
           href={`https://www.behance.net/embed/project/${behanceId}?ilo0=1`}
         >
-          <h3 className="  font-semibold">{title}</h3>
-          <PiArrowUpRight size={32} />
+          <h3 className="  font-semibold leading-tight ">{title}</h3>
         </Link>
       </div>
       <div className="relative w-full h-[300px] max-w-screen-md  mx-auto">
@@ -37,18 +48,21 @@ function PortfolioCard({ title, behanceId }: { title: string; behanceId: string 
         ></iframe>
 
         {/* The Overlay Div */}
-        <div className="absolute bottom-0 left-0 w-full h-20 bg-black opacity-15" />
+        <div className="absolute bottom-0 left-0 w-full h-full bg-accent-950 opacity-50" />
       </div>
-      <div className="flex items-center justify-center gap-4 mt-4 text-primary-800 dark:text-primary-200">
-        <Link href="#">
-          <RiGithubLine size={24} />
-        </Link>
-        <Link href="#">
-          <RiDribbbleLine size={24} />
-        </Link>
-        <Link href="#">
-          <FaGlobe size={24} />
-        </Link>
+      <div className="flex items-center justify-between mt-4 text-primary-800 dark:text-primary-200">
+        <div className="flex items-center justify-center gap-4  ">
+          <Link href={`${github}`}>
+            <RiGithubLine size={24} />
+          </Link>
+          <Link href={`${dribble}`}>
+            <RiDribbbleLine size={24} />
+          </Link>
+          <Link href={`${website}`}>
+            <FaGlobe size={20} />
+          </Link>
+        </div>
+        <PiArrowUpRight size={24} />
       </div>
     </div>
   )
@@ -59,10 +73,16 @@ export default function Portfolio() {
     {
       title: 'HealSpace - Wellness Marketplace Platform',
       behanceId: '235448997',
+      github: '#',
+      dribble: '#',
+      website: '#',
     },
     {
       title: 'Automatus - Elementor Template Kit',
       behanceId: '231924415',
+      github: '#',
+      dribble: '#',
+      website: '#',
     },
 
     // Add more projects

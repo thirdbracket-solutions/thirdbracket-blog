@@ -139,7 +139,7 @@ export default function CardGrid() {
           <div className=" mb-8 md:mb-10 lg:mb-16 grid gap-6  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto">
             <h2 className="  text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right ">
               {/* Looking for Fast & Affordable Web Development in the UK? */}
-              Why Choose Third Bracket?
+              Why Choose Third Bracket for your next project?
             </h2>
             <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light dark:text-primary-300 text-primary-700 text-left sm:text-center lg:text-left">
               Modern websites built with the latest technology, clean design principles, and
@@ -149,7 +149,7 @@ export default function CardGrid() {
 
           {/* Cards */}
           <div className="space-y-8">
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-8   [column-fill:_balance]">
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-4   [column-fill:_balance]">
               {cards.map(({ name, props }, index) => (
                 <div
                   key={index}

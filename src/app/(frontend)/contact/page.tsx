@@ -54,7 +54,7 @@ export default async function ContactPage() {
         <div className="md:max-w-screen-xl mx-auto">
           {/* Structured data now in layout.tsx */}
           <PageHeader title="Contact Us" description="Get in touch with our team" />
-          <div className="max-w-7xl mx-auto ">
+          <div className="">
             <FormBlock form={fallbackForm} enableIntro={false} />
           </div>
         </div>

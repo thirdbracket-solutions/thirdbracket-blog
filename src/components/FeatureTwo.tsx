@@ -98,7 +98,7 @@ export function WhyChooseUsSection() {
             </p>
           </div>
 
-          <div className="space-y-8 sm:grid sm:grid-cols-2 sm:gap-8 sm:space-y-0 lg:grid-cols-3 ">
+          <div className="space-y-8 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-3 ">
             {features.map(({ icon: Icon, header, description, href }, index) => (
               <Card
                 key={index}

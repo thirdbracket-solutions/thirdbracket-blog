@@ -29,7 +29,7 @@ const config = {
         'gradient-secondary-dark': 'conic-gradient(at bottom left, #fff,#f7f7f7, #f6f7f8  )',
         'gradient-secondary': 'conic-gradient(at bottom left, #000, #080808, #0f1215 )',
 
-        'gradient-text': 'conic-gradient(at bottom left, #0d0d0d, #242424, #3b3b3b  )',
+        'gradient-text': 'conic-gradient(at bottom left, #050708, #242424, #333b48  )',
         'gradient-text-dark': 'conic-gradient(at bottom left, #f2f2f2, #dbdbdb, #c4c4c4 )',
         'overlayDot-light': 'radial-gradient( #737e8c30 1px, transparent 1px)',
         'overlayDot-dark': 'radial-gradient(   #737e8c40 1px, transparent 1px)',
