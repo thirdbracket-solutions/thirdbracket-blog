@@ -117,7 +117,7 @@ export function WhyChooseUsSection() {
                     '[@media(hover:hover)]:hover:border-opacity-100    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100',
                 }}
                 cover={
-                  <div className="w-16 h-16 mb-4 flex items-center  justify-center   border  border-primary-400/25     rounded-xl bg-white dark:bg-black">
+                  <div className="w-16 h-16 mb-4 flex items-center  justify-center   border  border-primary-400/25     rounded-xl bg-secondary-100/60 dark:bg-secondary-900/60">
                     <Icon size={36} className="text-secondary-900 dark:text-secondary-100" />
                   </div>
                 }

@@ -63,7 +63,7 @@ export const ClientTestimonials = () => {
                 }
                 cover={
                   item.logo && (
-                    <div className="w-[100px] h-[45px] flex items-center  justify-center border border-primary-500/20  dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]        rounded-full bg-gradient-secondary-dark dark:bg-gradient-secondary">
+                    <div className="w-[100px] h-[45px] flex items-center  justify-center border  border-primary-500/20  dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]        rounded-full bg-white dark:bg-black">
                       <Image
                         src={item.logo}
                         alt={`${item.client} logo`}
