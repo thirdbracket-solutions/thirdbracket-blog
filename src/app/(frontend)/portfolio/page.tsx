@@ -33,7 +33,7 @@ function PortfolioCard({
           className="flex items-center justify-between"
           href={`https://www.behance.net/embed/project/${behanceId}?ilo0=1`}
         >
-          <h3 className="  font-semibold leading-tight ">{title}</h3>
+          <h3 className="font-semibold leading-tight ">{title}</h3>
         </Link>
       </div>
       <div className="relative w-full h-[300px] max-w-screen-md  mx-auto ">
@@ -49,7 +49,7 @@ function PortfolioCard({
         ></iframe>
 
         {/* The Overlay Div */}
-        <div className="absolute bottom-0 left-0 w-full h-full bg-accent-950 opacity-50" />
+        <div className="absolute bottom-0 left-0 w-full h-40 bg-gradient-to-t from-primary-950/40 via-primary-950/20 to-primary-950/0 rounded-b-lg" />
       </div>
       <div className="flex items-center justify-between mt-4 text-primary-800 dark:text-primary-200">
         <div className="flex items-center justify-center gap-4  text-lg">
