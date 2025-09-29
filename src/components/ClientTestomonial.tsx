@@ -40,13 +40,13 @@ export const ClientTestimonials = () => {
             Trusted by Early-stage Startups
           </h2>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-0 md:grid-cols-2 lg:grid-cols-3 ">
             {testimonials.map((item, i) => (
               <Card
                 isIcon
                 theme={{
                   background:
-                    'bg-white/85 dark:bg-black/70 bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:32px_32px]  ',
+                    'bg-white/85 dark:bg-black/70 bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:32px_32px]   lg:first:rounded-tl-lg lg:first:rounded-bl-lg lg:last:rounded-tr-lg lg:last:rounded-br-lg md:first:rounded-tr-none   md:last:rounded-bl-none first:rounded-tl-lg first:rounded-tr-lg last:rounded-br-lg last:rounded-bl-lg rounded-none',
                   border:
                     'border-opacity-30  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
 
