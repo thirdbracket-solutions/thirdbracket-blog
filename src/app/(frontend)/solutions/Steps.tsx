@@ -42,7 +42,7 @@ export default function Steps() {
         <h2 className="text-3xl lg:text-4xl font-bold text-primary-950 dark:text-primary-50 mb-4 ">
           How We Work
         </h2>
-        <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-500 mb-6">
+        <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-normal text-primary-500  mb-6">
           Our streamlined process ensures efficient delivery of high-quality solutions tailored to
           your needs
         </p>

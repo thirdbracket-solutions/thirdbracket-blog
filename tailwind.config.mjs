@@ -20,8 +20,9 @@ const config = {
         sans: ['var(--font-roboto)'],
       },
       backgroundImage: {
-        'gradient-gray':
-          'conic-gradient(from 180deg at 50% 50%,#6B7280 0%, #6E758A 20%, #64748B 40%, #6E758A 60%, #6B7280 80%, #6B7280 100%)',
+        'gradient-gray': 'radial-gradient(125% 125% at 50% 90%, #e0e3e6b2 40%, #737e8cb2 100%)',
+        'gradient-gray-dark':
+          'radial-gradient(125% 125% at 50% 10%, #22283066 40%, #333b48b2 100%)',
         'gradient-primary-dark':
           'conic-gradient(from 0deg at center, #fff, #f6f7f8, #f7f7f7, #f6f7f8,#f7f7f7, #fff  )',
         'gradient-primary':
@@ -29,8 +30,8 @@ const config = {
         'gradient-secondary-dark': 'conic-gradient(at bottom left, #fff,#f7f7f7, #f6f7f8  )',
         'gradient-secondary': 'conic-gradient(at bottom left, #000, #080808, #0f1215 )',
 
-        'gradient-text': 'conic-gradient(at bottom left, #050708, #242424, #333b48  )',
-        'gradient-text-dark': 'conic-gradient(at bottom left, #f2f2f2, #dbdbdb, #c4c4c4 )',
+        'gradient-text': 'conic-gradient(at bottom left, #242424, #3b3b3b, #525252  )',
+        'gradient-text-dark': 'conic-gradient(at bottom left, #dbdbdb, #c4c4c4, #adadad )',
         'overlayDot-light': 'radial-gradient( #737e8c30 1px, transparent 1px)',
         'overlayDot-dark': 'radial-gradient(   #737e8c40 1px, transparent 1px)',
 

@@ -27,11 +27,11 @@ export default function ServiceCard({
         hover:
           '[@media(hover:hover)]:hover:border-opacity-100    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100 ',
 
-        text: 'dark:text-primary-400 text-primary-600  font-light leading-[1.45]',
+        text: 'text-primary-500   font-normal leading-[1.45]',
       }}
       cover={
-        <div className="w-12 h-12 mb-4 flex items-center  justify-center   border border-primary-400/20   bg-white dark:bg-black   rounded-lg">
-          <Icon className="w-6 h-6 text-primary-900 dark:text-primary-100" />
+        <div className="w-16 h-16 mb-4 flex items-center  justify-center   border border-primary-400/20   bg-white dark:bg-black   rounded-lg">
+          <Icon size={32} className=" text-primary-700 dark:text-primary-300" />
         </div>
       }
       header={title}

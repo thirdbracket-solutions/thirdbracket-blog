@@ -89,10 +89,10 @@ export function WhyChooseUsSection() {
       <Bracket fluid centered padding="small">
         <div className="mx-auto md:max-w-screen-xl">
           <div className="mb-8 md:mb-10 lg:mb-16">
-            <h2 className="mb-6 text-3xl lg:text-4xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
+            <h2 className="mb-4 text-3xl lg:text-4xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
               What We Build & Deliver
             </h2>
-            <p className="dark:text-primary-300 text-primary-700 font-light text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
+            <p className=" text-primary-500  text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
               From modern websites to tailored systems, we help UK businesses thrive with reliable,
               high-performance web development.
             </p>
@@ -106,23 +106,23 @@ export function WhyChooseUsSection() {
                 as={Link}
                 href={href}
                 isIcon
-                className="last:col-span-2  last:rounded-tl-lg last:rounded-br-lg last:rounded-tr-3xl last:rounded-bl-3xl "
                 theme={{
-                  background: 'bg-gradient-secondary-dark dark:bg-gradient-secondary',
+                  background:
+                    'bg-gradient-secondary-dark last:bg-gradient-gray  dark:bg-gradient-secondary dark:last:bg-gradient-gray-dark lg:last:col-span-2  last:backdrop-blur-2xl last:backdrop-saturate-200 last:backdrop-contrast-150    ',
                   border:
                     'border-opacity-30  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
 
-                  text: ' text-primary-500 dark:text-primary-600 leading-[1.45] font-[350px] last:max-w-3xl',
+                  text: ' text-primary-500  leading-[1.45] font-normal last:max-w-3xl',
                   hover:
-                    '[@media(hover:hover)]:hover:border-opacity-100    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100',
+                    '[@media(hover:hover)]:hover:border-opacity-50    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100 ',
                 }}
                 cover={
-                  <div className="w-16 h-16 mb-4 flex items-center  justify-center   border  border-primary-400/25     rounded-xl bg-secondary-100/60 dark:bg-secondary-900/60">
-                    <Icon size={36} className="text-secondary-900 dark:text-secondary-100" />
+                  <div className="w-16 h-16 mb-4 flex items-center   justify-center   border  border-primary-100 dark:border-primary-900     rounded-xl bg-white  dark:bg-black">
+                    <Icon size={32} className="text-secondary-700 dark:text-secondary-300" />
                   </div>
                 }
                 header={
-                  <span className="font-semibold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-2 ">
+                  <span className="font-semibold bg-gradient-text  dark:bg-gradient-text-dark text-transparent bg-clip-text mb-2 ">
                     {header}
                   </span>
                 }

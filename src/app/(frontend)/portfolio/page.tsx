@@ -26,14 +26,16 @@ function PortfolioCard({
   website: string
 }) {
   return (
-    <div className="border border-primary-200 dark:border-primary-800 rounded-lg overflow-hidden p-4 md:p-6">
+    <div className="border border-primary-200 dark:border-primary-800 rounded-lg overflow-hidden p-6 md:p-6">
       {/* Behance Embed */}
-      <div className="text-primary-900 dark:text-primary-50 text-lg sm:text-xl md:text-2xl mb-3 md:mb-4">
+      <div className="text-primary-900 dark:text-primary-50 text-xl  mb-3 md:mb-4">
         <Link
           className="flex items-center justify-between"
           href={`https://www.behance.net/embed/project/${behanceId}?ilo0=1`}
         >
-          <h3 className="font-semibold leading-tight ">{title}</h3>
+          <h3 className="font-semibold leading-tight bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text">
+            {title}
+          </h3>
         </Link>
       </div>
       <div className="relative w-full h-[300px] max-w-screen-md  mx-auto ">

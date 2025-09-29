@@ -48,12 +48,12 @@ export default function SolutionCard({
               {technologies.map((tech, index) => (
                 <div
                   key={index}
-                  className="px-2 py-[2px]     bg-secondary-50 dark:bg-secondary-900/40   rounded-lg    border  border-secondary-500/20"
+                  className="px-2 py-[2px]     bg-white  dark:bg-secondary-950   rounded-lg    border  border-secondary-500/25"
                 >
-                  <div className="!text-[12px] font-medium  text-secondary-600 dark:text-primary-400">
+                  <div className="!text-[12px] font-medium  text-secondary-700 dark:text-primary-300">
                     {tech.cto}
                   </div>
-                  <div className="text-[9px] font-medium text-primary-400  dark:text-primary-600">
+                  <div className="text-[10px] font-medium text-primary-300  dark:text-primary-700">
                     {tech.title}
                   </div>
                 </div>
@@ -62,7 +62,7 @@ export default function SolutionCard({
           </div>
         )}
 
-        <ul className="list-disc list-inside   space-y-1 text-sm pb-4">
+        <ul className="list-disc list-inside text-primary-500 font-normal  space-y-1 text-sm pb-4">
           {features.map((feature, index) => (
             <li key={index}>{feature}</li>
           ))}
@@ -71,7 +71,7 @@ export default function SolutionCard({
         {description && (
           <Link
             href="#"
-            className="  inline-flex gap-2 items-center group leading-none text-primary-600 dark:text-primary-400 font-normal  mb-2"
+            className="  inline-flex gap-2 items-center group leading-none text-primary-900 dark:text-primary-100 font-normal  mb-2"
           >
             {description}
             <span className="group-hover:underline group-hover:translate-x-1 transition-all ease-in-out duration-200 ">

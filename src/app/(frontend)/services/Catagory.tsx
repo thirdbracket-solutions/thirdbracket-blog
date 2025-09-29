@@ -36,10 +36,10 @@ export default function Category({
           <h2 className="text-3xl lg:text-4xl font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text mb-4">
             {title}
           </h2>
-          <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] font-light text-primary-600 dark:text-primary-400 mb-6">
+          <p className="text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  text-primary-500  mb-6">
             {description}
           </p>
-          <div className="flex flex-wrap gap-4 mb-6 text-primary-800 dark:text-primary-200">
+          <div className="flex flex-wrap gap-4 mb-6 text-primary-700/70 dark:text-primary-400/50">
             {stackIcons.map((Icon, index) => (
               <span key={index}>{Icon}</span>
             ))}
