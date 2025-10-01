@@ -31,7 +31,7 @@ export interface NavigationSection {
 
 // Common theme styles
 const defaultNavlinkTheme = {
-  text: 'text-primary-900 dark:text-primary-50',
+  text: 'text-black  dark:text-white',
   states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
 }
 
@@ -49,7 +49,7 @@ const _megamenuTheme = {
 }
 
 const mobileMegamenuTheme = {
-  text: 'text-primary-900 dark:text-primary-50 text-base md:text-sm',
+  text: 'text-black dark:white text-base md:text-sm',
   states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
   menu: 'bg-gradient-primary-dark dark:bg-gradient-primary',
 }
@@ -67,37 +67,41 @@ export const mainNavItems: NavlinkItem[] = [
 export const webDevelopmentItems: NavlinkItem[] = [
   { label: 'Next.js Development', href: '/services', isDropdownItem: true },
   { label: 'WordPress Development', href: '/services', isDropdownItem: true },
-  { label: 'Headless Integration', href: '/services', isDropdownItem: true },
+  { label: 'E-commerce Development', href: '/services', isDropdownItem: true },
+  { label: 'Custom Admin Panel', href: '/services', isDropdownItem: true },
+  { label: 'CRM Integration', href: '/services', isDropdownItem: true },
+  { label: 'Analytics & Tracking Integration', href: '/services', isDropdownItem: true },
+  { label: 'VPS Setup', href: '/services', isDropdownItem: true },
+
   { label: 'Performance Optimization', href: '/services', isDropdownItem: true },
   { label: 'Migration & Modernization', href: '/services', isDropdownItem: true },
-  { label: 'Feature Development & API Integrations', href: '/services', isDropdownItem: true },
+  { label: 'Blog Development', href: '/services', isDropdownItem: true },
 ]
 
 export const uiUxDesignItems: NavlinkItem[] = [
-  { label: 'Landing Page Design', href: '/services', isDropdownItem: true },
-  { label: 'Website Interface Design', href: '/services', isDropdownItem: true },
-  { label: 'Vector Design', href: '/services', isDropdownItem: true },
-  { label: 'Component-Based UI Setup', href: '/services', isDropdownItem: true },
+  { label: 'UI/UX Design', href: '/services', isDropdownItem: true },
+  { label: 'Website Design', href: '/services', isDropdownItem: true },
   { label: 'Website Redesign', href: '/services', isDropdownItem: true },
-  { label: 'Design System Development', href: '/services', isDropdownItem: true },
-  { label: 'UX Strategy & Wireframing', href: '/services', isDropdownItem: true },
   { label: 'Social Media Design', href: '/services', isDropdownItem: true },
+  { label: 'Branding', href: '/services', isDropdownItem: true },
+  { label: 'Design System Development', href: '/services', isDropdownItem: true },
+  { label: 'Graphic Design', href: '/services', isDropdownItem: true },
+  { label: 'Elementor Template Design', href: '/services', isDropdownItem: true },
+  { label: 'Printable Design', href: '/services', isDropdownItem: true },
+  { label: 'Wireframe & Prototype', href: '/services', isDropdownItem: true },
 ]
 
 export const digitalMarketingItems: NavlinkItem[] = [
-  { label: 'Technical SEO Optimization', href: '/services', isDropdownItem: true },
-  { label: 'Website Performance Optimization', href: '/services', isDropdownItem: true },
-  { label: 'SEO-Ready Website Builds', href: '/services', isDropdownItem: true },
-  { label: 'Conversion Optimization', href: '/services', isDropdownItem: true },
-  { label: 'Content Writing', href: '/services', isDropdownItem: true },
-  { label: 'Social Media Management', href: '/services', isDropdownItem: true },
-  { label: 'Google Services Integration', href: '/services', isDropdownItem: true },
-  { label: 'SEO & Web Visibility', href: '/services', isDropdownItem: true },
-  { label: 'Branding & Design', href: '/services', isDropdownItem: true },
+  { label: 'Search Engine Optimisation', href: '/services', isDropdownItem: true },
+  { label: 'Search Engine Marketing', href: '/services', isDropdownItem: true },
+  { label: 'Content Marketing', href: '/services', isDropdownItem: true },
+  { label: ' Affiliate Marketing', href: '/services', isDropdownItem: true },
+  { label: 'Email Marketing', href: '/services', isDropdownItem: true },
   { label: 'Social Media Marketing', href: '/services', isDropdownItem: true },
-  { label: 'PPC & Social Ad', href: '/services', isDropdownItem: true },
-  { label: 'Content strategy & Copywriting', href: '/services', isDropdownItem: true },
-  { label: 'Other Digital Marketing Services', href: '/services', isDropdownItem: true },
+  { label: 'Conversational Marketing', href: '/services', isDropdownItem: true },
+  { label: 'PPC & Advertising', href: '/services', isDropdownItem: true },
+  { label: 'Marketing Analytics & Audit', href: '/services', isDropdownItem: true },
+  { label: 'Marketing Strategy & Planning', href: '/services', isDropdownItem: true },
 ]
 
 export const servicesItems: (NavlinkItem | MegamenuItem)[] = [
