@@ -122,7 +122,7 @@ const Header: FC = () => {
                   <h3 className="text-xs leading-none text-primary-500">Explore Our Services</h3>
                 </div> */}
                 <div className="flex flex-col space-y-1">
-                  <Navlink
+                  {/* <Navlink
                     theme={{
                       text: 'text-primary-900 dark:text-primary-50  ',
                       states:
@@ -187,7 +187,44 @@ const Header: FC = () => {
                         campaigns, e-commerce website, woocmmerce
                       </div>
                     </div>
-                  </Navlink>
+                  </Navlink> */}
+
+                  <div className="backdrop-blur-3xl       px-4 py-3   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
+                    <div className="flex items-center justify-between size-8 gap-2 dark:text-white text-black">
+                      Development
+                      <span>
+                        <BiChevronRight />
+                      </span>
+                    </div>
+                    <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                      Next.js/Wordpress,Vercel, payload admin, Next.js metadata, google essential
+                      integration, HubSpot, Mailchimp, Brevo, Klaviyo, Edge, CDN, Core Web Vitals
+                    </div>
+                  </div>
+                  <div className="backdrop-blur-3xl       px-4 py-3   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
+                    <div className="flex items-center justify-between size-8 gap-2 dark:text-white text-black">
+                      Development
+                      <span>
+                        <BiChevronRight />
+                      </span>
+                    </div>
+                    <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                      Next.js/Wordpress,Vercel, payload admin, Next.js metadata, google essential
+                      integration, HubSpot, Mailchimp, Brevo, Klaviyo, Edge, CDN, Core Web Vitals
+                    </div>
+                  </div>
+                  <div className="backdrop-blur-3xl       px-4 py-3   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
+                    <div className="flex items-center justify-between size-8 gap-2 dark:text-white text-black">
+                      Development
+                      <span>
+                        <BiChevronRight />
+                      </span>
+                    </div>
+                    <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                      Next.js/Wordpress,Vercel, payload admin, Next.js metadata, google essential
+                      integration, HubSpot, Mailchimp, Brevo, Klaviyo, Edge, CDN, Core Web Vitals
+                    </div>
+                  </div>
                 </div>
                 {/* <div className="flex-grow"></div> */}
                 {/* <div className="mt-6">
@@ -325,7 +362,7 @@ const Header: FC = () => {
                 </div> */}
               </div>
               {/* Keep the image column as is */}
-              <div className="hidden lg:flex w-full  flex-col items-center justify-stretch h-full">
+              <div className="hidden lg:flex w-full  flex-col items-center  h-full">
                 <div className="">
                   <Image
                     src="1.svg"
@@ -403,7 +440,7 @@ const Header: FC = () => {
                   }}
                 >
                   <div className="space-y-2 py-1.5">
-                    {digitalMarketingItems.slice(0, 7).map((item) => renderNavlink(item, true))}
+                    {digitalMarketingItems.map((item) => renderNavlink(item, true))}
                   </div>
                 </Megamenu>
               </div>
@@ -411,77 +448,145 @@ const Header: FC = () => {
 
             {/* Main navigation items for mobile */}
             {mainNavItems.map((item) => renderNavlink(item, true))}
-            <div className="flex flex-col space-y-1 ">
-              <Navlink
-                theme={{
-                  text: 'text-primary-900 dark:text-primary-50  ',
-                  states:
-                    'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                }}
-                href="/services"
-                as={Link}
-                cto
-              >
-                <div className="backdrop-blur-3xl          bg-gradient-primary-dark p-7 dark:bg-gradient-primary  border border-dotted  border-primary-500/50 w-full   rounded-lg">
-                  <div className="flex items-center justify-between   ">
-                    <h3>Development</h3>
 
-                    <RiArrowRightLine size={20} />
-                  </div>
-                  <div className="text-xs mt-2   leading-4 font-light  text-primary-600 dark:text-primary-400">
-                    Next.js/Wordpress,Vercel, payload admin, Next.js metadata, google essential
-                    integration, HubSpot, Mailchimp, Brevo, Klaviyo, Edge, CDN, Core Web Vitals
-                  </div>
+            {/* <div className="flex flex-col space-y-1 "> */}
+            {/* <Navlink
+              theme={{
+                text: 'text-primary-900 dark:text-primary-50  ',
+                states:
+                  'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+              }}
+              href="/services"
+              as={Link}
+              cto
+            >
+              <div className="backdrop-blur-3xl          bg-gradient-primary-dark p-7 dark:bg-gradient-primary  border border-dotted  border-primary-500/50 w-full   rounded-lg">
+                <div className="flex items-center justify-between   ">
+                  <h3>Development</h3>
+
+                  <RiArrowRightLine size={20} />
                 </div>
-              </Navlink>
-              <Navlink
-                theme={{
-                  text: 'text-primary-900 dark:text-primary-50  ',
-                  states:
-                    'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                }}
-                href="/services"
-                as={Link}
-                cto
-              >
-                <div className="backdrop-blur-3xl       p-7   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
-                  <div className="flex items-center justify-between  gap-2 ">
-                    <h3>Design</h3>
-                    <span className="size-6">
-                      <RiArrowRightLine />
-                    </span>
-                  </div>
-                  <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
-                    Web & app interfaces, wireframes, prototypes, modern layouts, responsive design,
-                    ads, posts, banners, brochures, presentations, business cards
-                  </div>
+                <div className="text-xs mt-2   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                  Next.js/Wordpress,Vercel, payload admin, Next.js metadata, google essential
+                  integration, HubSpot, Mailchimp, Brevo, Klaviyo, Edge, CDN, Core Web Vitals
                 </div>
-              </Navlink>
-              <Navlink
-                theme={{
-                  text: 'text-primary-900 dark:text-primary-50  ',
-                  states:
-                    'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                }}
-                href="/services"
-                as={Link}
-                cto
-              >
-                <div className="backdrop-blur-3xl       p-7   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
-                  <div className="flex items-center justify-between  gap-2 ">
-                    <h3>Marketing</h3>
-                    <span className="size-6">
-                      <RiArrowRightLine />
-                    </span>
-                  </div>
-                  <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
-                    SEO articles, landing page copy, blogs, social media campaigns, google
-                    campaigns, e-commerce website, woocmmerce
-                  </div>
+              </div>
+            </Navlink>
+            <Navlink
+              theme={{
+                text: 'text-primary-900 dark:text-primary-50  ',
+                states:
+                  'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+              }}
+              href="/services"
+              as={Link}
+              cto
+            >
+              <div className="backdrop-blur-3xl       p-7   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
+                <div className="flex items-center justify-between  gap-2 ">
+                  <h3>Design</h3>
+                  <span className="size-6">
+                    <RiArrowRightLine />
+                  </span>
                 </div>
-              </Navlink>
-            </div>
+                <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                  Web & app interfaces, wireframes, prototypes, modern layouts, responsive design,
+                  ads, posts, banners, brochures, presentations, business cards
+                </div>
+              </div>
+            </Navlink><Navlink
+              theme={{
+                text: 'text-primary-900 dark:text-primary-50  ',
+                states:
+                  'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+              }}
+              href="/services"
+              as={Link}
+              cto
+            >
+              <div className="backdrop-blur-3xl          bg-gradient-primary-dark p-7 dark:bg-gradient-primary  border border-dotted  border-primary-500/50 w-full   rounded-lg">
+                <div className="flex items-center justify-between   ">
+                  <h3>Development</h3>
+
+                  <RiArrowRightLine size={20} />
+                </div>
+                <div className="text-xs mt-2   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                  Next.js/Wordpress,Vercel, payload admin, Next.js metadata, google essential
+                  integration, HubSpot, Mailchimp, Brevo, Klaviyo, Edge, CDN, Core Web Vitals
+                </div>
+              </div>
+            </Navlink>
+            <Navlink
+              theme={{
+                text: 'text-primary-900 dark:text-primary-50  ',
+                states:
+                  'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+              }}
+              href="/services"
+              as={Link}
+              cto
+            >
+              <div className="backdrop-blur-3xl       p-7   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
+                <div className="flex items-center justify-between  gap-2 ">
+                  <h3>Design</h3>
+                  <span className="size-6">
+                    <RiArrowRightLine />
+                  </span>
+                </div>
+                <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                  Web & app interfaces, wireframes, prototypes, modern layouts, responsive design,
+                  ads, posts, banners, brochures, presentations, business cards
+                </div>
+              </div>
+            </Navlink>
+            <Navlink
+              theme={{
+                text: 'text-primary-900 dark:text-primary-50  ',
+                states:
+                  'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+              }}
+              href="/services"
+              as={Link}
+              cto
+            >
+              <div className="backdrop-blur-3xl       p-7   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
+                <div className="flex items-center justify-between  gap-2 ">
+                  <h3>Marketing</h3>
+                  <span className="size-6">
+                    <RiArrowRightLine />
+                  </span>
+                </div>
+                <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                  SEO articles, landing page copy, blogs, social media campaigns, google campaigns,
+                  e-commerce website, woocmmerce
+                </div>
+              </div>
+            </Navlink>
+            <Navlink
+              theme={{
+                text: 'text-primary-900 dark:text-primary-50  ',
+                states:
+                  'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+              }}
+              href="/services"
+              as={Link}
+              cto
+            >
+              <div className="backdrop-blur-3xl       p-7   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
+                <div className="flex items-center justify-between  gap-2 ">
+                  <h3>Marketing</h3>
+                  <span className="size-6">
+                    <RiArrowRightLine />
+                  </span>
+                </div>
+                <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                  SEO articles, landing page copy, blogs, social media campaigns, google campaigns,
+                  e-commerce website, woocmmerce
+                </div>
+              </div>
+            </Navlink> */}
           </div>
+          {/* </div> */}
         </MobileNav>
       </Navbar>
     </header>

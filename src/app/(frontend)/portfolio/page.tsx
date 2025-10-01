@@ -95,7 +95,7 @@ export default function Portfolio() {
     <Bracket fluid centered padding="small">
       <div className="md:max-w-screen-xl mx-auto">
         <PageHeader title="Portfolio" description="Curated projects from Behance" />
-        <div className=" py-8 sm:py-12 md:py-16">
+        <div className=" py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]">
           <div className="grid grid-cols-1  md:grid-cols-2 gap-8">
             {projects.map((project, index) => (
               <PortfolioCard key={index} {...project} />
