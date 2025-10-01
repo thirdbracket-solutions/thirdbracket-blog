@@ -28,6 +28,7 @@ import {
 
 import { MegamenuProps } from '@thirdbracket/bracketui'
 import { FaArrowRight } from 'react-icons/fa'
+import { RiArrowRightLine } from 'react-icons/ri'
 
 interface MyMegamenuProp extends Omit<MegamenuProps, 'label'> {
   label: React.ReactNode
@@ -115,8 +116,8 @@ const Header: FC = () => {
               menu: 'bg-white dark:bg-black',
             }}
           >
-            <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[1.5fr_repeat(3,1fr)_auto] grid-cols-[1.5fr_repeat(3,1fr)">
-              <div className="flex flex-col h-full">
+            <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[1.5fr_repeat(3,1fr)_auto] grid-cols-[1.5fr_repeat(3,1fr) py-1.5">
+              <div className="flex  flex-col h-full">
                 {/* <div className="mb-6">
                   <h3 className="text-xs leading-none text-primary-500">Explore Our Services</h3>
                 </div> */}
@@ -161,10 +162,7 @@ const Header: FC = () => {
                           <BiChevronRight />
                         </span>
                       </div>
-                      <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
-                        Web & app interfaces, wireframes, prototypes, modern layouts, responsive
-                        design, ads, posts, banners, brochures, presentations, business cards
-                      </div>
+                      <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400"></div>
                     </div>
                   </Navlink>
                   <Navlink
@@ -303,7 +301,7 @@ const Header: FC = () => {
                   <h3 className="">Marketing</h3>
                 </div>
 
-                <div className="flex flex-col space-y-1.5">
+                <div className="flex flex-col space-y-1 ">
                   {digitalMarketingItems.map((item) => renderNavlink(item))}
                 </div>
 
@@ -342,174 +340,6 @@ const Header: FC = () => {
           </Megamenu>
 
           {/* Solutions Megamenu */}
-          <Megamenu
-            label="Solutions"
-            theme={{
-              text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
-              states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-              menu: 'bg-white dark:bg-black',
-            }}
-          >
-            <div className="grid w-full grid-flow-col gap-x-8 grid-cols-[repeat(4,minmax(0,220px))_250px]">
-              <div className="flex flex-col h-full">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">Explore Our Solutions</h3>
-                </div>
-                <div className="flex flex-col space-y-3">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    href="/solutions"
-                    as={Link}
-                    cto
-                  >
-                    UI/UX Solutions
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    href="/solutions"
-                    as={Link}
-                    cto
-                  >
-                    Business Solutions
-                  </Navlink>
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    href="/solutions"
-                    as={Link}
-                    cto
-                  >
-                    Infrastructure Solutions
-                  </Navlink>
-                </div>
-                <div className="flex-grow"></div>
-                <div className="mt-6">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    Explore All
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-              <div className="flex flex-col h-full">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">UI/UX Solutions</h3>
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  {uiUxSolutionsItems.map((item) => renderNavlink(item))}
-                </div>
-                <div className="flex-grow"></div>
-                <div className="mt-6">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-              <div className="flex flex-col h-full">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">Business Solutions</h3>
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  {businessSolutionsItems.slice(0, 5).map((item) => renderNavlink(item))}
-                </div>
-                <div className="flex-grow"></div>
-                <div className="mt-6">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-              <div className="flex flex-col h-full">
-                <div className="mb-6">
-                  <h3 className="text-xs leading-none text-primary-500">
-                    Infrastructure Solutions
-                  </h3>
-                </div>
-                <div className="flex flex-col space-y-1.5">
-                  {infrastructureSolutionsItems.map((item) => renderNavlink(item))}
-                </div>
-                <div className="flex-grow"></div>
-                <div className="mt-6">
-                  <Navlink
-                    theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
-                      states:
-                        'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
-                    }}
-                    as={Link}
-                    href="/solutions"
-                    className="block md:inline-flex md:items-center gap-1"
-                    isDropdownItem
-                  >
-                    More
-                    <span>
-                      <BiChevronRight className="inline-flex items-center" size={20} />
-                    </span>
-                  </Navlink>
-                </div>
-              </div>
-              {/* Keep the image column as is */}
-              <div className="w-full flex flex-col items-center justify-center h-full">
-                <div className="p-2">
-                  <Image
-                    src="2.svg"
-                    alt=""
-                    width={280}
-                    height={280}
-                    className="w-full h-[280px] dark:opacity-90 bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted border-primary-500/30    rounded-3xl"
-                  ></Image>
-                </div>
-              </div>
-            </div>
-          </Megamenu>
 
           {/* Main navigation items */}
           {mainNavItems.map((item) => renderNavlink(item))}
@@ -528,7 +358,7 @@ const Header: FC = () => {
         </NavItem>
 
         <MobileNav>
-          <div className="space-y-2 py-1.5">
+          <div className="space-y-2 py-1.5 ">
             <Megamenu
               label="Services"
               theme={{
@@ -548,17 +378,6 @@ const Header: FC = () => {
                 >
                   <div className="space-y-3 py-1.5">
                     {webDevelopmentItems.map((item) => renderNavlink(item, true))}
-                    <div className="bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted border-primary-500/30  px-4 py-3  rounded-lg ">
-                      <div className=" text-primary-900 dark:text-primary-50 flex items-center justify-between ">
-                        <h3>Web Development</h3>
-
-                        <FaArrowRight className="text-primary-500 size-3" />
-                      </div>
-                      <p className="text-xs leading-4 mt-1 font-light  text-primary-600 dark:text-primary-400">
-                        Next.js/Wordpress,Vercel, payload admin, Next.js metadata, google essential
-                        integration, HubSpot, Mailchimp, Brevo, Klaviyo, Edge, CDN, Core Web Vitals.
-                      </p>
-                    </div>
                   </div>
                 </Megamenu>
 
@@ -589,57 +408,79 @@ const Header: FC = () => {
                 </Megamenu>
               </div>
             </Megamenu>
-            <Megamenu
-              label="Solutions"
-              theme={{
-                text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
-                states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                menu: 'bg-white dark:bg-black',
-              }}
-            >
-              <div className="space-y-2 py-1.5">
-                <Megamenu
-                  label="Infrastructure Solutions"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    {infrastructureSolutionsItems.map((item) => renderNavlink(item, true))}
-                  </div>
-                </Megamenu>
-                <Megamenu
-                  label="UI/UX Solutions"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    {uiUxSolutionsItems.map((item) => renderNavlink(item, true))}
-                  </div>
-                </Megamenu>
-
-                <Megamenu
-                  label="Business Solutions"
-                  theme={{
-                    text: 'text-primary-900 dark:text-primary-50  text-base md:text-sm',
-                    states: 'focus-within:opacity-100 active:opacity-100 md:hover:opacity-100',
-                    menu: 'bg-white dark:bg-black',
-                  }}
-                >
-                  <div className="space-y-2 py-1.5">
-                    {businessSolutionsItems.slice(0, 5).map((item) => renderNavlink(item, true))}
-                  </div>
-                </Megamenu>
-              </div>
-            </Megamenu>
 
             {/* Main navigation items for mobile */}
             {mainNavItems.map((item) => renderNavlink(item, true))}
+            <div className="flex flex-col space-y-1 ">
+              <Navlink
+                theme={{
+                  text: 'text-primary-900 dark:text-primary-50  ',
+                  states:
+                    'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+                }}
+                href="/services"
+                as={Link}
+                cto
+              >
+                <div className="backdrop-blur-3xl          bg-gradient-primary-dark p-7 dark:bg-gradient-primary  border border-dotted  border-primary-500/50 w-full   rounded-lg">
+                  <div className="flex items-center justify-between   ">
+                    <h3>Development</h3>
+
+                    <RiArrowRightLine size={20} />
+                  </div>
+                  <div className="text-xs mt-2   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                    Next.js/Wordpress,Vercel, payload admin, Next.js metadata, google essential
+                    integration, HubSpot, Mailchimp, Brevo, Klaviyo, Edge, CDN, Core Web Vitals
+                  </div>
+                </div>
+              </Navlink>
+              <Navlink
+                theme={{
+                  text: 'text-primary-900 dark:text-primary-50  ',
+                  states:
+                    'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+                }}
+                href="/services"
+                as={Link}
+                cto
+              >
+                <div className="backdrop-blur-3xl       p-7   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
+                  <div className="flex items-center justify-between  gap-2 ">
+                    <h3>Design</h3>
+                    <span className="size-6">
+                      <RiArrowRightLine />
+                    </span>
+                  </div>
+                  <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                    Web & app interfaces, wireframes, prototypes, modern layouts, responsive design,
+                    ads, posts, banners, brochures, presentations, business cards
+                  </div>
+                </div>
+              </Navlink>
+              <Navlink
+                theme={{
+                  text: 'text-primary-900 dark:text-primary-50  ',
+                  states:
+                    'focus-within:opacity-100 active:opacity-100  [@media(hover:hover)]:hover:opacity-100 [@media(hover:hover)]:dark:hover:opacity-100',
+                }}
+                href="/services"
+                as={Link}
+                cto
+              >
+                <div className="backdrop-blur-3xl       p-7   bg-gradient-primary-dark dark:bg-gradient-primary  border border-dotted  border-primary-500/50   rounded-lg">
+                  <div className="flex items-center justify-between  gap-2 ">
+                    <h3>Marketing</h3>
+                    <span className="size-6">
+                      <RiArrowRightLine />
+                    </span>
+                  </div>
+                  <div className="text-xs mt-1   leading-4 font-light  text-primary-600 dark:text-primary-400">
+                    SEO articles, landing page copy, blogs, social media campaigns, google
+                    campaigns, e-commerce website, woocmmerce
+                  </div>
+                </div>
+              </Navlink>
+            </div>
           </div>
         </MobileNav>
       </Navbar>
