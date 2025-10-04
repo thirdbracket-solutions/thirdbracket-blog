@@ -1,7 +1,6 @@
 // src/app/(frontend)/about/Team.tsx
 'use client'
 
-import { Bracket } from '@thirdbracket/bracketui'
 import Image from 'next/image'
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa'
 

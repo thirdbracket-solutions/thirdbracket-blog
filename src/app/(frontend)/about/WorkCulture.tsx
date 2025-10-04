@@ -1,7 +1,6 @@
 // src/app/(frontend)/about/WorkCulture.tsx
 'use client'
 
-import { Bracket } from '@thirdbracket/bracketui'
 import Image from 'next/image'
 import { FaLightbulb, FaHandshake, FaRocket, FaBalanceScale } from 'react-icons/fa'
 

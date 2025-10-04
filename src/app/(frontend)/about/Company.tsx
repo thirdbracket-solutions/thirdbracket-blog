@@ -1,7 +1,6 @@
 // src/app/(frontend)/about/Company.tsx
 'use client'
 
-import { Bracket } from '@thirdbracket/bracketui'
 import Image from 'next/image'
 
 export default function Company() {

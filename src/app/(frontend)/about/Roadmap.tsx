@@ -1,8 +1,6 @@
 // src/app/(frontend)/about/Roadmap.tsx
 'use client'
 
-import { Bracket } from '@thirdbracket/bracketui'
-
 const roadmapItems = [
   {
     year: '2019',

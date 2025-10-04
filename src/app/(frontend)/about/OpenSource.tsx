@@ -1,7 +1,7 @@
 // src/app/(frontend)/about/OpenSource.tsx
 'use client'
 
-import { Bracket, Button } from '@thirdbracket/bracketui'
+import { Button } from '@thirdbracket/bracketui'
 import { FaGithub } from 'react-icons/fa'
 
 const projects = [

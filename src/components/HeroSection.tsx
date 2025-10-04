@@ -1,9 +1,12 @@
 'use client'
 
 import { Bracket, Button } from '@thirdbracket/bracketui'
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import Modal from './Modal'
+import SubscriptionForm from '@/blocks/Form/SubscriptionFormBlock'
+import CallbackForm from '@/blocks/Form/CallBackForm'
 
 const featuredLogos = [
   { src: '/elementorgray.svg', alt: 'Elementor', width: 249, height: 40 },
@@ -12,6 +15,7 @@ const featuredLogos = [
 ]
 
 export const Hero: React.FC = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false)
   return (
     <section className=" py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:36px_36px]">
       <Bracket fluid centered padding="small">
@@ -48,9 +52,8 @@ export const Hero: React.FC = () => {
 
               <Button
                 outline
-                as={Link}
+                onClick={() => setIsFormOpen(true)}
                 className="flex-1 "
-                href="#subscription"
                 size="md"
                 theme={{
                   border: 'border-primary-100/70 dark:border-primary-900/80',
@@ -94,6 +97,10 @@ export const Hero: React.FC = () => {
           </div>
         </div>
       </Bracket>
+      <Modal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)}>
+        {/* <SubscriptionForm /> */}
+        <CallbackForm />
+      </Modal>
     </section>
   )
 }

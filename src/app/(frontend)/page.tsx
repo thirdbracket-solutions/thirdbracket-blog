@@ -35,8 +35,8 @@ async function getFormData() {
   return res.json()
 }
 
-export default async function Home() {
-  const form = await getFormData()
+export default function Home() {
+  // const form = await getFormData()
   return (
     <>
       <Script
@@ -59,7 +59,8 @@ export default async function Home() {
         <FAQ />
         {/* <Subscription /> */}
         <section id="subscription" className="scroll-mt-24 mx-auto">
-          <FormBlockSubscription form={form} />
+          {/* <FormBlockSubscription form={form} /> */}
+          <FormBlockSubscription />
         </section>
       </section>
     </>
