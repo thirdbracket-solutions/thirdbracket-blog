@@ -69,7 +69,7 @@ export async function POST(req: Request) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `users API-Key ${process.env.PAYLOAD_API_KEY || ''}`,
+        Authorization: `users API-Key ${process.env.PAYLOAD_SECRET || ''}`,
       },
       body: JSON.stringify({
         form: formID,
