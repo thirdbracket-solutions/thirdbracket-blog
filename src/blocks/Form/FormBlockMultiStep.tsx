@@ -53,21 +53,21 @@ export const FormBlockMultiStep: React.FC<
 
   // Define step groups for ContactProposal form
   const stepGroups = [
-    ['businessname', 'contactname', 'email', 'phone'],           // Step 1: About Business
-    ['website', 'social', 'currentrevenue', 'currentbudget'],    // Step 2: Current Digital Presence
-    ['goal'],                                                     // Step 3: Digital Vision
+    ['businessname', 'contactname', 'email', 'phone'], // Step 1: About Business
+    ['currentrevenue', 'currentbudget', 'website', 'social'], // Step 2: Current Digital Presence
+    ['goal'], // Step 3: Digital Vision
   ]
 
   const totalSteps = stepGroups.length
-  const currentFields = formFromProps?.fields?.filter((field: any) => 
-    stepGroups[currentStep]?.includes(field.name)
-  ) || []
+  const currentFields =
+    formFromProps?.fields?.filter((field: any) => stepGroups[currentStep]?.includes(field.name)) ||
+    []
 
   const nextStep = async () => {
     // Validate current step fields
     const currentStepFields = stepGroups[currentStep]
     const isValid = await trigger(currentStepFields as any)
-    
+
     if (isValid && currentStep < totalSteps - 1) {
       setCurrentStep(currentStep + 1)
     }
@@ -186,7 +186,7 @@ export const FormBlockMultiStep: React.FC<
                 </span>
               </div>
               <div className="w-full bg-primary-200 dark:bg-primary-800 rounded-full h-2">
-                <div 
+                <div
                   className="bg-gradient-text dark:bg-gradient-text-dark h-2 rounded-full transition-all duration-300"
                   style={{ width: `${((currentStep + 1) / totalSteps) * 100}%` }}
                 ></div>
