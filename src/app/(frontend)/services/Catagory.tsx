@@ -1,4 +1,3 @@
-import { Bracket } from '@thirdbracket/bracketui'
 import ServiceCard from './ServiceCards'
 import { IconType } from 'react-icons'
 import Image from 'next/image'

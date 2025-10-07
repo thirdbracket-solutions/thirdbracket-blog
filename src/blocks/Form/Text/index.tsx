@@ -28,9 +28,10 @@ export const Text: React.FC<
         )}
       </FormLabel>
       <FormInput
-        defaultValue={defaultValue}
+        defaultValue=""
         id={name}
         type="text"
+        placeholder={defaultValue}
         {...register(name, { required })}
         className="!bg-secondary-50 dark:!bg-secondary-950 !border-primary-100 dark:!border-primary-900 focus:!ring-primary-500 dark:focus:!ring-primary-400"
       />

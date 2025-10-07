@@ -44,7 +44,7 @@ export const Select: React.FC<
             <SelectComponent onValueChange={(val) => onChange(val)} value={controlledValue?.value}>
               <SelectTrigger className="w-full" id={name}>
                 <SelectValue
-                  placeholder={label}
+                  placeholder="Please Select"
                   className="!bg-secondary-50 dark:!bg-secondary-950 !border-primary-100 dark:!border-primary-900 focus:!ring-primary-500 dark:focus:!ring-primary-400"
                 />
               </SelectTrigger>

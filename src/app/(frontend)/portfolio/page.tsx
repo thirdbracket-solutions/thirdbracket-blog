@@ -3,9 +3,9 @@ import PageHeader from '../../../components/PageHeader'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { PiArrowUpRight } from 'react-icons/pi'
-import { SiGithub } from 'react-icons/si'
+
 import { RiDribbbleLine, RiGithubLine } from 'react-icons/ri'
-import { FaGlobe } from 'react-icons/fa'
+
 import { LuGlobe } from 'react-icons/lu'
 
 export const metadata: Metadata = {

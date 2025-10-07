@@ -17,7 +17,7 @@ const SelectTrigger: React.FC<
 > = ({ children, className, ref, ...props }) => (
   <SelectPrimitive.Trigger
     className={cn(
-      'flex h-10 w-full items-center justify-between rounded border border-primary-500/40  bg-white dark:bg-black px-3 py-2 text-black dark:text-white placeholder:text-primary-400 placeholder:dark:text-primary-600  focus:outline-none focus:ring-1 focus:ring-secondary-400  dark:focus:ring-secondary-700  disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
+      'flex h-10 w-full items-center text-sm  justify-between rounded border border-primary-500/40  bg-white dark:bg-black px-3 py-2 text-text-primary-400 dark:text-white placeholder:text-primary-400 placeholder:dark:text-primary-600  focus:outline-none focus:ring-1 focus:ring-secondary-400  dark:focus:ring-secondary-700  disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1',
       className,
     )}
     ref={ref}
@@ -64,7 +64,7 @@ const SelectContent: React.FC<
   <SelectPrimitive.Portal>
     <SelectPrimitive.Content
       className={cn(
-        'relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded border border-primary-300 dark:border-primary-700 bg-white dark:bg-black text-primary-800 dark:text-primary-200 shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
+        'relative z-50 max-h-96 min-w-[8rem] overflow-hidden rounded border border-primary-300 placeholder:text-primary-400 placeholder:dark:text-primary-600 dark:border-primary-700 bg-white dark:bg-black text-primary-800 dark:text-primary-200 shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
         position === 'popper' &&
           'data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1',
         className,

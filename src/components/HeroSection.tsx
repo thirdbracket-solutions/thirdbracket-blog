@@ -5,8 +5,13 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Modal from './Modal'
-import SubscriptionForm from '@/blocks/Form/SubscriptionFormBlock'
-import CallbackForm from '@/blocks/Form/CallBackForm'
+// import SubscriptionForm from '@/blocks/Form/SubscriptionFormBlock' // Not used in this component
+// import CallbackForm from '@/blocks/Form/CallBackForm' // Commented out - using FormBlockCompact instead
+// import FormContact from '@/blocks/Form/FormContact' // Commented out - using FormBlockCompact instead
+// import { FormBlock } from '@/blocks/Form/Component' // Using compact version for modal
+import { FormBlockCompact } from '@/blocks/Form/FormBlockCompact'
+import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
+import { FormBlockMultiStep } from '@/blocks/Form/FormBlockMultiStep'
 
 const featuredLogos = [
   { src: '/elementorgray.svg', alt: 'Elementor', width: 249, height: 40 },
@@ -14,7 +19,11 @@ const featuredLogos = [
   { src: '/bracketuigray.svg', alt: 'Bracketui', width: 190, height: 40 },
 ]
 
-export const Hero: React.FC = () => {
+type HeroProps = {
+  contactForm: FormType
+}
+
+export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
   const [isFormOpen, setIsFormOpen] = useState(false)
   return (
     <section className=" py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:36px_36px]">
@@ -99,7 +108,13 @@ export const Hero: React.FC = () => {
       </Bracket>
       <Modal isOpen={isFormOpen} onClose={() => setIsFormOpen(false)}>
         {/* <SubscriptionForm /> */}
-        <CallbackForm />
+        {/* <CallbackForm /> */} {/* Commented out - using FormBlockCompact instead */}
+        {/* <FormContact form={contactForm} /> */}{' '}
+        {/* Commented out - using FormBlockCompact instead */}
+        {/* <FormBlock form={contactForm} enableIntro={false} /> */}{' '}
+        {/* Using compact version for modal */}
+        {/* <FormBlockCompact form={contactForm} enableIntro={false} /> */}
+        <FormBlockMultiStep form={contactForm} enableIntro={false} />
       </Modal>
     </section>
   )

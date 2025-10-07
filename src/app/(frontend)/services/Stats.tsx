@@ -66,7 +66,6 @@
 // src/app/(frontend)/services/Stats.tsx
 'use client'
 
-import { Bracket } from '@thirdbracket/bracketui'
 import { FaProjectDiagram, FaUsers, FaGlobeAmericas, FaCalendarAlt } from 'react-icons/fa'
 
 export default function Stats() {

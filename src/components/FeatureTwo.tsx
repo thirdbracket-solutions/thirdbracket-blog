@@ -74,13 +74,6 @@ const features = [
     description:
       'Integrated solutions for analytics, SEO, and performance tracking to grow traffic and boost conversions.',
   },
-  {
-    icon: PiBracketsSquareBold,
-    header: 'Bracket UI',
-    href: '/services',
-    description:
-      'BracketUI is a lightweight React component library designed to help developers ship consistent, responsive UIs faster. Built with Tailwind CSS utilities and modern patterns, it balances flexibility with simplicity.',
-  },
 ]
 
 export function WhyChooseUsSection() {
@@ -107,8 +100,7 @@ export function WhyChooseUsSection() {
                 href={href}
                 isIcon
                 theme={{
-                  background:
-                    'bg-gradient-secondary-dark last:bg-gradient-gray  dark:bg-gradient-secondary dark:last:bg-gradient-gray-dark lg:last:col-span-2  last:backdrop-blur-2xl last:backdrop-saturate-200 last:backdrop-contrast-150    ',
+                  background: 'bg-gradient-secondary-dark   dark:bg-gradient-secondary      ',
                   border:
                     'border-opacity-30  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
 

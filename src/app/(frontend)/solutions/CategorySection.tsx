@@ -1,6 +1,5 @@
 // components/CategorySection.tsx
 
-import { Bracket } from '@thirdbracket/bracketui'
 import SolutionCard from './SolutionCards'
 import { SolutionCategory } from './types'
 
