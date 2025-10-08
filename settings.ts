@@ -4,7 +4,7 @@ export const url = 'https://www.thirdbracket.co.uk'
 export const gtm = 'GTM-5LLRMTFW'
 export const gtmconnected = true
 
-export const sitename = 'Third Bracket'
+export const sitename = 'Next.js Agency - Third Bracket'
 export const description =
   'Third Bracket is a trusted digital agency delivering affordable web development, UI/UX design, and digital marketing for businesses wordldwide.'
 export const keywords = [

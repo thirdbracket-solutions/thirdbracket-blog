@@ -29,15 +29,15 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
     <section className=" py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:36px_36px]">
       <Bracket fluid centered padding="small">
         <div className="mx-auto">
-          <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-[700px] lg:max-w-[980px]">
-            <h1 className="text-[2.70rem] leading-[1.10]    md:text-[3rem] lg:text-6xl  text-left sm:text-center bg-gradient-text font-black dark:bg-gradient-text-dark text-transparent bg-clip-text   ">
-              Most Affordable Next.js Agency for the Web
+          <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-3xl lg:max-w-[970px] xl:max-w-[1200px] px-2 sm:px-0">
+            <h1 className="text-[2.85rem] leading-[1.15]    md:text-5xl lg:text-[3.3rem] xl:text-[3.75rem]  text-left sm:text-center bg-gradient-text font-black dark:bg-gradient-text-dark text-transparent bg-clip-text   tracking-tight ">
+              Affordable Next.js Agency for the Web
               {/* <span className=" font-semibold italic text-lg md:text-xl lg:text-2xl block mt-2 tracking-tight">
                 Powered by Next.js
               </span> */}
             </h1>
 
-            <p className=" text-primary-500  text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem] text-left sm:text-center   backdrop-blur-sm">
+            <p className=" text-primary-500  text-[1rem]/[1.7] md:text-[1.10rem]/[1.75rem] lg:text-[1.20rem]/[1.8rem] text-left sm:text-center   backdrop-blur-sm lg:px-16 md:px-6">
               <span className="text-primary-900 dark:text-primary-100">Third Bracket </span>helps UK
               startups and small businesses launch high-quality, conversion-ready websites. From
               design to development — we make your online presence work for you.
@@ -69,15 +69,15 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
 
                   hoverBackground: 'hover:bg-primary-50 dark:hover:bg-secondary-900 ',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
-                  text: 'text-primary-800 dark:text-primary-200 ',
+                  text: 'text-primary-900 dark:text-primary-100 ',
                 }}
               >
-                Start a Partnership
+                Request Free Proposal
               </Button>
             </div>
 
             <div className="px-0 sm:px-4 py-4 text-left sm:text-center lg:px-36">
-              <span className="uppercase bg-gradient-secondary opacity-50 dark:opacity-40 dark:bg-gradient-secondary-dark text-transparent bg-clip-text font-medium backdrop-blur-sm">
+              <span className="uppercase bg-gradient-secondary opacity-50 dark:opacity-45 dark:bg-gradient-secondary-dark text-transparent bg-clip-text font-medium backdrop-blur-sm">
                 OUR PARTNERS
               </span>
               <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 lg:gap-12 sm:items-center dark:text-primary-500/40 text-primary-600/50 justify-start sm:justify-between">
@@ -97,7 +97,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                       fetchPriority="high"
                       priority
                       loading="eager"
-                      className="w-auto h-5 md:h-6 object-contain"
+                      className="w-auto h-5 md:h-6 object-contain opacity-50 hover:opacity-100 transition duration-300"
                     />
                   </a>
                 ))}

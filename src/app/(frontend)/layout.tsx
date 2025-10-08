@@ -21,7 +21,7 @@ const baseUrl = Settings.metadataBase
 export const metadata: Metadata = {
   title: {
     template: `%s | ${Settings.title}`,
-    default: `Affordable Web Development & Digtal Marketing Solutions |  ${Settings.title}`,
+    default: `${Settings.title}`,
   },
 
   metadataBase: new URL(baseUrl),

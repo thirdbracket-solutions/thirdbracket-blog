@@ -34,7 +34,7 @@ export const FormBlockMultiStep: React.FC<
   } = props
 
   const formMethods = useForm({
-    defaultValues: formFromProps.fields,
+    defaultValues: {},
   })
   const {
     control,
@@ -43,6 +43,7 @@ export const FormBlockMultiStep: React.FC<
     register,
     trigger,
     getValues,
+    reset,
   } = formMethods
 
   const [currentStep, setCurrentStep] = useState(0)
@@ -60,7 +61,7 @@ export const FormBlockMultiStep: React.FC<
 
   const totalSteps = stepGroups.length
   const currentFields =
-    formFromProps?.fields?.filter((field: any) => stepGroups[currentStep]?.includes(field.name)) ||
+    formFromProps?.fields?.filter((field: any) => stepGroups[currentStep]?.includes((field as any).name)) ||
     []
 
   const nextStep = async () => {
@@ -200,7 +201,7 @@ export const FormBlockMultiStep: React.FC<
                 const Field: React.FC<any> = fields?.[field.blockType as keyof typeof fields]
                 if (Field) {
                   return (
-                    <div key={index}>
+                    <div key={`${currentStep}-${(field as any).name}-${index}`}>
                       <Field
                         form={formFromProps}
                         {...field}
