@@ -91,7 +91,7 @@ export function WhyChooseUsSection() {
             </p>
           </div>
 
-          <div className="space-y-8 sm:grid sm:grid-cols-2 sm:gap-4 sm:space-y-0 lg:grid-cols-3 ">
+          <div className="space-y-6 sm:grid sm:grid-cols-2 gap-4 sm:space-y-0 lg:grid-cols-3 ">
             {features.map(({ icon: Icon, header, description, href }, index) => (
               <Card
                 key={index}
@@ -109,7 +109,7 @@ export function WhyChooseUsSection() {
                     '[@media(hover:hover)]:hover:border-opacity-50    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100 ',
                 }}
                 cover={
-                  <div className="w-16 h-16 mb-4 flex items-center   justify-center   border  border-primary-100 dark:border-primary-900     rounded-xl bg-white  dark:bg-black">
+                  <div className="w-16 h-16 mb-4 flex items-center   justify-center   border  border-primary-100 dark:border-primary-900     rounded-xl bg-gradient-primary-dark  dark:bg-gradient-text">
                     <Icon size={32} className="text-secondary-700 dark:text-secondary-300" />
                   </div>
                 }

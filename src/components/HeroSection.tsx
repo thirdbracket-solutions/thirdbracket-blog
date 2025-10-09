@@ -30,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
       <Bracket fluid centered padding="small">
         <div className="mx-auto">
           <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-3xl lg:max-w-[970px] xl:max-w-[1200px] px-2 sm:px-0">
-            <h1 className="text-[2.85rem] leading-[1.15]    md:text-5xl lg:text-[3.3rem] xl:text-[3.75rem]  text-left sm:text-center bg-gradient-text font-black dark:bg-gradient-text-dark text-transparent bg-clip-text   tracking-tight ">
+            <h1 className="text-[2.85rem] leading-[1.15]    md:text-5xl lg:text-[3.3rem] xl:text-[3.75rem]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-black    tracking-tight ">
               Affordable Next.js Agency for the Web
               {/* <span className=" font-semibold italic text-lg md:text-xl lg:text-2xl block mt-2 tracking-tight">
                 Powered by Next.js

@@ -36,50 +36,54 @@ export const ClientTestimonials = () => {
     <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]  ">
       <Bracket fluid centered padding="small">
         <div className="mx-auto md:max-w-screen-xl">
-          <h2 className="text-3xl lg:text-4xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  text-center mb-14">
+          <h2 className="text-3xl lg:text-4xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  text-center mb-14 ">
             Trusted by Early-stage Startups
           </h2>
 
-          <div className="grid gap-0 md:grid-cols-2 lg:grid-cols-3 ">
+          <div className="  grid gap-0 sm:grid-cols-2 lg:grid-cols-3 ">
             {testimonials.map((item, i) => (
               <Card
-                isIcon
                 theme={{
                   background:
-                    'bg-white/85 dark:bg-black/70 bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:32px_32px]   lg:first:rounded-tl-lg lg:first:rounded-bl-lg lg:last:rounded-tr-lg lg:last:rounded-br-lg md:first:rounded-tr-none   md:last:rounded-bl-none first:rounded-tl-lg first:rounded-tr-lg last:rounded-br-lg last:rounded-bl-lg rounded-none',
+                    'dark:bg-secondary-900 bg-secondary-800 bg-overlayDot-testimonial  dark:bg-overlayDot-testimonial-dark  [background-size:32px_32px]   lg:first:rounded-tl-lg lg:first:rounded-bl-lg lg:last:rounded-tr-lg lg:last:rounded-br-lg sm:first:rounded-tr-none   sm:last:rounded-bl-none first:rounded-tl-lg  first:rounded-tr-lg last:rounded-br-lg last:rounded-bl-lg rounded-none border ',
                   border:
-                    'border-opacity-30  border-primary-500  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+                    'shadow-[0_0_2px_rgba(72,81,91,0.20)]  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  border-secondary-700 dark:border-secondary-800/60',
 
-                  text: 'dark:text-primary-400 text-primary-600  font-light leading-[1.45]',
+                  text: 'dark:text-primary-600 text-primary-600  font-light leading-[1.45]',
                   hover:
-                    '[@media(hover:hover)]:hover:border-opacity-100    [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]         focus-within:border-opacity-100 active:border-opacity-100',
+                    '[@media(hover:hover)]:hover:border-opacity-100    [@media(hover:hover)]:hover:bg-opacity-100',
                 }}
                 key={i}
-                size="lg"
-                header={
-                  <blockquote className="text-primary-950 dark:text-primary-50 mb-6 font-medium text-lg  ">
-                    “{item.quote}”
-                  </blockquote>
-                }
-                cover={
-                  item.logo && (
-                    <div className="w-[100px] h-[45px] flex items-center  justify-center border  border-primary-500/20  dark:shadow-[0_0_2px_rgba(214,218,224,0.10)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]        rounded-full bg-white dark:bg-black">
-                      <Image
-                        src={item.logo}
-                        alt={`${item.client} logo`}
-                        height={20}
-                        width={60}
-                        className="object-cover  grayscale dark:invert  opacity-60 text-primary-900 dark:text-primary-100"
-                      />
-                    </div>
-                  )
-                }
-                className="  rounded    "
+                className="rounded  flex   items-stretch !p-2"
               >
-                <p className="text-sm font-normal text-primary-600 dark:text-primary-400 backdrop-blur-[1px]">
-                  {item.client}
-                </p>
-                <p className="text-sm text-primary-500 backdrop-blur-[1px]">{item.role}</p>
+                <div className="flex-1  flex flex-col h-full  p-4">
+                  <div className="mb-auto">
+                    <blockquote className="dark:bg-gradient-text-dark bg-gradient-text-dark text-transparent bg-clip-text  font-medium text-lg  mb-8">
+                      “{item.quote}”
+                    </blockquote>
+                  </div>
+                  <div className="flex items-center justify-between gap-6 mt-auto">
+                    <div>
+                      <p className="text-sm font-medium dark:text-primary-300 text-primary-300 ">
+                        {item.client}
+                      </p>
+                      <p className="text-sm dark:text-primary-300 text-primary-300 font-light ">
+                        {item.role}
+                      </p>
+                    </div>
+                    {item.logo && (
+                      <div className="w-[100px] h-[35px] flex items-center  justify-center   shadow-[0_0_2px_rgba(246,247,248,0.10)]  dark:shadow-[0_0_2px_rgba(224,227,230,0.10)]     border  border-secondary-700 dark:border-secondary-800 rounded-full   bg-secondary-600/20 dark:bg-secondary-700/10 backdrop-blur-3xl">
+                        <Image
+                          src={item.logo}
+                          alt={`${item.client} logo`}
+                          height={20}
+                          width={60}
+                          className="object-cover invert dark:invert grayscale   opacity-60 text-white dark:text-white"
+                        />
+                      </div>
+                    )}
+                  </div>
+                </div>
               </Card>
             ))}
           </div>
