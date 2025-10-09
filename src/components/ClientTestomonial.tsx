@@ -72,12 +72,12 @@ export const ClientTestimonials = () => {
                       </p>
                     </div>
                     {item.logo && (
-                      <div className="w-[100px] h-[35px] flex items-center  justify-center   shadow-[0_0_2px_rgba(246,247,248,0.10)]  dark:shadow-[0_0_2px_rgba(224,227,230,0.10)]     border  border-secondary-700 dark:border-secondary-800 rounded-full   bg-secondary-600/20 dark:bg-secondary-700/10 backdrop-blur-3xl">
+                      <div className="w-[100px] h-[35px] flex items-center  justify-center   shadow-[0_0_2px_rgba(246,247,248,0.10)]  dark:shadow-[0_0_2px_rgba(224,227,230,0.10)]     border  border-secondary-700 dark:border-secondary-800 rounded-full   bg-secondary-600/10 dark:bg-secondary-700/10 backdrop-blur-3xl ">
                         <Image
                           src={item.logo}
                           alt={`${item.client} logo`}
                           height={20}
-                          width={60}
+                          width={50}
                           className="object-cover invert dark:invert grayscale   opacity-60 text-white dark:text-white"
                         />
                       </div>
