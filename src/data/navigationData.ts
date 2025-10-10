@@ -56,7 +56,6 @@ const mobileMegamenuTheme = {
 
 // Define navigation data
 export const mainNavItems: NavlinkItem[] = [
-  // { label: 'Case Studies', href: '/case-studies' },
   { label: 'Portfolios', href: '/portfolio' },
   { label: 'About', href: '/about' },
   { label: 'Blog', href: '/posts' },
@@ -136,6 +135,46 @@ export const infrastructureSolutionsItems: NavlinkItem[] = [
   { label: 'WordPress', href: '/solutions', isDropdownItem: true },
   { label: 'Blog 360', href: '/solutions', isDropdownItem: true },
   { label: 'Ecommerce 360', href: '/solutions', isDropdownItem: true },
+]
+
+// Solutions megamenu items
+export const nextjsSolutionsItems: NavlinkItem[] = [
+  { label: 'Multi-Tenant SaaS', href: '/solutions', isDropdownItem: true },
+  { label: 'Headless CMS', href: '/solutions', isDropdownItem: true },
+  { label: 'Headless E-Commerce', href: '/solutions', isDropdownItem: true },
+  { label: 'Admin Panel / Dashboard', href: '/solutions', isDropdownItem: true },
+  { label: 'Learning Management System', href: '/solutions', isDropdownItem: true },
+  { label: 'Blog / Publishing System', href: '/solutions', isDropdownItem: true },
+  { label: 'Legacy-Cloud Migration', href: '/solutions', isDropdownItem: true },
+  { label: 'Notion Based Development', href: '/solutions', isDropdownItem: true },
+  { label: 'Digital Asset Management', href: '/solutions', isDropdownItem: true },
+  { label: 'Project Management Tool', href: '/solutions', isDropdownItem: true },
+]
+
+export const wordpressSolutionsItems: NavlinkItem[] = [
+  { label: 'High-Performance WordPress', href: '/solutions', isDropdownItem: true },
+  { label: 'Cloud Migration', href: '/solutions', isDropdownItem: true },
+  { label: 'Decoupled Headless WordPress', href: '/solutions', isDropdownItem: true },
+  { label: 'Ultra-Fast WooCommerce', href: '/solutions', isDropdownItem: true },
+  { label: 'Advanced Custom Fields', href: '/solutions', isDropdownItem: true },
+  { label: 'Elementor Templates', href: '/solutions', isDropdownItem: true },
+  { label: 'Enterprise Wordpress Engineering', href: '/solutions', isDropdownItem: true },
+  { label: 'Wordpress Multisite', href: '/solutions', isDropdownItem: true },
+  { label: 'Complete LMS Solution', href: '/solutions', isDropdownItem: true },
+  { label: 'Listing Platform', href: '/solutions', isDropdownItem: true },
+  { label: 'Revamp Wordpress', href: '/solutions', isDropdownItem: true },
+]
+
+export const openSourceSolutionsItems: NavlinkItem[] = [
+  { label: 'BracketUI Component Library', href: '/solutions', isDropdownItem: true },
+  { label: 'Tailwind Starter Template', href: '/solutions', isDropdownItem: true },
+  { label: 'Blog Template', href: '/solutions', isDropdownItem: true },
+  { label: 'Jamstack Theme', href: '/solutions', isDropdownItem: true },
+  { label: 'Hugo Theme', href: '/solutions', isDropdownItem: true },
+  { label: 'Next.js Theme', href: '/solutions', isDropdownItem: true },
+  { label: 'Html Template', href: '/solutions', isDropdownItem: true },
+  { label: 'Flowbite Starter', href: '/solutions', isDropdownItem: true },
+  { label: 'Automation Script', href: '/solutions', isDropdownItem: true },
 ]
 
 export const automationIntegrationItems: NavlinkItem[] = [
