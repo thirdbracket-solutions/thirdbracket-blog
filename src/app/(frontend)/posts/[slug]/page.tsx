@@ -53,7 +53,7 @@ export default async function Post({ params: paramsPromise }: Args) {
   if (!post) return <PayloadRedirects url={url} />
 
   return (
-    <Bracket>
+    <Bracket fluid centered padding="small">
       {/* Temporarily removed BlogPostData to avoid type errors */}
       {/* <BlogPostData post={{...}} /> */}
       <PageClient />
@@ -65,12 +65,12 @@ export default async function Post({ params: paramsPromise }: Args) {
 
       <PostHero post={post} />
 
-      <div className="flex flex-col items-center gap-8 py-8 sm:py-12 md:py-16 text-primary-700 dark:text-primary-300">
-        <div className="container">
-          <RichText className="mx-auto max-w-screen-lg" data={post.content} enableGutter={false} />
+      <div className="md:max-w-screen-xl mx-auto">
+        <div className="py-8 sm:py-12 md:py-16 text-primary-700 dark:text-primary-300">
+          <RichText className="max-w-screen-lg mx-auto" data={post.content} enableGutter={false} />
           {post.relatedPosts && post.relatedPosts.length > 0 && (
             <RelatedPosts
-              className="mt-12 max-w-[52rem] lg:grid lg:grid-cols-subgrid col-start-1 col-span-3 grid-rows-[2fr]"
+              className="mt-12"
               docs={post.relatedPosts.filter((post) => typeof post === 'object')}
             />
           )}

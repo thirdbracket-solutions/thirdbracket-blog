@@ -46,13 +46,15 @@ export default function Category({
         </div>
 
         <div className="md:w-1/2 hidden sm:flex ">
-          <Image
-            src={illustration.src}
-            alt={illustration.alt}
-            width={334}
-            height={250}
-            className="w-full h-auto lg:max-w-sm max-w-xs mx-auto"
-          />
+          {illustration.src && (
+            <Image
+              src={illustration.src}
+              alt={illustration.alt}
+              width={334}
+              height={250}
+              className="w-full h-auto lg:max-w-sm max-w-xs mx-auto"
+            />
+          )}
         </div>
       </div>
 
