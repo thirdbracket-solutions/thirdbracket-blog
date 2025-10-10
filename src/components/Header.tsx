@@ -119,13 +119,16 @@ const Header: FC = () => {
             <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[300px_repeat(3,1fr)_280px] grid-cols-[300px_repeat(3,1fr)] py-1.5">
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">Our Services</h3>
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                    Our Services
+                  </h3>
                 </div>
                 <div className="flex flex-col space-y-2">
                   <Navlink
                     theme={{
                       text: 'text-primary-900 dark:text-primary-50',
-                      states: 'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
+                      states:
+                        'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
                     href="/services"
                     as={Link}
@@ -137,14 +140,16 @@ const Header: FC = () => {
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
-                        Next.js, WordPress, Custom Solutions
+                        Next.js, WordPress, Custom Solutions, Full Stack Development, Front-end
+                        Development, Backend Development
                       </div>
                     </div>
                   </Navlink>
                   <Navlink
                     theme={{
                       text: 'text-primary-900 dark:text-primary-50',
-                      states: 'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
+                      states:
+                        'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
                     href="/services"
                     as={Link}
@@ -156,14 +161,15 @@ const Header: FC = () => {
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
-                        UI/UX, Branding, Web Design
+                        UI/UX, Branding, Web Design, Website Redesign, Tailwindcss, React, Miniml UI
                       </div>
                     </div>
                   </Navlink>
                   <Navlink
                     theme={{
                       text: 'text-primary-900 dark:text-primary-50',
-                      states: 'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
+                      states:
+                        'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
                     href="/services"
                     as={Link}
@@ -175,7 +181,8 @@ const Header: FC = () => {
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
-                        SEO, Content, Digital Campaigns
+                        SEO, Content, Digital Campaigns, Social Media Marketing, Google Analytics,
+                        Paid Advertising
                       </div>
                     </div>
                   </Navlink>
@@ -183,7 +190,9 @@ const Header: FC = () => {
               </div>
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">Web Development</h3>
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                    Web Development
+                  </h3>
                 </div>
                 <div className="flex flex-col space-y-1">
                   {webDevelopmentItems.map((item) => renderNavlink(item))}
@@ -213,7 +222,9 @@ const Header: FC = () => {
                   <h3 className="text-xs leading-none text-primary-500">UI/UX Design</h3>
                 </div> */}
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">UI/UX Design</h3>
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                    UI/UX Design
+                  </h3>
                 </div>
                 <div className="flex flex-col space-y-1">
                   {uiUxDesignItems.map((item) => renderNavlink(item))}
@@ -243,7 +254,9 @@ const Header: FC = () => {
                   <h3 className="text-xs leading-none text-primary-500">Digital Marketing</h3>
                 </div> */}
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">Marketing</h3>
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                    Marketing
+                  </h3>
                 </div>
 
                 <div className="flex flex-col space-y-1">
@@ -281,7 +294,12 @@ const Header: FC = () => {
                         stroke="currentColor"
                         className="w-8 h-8 text-primary-600 dark:text-primary-400"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M13 10V3L4 14h7v7l9-11h-7z"
+                        />
                       </svg>
                     </div>
                     <h3 className="text-lg font-semibold text-primary-900 dark:text-primary-50 mb-2">
@@ -318,13 +336,16 @@ const Header: FC = () => {
             <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[300px_repeat(3,1fr)_280px] grid-cols-[300px_repeat(3,1fr)] py-1.5">
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">Our Solutions</h3>
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                    Our Solutions
+                  </h3>
                 </div>
                 <div className="flex flex-col space-y-2">
                   <Navlink
                     theme={{
                       text: 'text-primary-900 dark:text-primary-50',
-                      states: 'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
+                      states:
+                        'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
                     href="/solutions"
                     as={Link}
@@ -336,14 +357,16 @@ const Header: FC = () => {
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
-                        Next.js, Payload CMS, Coolify, Hetzner, Postgres, Resend, Cloudflare, Vercel Multi-Tenant
+                        Next.js, Payload CMS, Coolify, Hetzner, Postgres, Resend, Cloudflare, Vercel
+                        Multi-Tenant
                       </div>
                     </div>
                   </Navlink>
                   <Navlink
                     theme={{
                       text: 'text-primary-900 dark:text-primary-50',
-                      states: 'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
+                      states:
+                        'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
                     href="/solutions"
                     as={Link}
@@ -355,14 +378,16 @@ const Header: FC = () => {
                         <BiChevronRight size={16} />
                       </div>
                       <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
-                        Ubuntu VPS, OpenLiteSpeed/Nginx, Redis, Cloudflare, S3, Elementor, ACF, WooCommerce
+                        Ubuntu VPS, OpenLiteSpeed/Nginx, Redis, Cloudflare, S3, Elementor, ACF,
+                        WooCommerce
                       </div>
                     </div>
                   </Navlink>
                   <Navlink
                     theme={{
                       text: 'text-primary-900 dark:text-primary-50',
-                      states: 'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
+                      states:
+                        'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
                     href="/solutions"
                     as={Link}
@@ -382,7 +407,9 @@ const Header: FC = () => {
               </div>
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">Next.js Solutions</h3>
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                    Next.js Solutions
+                  </h3>
                 </div>
                 <div className="flex flex-col space-y-1">
                   {nextjsSolutionsItems.map((item) => renderNavlink(item))}
@@ -390,7 +417,9 @@ const Header: FC = () => {
               </div>
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">WordPress Solutions</h3>
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                    WordPress Solutions
+                  </h3>
                 </div>
                 <div className="flex flex-col space-y-1">
                   {wordpressSolutionsItems.map((item) => renderNavlink(item))}
@@ -398,7 +427,9 @@ const Header: FC = () => {
               </div>
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">Open Source Solutions</h3>
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                    Open Source Solutions
+                  </h3>
                 </div>
                 <div className="flex flex-col space-y-1">
                   {openSourceSolutionsItems.map((item) => renderNavlink(item))}
@@ -415,14 +446,19 @@ const Header: FC = () => {
                         stroke="currentColor"
                         className="w-8 h-8 text-primary-600 dark:text-primary-400"
                       >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                        />
                       </svg>
                     </div>
                     <h3 className="text-lg font-semibold text-primary-900 dark:text-primary-50 mb-2">
                       Need Custom Solution?
                     </h3>
                     <p className="text-sm text-primary-600 dark:text-primary-400 mb-4">
-                      Let's build something tailored for your business
+                      Let us build something tailored for your business
                     </p>
                     <Navlink
                       theme={{
