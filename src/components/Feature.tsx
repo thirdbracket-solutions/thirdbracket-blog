@@ -137,7 +137,7 @@ export default function CardGrid() {
           {/* Header */}
 
           <div className=" mb-8 md:mb-10 lg:mb-16 grid gap-3 lg:gap-4  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto ">
-            <h2 className="  text-3xl lg:text-4xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right ">
+            <h2 className="  text-2xl/[2.2rem] lg:text-3xl/[2.4rem] font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right ">
               {/* Looking for Fast & Affordable Web Development in the UK? */}
               Why Choose Third Bracket for your next project?
             </h2>

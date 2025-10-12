@@ -14,8 +14,11 @@ export default function SolutionCard({
   image,
   features,
 }: Solution) {
+  const cardId = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+  
   return (
     <Card
+      id={cardId}
       size="xl"
       // isIcon
       theme={{

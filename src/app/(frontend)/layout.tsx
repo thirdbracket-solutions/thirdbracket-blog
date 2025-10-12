@@ -6,9 +6,9 @@ import { Settings } from '../../utilities/meta'
 import { Metadata } from 'next'
 
 import GTM from '@/components/GTM'
-import { Roboto } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import { SpeedInsights } from '@vercel/speed-insights/next'
-const roboto = Roboto({
+const roboto = Inter({
   subsets: ['latin'],
   // weight: ['300', '400', '500', '600', '700', '800', '900'],
   display: 'swap',

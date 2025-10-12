@@ -30,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
       <Bracket fluid centered padding="small">
         <div className="mx-auto">
           <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-3xl lg:max-w-[970px] xl:max-w-[1200px] px-2 sm:px-0">
-            <h1 className="text-[2.85rem] leading-[1.15]    md:text-5xl lg:text-[3.3rem] xl:text-[3.75rem]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-black    tracking-tight ">
+            <h1 className="text-[2.85rem] leading-[1.15]    md:text-5xl lg:text-[3.3rem] xl:text-[3.75rem]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-extrabold ">
               Affordable Next.js Agency for the Web
               {/* <span className=" font-semibold italic text-lg md:text-xl lg:text-2xl block mt-2 tracking-tight">
                 Powered by Next.js
@@ -45,21 +45,6 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
 
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 backdrop-blur-[2px]">
               <Button
-                size="md"
-                as={Link}
-                className="flex-1 "
-                theme={{
-                  background: 'bg-gradient-text dark:bg-gradient-text-dark',
-                  hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
-                  focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
-                  text: 'text-primary-50 dark:text-primary-950',
-                }}
-                href="/about"
-              >
-                Learn About Us
-              </Button>
-
-              <Button
                 outline
                 onClick={() => setIsFormOpen(true)}
                 className="flex-1 "
@@ -73,6 +58,20 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                 }}
               >
                 Request Free Proposal
+              </Button>
+              <Button
+                size="md"
+                as={Link}
+                className="flex-1 "
+                theme={{
+                  background: 'bg-gradient-text dark:bg-gradient-text-dark',
+                  hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
+                  focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
+                  text: 'text-primary-50 dark:text-primary-950',
+                }}
+                href="/about"
+              >
+                Learn About Us
               </Button>
             </div>
 

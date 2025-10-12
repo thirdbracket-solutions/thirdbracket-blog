@@ -16,8 +16,11 @@ export default function ServiceCard({
 
   icon: Icon,
 }: ServiceCardProps) {
+  const cardId = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+  
   return (
     <Card
+      id={cardId}
       size="xl"
       isIcon
       theme={{

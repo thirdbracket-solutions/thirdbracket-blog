@@ -81,8 +81,8 @@ export function WhyChooseUsSection() {
     <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] ">
       <Bracket fluid centered padding="small">
         <div className="mx-auto md:max-w-screen-xl">
-          <div className="mb-8 md:mb-10 lg:mb-16">
-            <h2 className="mb-4 text-3xl lg:text-4xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl">
+          <div className="mb-10 lg:mb-16">
+            <h2 className="mb-4 text-2xl/[2.2rem] lg:text-3xl/[2.4rem]  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl ">
               What We Build & Deliver
             </h2>
             <p className=" text-primary-500  text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
@@ -114,7 +114,7 @@ export function WhyChooseUsSection() {
                   </div>
                 }
                 header={
-                  <span className="font-semibold bg-gradient-text  dark:bg-gradient-text-dark text-transparent bg-clip-text mb-2 ">
+                  <span className="font-semibold bg-gradient-text tracking-tight  dark:bg-gradient-text-dark text-transparent bg-clip-text mb-2 ">
                     {header}
                   </span>
                 }

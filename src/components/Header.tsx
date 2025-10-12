@@ -130,7 +130,7 @@ const Header: FC = () => {
                       states:
                         'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
-                    href="/services"
+                    href="/services/web-development"
                     as={Link}
                     isDropdownItem
                   >
@@ -151,7 +151,7 @@ const Header: FC = () => {
                       states:
                         'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
-                    href="/services"
+                    href="/services/ui-ux-design"
                     as={Link}
                     isDropdownItem
                   >
@@ -171,7 +171,7 @@ const Header: FC = () => {
                       states:
                         'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
-                    href="/services"
+                    href="/services/digital-marketing"
                     as={Link}
                     isDropdownItem
                   >
@@ -347,7 +347,7 @@ const Header: FC = () => {
                       states:
                         'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
-                    href="/solutions"
+                    href="/solutions/nextjs-solutions"
                     as={Link}
                     isDropdownItem
                   >
@@ -368,7 +368,7 @@ const Header: FC = () => {
                       states:
                         'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
-                    href="/solutions"
+                    href="/solutions/wordpress-solutions"
                     as={Link}
                     isDropdownItem
                   >
@@ -389,7 +389,7 @@ const Header: FC = () => {
                       states:
                         'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
-                    href="/solutions"
+                    href="/solutions/open-source-solutions"
                     as={Link}
                     isDropdownItem
                   >
