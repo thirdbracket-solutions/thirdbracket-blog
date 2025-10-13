@@ -5,6 +5,8 @@ import React, { useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import Modal from './Modal'
+
+import { TbArrowRight, TbCaretUp, TbCaretUpDown, TbStackPop } from 'react-icons/tb'
 // import SubscriptionForm from '@/blocks/Form/SubscriptionFormBlock' // Not used in this component
 // import CallbackForm from '@/blocks/Form/CallBackForm' // Commented out - using FormBlockCompact instead
 // import FormContact from '@/blocks/Form/FormContact' // Commented out - using FormBlockCompact instead
@@ -12,6 +14,12 @@ import Modal from './Modal'
 import { FormBlockCompact } from '@/blocks/Form/FormBlockCompact'
 import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
 import { FormBlockMultiStep } from '@/blocks/Form/FormBlockMultiStep'
+import {
+  PiArrowArcRight,
+  PiCaretDoubleUp,
+  PiChatCenteredDotsLight,
+  PiStackSimple,
+} from 'react-icons/pi'
 
 const featuredLogos = [
   { src: '/elementorgray.svg', alt: 'Elementor', width: 249, height: 40 },
@@ -29,24 +37,21 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
     <section className=" py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:36px_36px]">
       <Bracket fluid centered padding="small">
         <div className="mx-auto">
-          <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-3xl lg:max-w-[970px] xl:max-w-[1200px] px-2 sm:px-0">
-            <h1 className="text-[2.85rem] leading-[1.15]    md:text-5xl lg:text-[3.3rem] xl:text-[3.75rem]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-extrabold ">
+          <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-[970px] xl:max-w-[1200px] px-2 sm:px-0">
+            <h1 className="text-[2.85rem]/[1.2]    md:text-5xl/[1.2] lg:text-[3.25rem]/[1.1] xl:text-6xl/[1.1]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-extrabold tracking-tight">
               Affordable Next.js Agency for the Web
-              {/* <span className=" font-semibold italic text-lg md:text-xl lg:text-2xl block mt-2 tracking-tight">
-                Powered by Next.js
-              </span> */}
             </h1>
-
-            <p className=" text-primary-500  text-[1rem]/[1.7] md:text-[1.10rem]/[1.75rem] lg:text-[1.20rem]/[1.8rem] text-left sm:text-center   backdrop-blur-sm lg:px-16 md:px-6">
+            <p className=" text-primary-500  text-base/7  lg:text-[1.15rem]/8 text-left sm:text-center   backdrop-blur-sm lg:px-16 md:px-6">
               <span className="text-primary-900 dark:text-primary-100">Third Bracket </span>helps UK
               startups and small businesses launch high-quality, conversion-ready websites. From
-              design to development — we make your online presence work for you.
+              design to development, we make your online presence work for you.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 backdrop-blur-[2px]">
               <Button
                 outline
-                onClick={() => setIsFormOpen(true)}
+                as={Link}
+                href="/about"
                 className="flex-1 "
                 size="md"
                 theme={{
@@ -54,24 +59,37 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
 
                   hoverBackground: 'hover:bg-primary-50 dark:hover:bg-secondary-900 ',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
-                  text: 'text-primary-900 dark:text-primary-100 ',
+                  text: 'text-primary-900 dark:text-primary-100',
                 }}
               >
-                Request Free Proposal
+                Learn About Us
               </Button>
+
               <Button
                 size="md"
-                as={Link}
+                onClick={() => setIsFormOpen(true)}
                 className="flex-1 "
                 theme={{
                   background: 'bg-gradient-text dark:bg-gradient-text-dark',
-                  hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
+                  hoverBackground: '[@media(hover:hover)]:hover:opacity-95',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
-                  text: 'text-primary-50 dark:text-primary-950',
+                  text: 'text-primary-50 dark:text-primary-950 ',
                 }}
-                href="/about"
               >
-                Learn About Us
+                Request Free Audit
+                <svg
+                  className="w-5 h-5 ml-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 12.6"
+                >
+                  <path
+                    d="m0.4396 0.43894 0.021367 7.3301 2.5397-0.01425v-4.6734l8.456 0.05589 0.0011-2.6915zm17.89 0.11246a1.2318 1.2318 0 0 0-1.2318 1.2318 1.2318 1.2318 0 0 0 1.2318 1.2318 1.2318 1.2318 0 0 0 1.2318-1.2318 1.2318 1.2318 0 0 0-1.2318-1.2318zm-3.7729 0.01076a1.2318 1.2318 0 0 0-1.2318 1.2318 1.2318 1.2318 0 0 0 1.2318 1.2318 1.2318 1.2318 0 0 0 1.2318-1.2318 1.2318 1.2318 0 0 0-1.2318-1.2318zm-9.8478 4.4707-0.015958 3.509h9.1513l3.0007 2.9998v-2.9998h2.3372l-0.0029-0.10157 0.03821-3.3065z"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="0.87665"
+                  />
+                </svg>
               </Button>
             </div>
 

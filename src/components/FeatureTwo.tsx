@@ -82,10 +82,10 @@ export function WhyChooseUsSection() {
       <Bracket fluid centered padding="small">
         <div className="mx-auto md:max-w-screen-xl">
           <div className="mb-10 lg:mb-16">
-            <h2 className="mb-4 text-2xl/[2.2rem] lg:text-3xl/[2.4rem]  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl ">
+            <h2 className="mb-4 text-[1.75rem]/[1.4] lg:text-3xl  font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left md:text-center sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-5xl tracking-tight">
               What We Build & Deliver
             </h2>
-            <p className=" text-primary-500  text-base/[1.6] md:text-lg/[1.75rem] lg:text-xl/[1.85rem]  text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
+            <p className=" text-primary-500  text-base/7  lg:text-[1.15rem]/8  text-left sm:mx-auto md:text-center  max-w-lg md:max-w-2xl lg:max-w-5xl">
               From modern websites to tailored systems, we help UK businesses thrive with reliable,
               high-performance web development.
             </p>

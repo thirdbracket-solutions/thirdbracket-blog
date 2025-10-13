@@ -36,7 +36,7 @@ export const ClientTestimonials = () => {
     <section className="py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]  ">
       <Bracket fluid centered padding="small">
         <div className="mx-auto md:max-w-screen-xl">
-          <h2 className="text-2xl lg:text-3xl  font-bold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  text-center mb-14 ">
+          <h2 className="text-[1.75rem]/[1.4] lg:text-3xl   font-extrabold  bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  text-center mb-14 tracking-tight">
             Trusted by Early-stage Startups
           </h2>
 
