@@ -22,9 +22,9 @@ import {
 } from 'react-icons/pi'
 
 const featuredLogos = [
-  { src: '/elementorgray.svg', alt: 'Elementor', width: 249, height: 40 },
-  { src: '/clutch.svg', alt: 'Clutch', width: 141, height: 40 },
-  { src: '/bracketuigray.svg', alt: 'Bracketui', width: 190, height: 40 },
+  { src: '/elementoricon.svg', alt: 'Elementor', width: 150, height: 24 },
+
+  { src: '/bracketuii.svg', alt: 'Bracketui', width: 150, height: 24 },
 ]
 
 type HeroProps = {
@@ -78,16 +78,16 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
               >
                 Request Free Audit
                 <svg
-                  className="w-5 h-5 ml-3"
+                  className="w-4 h-4 ml-2.5"
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 12.6"
+                  viewBox="0 0 24 24"
                 >
                   <path
-                    d="m0.4396 0.43894 0.021367 7.3301 2.5397-0.01425v-4.6734l8.456 0.05589 0.0011-2.6915zm17.89 0.11246a1.2318 1.2318 0 0 0-1.2318 1.2318 1.2318 1.2318 0 0 0 1.2318 1.2318 1.2318 1.2318 0 0 0 1.2318-1.2318 1.2318 1.2318 0 0 0-1.2318-1.2318zm-3.7729 0.01076a1.2318 1.2318 0 0 0-1.2318 1.2318 1.2318 1.2318 0 0 0 1.2318 1.2318 1.2318 1.2318 0 0 0 1.2318-1.2318 1.2318 1.2318 0 0 0-1.2318-1.2318zm-9.8478 4.4707-0.015958 3.509h9.1513l3.0007 2.9998v-2.9998h2.3372l-0.0029-0.10157 0.03821-3.3065z"
-                    fill="none"
+                    d="m5.9 0.48v18h18v-18zm8.8 7.3a1.5 1.5 0 0 1 0.14 0 1.5 1.5 0 0 1 0.14 0.013 1.5 1.5 0 0 1 0.14 0.027 1.5 1.5 0 0 1 0.13 0.04 1.5 1.5 0 0 1 0.13 0.052 1.5 1.5 0 0 1 0.12 0.065 1.5 1.5 0 0 1 0.12 0.075 1.5 1.5 0 0 1 0.11 0.086 1.5 1.5 0 0 1 0.1 0.098 1.5 1.5 0 0 1 0.092 0.11 1.5 1.5 0 0 1 0.08 0.11 1.5 1.5 0 0 1 0.069 0.12 1.5 1.5 0 0 1 0.059 0.13 1.5 1.5 0 0 1 0.046 0.13 1.5 1.5 0 0 1 0.033 0.14 1.5 1.5 0 0 1 0.019 0.14 1.5 1.5 0 0 1 0.0077 0.14 1.5 1.5 0 0 1-0.038 0.33 1.5 1.5 0 0 1-0.11 0.31 1.5 1.5 0 0 1-0.18 0.28 1.5 1.5 0 0 1-0.23 0.23 1.5 1.5 0 0 1-0.28 0.17 1.5 1.5 0 0 1-0.31 0.11 1.5 1.5 0 0 1-0.33 0.036l0.0019 0.0019a1.5 1.5 0 0 1-0.37-0.044 1.5 1.5 0 0 1-0.34-0.13 1.5 1.5 0 0 1-0.3-0.21 1.5 1.5 0 0 1-0.24-0.28 1.5 1.5 0 0 1-0.16-0.33 1.5 1.5 0 0 1-0.073-0.36 1.5 1.5 0 0 1 0.021-0.37 1.5 1.5 0 0 1 0.11-0.35 1.5 1.5 0 0 1 0.19-0.31 1.5 1.5 0 0 1 0.27-0.25 1.5 1.5 0 0 1 0.32-0.18 1.5 1.5 0 0 1 0.36-0.096 1.5 1.5 0 0 1 0.14-0.013zm-4.4 0.0019a1.5 1.5 0 0 1 0.34 0.021 1.5 1.5 0 0 1 0.32 0.1 1.5 1.5 0 0 1 0.29 0.17 1.5 1.5 0 0 1 0.24 0.23 1.5 1.5 0 0 1 0.19 0.28 1.5 1.5 0 0 1 0.12 0.32 1.5 1.5 0 0 1 0.038 0.34 1.5 1.5 0 0 1-0.036 0.33 1.5 1.5 0 0 1-0.11 0.31 1.5 1.5 0 0 1-0.17 0.28 1.5 1.5 0 0 1-0.23 0.23 1.5 1.5 0 0 1-0.28 0.17 1.5 1.5 0 0 1-0.31 0.11 1.5 1.5 0 0 1-0.33 0.038 1.5 1.5 0 0 1-0.35-0.04 1.5 1.5 0 0 1-0.33-0.12 1.5 1.5 0 0 1-0.29-0.2 1.5 1.5 0 0 1-0.24-0.26 1.5 1.5 0 0 1-0.17-0.31 1.5 1.5 0 0 1-0.09-0.34 1.5 1.5 0 0 1-0.0096-0.35 1.5 1.5 0 0 1 0.075-0.34 1.5 1.5 0 0 1 0.15-0.32 1.5 1.5 0 0 1 0.22-0.27 1.5 1.5 0 0 1 0.28-0.21 1.5 1.5 0 0 1 0.32-0.14 1.5 1.5 0 0 1 0.34-0.057zm8.8 0a1.5 1.5 0 0 1 0.34 0.021 1.5 1.5 0 0 1 0.33 0.1 1.5 1.5 0 0 1 0.29 0.17 1.5 1.5 0 0 1 0.24 0.23 1.5 1.5 0 0 1 0.19 0.28 1.5 1.5 0 0 1 0.11 0.32 1.5 1.5 0 0 1 0.04 0.34 1.5 1.5 0 0 1-0.036 0.33 1.5 1.5 0 0 1-0.11 0.31 1.5 1.5 0 0 1-0.18 0.28 1.5 1.5 0 0 1-0.23 0.23 1.5 1.5 0 0 1-0.28 0.17 1.5 1.5 0 0 1-0.31 0.11 1.5 1.5 0 0 1-0.33 0.038 1.5 1.5 0 0 1-0.35-0.042 1.5 1.5 0 0 1-0.33-0.12 1.5 1.5 0 0 1-0.29-0.2 1.5 1.5 0 0 1-0.23-0.26 1.5 1.5 0 0 1-0.17-0.31 1.5 1.5 0 0 1-0.09-0.34 1.5 1.5 0 0 1-0.0096-0.35 1.5 1.5 0 0 1 0.075-0.34 1.5 1.5 0 0 1 0.15-0.31 1.5 1.5 0 0 1 0.22-0.27 1.5 1.5 0 0 1 0.28-0.21 1.5 1.5 0 0 1 0.32-0.14 1.5 1.5 0 0 1 0.34-0.057zm-19 2v14h14v-3.1h-11v-11z"
                     stroke="currentColor"
-                    strokeWidth="0.87665"
+                    strokeWidth=".97"
+                    fill="currentColor"
                   />
                 </svg>
               </Button>
@@ -97,14 +97,14 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
               <span className="uppercase bg-gradient-secondary opacity-50 dark:opacity-45 dark:bg-gradient-secondary-dark text-transparent bg-clip-text font-medium backdrop-blur-sm">
                 OUR PARTNERS
               </span>
-              <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 lg:gap-12 sm:items-center dark:text-primary-500/40 text-primary-600/50 justify-start sm:justify-between">
+              <div className="mt-6 sm:mt-8 flex flex-wrap items-start gap-8 lg:gap-12 sm:items-center dark:text-primary-500/40 text-primary-600/50 justify-start sm:justify-between ">
                 {featuredLogos.map((logo, idx) => (
                   <a
                     key={idx}
                     href="#"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="backdrop-blur-lg grayscale hover:grayscale-0 transition duration-300"
+                    className="backdrop-blur-lg  transition duration-300"
                   >
                     <Image
                       src={logo.src}
@@ -114,7 +114,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                       fetchPriority="high"
                       priority
                       loading="eager"
-                      className="w-auto h-5 md:h-6 object-contain opacity-50 hover:opacity-100 transition duration-300"
+                      className="w-auto h-5 md:h-6 object-contain dark:invert  opacity-40 hover:opacity-100"
                     />
                   </a>
                 ))}
