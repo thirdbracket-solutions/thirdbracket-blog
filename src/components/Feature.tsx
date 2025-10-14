@@ -142,7 +142,7 @@ export default function CardGrid() {
               Why Choose Third Bracket for your next project?
             </h2>
             <p className="text-base/7  lg:text-[1.15rem]/8   text-primary-500 text-left sm:text-center lg:text-left">
-              Beacuse we cook with the latest technology, minimal design system, and
+              Beacuse we cook websites with the latest technology, minimal design system, and
               performance-first thinking.
             </p>
           </div>

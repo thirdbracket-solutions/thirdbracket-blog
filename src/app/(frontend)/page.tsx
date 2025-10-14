@@ -90,6 +90,12 @@ export default async function Home() {
 
         <Bracket fluid centered padding="small">
           <CTASection
+            cover={{
+              src: '/bracketuicover.svg',
+              alt: 'Bracket UI Cover',
+              width: 900,
+              height: 600,
+            }}
             title="Explore Bracket UI"
             description="Built with Tailwind CSS utilities and modern patterns, it balances flexibility with simplicity."
             primary={{
