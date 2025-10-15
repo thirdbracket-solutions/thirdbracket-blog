@@ -18,6 +18,9 @@ import { Bracket } from '@thirdbracket/bracketui'
 // Temporarily removing BlogPostData to avoid type errors
 // import BlogPostData from './BlogPostData'
 
+export const dynamic = 'force-static'
+export const revalidate = false
+
 export async function generateStaticParams() {
   const payload = await getPayload({ config: configPromise })
   const posts = await payload.find({
@@ -63,11 +66,10 @@ export default async function Post({ params: paramsPromise }: Args) {
 
       {draft && <LivePreviewListener />}
 
-      <PostHero post={post} />
-
       <div className="md:max-w-screen-xl mx-auto">
-        <div className="py-8 sm:py-12 md:py-16 text-primary-700 dark:text-primary-300">
-          <RichText className="max-w-screen-lg mx-auto" data={post.content} enableGutter={false} />
+        <PostHero post={post} />
+        <div className=" py-[3rem] sm:py-[3.75rem]  lg:py-[4rem] text-primary-700 dark:text-primary-300">
+          <RichText data={post.content} enableGutter={false} />
           {post.relatedPosts && post.relatedPosts.length > 0 && (
             <RelatedPosts
               className="mt-12"

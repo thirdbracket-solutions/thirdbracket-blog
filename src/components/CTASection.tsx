@@ -56,7 +56,6 @@ const CTASection = ({
               <p className="text-primary-600 dark:text-primary-500  text-base/7  lg:text-[1.15rem]/8 max-w-md ">
                 {description}
               </p>
-              \
             </div>
           </div>
 

@@ -22,8 +22,7 @@ export const metadata: Metadata = {
 async function getFormData() {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/1`, {
-      cache: 'no-store', // Temporarily disabled cache
-      // next: { revalidate: 3600 },
+      next: { revalidate: 3600 },
     })
 
     if (!res.ok) return null

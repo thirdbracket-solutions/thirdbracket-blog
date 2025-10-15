@@ -27,7 +27,7 @@ export const Settings = {
   keywords: keywords,
   openGraph: {
     type: 'website',
-    title: 'Trusted Web Design & Development Services in the UK | Third Bracket',
+    title: 'Trusted Web Design & Development Services in the UK',
     description: description,
     siteName: sitename,
     images: [

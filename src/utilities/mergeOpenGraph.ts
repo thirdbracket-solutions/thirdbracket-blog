@@ -3,14 +3,14 @@ import { getServerSideURL } from './getURL'
 
 const defaultOpenGraph: Metadata['openGraph'] = {
   type: 'website',
-  description: 'Lightening Fast Website with Nextjs SEO features ',
+  description: 'Get Next.js website and full-stack ecosystem around it',
   images: [
     {
-      url: `${getServerSideURL()}/og-image.png`,
+      url: `${getServerSideURL()}/website-template-OG.webp`,
     },
   ],
-  siteName: 'Third Bracket',
-  title: 'Third Bracket',
+  siteName: 'Next.js Agency - Third Bracket',
+  title: 'Next.js Agency - Third Bracket',
 }
 
 export const mergeOpenGraph = (og?: Metadata['openGraph']): Metadata['openGraph'] => {
