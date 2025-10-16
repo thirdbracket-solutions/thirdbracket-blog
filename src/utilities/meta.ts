@@ -11,8 +11,6 @@ import {
   urlimage,
 } from '../../settings'
 
-import { OpenGraph, TwitterCard } from './metadata'
-
 export const Company = {
   name: companyname,
   link: companylink,
@@ -26,7 +24,7 @@ export const Settings = {
   // siteicon: siteicon,
   keywords: keywords,
   openGraph: {
-    type: 'website',
+    type: 'website' as const,
     title: 'Trusted Web Design & Development Services in the UK',
     description: description,
     siteName: sitename,
@@ -38,9 +36,9 @@ export const Settings = {
         alt: imagealt,
       },
     ],
-  } as OpenGraph,
+  },
   twitter: {
-    card: 'summary_large_image',
+    card: 'summary_large_image' as const,
     title: 'Trusted Web Design & Development Services in the UK | Third Bracket',
     description: description,
     site: twitterhandle,
@@ -50,6 +48,6 @@ export const Settings = {
         alt: imagealt,
       },
     ],
-  } as TwitterCard,
+  },
   canonical: url,
 }

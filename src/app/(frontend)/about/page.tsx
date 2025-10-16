@@ -9,15 +9,24 @@ import OpenSource from './OpenSource'
 import WorkCulture from './WorkCulture'
 import CTASection from '@/components/CTASection'
 import { Bracket } from '@thirdbracket/bracketui'
+import { Settings } from '@/utilities/meta'
 
 export const metadata: Metadata = {
   title: 'About Third Bracket',
   description:
     'We’re a UK-based web design studio focused on clean design, scalable architecture, and performance-first websites.',
   openGraph: {
-    title: 'Meet the Team Behind Third Bracket',
-    description:
-      'Get to know our mission, values, and the team building high-performance websites for businesses.',
+    url: `${Settings.metadataBase}/about`,
+    title: 'About Us',
+
+    images: [
+      {
+        url: '/og.svg', // Custom image for contact page
+        width: 1600, // Add this
+        height: 840,
+        alt: 'About Us',
+      },
+    ],
   },
 }
 

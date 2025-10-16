@@ -7,9 +7,25 @@ import { PiArrowUpRight } from 'react-icons/pi'
 import { RiDribbbleLine, RiGithubLine } from 'react-icons/ri'
 
 import { LuGlobe } from 'react-icons/lu'
+import { Settings } from '@/utilities/meta'
 
 export const metadata: Metadata = {
   title: 'Portfolio',
+  description: 'Browse selected work',
+
+  openGraph: {
+    url: `${Settings.metadataBase}/portfolio`,
+    title: 'Portfolio',
+
+    images: [
+      {
+        url: '/og.svg', // Custom image for contact page
+        width: 1600, // Add this
+        height: 840,
+        alt: 'Contact Third Bracket',
+      },
+    ],
+  },
 }
 
 function PortfolioCard({

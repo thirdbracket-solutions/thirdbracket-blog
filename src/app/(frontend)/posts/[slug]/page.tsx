@@ -15,6 +15,7 @@ import { generateMeta } from '@/utilities/generateMeta'
 import PageClient from './page.client'
 import { LivePreviewListener } from '@/components/LivePreviewListener'
 import { Bracket } from '@thirdbracket/bracketui'
+import { Settings } from '@/utilities/meta'
 // Temporarily removing BlogPostData to avoid type errors
 // import BlogPostData from './BlogPostData'
 
@@ -82,11 +83,23 @@ export default async function Post({ params: paramsPromise }: Args) {
   )
 }
 
-export async function generateMetadata({ params: paramsPromise }: Args): Promise<Metadata> {
-  const { slug = '' } = await paramsPromise
-  const post = await queryPostBySlug({ slug })
+export const metadata: Metadata = {
+  // metadataBase: new URL(Settings.metadataBase),
+  title: 'Bracket Insights',
+  description: 'Read curated development blog',
+  openGraph: {
+    url: `${Settings.metadataBase}/posts`,
+    title: 'Bracket Insights',
 
-  return generateMeta({ doc: post })
+    images: [
+      {
+        url: '/og.svg', // Custom image for contact page
+        width: 1600, // Add this
+        height: 840,
+        alt: 'Contact Third Bracket',
+      },
+    ],
+  },
 }
 
 const queryPostBySlug = cache(async ({ slug }: { slug: string }) => {

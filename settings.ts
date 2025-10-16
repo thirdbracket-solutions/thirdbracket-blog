@@ -17,7 +17,7 @@ export const keywords = [
   'affordable website development',
   'web development services',
 ]
-export const urlimage = '/og-image.png'
+export const urlimage = '/og.svg'
 export const imagealt = 'Affordable Web Design, Dvelopment & Marketing Solutions | Third Bracket'
 export const twitterhandle = '@ThirdbracketStudio'
 

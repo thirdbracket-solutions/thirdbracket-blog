@@ -7,15 +7,25 @@ import { FormBlock } from '@/blocks/Form/Component'
 // Structured data now in layout.tsx
 import { Metadata } from 'next'
 import { Bracket } from '@thirdbracket/bracketui'
+import { Settings } from '@/utilities/meta'
 
 export const metadata: Metadata = {
+  // metadataBase: new URL(Settings.metadataBase),
   title: 'Get In Touch',
   description:
     'Get in touch for web design consultations, project quotes, or partnership opportunities. We’d love to hear from you.',
   openGraph: {
+    url: `${Settings.metadataBase}/contact`,
     title: 'Contact Third Bracket',
-    description:
-      'Have a project or question? Reach out to our web design and development team today.',
+
+    images: [
+      {
+        url: '/og.svg', // Custom image for contact page
+        width: 1600, // Add this
+        height: 840,
+        alt: 'Contact Third Bracket',
+      },
+    ],
   },
 }
 
@@ -33,8 +43,8 @@ async function getFormData() {
   }
 }
 
-export const dynamic = 'force-dynamic'
-
+export const dynamic = 'force-static'
+export const revalidate = false
 export default async function ContactPage() {
   const form = await getFormData()
 
