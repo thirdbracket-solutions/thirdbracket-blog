@@ -6,20 +6,13 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Modal from './Modal'
 
-import { TbArrowRight, TbCaretUp, TbCaretUpDown, TbStackPop } from 'react-icons/tb'
 // import SubscriptionForm from '@/blocks/Form/SubscriptionFormBlock' // Not used in this component
 // import CallbackForm from '@/blocks/Form/CallBackForm' // Commented out - using FormBlockCompact instead
 // import FormContact from '@/blocks/Form/FormContact' // Commented out - using FormBlockCompact instead
 // import { FormBlock } from '@/blocks/Form/Component' // Using compact version for modal
-import { FormBlockCompact } from '@/blocks/Form/FormBlockCompact'
+
 import type { Form as FormType } from '@payloadcms/plugin-form-builder/types'
 import { FormBlockMultiStep } from '@/blocks/Form/FormBlockMultiStep'
-import {
-  PiArrowArcRight,
-  PiCaretDoubleUp,
-  PiChatCenteredDotsLight,
-  PiStackSimple,
-} from 'react-icons/pi'
 
 const featuredLogos = [
   { src: '/elementoricon.svg', alt: 'Elementor', width: 150, height: 24 },
@@ -61,7 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                 <Image
                   className="invert dark:invert-0 me-2.5"
                   src="/popup-form-icon.svg"
-                  alt="Vercel logomark"
+                  alt="tb-popup-icon"
                   width={16}
                   height={16}
                 />

@@ -116,11 +116,11 @@ const Header: FC = () => {
               menu: 'bg-white dark:bg-black',
             }}
           >
-            <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[300px_repeat(3,1fr)_280px] grid-cols-[300px_repeat(3,1fr)] py-1.5">
+            <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[280px_repeat(3,1fr)_220px] grid-cols-[280px_repeat(3,1fr)] pb-1">
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
-                    Our Services
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
+                    All Services
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-2">
@@ -134,12 +134,12 @@ const Header: FC = () => {
                     as={Link}
                     isDropdownItem
                   >
-                    <div className="p-3 bg-secondary-50/50 dark:bg-secondary-900/50 border border-primary-500/20 rounded-lg">
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
                         <span className="font-medium">Development</span>
                         <BiChevronRight size={16} />
                       </div>
-                      <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
                         Next.js, WordPress, Custom Solutions, Full Stack Development, Front-end
                         Development, Backend Development
                       </div>
@@ -155,12 +155,12 @@ const Header: FC = () => {
                     as={Link}
                     isDropdownItem
                   >
-                    <div className="p-3 bg-secondary-50/50 dark:bg-secondary-900/50 border border-primary-500/20 rounded-lg">
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
                         <span className="font-medium">Design</span>
                         <BiChevronRight size={16} />
                       </div>
-                      <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
                         UI/UX, Branding, Web Design, Website Redesign, Tailwindcss, React, Miniml UI
                       </div>
                     </div>
@@ -175,12 +175,12 @@ const Header: FC = () => {
                     as={Link}
                     isDropdownItem
                   >
-                    <div className="p-3 bg-secondary-50/50 dark:bg-secondary-900/50 border border-primary-500/20 rounded-lg">
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
                         <span className="font-medium">Marketing</span>
                         <BiChevronRight size={16} />
                       </div>
-                      <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
                         SEO, Content, Digital Campaigns, Social Media Marketing, Google Analytics,
                         Paid Advertising
                       </div>
@@ -190,11 +190,11 @@ const Header: FC = () => {
               </div>
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
                     Web Development
                   </h3>
                 </div>
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-[2px]">
                   {webDevelopmentItems.map((item) => renderNavlink(item))}
                 </div>
 
@@ -222,11 +222,11 @@ const Header: FC = () => {
                   <h3 className="text-xs leading-none text-primary-500">UI/UX Design</h3>
                 </div> */}
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
                     UI/UX Design
                   </h3>
                 </div>
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-[2px]">
                   {uiUxDesignItems.map((item) => renderNavlink(item))}
                 </div>
 
@@ -254,12 +254,12 @@ const Header: FC = () => {
                   <h3 className="text-xs leading-none text-primary-500">Digital Marketing</h3>
                 </div> */}
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
                     Marketing
                   </h3>
                 </div>
 
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-[2px]">
                   {digitalMarketingItems.map((item) => renderNavlink(item))}
                 </div>
 
@@ -333,17 +333,17 @@ const Header: FC = () => {
               menu: 'bg-white dark:bg-black',
             }}
           >
-            <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[300px_repeat(3,1fr)_280px] grid-cols-[300px_repeat(3,1fr)] py-1.5">
+            <div className="grid w-full grid-flow-col gap-x-8 lg:grid-cols-[280px_repeat(3,1fr)_220px] grid-cols-[280px_repeat(3,1fr)] pb-1">
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500">
                     Our Solutions
                   </h3>
                 </div>
                 <div className="flex flex-col space-y-2">
                   <Navlink
                     theme={{
-                      text: 'text-primary-900 dark:text-primary-50',
+                      text: 'text-primary-950 dark:text-primary-50',
                       states:
                         'focus-within:opacity-100 active:opacity-100 [@media(hover:hover)]:hover:opacity-100',
                     }}
@@ -351,12 +351,12 @@ const Header: FC = () => {
                     as={Link}
                     isDropdownItem
                   >
-                    <div className="p-3 bg-secondary-50/50 dark:bg-secondary-900/50 border border-primary-500/20 rounded-lg">
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
                         <span className="font-medium">Next.js Solutions</span>
                         <BiChevronRight size={16} />
                       </div>
-                      <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
                         Next.js, Payload CMS, Coolify, Hetzner, Postgres, Resend, Cloudflare, Vercel
                         Multi-Tenant
                       </div>
@@ -372,12 +372,12 @@ const Header: FC = () => {
                     as={Link}
                     isDropdownItem
                   >
-                    <div className="p-3 bg-secondary-50/50 dark:bg-secondary-900/50 border border-primary-500/20 rounded-lg">
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
                         <span className="font-medium">WordPress Solutions</span>
                         <BiChevronRight size={16} />
                       </div>
-                      <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
                         Ubuntu VPS, OpenLiteSpeed/Nginx, Redis, Cloudflare, S3, Elementor, ACF,
                         WooCommerce
                       </div>
@@ -393,12 +393,12 @@ const Header: FC = () => {
                     as={Link}
                     isDropdownItem
                   >
-                    <div className="p-3 bg-secondary-50/50 dark:bg-secondary-900/50 border border-primary-500/20 rounded-lg">
+                    <div className="p-4 bg-secondary-50 dark:bg-secondary-950 border border-primary-300 dark:border-primary-700 rounded-lg">
                       <div className="flex items-center justify-between gap-2">
                         <span className="font-medium">Open Source Solutions</span>
                         <BiChevronRight size={16} />
                       </div>
-                      <div className="text-xs mt-1 text-primary-600 dark:text-primary-400">
+                      <div className="text-xs mt-2 text-primary-600 dark:text-primary-400">
                         BracketUI, TailwindCSS, Next.js, Payload, WordPress Headless Integrations
                       </div>
                     </div>
@@ -407,31 +407,31 @@ const Header: FC = () => {
               </div>
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
                     Next.js Solutions
                   </h3>
                 </div>
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-[2px]">
                   {nextjsSolutionsItems.map((item) => renderNavlink(item))}
                 </div>
               </div>
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 ">
                     WordPress Solutions
                   </h3>
                 </div>
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-[2px]">
                   {wordpressSolutionsItems.map((item) => renderNavlink(item))}
                 </div>
               </div>
               <div className="flex flex-col h-full">
                 <div className="mb-4">
-                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500 mb-3">
+                  <h3 className="text-xs font-medium text-primary-500 dark:text-primary-500">
                     Open Source Solutions
                   </h3>
                 </div>
-                <div className="flex flex-col space-y-1">
+                <div className="flex flex-col space-y-[2px]">
                   {openSourceSolutionsItems.map((item) => renderNavlink(item))}
                 </div>
               </div>

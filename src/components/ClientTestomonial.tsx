@@ -45,7 +45,7 @@ export const ClientTestimonials = () => {
               <Card
                 theme={{
                   background:
-                    'dark:bg-secondary-900/20 bg-white/20 bg-overlayDot-testimonial  dark:bg-overlayDot-testimonial-dark  [background-size:32px_32px]   lg:first:rounded-tl-lg lg:first:rounded-bl-lg lg:last:rounded-tr-lg lg:last:rounded-br-lg sm:first:rounded-tr-none   sm:last:rounded-bl-none first:rounded-tl-lg  first:rounded-tr-lg last:rounded-br-lg last:rounded-bl-lg rounded-none border backdrop-blur-3xl',
+                    'dark:bg-black/5 bg-white/5 bg-overlayDot-testimonial  dark:bg-overlayDot-testimonial-dark  [background-size:32px_32px]   lg:first:rounded-tl-lg lg:first:rounded-bl-lg lg:last:rounded-tr-lg lg:last:rounded-br-lg sm:first:rounded-tr-none   sm:last:rounded-bl-none first:rounded-tl-lg  first:rounded-tr-lg last:rounded-br-lg last:rounded-bl-lg rounded-none border backdrop-blur-3xl',
                   border:
                     'shadow-[0_0_2px_rgba(51,59,72,0.20)]  dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  border-secondary-200/60 dark:border-secondary-800/60',
 
@@ -58,7 +58,7 @@ export const ClientTestimonials = () => {
               >
                 <div className="flex-1  flex flex-col h-full  p-4">
                   <div className="mb-auto">
-                    <blockquote className="dark:bg-gradient-text-dark bg-gradient-text text-transparent bg-clip-text  font-medium text-lg  mb-8 ">
+                    <blockquote className="dark:bg-gradient-text-dark bg-gradient-text text-transparent bg-clip-text  font-medium text-lg  mb-12 ">
                       “{item.quote}”
                     </blockquote>
                   </div>

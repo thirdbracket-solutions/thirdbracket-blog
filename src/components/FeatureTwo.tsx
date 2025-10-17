@@ -20,7 +20,6 @@ import { PiBracketsSquareBold } from 'react-icons/pi'
 
 import { Bracket, Card } from '@thirdbracket/bracketui'
 import Link from 'next/link'
-import { SiElementor } from 'react-icons/si'
 
 const features = [
   {

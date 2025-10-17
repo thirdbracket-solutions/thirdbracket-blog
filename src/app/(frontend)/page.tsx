@@ -91,7 +91,7 @@ export default async function Home() {
         <Bracket fluid centered padding="small">
           <CTASection
             cover={{
-              src: '/bracketuicover.svg',
+              src: '/buicover.svg',
               alt: 'Bracket UI Cover',
               width: 900,
               height: 600,
