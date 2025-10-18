@@ -12,7 +12,26 @@ const redirects = async () => {
     source: '/:path((?!ie-incompatible.html$).*)', // all pages except the incompatibility page
   }
 
-  const redirects = [internetExplorerRedirect]
+  // SEO-safe migration: Redirect all posts URLs to blog URLs
+  const postsToBlogs = [
+    {
+      source: '/posts',
+      destination: '/blog',
+      permanent: true, // 301 redirect
+    },
+    {
+      source: '/posts/:slug*',
+      destination: '/blog/:slug*',
+      permanent: true, // 301 redirect
+    },
+    {
+      source: '/posts/page/:pageNumber*',
+      destination: '/blog',
+      permanent: true, // 301 redirect
+    },
+  ]
+
+  const redirects = [internetExplorerRedirect, ...postsToBlogs]
 
   return redirects
 }
