@@ -12,9 +12,9 @@ import PageHeader from '@/components/PageHeader'
 // Structured data now in layout.tsx
 
 export const dynamic = 'force-static'
-// export const revalidate = 600
+export const revalidate = 60
 
-export const revalidate = false
+// export const revalidate = false
 
 export default async function Page() {
   const payload = await getPayload({ config: configPromise })
