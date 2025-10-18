@@ -43,8 +43,8 @@ async function getFormData() {
   }
 }
 
-export const dynamic = 'force-static'
-export const revalidate = false
+// export const dynamic = 'force-static'
+// export const revalidate = false
 export default async function ContactPage() {
   const form = await getFormData()
 

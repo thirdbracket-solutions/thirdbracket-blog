@@ -1,27 +1,31 @@
 import { formatDateTime } from 'src/utilities/formatDateTime'
 import React from 'react'
 
-import type { Post } from '@/payload-types'
+import type { Post, Blog } from '@/payload-types'
+import { Media } from '@/components/Media'
 
 import { formatAuthors } from '@/utilities/formatAuthors'
 
 export const PostHero: React.FC<{
-  post: Post
+  post: Post | Blog
 }> = ({ post }) => {
-  const { categories, populatedAuthors, publishedAt, title } = post
+  const { categories, populatedAuthors, publishedAt, title, heroImage } = post
 
   const hasAuthors =
     populatedAuthors && populatedAuthors.length > 0 && formatAuthors(populatedAuthors) !== ''
 
   return (
-    <section className=" h-full w-full  bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1c1c1c_1px,transparent_1px)]  [background-size:16px_16px] pb-8 sm:pb-12 md:pb-16 pt-20  lg:pt-24 border-b border-dashed border-primary-200/50 dark:border-primary-800/60   ">
+    <section className="h-full w-full  bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1c1c1c_1px,transparent_1px)]  [background-size:16px_16px] pb-8 sm:pb-12 md:pb-16 pt-20  lg:pt-24 border-b border-dashed border-primary-200/50 dark:border-primary-800/60">
       {/* {heroImage && typeof heroImage !== 'string' && (
-        <Media
-          fill
-          priority
-          imgClassName="opacity-20 object-fit max-h-[50vh] md:max-h-[65vh]"
-          resource={heroImage}
-        />
+        <div className="absolute inset-0 -z-10">
+          <Media
+            fill
+            priority
+            imgClassName="object-cover blur-sm opacity-10 dark:opacity-5"
+            resource={heroImage}
+          />
+          <div className="absolute inset-0 bg-white/80 dark:bg-black/80" />
+        </div>
       )} */}
       <div className="uppercase text-sm mb-6 text-center">
         {categories?.map((category, index) => {

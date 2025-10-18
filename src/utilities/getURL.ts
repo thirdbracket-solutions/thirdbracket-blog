@@ -15,6 +15,11 @@ export const getServerSideURL = () => {
 }
 
 export const getClientSideURL = () => {
+  // In development, always use the local server URL to prevent hydration mismatch
+  if (process.env.NODE_ENV === 'development') {
+    return process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3000'
+  }
+
   if (canUseDOM) {
     const protocol = window.location.protocol
     const domain = window.location.hostname

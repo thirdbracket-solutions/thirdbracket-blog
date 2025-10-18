@@ -14,6 +14,11 @@ const nextConfig = {
   // SWC minification is enabled by default in recent Next.js versions
   images: {
     remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+        port: '3000',
+      },
       ...[NEXT_PUBLIC_SERVER_URL /* 'https://example.com' */].map((item) => {
         const url = new URL(item)
 

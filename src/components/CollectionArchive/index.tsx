@@ -5,10 +5,11 @@ import { CardPostData, PostCard } from '@/components/Card'
 
 export type Props = {
   posts: CardPostData[]
+  relationTo?: 'posts' | 'blog'
 }
 
 export const CollectionArchive: React.FC<Props> = (props) => {
-  const { posts } = props
+  const { posts, relationTo = 'posts' } = props
 
   return (
     <div className={cn('container')}>
@@ -25,7 +26,7 @@ export const CollectionArchive: React.FC<Props> = (props) => {
                   // className="col-span-4"
                   key={index}
                 >
-                  <PostCard className="h-full" doc={result} relationTo="posts" showCategories />
+                  <PostCard className="h-full" doc={result} relationTo={relationTo} showCategories />
                 </div>
               )
             }

@@ -6,6 +6,7 @@ import path from 'path'
 import { buildConfig, PayloadRequest } from 'payload'
 import { fileURLToPath } from 'url'
 
+import { Blog } from './collections/Blog'
 import { Categories } from './collections/Categories'
 import { EmailSender } from './collections/EmailSender'
 // EmailTemplates collection removed - using file-based templates instead
@@ -85,7 +86,7 @@ export default buildConfig({
     // Force schema sync in production to ensure all tables are created
     push: process.env.NODE_ENV === 'production',
   }),
-  collections: [Pages, Posts, Media, Categories, Users, EmailSender],
+  collections: [Pages, Posts, Blog, Media, Categories, Users, EmailSender],
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
   plugins: [

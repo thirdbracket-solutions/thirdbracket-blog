@@ -40,8 +40,8 @@ async function getFormData() {
 async function getContactFormData() {
   try {
     const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/forms/4`, {
-      cache: 'no-store', // Temporarily disabled cache
-      // next: { revalidate: 3600 },
+      cache: 'force-cache', // Temporarily disabled cache
+      next: { revalidate: 3600 },
     })
 
     if (!res.ok) return null

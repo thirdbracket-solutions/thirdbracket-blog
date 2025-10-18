@@ -58,7 +58,7 @@ const mobileMegamenuTheme = {
 export const mainNavItems: NavlinkItem[] = [
   { label: 'Portfolios', href: '/portfolio' },
   { label: 'About', href: '/about' },
-  { label: 'Blog', href: '/posts' },
+  { label: 'Blog', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ]
 
