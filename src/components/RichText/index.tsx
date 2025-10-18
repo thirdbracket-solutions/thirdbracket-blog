@@ -34,6 +34,7 @@ const internalDocToHref = ({ linkNode }: { linkNode: SerializedLinkNode }) => {
   const slug = value.slug
   if (relationTo === 'posts') return `/posts/${slug}`
   if (relationTo === 'blog') return `/blog/${slug}`
+  if (relationTo === 'work') return `/work/${slug}`
   return `/${slug}`
 }
 

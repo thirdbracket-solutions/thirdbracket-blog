@@ -191,23 +191,38 @@ import { cn } from '@/utilities/ui'
 import type { Post } from '@/payload-types'
 import { Media } from '@/components/Media'
 import { Card } from '@thirdbracket/bracketui'
+import { FaGithub, FaBehance, FaExternalLinkAlt } from 'react-icons/fa'
+import { formatAuthors } from '@/utilities/formatAuthors'
 
-export type CardPostData = Pick<Post, 'slug' | 'categories' | 'meta' | 'title'>
+export type CardPostData = Pick<Post, 'slug' | 'categories' | 'meta' | 'title'> & {
+  technologies?: any[]
+  socialLinks?: any
+  populatedAuthors?: any[]
+  populatedAgency?: any[]
+  github?: string
+  behance?: string
+  liveWebsite?: string
+}
 
 export const PostCard: React.FC<{
   alignItems?: 'center'
   className?: string
   doc?: CardPostData
-  relationTo?: 'posts' | 'blog'
+  relationTo?: 'posts' | 'blog' | 'work'
   showCategories?: boolean
   title?: string
 }> = (props) => {
   const { className, doc, relationTo, showCategories, title: titleFromProps } = props
 
-  const { slug, categories, meta, title } = doc || {}
+  const { slug, categories, meta, title, technologies, socialLinks, populatedAuthors, populatedAgency, github, behance, liveWebsite } = doc || {}
   const { description, image: metaImage } = meta || {}
 
   const hasCategories = categories && Array.isArray(categories) && categories.length > 0
+  const hasTechnologies = technologies && Array.isArray(technologies) && technologies.length > 0
+  const isWorkCollection = relationTo === 'work'
+  const authors = populatedAuthors || populatedAgency
+  const hasAuthors = authors && Array.isArray(authors) && authors.length > 0
+  const hasSocialLinks = github || behance || liveWebsite
   const titleToUse = titleFromProps || title
   const sanitizedDescription = description?.replace(/\s/g, ' ') // replace non-breaking space with white space
   const href = `/${relationTo}/${slug}`
@@ -240,8 +255,8 @@ export const PostCard: React.FC<{
                   const categoryTitle = titleFromCategory || 'Untitled category'
 
                   return (
-                    <span key={index} className="px-2 py-[2px] bg-white dark:bg-secondary-950 rounded-lg border border-secondary-500/25">
-                      <div className="!text-[12px] font-medium text-secondary-700 dark:text-primary-300">
+                    <span key={index} className="px-2 py-[2px] bg-blue-100 dark:bg-blue-900 rounded-lg border border-blue-200 dark:border-blue-800">
+                      <div className="!text-[12px] font-medium text-blue-700 dark:text-blue-300">
                         {categoryTitle}
                       </div>
                     </span>
@@ -252,7 +267,54 @@ export const PostCard: React.FC<{
             </div>
           </div>
         )}
-        {description && <p className="text-sm">{sanitizedDescription}</p>}
+        {isWorkCollection && hasTechnologies && (
+          <div className="mb-3">
+            <div className="flex flex-wrap gap-2">
+              {technologies?.map((tech, index) => {
+                if (typeof tech === 'object') {
+                  const { title: techTitle } = tech
+                  const technologyTitle = techTitle || 'Untitled technology'
+
+                  return (
+                    <span key={index} className="px-2 py-[2px] bg-green-100 dark:bg-green-900 rounded-lg border border-green-200 dark:border-green-800">
+                      <div className="!text-[12px] font-medium text-green-700 dark:text-green-300">
+                        {technologyTitle}
+                      </div>
+                    </span>
+                  )
+                }
+                return null
+              })}
+            </div>
+          </div>
+        )}
+        {hasAuthors && (
+          <div className="mb-2">
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              {isWorkCollection ? 'Agency' : 'Author'}: {formatAuthors(authors)}
+            </p>
+          </div>
+        )}
+        {description && <p className="text-sm mb-3">{sanitizedDescription}</p>}
+        {isWorkCollection && hasSocialLinks && (
+          <div className="flex gap-2 mt-2">
+            {github && (
+              <a href={github as string} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400">
+                <FaGithub size={16} />
+              </a>
+            )}
+            {behance && (
+              <a href={behance as string} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400">
+                <FaBehance size={16} />
+              </a>
+            )}
+            {liveWebsite && (
+              <a href={liveWebsite as string} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400">
+                <FaExternalLinkAlt size={14} />
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </Card>
   )

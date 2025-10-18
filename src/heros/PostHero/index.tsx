@@ -1,32 +1,43 @@
 import { formatDateTime } from 'src/utilities/formatDateTime'
 import React from 'react'
 
-import type { Post, Blog } from '@/payload-types'
+import type { Post, Blog, Work } from '@/payload-types'
 import { Media } from '@/components/Media'
 
 import { formatAuthors } from '@/utilities/formatAuthors'
+import { FaGithub, FaBehance, FaExternalLinkAlt } from 'react-icons/fa'
 
 export const PostHero: React.FC<{
-  post: Post | Blog
+  post: Post | Blog | Work
 }> = ({ post }) => {
-  const { categories, populatedAuthors, publishedAt, title, heroImage } = post
+  const { categories, title, heroImage, meta } = post
+  
+  // Handle different field names for different collections
+  const authors = 'populatedAuthors' in post ? post.populatedAuthors : 'populatedAgency' in post ? post.populatedAgency : null
+  const dateField = 'publishedAt' in post ? post.publishedAt : 'completedAt' in post ? post.completedAt : null
+  const dateLabel = 'publishedAt' in post ? 'Date Published' : 'Date Completed'
+  const authorLabel = 'populatedAuthors' in post ? 'Author' : 'Agency'
+  const technologies = 'technologies' in post ? post.technologies : null
+  const socialLinks = 'github' in post ? { github: post.github, behance: post.behance, liveWebsite: post.liveWebsite } : null
+  
+  // Use meta image for background, fallback to hero image
+  const backgroundImage = meta?.image || heroImage
 
-  const hasAuthors =
-    populatedAuthors && populatedAuthors.length > 0 && formatAuthors(populatedAuthors) !== ''
+  const hasAuthors = authors && Array.isArray(authors) && authors.length > 0 && formatAuthors(authors) !== ''
 
   return (
-    <section className="h-full w-full  bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1c1c1c_1px,transparent_1px)]  [background-size:16px_16px] pb-8 sm:pb-12 md:pb-16 pt-20  lg:pt-24 border-b border-dashed border-primary-200/50 dark:border-primary-800/60">
-      {/* {heroImage && typeof heroImage !== 'string' && (
+    <section className="relative h-full w-full bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1c1c1c_1px,transparent_1px)] [background-size:16px_16px] pb-8 sm:pb-12 md:pb-16 pt-20 lg:pt-24 border-b border-dashed border-primary-200/50 dark:border-primary-800/60 overflow-hidden">
+      {backgroundImage && typeof backgroundImage !== 'string' && (
         <div className="absolute inset-0 -z-10">
           <Media
             fill
             priority
-            imgClassName="object-cover blur-sm opacity-10 dark:opacity-5"
-            resource={heroImage}
+            imgClassName="object-cover blur-sm opacity-20 dark:opacity-15"
+            resource={backgroundImage}
           />
-          <div className="absolute inset-0 bg-white/80 dark:bg-black/80" />
+          <div className="absolute inset-0 bg-white/70 dark:bg-black/75" />
         </div>
-      )} */}
+      )}
       <div className="uppercase text-sm mb-6 text-center">
         {categories?.map((category, index) => {
           if (typeof category === 'object' && category !== null) {
@@ -42,7 +53,31 @@ export const PostHero: React.FC<{
                   className="mr-2 lg:mr-3 rounded-full 
     
     px-2 py-0.5 text-xs text-white dark:text-primary-950 
-     bg-primary-800 dark:bg-primary-200"
+     bg-blue-600 dark:bg-blue-400"
+                >
+                  {titleToUse}
+                </span>
+                {!isLast && <React.Fragment>, &nbsp;</React.Fragment>}
+              </React.Fragment>
+            )
+          }
+          return null
+        })}
+        {technologies && Array.isArray(technologies) && technologies.map((tech, index) => {
+          if (typeof tech === 'object' && tech !== null) {
+            const { title: techTitle } = tech
+
+            const titleToUse = techTitle || 'Untitled technology'
+
+            const isLast = index === (technologies?.length || 0) - 1
+
+            return (
+              <React.Fragment key={`tech-${index}`}>
+                <span
+                  className="mr-2 lg:mr-3 rounded-full 
+    
+    px-2 py-0.5 text-xs text-white dark:text-primary-950 
+     bg-green-600 dark:bg-green-400"
                 >
                   {titleToUse}
                 </span>
@@ -63,17 +98,39 @@ export const PostHero: React.FC<{
         {hasAuthors && (
           <div className="flex flex-col gap-4">
             <div className="flex flex-col gap-1">
-              <p className="text-xs md:text-sm">Author</p>
+              <p className="text-xs md:text-sm">{authorLabel}</p>
 
-              <p>{formatAuthors(populatedAuthors)}</p>
+              <p>{formatAuthors(authors)}</p>
             </div>
           </div>
         )}
-        {publishedAt && (
+        {dateField && (
           <div className="flex flex-col gap-1">
-            <p className="text-xs md:text-sm">Date Published</p>
+            <p className="text-xs md:text-sm">{dateLabel}</p>
 
-            <time dateTime={publishedAt}>{formatDateTime(publishedAt)}</time>
+            <time dateTime={dateField}>{formatDateTime(dateField)}</time>
+          </div>
+        )}
+        {socialLinks && (
+          <div className="flex flex-col gap-1">
+            <p className="text-xs md:text-sm">Links</p>
+            <div className="flex gap-3">
+              {socialLinks.github && (
+                <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200">
+                  <FaGithub size={18} />
+                </a>
+              )}
+              {socialLinks.behance && (
+                <a href={socialLinks.behance} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200">
+                  <FaBehance size={18} />
+                </a>
+              )}
+              {socialLinks.liveWebsite && (
+                <a href={socialLinks.liveWebsite} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200">
+                  <FaExternalLinkAlt size={16} />
+                </a>
+              )}
+            </div>
           </div>
         )}
       </div>

@@ -31,7 +31,21 @@ const redirects = async () => {
     },
   ]
 
-  const redirects = [internetExplorerRedirect, ...postsToBlogs]
+  // SEO-safe migration: Redirect all portfolio URLs to work URLs
+  const portfolioToWork = [
+    {
+      source: '/portfolio',
+      destination: '/work',
+      permanent: true, // 301 redirect
+    },
+    {
+      source: '/portfolio/:slug*',
+      destination: '/work/:slug*',
+      permanent: true, // 301 redirect
+    },
+  ]
+
+  const redirects = [internetExplorerRedirect, ...postsToBlogs, ...portfolioToWork]
 
   return redirects
 }

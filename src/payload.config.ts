@@ -14,6 +14,8 @@ import { Media } from './collections/Media'
 import { Pages } from './collections/Pages'
 import { Posts } from './collections/Posts'
 import { Users } from './collections/Users'
+import { Work } from './collections/Work'
+import { Technologies } from './collections/Technologies'
 import { Footer } from './Footer/config'
 import { Header } from './Header/config'
 
@@ -86,7 +88,7 @@ export default buildConfig({
     // Force schema sync in production to ensure all tables are created
     push: process.env.NODE_ENV === 'production',
   }),
-  collections: [Pages, Posts, Blog, Media, Categories, Users, EmailSender],
+  collections: [Pages, Posts, Blog, Work, Media, Categories, Technologies, Users, EmailSender],
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
   plugins: [

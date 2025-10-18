@@ -70,8 +70,10 @@ export interface Config {
     pages: Page;
     posts: Post;
     blog: Blog;
+    work: Work;
     media: Media;
     categories: Category;
+    technologies: Technology;
     users: User;
     'email-sender': EmailSender;
     redirects: Redirect;
@@ -88,8 +90,10 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     posts: PostsSelect<false> | PostsSelect<true>;
     blog: BlogSelect<false> | BlogSelect<true>;
+    work: WorkSelect<false> | WorkSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     categories: CategoriesSelect<false> | CategoriesSelect<true>;
+    technologies: TechnologiesSelect<false> | TechnologiesSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     'email-sender': EmailSenderSelect<false> | EmailSenderSelect<true>;
     redirects: RedirectsSelect<false> | RedirectsSelect<true>;
@@ -186,6 +190,10 @@ export interface Page {
               | ({
                   relationTo: 'blog';
                   value: number | Blog;
+                } | null)
+              | ({
+                  relationTo: 'work';
+                  value: number | Work;
                 } | null);
             url?: string | null;
             label: string;
@@ -442,6 +450,67 @@ export interface Blog {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "work".
+ */
+export interface Work {
+  id: number;
+  title: string;
+  heroImage?: (number | null) | Media;
+  content: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
+  completedAt?: string | null;
+  agency?: (number | User)[] | null;
+  categories?: (number | Category)[] | null;
+  technologies?: (number | Technology)[] | null;
+  meta?: {
+    title?: string | null;
+    /**
+     * Maximum upload file size: 12MB. Recommended file size for images is <500KB.
+     */
+    image?: (number | null) | Media;
+    description?: string | null;
+  };
+  github?: string | null;
+  behance?: string | null;
+  liveWebsite?: string | null;
+  relatedWork?: (number | Work)[] | null;
+  populatedAgency?:
+    | {
+        id?: string | null;
+        name?: string | null;
+      }[]
+    | null;
+  slug?: string | null;
+  slugLock?: boolean | null;
+  updatedAt: string;
+  createdAt: string;
+  _status?: ('draft' | 'published') | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "technologies".
+ */
+export interface Technology {
+  id: number;
+  title: string;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "CallToActionBlock".
  */
 export interface CallToActionBlock {
@@ -477,6 +546,10 @@ export interface CallToActionBlock {
             | ({
                 relationTo: 'blog';
                 value: number | Blog;
+              } | null)
+            | ({
+                relationTo: 'work';
+                value: number | Work;
               } | null);
           url?: string | null;
           label: string;
@@ -531,6 +604,10 @@ export interface ContentBlock {
             | ({
                 relationTo: 'blog';
                 value: number | Blog;
+              } | null)
+            | ({
+                relationTo: 'work';
+                value: number | Work;
               } | null);
           url?: string | null;
           label: string;
@@ -577,7 +654,7 @@ export interface ArchiveBlock {
     [k: string]: unknown;
   } | null;
   populateBy?: ('collection' | 'selection') | null;
-  relationTo?: ('posts' | 'blog') | null;
+  relationTo?: ('posts' | 'blog' | 'work') | null;
   categories?: (number | Category)[] | null;
   limit?: number | null;
   selectedDocs?:
@@ -589,6 +666,10 @@ export interface ArchiveBlock {
         | {
             relationTo: 'blog';
             value: number | Blog;
+          }
+        | {
+            relationTo: 'work';
+            value: number | Work;
           }
       )[]
     | null;
@@ -868,6 +949,10 @@ export interface Redirect {
       | ({
           relationTo: 'blog';
           value: number | Blog;
+        } | null)
+      | ({
+          relationTo: 'work';
+          value: number | Work;
         } | null);
     url?: string | null;
   };
@@ -909,6 +994,10 @@ export interface Search {
     | {
         relationTo: 'blog';
         value: number | Blog;
+      }
+    | {
+        relationTo: 'work';
+        value: number | Work;
       };
   slug?: string | null;
   meta?: {
@@ -1038,12 +1127,20 @@ export interface PayloadLockedDocument {
         value: number | Blog;
       } | null)
     | ({
+        relationTo: 'work';
+        value: number | Work;
+      } | null)
+    | ({
         relationTo: 'media';
         value: number | Media;
       } | null)
     | ({
         relationTo: 'categories';
         value: number | Category;
+      } | null)
+    | ({
+        relationTo: 'technologies';
+        value: number | Technology;
       } | null)
     | ({
         relationTo: 'users';
@@ -1314,6 +1411,41 @@ export interface BlogSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "work_select".
+ */
+export interface WorkSelect<T extends boolean = true> {
+  title?: T;
+  heroImage?: T;
+  content?: T;
+  completedAt?: T;
+  agency?: T;
+  categories?: T;
+  technologies?: T;
+  meta?:
+    | T
+    | {
+        title?: T;
+        image?: T;
+        description?: T;
+      };
+  github?: T;
+  behance?: T;
+  liveWebsite?: T;
+  relatedWork?: T;
+  populatedAgency?:
+    | T
+    | {
+        id?: T;
+        name?: T;
+      };
+  slug?: T;
+  slugLock?: T;
+  updatedAt?: T;
+  createdAt?: T;
+  _status?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media_select".
  */
 export interface MediaSelect<T extends boolean = true> {
@@ -1422,6 +1554,15 @@ export interface CategoriesSelect<T extends boolean = true> {
         label?: T;
         id?: T;
       };
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "technologies_select".
+ */
+export interface TechnologiesSelect<T extends boolean = true> {
+  title?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -1736,6 +1877,10 @@ export interface Header {
             | ({
                 relationTo: 'blog';
                 value: number | Blog;
+              } | null)
+            | ({
+                relationTo: 'work';
+                value: number | Work;
               } | null);
           url?: string | null;
           label: string;
@@ -1769,6 +1914,10 @@ export interface Footer {
             | ({
                 relationTo: 'blog';
                 value: number | Blog;
+              } | null)
+            | ({
+                relationTo: 'work';
+                value: number | Work;
               } | null);
           url?: string | null;
           label: string;
