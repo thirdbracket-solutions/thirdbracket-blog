@@ -214,7 +214,19 @@ export const PostCard: React.FC<{
 }> = (props) => {
   const { className, doc, relationTo, showCategories, title: titleFromProps } = props
 
-  const { slug, categories, meta, title, technologies, socialLinks, populatedAuthors, populatedAgency, github, behance, liveWebsite } = doc || {}
+  const {
+    slug,
+    categories,
+    meta,
+    title,
+    technologies,
+    socialLinks,
+    populatedAuthors,
+    populatedAgency,
+    github,
+    behance,
+    liveWebsite,
+  } = doc || {}
   const { description, image: metaImage } = meta || {}
 
   const hasCategories = categories && Array.isArray(categories) && categories.length > 0
@@ -231,19 +243,28 @@ export const PostCard: React.FC<{
     <Card
       size="xl"
       href={href}
-      className={cn('!delay-50 motion-reduce:!transition-none motion-reduce:hover:!transform-none', className)}
+      className={cn(
+        '!delay-50 motion-reduce:!transition-none motion-reduce:hover:!transform-none',
+        className,
+      )}
       theme={{
         background: 'bg-white dark:bg-black',
-        border: 'border-opacity-50 border-primary-500 dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] shadow-[0_0_2px_rgba(11,13,15,0.10)]',
-        hover: '[@media(hover:hover)]:hover:border-opacity-100 [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] focus-within:border-opacity-100 active:border-opacity-100',
-        text: 'text-primary-500 font-normal leading-[1.45]'
+        border:
+          'border-opacity-50 border-primary-500 dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+        hover:
+          '[@media(hover:hover)]:hover:border-opacity-100 [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] focus-within:border-opacity-100 active:border-opacity-100',
+        text: 'text-primary-500 font-normal leading-[1.45]',
       }}
-      cover={metaImage && typeof metaImage !== 'string' ? <Media resource={metaImage} /> : undefined}
-      header={titleToUse ? (
-        <span className="bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          {titleToUse}
-        </span>
-      ) : undefined}
+      cover={
+        metaImage && typeof metaImage !== 'string' ? <Media resource={metaImage} /> : undefined
+      }
+      header={
+        titleToUse ? (
+          <span className="bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+            {titleToUse}
+          </span>
+        ) : undefined
+      }
     >
       <div>
         {showCategories && hasCategories && (
@@ -255,8 +276,11 @@ export const PostCard: React.FC<{
                   const categoryTitle = titleFromCategory || 'Untitled category'
 
                   return (
-                    <span key={index} className="px-2 py-[2px] bg-blue-100 dark:bg-blue-900 rounded-lg border border-blue-200 dark:border-blue-800">
-                      <div className="!text-[12px] font-medium text-blue-700 dark:text-blue-300">
+                    <span
+                      key={index}
+                      className="px-2 py-[2px] bg-accent-50 dark:bg-accent-950 rounded-lg border border-accent-100 dark:border-accent-900"
+                    >
+                      <div className="!text-[12px] font-medium text-accent-700 dark:text-accent-300">
                         {categoryTitle}
                       </div>
                     </span>
@@ -276,8 +300,11 @@ export const PostCard: React.FC<{
                   const technologyTitle = techTitle || 'Untitled technology'
 
                   return (
-                    <span key={index} className="px-2 py-[2px] bg-green-100 dark:bg-green-900 rounded-lg border border-green-200 dark:border-green-800">
-                      <div className="!text-[12px] font-medium text-green-700 dark:text-green-300">
+                    <span
+                      key={index}
+                      className="px-2 py-[2px] bg-secondary-50 dark:bg-secondary-950 rounded-lg border border-secondary-100 dark:border-secondary-900"
+                    >
+                      <div className="!text-[12px] font-medium text-secondary-700 dark:text-secondary-300">
                         {technologyTitle}
                       </div>
                     </span>
@@ -299,17 +326,32 @@ export const PostCard: React.FC<{
         {isWorkCollection && hasSocialLinks && (
           <div className="flex gap-2 mt-2">
             {github && (
-              <a href={github as string} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400">
+              <a
+                href={github as string}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400"
+              >
                 <FaGithub size={16} />
               </a>
             )}
             {behance && (
-              <a href={behance as string} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400">
+              <a
+                href={behance as string}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400"
+              >
                 <FaBehance size={16} />
               </a>
             )}
             {liveWebsite && (
-              <a href={liveWebsite as string} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400">
+              <a
+                href={liveWebsite as string}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-primary-600 dark:text-gray-400 dark:hover:text-primary-400"
+              >
                 <FaExternalLinkAlt size={14} />
               </a>
             )}
