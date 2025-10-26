@@ -42,6 +42,25 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    meta: {
+      titleSuffix: '- Admin Panel', // Adds a suffix to the default title
+      title: 'Third Bracket', // Overrides the entire title
+      description: 'This is the administration panel for my application.',
+
+      icons: [
+        {
+          rel: 'icon',
+          type: 'image/x-icon',
+          url: '/favicon.ico', // Path to your primary favicon
+        },
+        {
+          rel: 'apple-touch-icon',
+          type: 'image/png',
+          url: '/apple-touch-icon.png', // Path to your Apple touch icon
+        },
+        // Add more icons as needed for different sizes or formats
+      ],
+    },
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below and the import `BeforeLogin` statement on line 15.

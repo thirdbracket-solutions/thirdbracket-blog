@@ -11,19 +11,29 @@ export const PostHero: React.FC<{
   post: Post | Blog | Work
 }> = ({ post }) => {
   const { categories, title, heroImage, meta } = post
-  
+
   // Handle different field names for different collections
-  const authors = 'populatedAuthors' in post ? post.populatedAuthors : 'populatedAgency' in post ? post.populatedAgency : null
-  const dateField = 'publishedAt' in post ? post.publishedAt : 'completedAt' in post ? post.completedAt : null
+  const authors =
+    'populatedAuthors' in post
+      ? post.populatedAuthors
+      : 'populatedAgency' in post
+        ? post.populatedAgency
+        : null
+  const dateField =
+    'publishedAt' in post ? post.publishedAt : 'completedAt' in post ? post.completedAt : null
   const dateLabel = 'publishedAt' in post ? 'Date Published' : 'Date Completed'
   const authorLabel = 'populatedAuthors' in post ? 'Author' : 'Agency'
   const technologies = 'technologies' in post ? post.technologies : null
-  const socialLinks = 'github' in post ? { github: post.github, behance: post.behance, liveWebsite: post.liveWebsite } : null
-  
+  const socialLinks =
+    'github' in post
+      ? { github: post.github, behance: post.behance, liveWebsite: post.liveWebsite }
+      : null
+
   // Use meta image for background, fallback to hero image
   const backgroundImage = meta?.image || heroImage
 
-  const hasAuthors = authors && Array.isArray(authors) && authors.length > 0 && formatAuthors(authors) !== ''
+  const hasAuthors =
+    authors && Array.isArray(authors) && authors.length > 0 && formatAuthors(authors) !== ''
 
   return (
     <section className="relative h-full w-full bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1c1c1c_1px,transparent_1px)] [background-size:16px_16px] pb-8 sm:pb-12 md:pb-16 pt-20 lg:pt-24 border-b border-dashed border-primary-200/50 dark:border-primary-800/60 overflow-hidden">
@@ -53,7 +63,7 @@ export const PostHero: React.FC<{
                   className="mr-2 lg:mr-3 rounded-full 
     
     px-2 py-0.5 text-xs text-white dark:text-primary-950 
-     bg-blue-600 dark:bg-blue-400"
+     bg-accent-600 dark:bg-accent-400"
                 >
                   {titleToUse}
                 </span>
@@ -63,30 +73,32 @@ export const PostHero: React.FC<{
           }
           return null
         })}
-        {technologies && Array.isArray(technologies) && technologies.map((tech, index) => {
-          if (typeof tech === 'object' && tech !== null) {
-            const { title: techTitle } = tech
+        {technologies &&
+          Array.isArray(technologies) &&
+          technologies.map((tech, index) => {
+            if (typeof tech === 'object' && tech !== null) {
+              const { title: techTitle } = tech
 
-            const titleToUse = techTitle || 'Untitled technology'
+              const titleToUse = techTitle || 'Untitled technology'
 
-            const isLast = index === (technologies?.length || 0) - 1
+              const isLast = index === (technologies?.length || 0) - 1
 
-            return (
-              <React.Fragment key={`tech-${index}`}>
-                <span
-                  className="mr-2 lg:mr-3 rounded-full 
+              return (
+                <React.Fragment key={`tech-${index}`}>
+                  <span
+                    className="mr-2 lg:mr-3 rounded-full 
     
     px-2 py-0.5 text-xs text-white dark:text-primary-950 
-     bg-green-600 dark:bg-green-400"
-                >
-                  {titleToUse}
-                </span>
-                {!isLast && <React.Fragment>, &nbsp;</React.Fragment>}
-              </React.Fragment>
-            )
-          }
-          return null
-        })}
+     bg-secondary-600 dark:bg-secondary-400"
+                  >
+                    {titleToUse}
+                  </span>
+                  {!isLast && <React.Fragment>, &nbsp;</React.Fragment>}
+                </React.Fragment>
+              )
+            }
+            return null
+          })}
       </div>
       <div>
         {' '}
@@ -116,17 +128,32 @@ export const PostHero: React.FC<{
             <p className="text-xs md:text-sm">Links</p>
             <div className="flex gap-3">
               {socialLinks.github && (
-                <a href={socialLinks.github} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200">
+                <a
+                  href={socialLinks.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200"
+                >
                   <FaGithub size={18} />
                 </a>
               )}
               {socialLinks.behance && (
-                <a href={socialLinks.behance} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200">
+                <a
+                  href={socialLinks.behance}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200"
+                >
                   <FaBehance size={18} />
                 </a>
               )}
               {socialLinks.liveWebsite && (
-                <a href={socialLinks.liveWebsite} target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200">
+                <a
+                  href={socialLinks.liveWebsite}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary-600 hover:text-primary-800 dark:text-primary-400 dark:hover:text-primary-200"
+                >
                   <FaExternalLinkAlt size={16} />
                 </a>
               )}

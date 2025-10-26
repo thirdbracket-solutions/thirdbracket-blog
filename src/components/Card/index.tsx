@@ -278,9 +278,9 @@ export const PostCard: React.FC<{
                   return (
                     <span
                       key={index}
-                      className="px-2 py-[2px] bg-accent-100 dark:bg-accent-900 rounded-lg border border-accent-200 dark:border-accent-800"
+                      className="px-2 py-[2px] bg-accent-50 dark:bg-accent-950 rounded-lg border border-accent-100 dark:border-accent-900"
                     >
-                      <div className="!text-[12px] font-medium text-accent-900 dark:text-accent-100">
+                      <div className="!text-[12px] font-medium text-secondary-900 dark:text-secondary-100">
                         {categoryTitle}
                       </div>
                     </span>
