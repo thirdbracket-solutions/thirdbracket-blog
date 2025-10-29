@@ -93,18 +93,18 @@ export default async function Home() {
             cover={{
               src: '/buicover.svg',
               alt: 'Bracket UI Cover',
-              width: 900,
-              height: 600,
+              width: 500,
+              height: 500,
             }}
             title="Explore Bracket UI"
             description="Built with Tailwind CSS utilities and modern patterns, it balances flexibility with simplicity."
             primary={{
-              label: 'Lets Build',
-              href: 'https://www.npmjs.com/package/@thirdbracket/bracketui',
+              label: 'Contact Us',
+              href: '/contact',
             }}
             secondary={{
-              label: 'Source Code',
-              href: 'https://github.com/sagarmusabbir/bracketui',
+              label: 'Learn More',
+              href: '/about',
             }}
           />
         </Bracket>

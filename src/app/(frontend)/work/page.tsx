@@ -9,6 +9,7 @@ import React from 'react'
 import PageClient from './page.client'
 import { Bracket } from '@thirdbracket/bracketui'
 import PageHeader from '@/components/PageHeader'
+import CTASection from '@/components/CTASection'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -41,7 +42,10 @@ export default async function Page() {
     <Bracket fluid centered padding="small">
       <div className="md:max-w-screen-xl mx-auto">
         <PageClient />
-        <PageHeader title="Our Work" description="Showcasing our latest projects and achievements" />
+        <PageHeader
+          title="Our Work"
+          description="Showcasing our latest projects and achievements"
+        />
         <div className="py-8 sm:py-12 md:py-16">
           <div className="container mb-8">
             <PageRange
@@ -53,6 +57,25 @@ export default async function Page() {
           </div>
 
           <CollectionArchive posts={works.docs} relationTo="work" />
+
+          <CTASection
+            cover={{
+              src: '/workcto.svg',
+              alt: 'Bracket UI Cover',
+              width: 500,
+              height: 500,
+            }}
+            title="Behind the Build"
+            description="Learn the strategies, tools, and thinking that power our projects."
+            primary={{
+              label: 'Our Blog',
+              href: '/blog',
+            }}
+            secondary={{
+              label: 'Our Solutions',
+              href: '/solutions',
+            }}
+          />
 
           <div className="container">
             {works.totalPages > 1 && works.page && (

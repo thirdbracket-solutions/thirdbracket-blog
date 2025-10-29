@@ -39,26 +39,46 @@ const digitalMarketingCategory = {
 
 function getServiceDescription(title: string): string {
   const descriptions: Record<string, string> = {
-    'Search Engine Optimisation': 'Optimize website technical aspects for better search engine visibility and rankings.',
-    'Search Engine Marketing': 'Drive targeted traffic through paid search campaigns and strategic keyword targeting.',
-    'Content Marketing': 'Create and distribute valuable content to attract and engage your target audience.',
-    ' Affiliate Marketing': 'Build strategic partnerships to expand reach and drive sales through affiliate networks.',
-    'Email Marketing': 'Develop targeted email campaigns to nurture leads and maintain customer relationships.',
-    'Social Media Marketing': 'Manage and grow your social media presence with strategic content and engagement.',
-    'Conversational Marketing': 'Implement chatbots and messaging strategies to engage customers in real-time.',
-    'PPC & Advertising': 'Create and manage pay-per-click campaigns across multiple advertising platforms.',
-    'Marketing Analytics & Audit': 'Analyze marketing performance and provide actionable insights for optimization.',
-    'Marketing Strategy & Planning': 'Develop comprehensive marketing strategies aligned with your business goals.',
+    'Search Engine Optimisation':
+      'Optimize website technical aspects for better search engine visibility and rankings.',
+    'Search Engine Marketing':
+      'Drive targeted traffic through paid search campaigns and strategic keyword targeting.',
+    'Content Marketing':
+      'Create and distribute valuable content to attract and engage your target audience.',
+    ' Affiliate Marketing':
+      'Build strategic partnerships to expand reach and drive sales through affiliate networks.',
+    'Email Marketing':
+      'Develop targeted email campaigns to nurture leads and maintain customer relationships.',
+    'Social Media Marketing':
+      'Manage and grow your social media presence with strategic content and engagement.',
+    'Conversational Marketing':
+      'Implement chatbots and messaging strategies to engage customers in real-time.',
+    'PPC & Advertising':
+      'Create and manage pay-per-click campaigns across multiple advertising platforms.',
+    'Marketing Analytics & Audit':
+      'Analyze marketing performance and provide actionable insights for optimization.',
+    'Marketing Strategy & Planning':
+      'Develop comprehensive marketing strategies aligned with your business goals.',
   }
-  return descriptions[title] || 'Professional digital marketing service to grow your online presence.'
+  return (
+    descriptions[title] || 'Professional digital marketing service to grow your online presence.'
+  )
 }
 
 function getServiceFeatures(title: string): string[] {
   const features: Record<string, string[]> = {
     'Search Engine Optimisation': ['Technical SEO', 'On-Page Optimization', 'Link Building'],
-    'Search Engine Marketing': ['Keyword Research', 'Ad Campaign Management', 'Conversion Tracking'],
+    'Search Engine Marketing': [
+      'Keyword Research',
+      'Ad Campaign Management',
+      'Conversion Tracking',
+    ],
     'Content Marketing': ['Content Strategy', 'Blog Writing', 'Content Distribution'],
-    ' Affiliate Marketing': ['Partner Recruitment', 'Commission Management', 'Performance Tracking'],
+    ' Affiliate Marketing': [
+      'Partner Recruitment',
+      'Commission Management',
+      'Performance Tracking',
+    ],
     'Email Marketing': ['Campaign Design', 'List Management', 'Automation Setup'],
     'Social Media Marketing': ['Content Calendar', 'Platform Strategy', 'Community Management'],
     'Conversational Marketing': ['Chatbot Setup', 'Live Chat Integration', 'Customer Support'],
@@ -110,10 +130,16 @@ export default function DigitalMarketingPage() {
             title="Digital Marketing Services"
             description="Data-driven digital marketing strategies to improve visibility, engagement, and conversion rates."
           />
-          
+
           <Category {...digitalMarketingCategory} index={0} />
 
           <CTASection
+            cover={{
+              src: '/digitalmarketingcto.svg',
+              alt: 'Bracket UI Cover',
+              width: 500,
+              height: 500,
+            }}
             title="Ready to Grow Your Online Presence?"
             description="Let's implement data-driven marketing strategies that drive real results for your business."
             primary={{
@@ -121,7 +147,7 @@ export default function DigitalMarketingPage() {
               href: '/contact',
             }}
             secondary={{
-              label: 'View All Services',
+              label: 'Other Services',
               href: '/services',
             }}
           />

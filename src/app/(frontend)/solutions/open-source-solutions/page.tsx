@@ -208,6 +208,12 @@ export default function OpenSourceSolutionsPage() {
           <CategorySection {...openSourceSolutionsCategory} />
 
           <CTASection
+            cover={{
+              src: '/opensourcecto.svg',
+              alt: 'Bracket UI Cover',
+              width: 500,
+              height: 500,
+            }}
             title="Ready to Contribute or Customize?"
             description="Explore our open source solutions and join our community of developers building the future."
             primary={{
@@ -215,7 +221,7 @@ export default function OpenSourceSolutionsPage() {
               href: '/contact',
             }}
             secondary={{
-              label: 'View All Solutions',
+              label: 'Other Solutions',
               href: '/solutions',
             }}
           />

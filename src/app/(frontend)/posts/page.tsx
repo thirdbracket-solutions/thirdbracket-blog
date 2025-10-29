@@ -9,6 +9,7 @@ import React from 'react'
 import PageClient from './page.client'
 import { Bracket } from '@thirdbracket/bracketui'
 import PageHeader from '@/components/PageHeader'
+import CTASection from '@/components/CTASection'
 // Structured data now in layout.tsx
 
 export const dynamic = 'force-static'

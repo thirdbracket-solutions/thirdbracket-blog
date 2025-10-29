@@ -55,8 +55,8 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                   className="invert dark:invert-0 me-2.5"
                   src="/popup-form-icon.svg"
                   alt="tb-popup-icon"
-                  width={16}
-                  height={16}
+                  width={14}
+                  height={14}
                 />
                 Start Free Website Audit
               </Button>

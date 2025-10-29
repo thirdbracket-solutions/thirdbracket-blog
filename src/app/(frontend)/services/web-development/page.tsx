@@ -37,15 +37,21 @@ const webDevelopmentCategory = {
 
 function getServiceDescription(title: string): string {
   const descriptions: Record<string, string> = {
-    'Next.js Development': 'Build modern web applications with React and server components for optimal performance.',
-    'WordPress Development': 'Custom WordPress solutions with modern development practices and optimizations.',
-    'E-commerce Development': 'Build powerful online stores with modern e-commerce platforms and payment integrations.',
+    'Next.js Development':
+      'Build modern web applications with React and server components for optimal performance.',
+    'WordPress Development':
+      'Custom WordPress solutions with modern development practices and optimizations.',
+    'E-commerce Development':
+      'Build powerful online stores with modern e-commerce platforms and payment integrations.',
     'Custom Admin Panel': 'Create tailored admin dashboards for content and data management.',
-    'CRM Integration': 'Integrate customer relationship management systems with your web applications.',
-    'Analytics & Tracking Integration': 'Implement comprehensive analytics and tracking solutions for data-driven insights.',
+    'CRM Integration':
+      'Integrate customer relationship management systems with your web applications.',
+    'Analytics & Tracking Integration':
+      'Implement comprehensive analytics and tracking solutions for data-driven insights.',
     'VPS Setup': 'Configure and optimize virtual private servers for your web applications.',
     'Performance Optimization': 'Optimize web applications for speed, SEO, and user experience.',
-    'Migration & Modernization': 'Upgrade legacy systems to modern technology stacks with minimal disruption.',
+    'Migration & Modernization':
+      'Upgrade legacy systems to modern technology stacks with minimal disruption.',
     'Blog Development': 'Create engaging blog platforms with modern CMS and publishing workflows.',
   }
   return descriptions[title] || 'Professional web development service tailored to your needs.'
@@ -58,7 +64,11 @@ function getServiceFeatures(title: string): string[] {
     'E-commerce Development': ['Payment Integration', 'Inventory Management', 'Order Processing'],
     'Custom Admin Panel': ['User Management', 'Content Management', 'Analytics Dashboard'],
     'CRM Integration': ['Lead Management', 'Customer Tracking', 'Sales Pipeline'],
-    'Analytics & Tracking Integration': ['Google Analytics', 'Conversion Tracking', 'Performance Metrics'],
+    'Analytics & Tracking Integration': [
+      'Google Analytics',
+      'Conversion Tracking',
+      'Performance Metrics',
+    ],
     'VPS Setup': ['Server Configuration', 'Security Setup', 'Performance Optimization'],
     'Performance Optimization': ['Core Web Vitals', 'Caching Strategy', 'Asset Optimization'],
     'Migration & Modernization': ['Code Refactoring', 'Platform Migration', 'Tech Stack Updates'],
@@ -108,10 +118,16 @@ export default function WebDevelopmentPage() {
             title="Web Development Services"
             description="Modern web development solutions using cutting-edge technologies for scalable and maintainable applications."
           />
-          
+
           <Category {...webDevelopmentCategory} index={0} />
 
           <CTASection
+            cover={{
+              src: '/webdevcto.svg',
+              alt: 'Bracket UI Cover',
+              width: 500,
+              height: 500,
+            }}
             title="Ready to Build Your Web Application?"
             description="Let's create a modern, high-performance web solution tailored to your business needs."
             primary={{
@@ -119,7 +135,7 @@ export default function WebDevelopmentPage() {
               href: '/contact',
             }}
             secondary={{
-              label: 'View All Services',
+              label: 'Other Services',
               href: '/services',
             }}
           />

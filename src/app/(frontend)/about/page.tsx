@@ -46,6 +46,12 @@ export default function AboutPage() {
           <OpenSource />
           <WorkCulture />
           <CTASection
+            cover={{
+              src: '/aboutcto.svg',
+              alt: 'Bracket UI Cover',
+              width: 500,
+              height: 500,
+            }}
             title="Ready to Work With Us?"
             description="Let's discuss how we can help bring your digital vision to life"
             primary={{

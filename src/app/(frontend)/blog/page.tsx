@@ -9,6 +9,7 @@ import React from 'react'
 import PageClient from './page.client'
 import { Bracket } from '@thirdbracket/bracketui'
 import PageHeader from '@/components/PageHeader'
+import CTASection from '@/components/CTASection'
 
 export const dynamic = 'force-static'
 export const revalidate = false
@@ -47,6 +48,25 @@ export default async function Page() {
           </div>
 
           <CollectionArchive posts={blogs.docs} relationTo="blog" />
+
+          <CTASection
+            cover={{
+              src: '/blogcto.svg',
+              alt: 'Bracket UI Cover',
+              width: 900,
+              height: 600,
+            }}
+            title="Discover Our Projects"
+            description="Real results, real impact crafted with design, code and strategy."
+            primary={{
+              label: 'Our Work',
+              href: '/work',
+            }}
+            secondary={{
+              label: 'Our Services',
+              href: '/services',
+            }}
+          />
 
           <div className="container">
             {blogs.totalPages > 1 && blogs.page && (

@@ -229,6 +229,12 @@ export default function WordPressSolutionsPage() {
           <CategorySection {...wordpressSolutionsCategory} />
 
           <CTASection
+            cover={{
+              src: '/wordpresscto.svg',
+              alt: 'Bracket UI Cover',
+              width: 500,
+              height: 500,
+            }}
             title="Ready to Optimize Your WordPress?"
             description="Let's build a high-performance WordPress solution that delivers exceptional user experience."
             primary={{
@@ -236,7 +242,7 @@ export default function WordPressSolutionsPage() {
               href: '/contact',
             }}
             secondary={{
-              label: 'View All Solutions',
+              label: 'Other Solutions',
               href: '/solutions',
             }}
           />

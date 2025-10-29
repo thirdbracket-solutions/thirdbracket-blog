@@ -39,14 +39,20 @@ function getServiceDescription(title: string): string {
   const descriptions: Record<string, string> = {
     'UI/UX Design': 'Create user-centered designs that enhance usability and drive engagement.',
     'Website Design': 'Design modern, responsive websites that reflect your brand identity.',
-    'Website Redesign': 'Modernize existing websites with contemporary design patterns and best practices.',
-    'Social Media Design': 'Create engaging visual content for social media platforms and campaigns.',
-    'Branding': 'Develop comprehensive brand identities including logos, colors, and visual guidelines.',
-    'Design System Development': 'Build scalable design systems with reusable components and patterns.',
+    'Website Redesign':
+      'Modernize existing websites with contemporary design patterns and best practices.',
+    'Social Media Design':
+      'Create engaging visual content for social media platforms and campaigns.',
+    Branding:
+      'Develop comprehensive brand identities including logos, colors, and visual guidelines.',
+    'Design System Development':
+      'Build scalable design systems with reusable components and patterns.',
     'Graphic Design': 'Create compelling visual designs for print and digital media.',
     'Elementor Template Design': 'Design custom Elementor templates for WordPress websites.',
-    'Printable Design': 'Design materials for print including brochures, business cards, and marketing materials.',
-    'Wireframe & Prototype': 'Create detailed wireframes and interactive prototypes for user testing.',
+    'Printable Design':
+      'Design materials for print including brochures, business cards, and marketing materials.',
+    'Wireframe & Prototype':
+      'Create detailed wireframes and interactive prototypes for user testing.',
   }
   return descriptions[title] || 'Professional design service tailored to your brand needs.'
 }
@@ -57,10 +63,14 @@ function getServiceFeatures(title: string): string[] {
     'Website Design': ['Responsive Design', 'Brand Integration', 'User Experience'],
     'Website Redesign': ['UI Modernization', 'UX Enhancement', 'Visual Refresh'],
     'Social Media Design': ['Platform Optimization', 'Brand Consistency', 'Engagement Focus'],
-    'Branding': ['Logo Design', 'Brand Guidelines', 'Visual Identity'],
+    Branding: ['Logo Design', 'Brand Guidelines', 'Visual Identity'],
     'Design System Development': ['Component Library', 'Style Guide', 'Design Tokens'],
     'Graphic Design': ['Visual Communication', 'Brand Alignment', 'Creative Solutions'],
-    'Elementor Template Design': ['WordPress Integration', 'Responsive Templates', 'Custom Layouts'],
+    'Elementor Template Design': [
+      'WordPress Integration',
+      'Responsive Templates',
+      'Custom Layouts',
+    ],
     'Printable Design': ['Print Optimization', 'High Resolution', 'Brand Consistency'],
     'Wireframe & Prototype': ['User Flow', 'Interactive Prototypes', 'Design Validation'],
   }
@@ -73,7 +83,7 @@ function getServiceBadge(title: string): string {
     'Website Design': 'Web Design',
     'Website Redesign': 'Redesign',
     'Social Media Design': 'Social',
-    'Branding': 'Brand',
+    Branding: 'Brand',
     'Design System Development': 'System',
     'Graphic Design': 'Graphics',
     'Elementor Template Design': 'Template',
@@ -89,7 +99,7 @@ function getServiceIcon(title: string) {
     'Website Design': FaDesktop,
     'Website Redesign': FaSyncAlt,
     'Social Media Design': FaPalette,
-    'Branding': FaPaintBrush,
+    Branding: FaPaintBrush,
     'Design System Development': FaCubes,
     'Graphic Design': FaVectorSquare,
     'Elementor Template Design': FaMobile,
@@ -108,10 +118,16 @@ export default function UIUXDesignPage() {
             title="UI/UX Design Services"
             description="Create intuitive and engaging user interfaces that balance aesthetic appeal with functional design principles."
           />
-          
+
           <Category {...uiUxDesignCategory} index={0} />
 
           <CTASection
+            cover={{
+              src: '/designcto.svg',
+              alt: 'Bracket UI Cover',
+              width: 500,
+              height: 500,
+            }}
             title="Ready to Transform Your Design?"
             description="Let's create beautiful, user-centered designs that enhance your brand and drive engagement."
             primary={{
@@ -119,7 +135,7 @@ export default function UIUXDesignPage() {
               href: '/contact',
             }}
             secondary={{
-              label: 'View All Services',
+              label: 'Other Services',
               href: '/services',
             }}
           />

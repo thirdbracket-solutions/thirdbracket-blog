@@ -35,12 +35,12 @@ const CTASection = ({
     <section className={` py-[3rem] sm:py-[3.75rem]  lg:py-[4rem]   ${className}`}>
       <div className="md:max-w-screen-xl mx-auto bg-accent-radial dark:bg-accent-radial-dark rounded-xl p-8 lg:p-12 border border-primary-200 dark:border-primary-800  ">
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-12">
-          <div className="flex flex-col  md:flex-row md:items-center justify-between  gap-6 md:gap-12 ">
+          <div className="flex flex-col  md:flex-row md:items-center justify-between  gap-6 md:gap-10 ">
             <div>
               {cover && (
-                <div className="mb-4 lg:mb-0">
+                <div className="mb-0 lg:mb-0">
                   <Image
-                    className="w-[200px] h-auto  object-cover "
+                    className="h-[200px] w-auto  object-cover "
                     src={cover.src}
                     alt={cover.alt}
                     width={cover.width}
@@ -59,13 +59,13 @@ const CTASection = ({
             </div>
           </div>
 
-          <div className="flex flex-row md:flex-col md:justify-between  gap-4">
+          <div className="flex flex-wrap flex-row md:flex-col md:justify-between  gap-4">
             {primary && (
               <Button
                 href={primary.href}
                 size="md"
                 theme={{
-                  background: 'bg-gradient-secondary dark:bg-gradient-secondary-dark opacity-75 ',
+                  background: 'bg-gradient-secondary dark:bg-gradient-secondary-dark ',
                   hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                   text: 'text-primary-50 dark:text-primary-950',
