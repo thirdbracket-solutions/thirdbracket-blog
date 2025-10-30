@@ -65,7 +65,7 @@ const CTASection = ({
                 href={primary.href}
                 size="md"
                 theme={{
-                  background: 'bg-gradient-secondary dark:bg-gradient-secondary-dark ',
+                  background: 'bg-gradient-text dark:bg-gradient-text-dark',
                   hoverBackground: '[@media(hover:hover)]:hover:opacity-90',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                   text: 'text-primary-50 dark:text-primary-950',
@@ -82,8 +82,8 @@ const CTASection = ({
                 size="md"
                 theme={{
                   border: 'border-primary-900/80 dark:border-primary-100/70 ',
-                  hoverBackground: 'hover:bg-white/10 dark:hover:bg-black/10 ',
-                  focusRing: 'focus:ring-white/30 dark:focus:ring-black/30',
+                  hoverBackground: 'hover:bg-primary-50 dark:hover:bg-secondary-900',
+                  focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
                   text: 'text-primary-900 dark:text-primary-100 ',
                 }}
               >
