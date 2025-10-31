@@ -241,7 +241,7 @@ export const PostCard: React.FC<{
 
   return (
     <Card
-      size="xl"
+      size="lg"
       href={href}
       className={cn(
         '!delay-50 motion-reduce:!transition-none motion-reduce:hover:!transform-none',
@@ -250,7 +250,7 @@ export const PostCard: React.FC<{
       theme={{
         background: 'bg-white dark:bg-black',
         border:
-          'border-opacity-50 border-primary-500 dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] shadow-[0_0_2px_rgba(11,13,15,0.10)]',
+          'border-opacity-30  border-primary-500 dark:shadow-[0_0_2px_rgba(224,227,230,0.20)]  shadow-[0_0_2px_rgba(11,13,15,0.10)]',
         hover:
           '[@media(hover:hover)]:hover:border-opacity-100 [@media(hover:hover)]:hover:shadow-[0_0_3px_rgba(11,13,15,0.15)] [@media(hover:hover)]:dark:shadow-[0_0_2px_rgba(224,227,230,0.20)] focus-within:border-opacity-100 active:border-opacity-100',
         text: 'text-primary-500 font-normal leading-[1.45]',
@@ -278,7 +278,7 @@ export const PostCard: React.FC<{
                   return (
                     <span
                       key={index}
-                      className="px-2 py-[2px] bg-accent-50 dark:bg-accent-950 rounded-lg border border-accent-100 dark:border-accent-900"
+                      className="px-2 py-[2px] bg-accent-radial dark:bg-accent-radial-dark rounded-lg  "
                     >
                       <div className="!text-[12px] font-medium text-secondary-900 dark:text-secondary-100">
                         {categoryTitle}

@@ -36,7 +36,8 @@ export const PostHero: React.FC<{
     authors && Array.isArray(authors) && authors.length > 0 && formatAuthors(authors) !== ''
 
   return (
-    <section className="relative h-full w-full bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1c1c1c_1px,transparent_1px)] [background-size:16px_16px] pb-8 sm:pb-12 md:pb-16 pt-20 lg:pt-24 border-b border-dashed border-primary-200/50 dark:border-primary-800/60 overflow-hidden">
+    // <section className="relative h-full w-full bg-[radial-gradient(#f0f0f0_1px,transparent_1px)] dark:bg-[radial-gradient(#1c1c1c_1px,transparent_1px)] [background-size:16px_16px] pb-8 sm:pb-12 md:pb-16 pt-20 lg:pt-24 border-b border-dashed border-primary-200/50 dark:border-primary-800/60 overflow-hidden">
+    <section className="py-[3rem] sm:py-[3.75rem] lg:py-[4rem] bg-overlayDot-light dark:bg-overlayDot-dark  [background-size:36px_36px]  text-center ">
       {backgroundImage && typeof backgroundImage !== 'string' && (
         <div className="absolute inset-0 -z-10">
           <Media
@@ -62,8 +63,8 @@ export const PostHero: React.FC<{
                 <span
                   className="mr-2 lg:mr-3 rounded-full 
     
-    px-2 py-0.5 text-xs text-white dark:text-primary-950 
-     bg-accent-600 dark:bg-accent-400"
+    px-2 py-0.5 text-xs text-primary-900 dark:text-primary-50 
+     bg-accent-radial dark:bg-accent-radial-dark"
                 >
                   {titleToUse}
                 </span>
@@ -102,7 +103,7 @@ export const PostHero: React.FC<{
       </div>
       <div>
         {' '}
-        <h1 className="text-4xl font-extrabold md:text-5xl lg:text-6xl bg-gradient-to-r from-primary-800 via-primary-900 to-primary-800 dark:from-primary-200 dark:via-primary-100 dark:to-primary-200 text-transparent bg-clip-text  text-center mb-6">
+        <h1 className=" font-extrabold text-[2.55rem]/[1]  md:text-[2.95rem]/[1.1] lg:text-[3.45rem]/[1.1] bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text  text-center mb-6">
           {title}
         </h1>
       </div>
