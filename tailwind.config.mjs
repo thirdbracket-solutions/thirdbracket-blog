@@ -32,6 +32,7 @@ const config = {
 
         'gradient-text': 'conic-gradient(at bottom left, #3b3b3b, #242424, #3b3b3b  )',
         'gradient-text-dark': 'conic-gradient(at bottom left, #dbdbdb, #c4c4c4, #adadad )',
+        'gradient-kool': 'conic-gradienct (at bottom left, #d2798f, #a8afb8, #c65370 )',
         'overlayDot-light': 'radial-gradient( #737e8c30 1px, transparent 1px)',
         'overlayDot-dark': 'radial-gradient(   #737e8c40 1px, transparent 1px)',
         'overlayDot-testimonial': 'radial-gradient(   #c4c9cf60 1px, transparent 1px)',

@@ -31,13 +31,17 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
       <Bracket fluid centered padding="small">
         <div className="mx-auto">
           <div className="flex flex-col items-start sm:items-center  space-y-10 lg:space-y-16 sm:mx-auto max-w-lg md:max-w-2xl lg:max-w-[970px] xl:max-w-[1200px] px-2 sm:px-0">
-            <h1 className="text-[2.85rem]/[1.2]    md:text-5xl/[1.2] lg:text-[3.25rem]/[1.1] xl:text-6xl/[1.1]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-extrabold tracking-tight">
-              Next.js Development for the Web
+            <h1 className="text-[2.80rem]/[1.2]    md:text-5xl/[1.2] lg:text-[3.25rem]/[1.1] xl:text-6xl/[1.1]  text-left sm:text-center bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-extrabold tracking-tight">
+              Fast sites. Minimal design.&nbsp;
+              <span className=" bg-gradient-to-r from-primary-900 via-primary-800 to-accent-700 dark:from-primary-100 dark:via-primary-200 dark:to-accent-200 text-transparent bg-clip-text">
+                Better engineered.
+              </span>
             </h1>
-            <p className=" text-primary-500  text-base/7  lg:text-[1.15rem]/8 text-left sm:text-center   backdrop-blur-sm lg:px-16 md:px-6">
-              <span className="text-primary-900 dark:text-primary-100">Third Bracket </span>is the
-              first company offering full-stack design, development, infrastructure and digital
-              marketing services in the Next.js ecosystem.
+            <p className=" text-primary-500  text-base/8  lg:text-[1.15rem]/8 text-left sm:text-center   backdrop-blur-sm lg:px-16 md:px-6">
+              We build high-speed, minimal websites engineered for efficiency, navigating the two
+              worlds of WordPress and Next.js. With{' '}
+              <span className="text-primary-900 dark:text-primary-100">Third Bracket</span>,
+              WordPress runs faster, Next.js deploys cheaper.
             </p>
 
             <div className="flex flex-wrap sm:justify-center gap-4 md:gap-6 backdrop-blur-[2px]">
@@ -58,7 +62,7 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                   width={14}
                   height={14}
                 />
-                Start Free Website Audit
+                Get a Free Consultation
               </Button>
               <Button
                 outline
@@ -67,11 +71,12 @@ export const Hero: React.FC<HeroProps> = ({ contactForm }) => {
                 // className="flex-1 "
                 size="md"
                 theme={{
-                  border: 'border-primary-100/70 dark:border-primary-900/80',
+                  border: 'border-secondary-100/70 dark:border-secondary-900/80 ',
 
-                  hoverBackground: 'hover:bg-primary-50 dark:hover:bg-secondary-900 ',
+                  hoverBackground:
+                    'hover:from-accent-700 hover:via-primary-800 hover:to-primary-900 dark:hover:from-accent-200 dark:hover:via-primary-200 dark:hover:to-primary-100 ',
                   focusRing: 'focus:ring-primary-700 dark:focus:ring-secondary-300',
-                  text: 'text-primary-900 dark:text-primary-100',
+                  text: 'bg-gradient-to-r from-primary-900 via-accent-700 to-accent-600 dark:from-primary-100 dark:via-primary-200 dark:to-accent-200 text-transparent bg-clip-text ',
                 }}
               >
                 Learn About Us
