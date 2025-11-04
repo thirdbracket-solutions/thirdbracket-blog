@@ -10,7 +10,7 @@ const cards = [
           Speed
         </span>
       ),
-      cover: '/spd.svg',
+      cover: '/speed.svg',
 
       children:
         'Every site we deliver loads within a second, wheather it is built on WordPress or Next.js, no exceptions.',
@@ -43,19 +43,6 @@ const cards = [
         'Every website we build is SEO-ready with structured data, speed optimization, and best practices baked in.',
     },
   },
-  {
-    name: 'whitelabel',
-    props: {
-      header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          White-Label Friendly
-        </span>
-      ),
-
-      children:
-        'We’re agency-ready. Our systems and components are reusable, documented, and easily integrated into your workflows.',
-    },
-  },
 
   {
     name: 'cost',
@@ -80,7 +67,7 @@ const cards = [
           Minimal Aesthetics
         </span>
       ),
-      cover: '/ui.svg',
+      cover: '/asthetic.svg',
 
       children:
         'Our design philosophy emphasizes whitespace, clarity, and strong visual hierarchy that enhances brand perception.',
@@ -108,10 +95,23 @@ const cards = [
           Faster Delivery
         </span>
       ),
-      cover: '/performance.svg',
+      cover: '/delivery.svg',
 
       children:
         'With our in-house UI components, elementor templates and a refined development stack, we ship projects by the time others pick a name.',
+    },
+  },
+  {
+    name: 'whitelabel',
+    props: {
+      header: (
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+          White-Label Friendly
+        </span>
+      ),
+
+      children:
+        'We’re agency-ready. Our systems and components are reusable, documented, and easily integrated into your workflows.',
     },
   },
 ]
