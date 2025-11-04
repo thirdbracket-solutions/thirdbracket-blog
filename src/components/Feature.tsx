@@ -3,17 +3,17 @@ import { Bracket, Card } from '@thirdbracket/bracketui'
 
 const cards = [
   {
-    name: 'nextjs',
+    name: 'speed',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          Next.js Expertise
+          Speed
         </span>
       ),
-      cover: '/website.svg',
+      cover: '/speed.svg',
 
       children:
-        'We use Next.js to build fast, scalable, and secure applications trusted by startups and enterprise teams alike.',
+        'Every site we deliver loads within a second, wheather it is built on WordPress or Next.js, no exceptions.',
     },
   },
 
@@ -22,12 +22,12 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          Modern Design
+          Code First
         </span>
       ),
 
       children:
-        'We create sleek, user-friendly interfaces focused on usability, branding, and accessibility — no clutter, just clarity.',
+        'We deliver well-organized, fully documentated code so any team can pick up right where we left off.',
     },
   },
   {
@@ -44,18 +44,34 @@ const cards = [
     },
   },
   {
-    name: 'affordable',
+    name: 'whitelabel',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          Affordable Solutions
+          White-Label Friendly
         </span>
       ),
 
       children:
-        'We offer honest, competitive rates with no surprises — perfect for small businesses and growing teams.',
+        'We’re agency-ready. Our systems and components are reusable, documented, and easily integrated into your workflows.',
     },
   },
+
+  {
+    name: 'cost',
+    props: {
+      header: (
+        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
+          Cost Engineering
+        </span>
+      ),
+      cover: '/cost.svg',
+
+      children:
+        'We engineer infrastructure from the root, using edge networks, serverless functions and smart caching to cut resource use.',
+    },
+  },
+
   {
     name: 'minimal',
     props: {
@@ -72,45 +88,16 @@ const cards = [
   },
 
   {
-    name: 'pwa',
-    props: {
-      header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          PWA Ready
-        </span>
-      ),
-      cover: '/webdev.svg',
-
-      children:
-        'Want app-like performance? We deliver progressive web apps (PWAs) that load fast and work offline.',
-    },
-  },
-
-  {
-    name: 'whitelabel',
-    props: {
-      header: (
-        <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          White-Label Friendly
-        </span>
-      ),
-
-      children:
-        'We’re agency-ready. Our systems and components are reusable, documented, and easily integrated into your workflows.',
-    },
-  },
-
-  {
     name: 'devops',
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          DevOps-Ready
+          DevOps Engineered
         </span>
       ),
 
       children:
-        'We build for scale — CI/CD pipelines, staging environments, and performance monitoring come standard.',
+        'We streamline development with CI/CD pipelines, infrastructure as code, and collaborative workflows, ensuring seamless scalability.',
     },
   },
   {
@@ -118,13 +105,13 @@ const cards = [
     props: {
       header: (
         <span className=" bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text font-semibold">
-          In-House UI Library
+          Faster Delivery
         </span>
       ),
       cover: '/performance.svg',
 
       children:
-        'Our custom-built, reusable component library accelerates delivery and ensures consistent UI across your site.',
+        'With our in-house UI components, elementor templates and a refined development stack, we ship projects by the time others pick a name.',
     },
   },
 ]
@@ -139,11 +126,10 @@ export default function CardGrid() {
           <div className=" mb-8 md:mb-10 lg:mb-16 grid gap-3 lg:gap-4  lg:grid-cols-2 lg:items-center lg:max-w-5xl lg:mx-auto ">
             <h2 className="  text-[1.75rem]/[1.4] lg:text-3xl font-extrabold bg-gradient-text dark:bg-gradient-text-dark text-transparent bg-clip-text text-left sm:text-center lg:text-right tracking-tight">
               {/* Looking for Fast & Affordable Web Development in the UK? */}
-              Why Choose Third Bracket for your next project?
+              What Makes Us Different?
             </h2>
             <p className="text-base/7  lg:text-[1.15rem]/8   text-primary-500 text-left sm:text-center lg:text-left">
-              Beacuse we cook websites with the latest technology, minimal design system, and
-              performance-first thinking.
+              Every decition, from design to development, is engineered for performance and cost.
             </p>
           </div>
 
