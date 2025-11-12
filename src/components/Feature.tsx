@@ -10,7 +10,7 @@ const cards = [
           Speed
         </span>
       ),
-      cover: '/speed.svg',
+      cover: '/webspeed.svg',
 
       children:
         'Every site we deliver loads within a second, wheather it is built on WordPress or Next.js, no exceptions.',
